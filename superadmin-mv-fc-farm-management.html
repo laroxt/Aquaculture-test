@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
+	<title>KS Aquaculture-Mv-Farm Management</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+		type="text/css">
+	<link href="./global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/floorplan_indicator.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="./global_assets/js/main/jquery.min.js"></script>
+	<script src="./global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="./global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="./global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/selects/select3.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="./global_assets/js/demo_pages/form_multiselect.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
+	<script src="./global_assets/js/demo_pages/form_wizard3.js"></script>
+	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="./global_assets/js/demo_pages/extra_pnotify.js"></script>
+	<script src="./global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="./dragscroll_js/dragscroll.js"></script>
+
+
+	<!-- Theme JS files -->
+	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
+	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
+	<!-- /theme JS files -->
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<!-- Browser-Nav-Logo -->
+	<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="./brand_img/hummingsoft logo_light.png" alt="">
+			</a>
+		</div>
+
+		<!-- Mobile-Nav -->
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+
+				<!-- Notification -->
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+						<i class="icon-bell2"></i>
+						<span class="badge badge-pill bg-warning-400 ml-auto ml-md-0">9+</span>
+					</a>
+
+					<div class="dropdown-menu dropdown-content wmin-md-350">
+						<div class="dropdown-content-header">
+							<span class="font-weight-semibold">Notifications</span>
+							<a href="#" class="text-default"><i class="icon-sync"></i></a>
+						</div>
+
+						<div class="dropdown-content-body dropdown-scrollable">
+							<ul class="media-list">
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-primary text-primary rounded-round border-2 btn-icon"><i
+												class="icon-git-pull-request"></i></a>
+									</div>
+
+									<div class="media-body">
+										Drop the IE <a href="#">specific hacks</a> for temporal inputs
+										<div class="text-muted font-size-sm">4 minutes ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-warning text-warning rounded-round border-2 btn-icon"><i
+												class="icon-git-commit"></i></a>
+									</div>
+
+									<div class="media-body">
+										Add full font overrides for popovers and tooltips
+										<div class="text-muted font-size-sm">36 minutes ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-info text-info rounded-round border-2 btn-icon"><i
+												class="icon-git-branch"></i></a>
+									</div>
+
+									<div class="media-body">
+										<a href="#">Chris Arney</a> created a new <span
+											class="font-weight-semibold">Design</span> branch
+										<div class="text-muted font-size-sm">2 hours ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-success text-success rounded-round border-2 btn-icon"><i
+												class="icon-git-merge"></i></a>
+									</div>
+
+									<div class="media-body">
+										<a href="#">Eugene Kopyov</a> merged <span
+											class="font-weight-semibold">Master</span> and <span
+											class="font-weight-semibold">Dev</span> branches
+										<div class="text-muted font-size-sm">Dec 18, 18:36</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-primary text-primary rounded-round border-2 btn-icon"><i
+												class="icon-git-pull-request"></i></a>
+									</div>
+
+									<div class="media-body">
+										Have Carousel ignore keyboard events
+										<div class="text-muted font-size-sm">Dec 12, 05:46</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<span class=" ml-md-3 mr-md-auto"></span>
+
+
+
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
+						data-toggle="dropdown">
+						<img src="../main/global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2"
+							height="34" alt="">
+						<span>Mr.Cyprian</span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>
+						<a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user">
+					<div class="card-body">
+						<div class="media">
+							<div class="mr-3">
+								<!-- user-profile-image -->
+								<a href="#"><img src="../main/global_assets/images/placeholders/placeholder.jpg"
+										width="38" height="38" class="rounded-circle" alt=""></a>
+							</div>
+							<div class="media-body">
+								<div class="media-title font-weight-semibold">Cyprian Aidan Chong</div>
+								<div class="font-size-xs opacity-50">
+									<i class="icon-pin font-size-sm"></i> &nbsp;Farm 1, Pulau Ketam, MY
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<!-- Account -->
+
+						<!-- Account -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Master Dashboard</div> <i
+								class="icon-circle-small" title="Main"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-gear"></i>
+								<span>Product Visualizer</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="./superadmin-mv-fc-farm-management.html"
+										class="nav-link">Recorder Data</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mv-feed.html" class="nav-link">Purchasing
+										Data</a>
+								</li>
+								<li class="nav-item"><a href="#" class="nav-link">Accounting Data</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mv-fc-farm-management.html"
+										class="nav-link">Operational Admin Data</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mv-feed.html" class="nav-link">Bagan
+										Warehouse Data</a>
+								</li>
+
+							</ul>
+
+						</li>
+						<!-- /Account -->
+
+						<!-- Account -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Master Form</div> <i
+								class="icon-circle-small" title="Main"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link active"><i class="icon-gear"></i>
+								<span>Master Value Configuration</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="./superadmin-mv-fc-farm-management.html"
+										class="nav-link active">Farm
+										Management</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mv-feed.html" class="nav-link">Feed
+										Management</a>
+								</li>
+								<li class="nav-item"><a href="#" class="nav-link">Species
+										Management</a>
+								</li>
+							</ul>
+
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
+								<span> Recorder Data Entry</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="./superadmin-mf-rd-feed.html" class="nav-link">Feed</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mf-rd-mortality-overview.html"
+										class="nav-link ">Mortality</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mf-rd-stock-count-overview.html"
+										class="nav-link">Stock Count</a></li>
+								<li class="nav-item"><a href="superadmin-mf-rd-sizing-overview.html"
+										class="nav-link">Sizing</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="./superadmin-mf-reservation.html" class="nav-link"><i class="icon-drawer3"></i>
+								<span>Reservation</span></a>
+						</li>
+
+						<!-- Account -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Configuration</div> <i
+								class="icon-circle-small" title="Main"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href=" #" class="nav-link "><i class="icon-gear"></i>
+								<span>Net Management</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="./superadmin-nm-nc-create-net-overview.html"
+										class="nav-link">Create Net</a></li>
+								<li class="nav-item"><a href="./superadmin-nm-nc-merge-net-overview.html"
+										class="nav-link">Merge Net</a></li>
+								<li class="nav-item"><a href="./superadmin-nm-nc-split-net-overview.html"
+										class="nav-link">Split Net</a></li>
+								<li class="nav-item"><a href="./superadmin-nm-nc-management-net-fv-overview.html"
+										class="nav-link">Manage Net</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-gear"></i>
+								<span>User Management</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="./superadmin-um-user-create.html" class="nav-link">Create
+										User
+										Account</a></li>
+								<li class="nav-item"><a href="./superadmin-um-user-management.html" class="nav-link">
+										Manage User
+										Account
+									</a></li>
+							</ul>
+						</li>
+
+						<!-- Account -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Floorplan Viewer</div> <i
+								class="icon-circle-small" title="Main"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href=" #" class="nav-link "><i class="icon-gear"></i>
+								<span>Floorplan Management</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="./superadmin-floorplan-overview.html"
+										class="nav-link">Overview Floorplan</a></li>
+								<li class="nav-item"><a href="./superadmin-floorplan-reservation-overview.html"
+										class="nav-link">Reservation Floorplan</a></li>
+								<li class="nav-item"><a href="./superadmin-floorplan-feed-overview.html"
+										class="nav-link ">Feed Floorplan</a></li>
+								<li class="nav-item"><a href="./superadmin-floorplan-mortality-overview.html"
+										class="nav-link">Mortality Floorplan</a></li>
+								<li class="nav-item"><a href="./superadmin-floorplan-stock-count-overview.html"
+										class="nav-link">Stock Floorplan</a></li>
+							</ul>
+						</li>
+
+
+						<!-- Account -->
+
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Report</div> <i
+								class="icon-circle-small" title="Main"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-file-text "></i>
+								<span>FCR</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="#" class="nav-link">Batch FCR</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Farm/Species FCR</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="./recorder-stock-count-form-overview.html" class="nav-link"><i
+									class="icon-file-text "></i> <span>Stock</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="#" class="nav-link">Movement By Farm</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Movement By batch</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Mortality</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Discrepency</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Last Count</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Survivor Rate</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-file-text "></i>
+								<span>Farm Usage</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="#" class="nav-link">Farm By Cage</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Farm By Species</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Feed</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-file-text "></i>
+								<span>Batch</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="#" class="nav-link">Profiling</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-file-text "></i>
+								<span>Werehouse</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="#" class="nav-link">Stock Movement</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Inventory</a></li>
+							</ul>
+						</li>
+						<!-- /Account -->
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+
+				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+					<div class="d-flex">
+						<h class="breadcrumb-item active">Master Form</h>
+						<h class="breadcrumb-item active">Farm Management</h>
+						<a href="./superadmin-mv-fc-farm-management.html" class="breadcrumb-item">Farm Create Form</a>
+					</div>
+
+
+				</div>
+			</div>
+			<!-- /page header -->
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+				<!-- Content area -->
+				<div class="content2">
+					<div class="row">
+						<!-- /fieldset legend -->
+
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<!-- 2 columns form -->
+							<div class="card">
+
+
+								<div class="card-header bg-white header-elements-inline">
+									<h5 class="card-title font-weight-bold">Create Farm</h5>
+									<div class="header-elements">
+
+									</div>
+								</div>
+								<div class="card-body">
+									<form action="#">
+										<div class="row">
+											<div class="col-md-6">
+												<fieldset>
+													<div class="form-group">
+														<label>Site:</label>
+														<select data-placeholder="Select your state"
+															class="form-control form-control-select2" data-fouc>
+															<optgroup label="Pulau Ketam">
+																<option value="Farm-1">BA</option>
+																<option value="Farm-2">BB</option>
+																<option value="Farm-3">BD</option>
+																<option value="Farm-3">BE</option>
+																<option value="Farm-3">BF</option>
+																<option value="Farm-3">BJ</option>
+															</optgroup>
+															<optgroup label="Johor">
+																<option value="Farm-1">JA</option>
+																<option value="Farm-2">JB</option>
+																<option value="Farm-3">JC</option>
+															</optgroup>
+															</optgroup>
+														</select>
+													</div>
+												</fieldset>
+											</div>
+
+
+											<div class="col-md-6">
+												<fieldset>
+													<div class="form-group">
+														<label>Farm Name:</label>
+														<input type="email" class="form-control"
+															placeholder="Insert other amount">
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<fieldset>
+													<div class="form-group">
+														<label>Code:</label>
+														<input type="email" class="form-control"
+															placeholder="Insert other amount">
+													</div>
+												</fieldset>
+											</div>
+
+
+											<div class="col-md-6">
+												<fieldset>
+													<div class="form-group">
+														<label>Dimension:</label>
+														<select data-placeholder="Select your state"
+															class="form-control form-control-select2" data-fouc>
+															<option value="Farm-1">12 X 12</option>
+															<option value="Farm-2">12 X 16</option>
+															<option value="Farm-3">16 X 16</option>
+															<option value="Farm-3">20 X 20</option>
+														</select>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="text-right">
+											<button type="button" class="btn btn-primary"
+												onClick="location.href='superadmin-mv-fc-farm-management-create-20x20.html'">Next</button>
+										</div>
+									</form>
+								</div>
+
+
+
+							</div>
+
+						</div>
+
+
+
+
+
+
+
+					</div>
+				</div>
+				<!-- /content area -->
+
+
+
+				<!-- Footer -->
+				<div class="navbar navbar-expand-lg navbar-light">
+					<div class="text-center d-lg-none w-100">
+						<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+							data-target="#navbar-footer">
+							<i class="icon-unfold mr-2"></i>
+							Footer
+						</button>
+					</div>
+
+					<div class="navbar-collapse collapse" id="navbar-footer">
+						<span class="navbar-text">
+							&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a
+								href="http://themeforest.net/user/Kopyov" target="_blank">Cyprian Aidan
+								Chong</a>
+						</span>
+
+						<ul class="navbar-nav ml-lg-auto">
+							<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
+									target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+							<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
+									class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i>
+									Docs</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /footer -->
+
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+</body>
+
+</html>

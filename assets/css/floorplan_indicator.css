@@ -1,0 +1,74 @@
+.floorplan-batch-size-input {
+    color: green;
+}
+
+.floorplan-last-enter-size-input {
+    color: green;
+}
+
+.floorplan-sizing-size-input {
+    color: green;
+}
+
+.floorplan-batch-stock-input {
+    color: green;
+}
+
+.floorplan-last-enter-stock-input {
+    color: green;
+}
+
+.floorplan-stocking-stock-input {
+    color: green;
+}
+
+.floorplan-batch-mortality-input {
+    color: green;
+}
+
+.floorplan-last-enter-mortality-input {
+    color: green;
+}
+
+.floorplan-mortaliting-mortality-input {
+    color: green;
+}
+
+.table-location-indicator {
+    padding-top: 2px;
+    color: green;
+}
+
+.floorplan-details {
+    width: 150px;
+}
+
+.floorplan-details-empty {
+    width: 30px;
+    height: 5px;
+}
+
+table.example-table .selected {
+    background-color: rgb(255, 228, 73, 0.8);
+}
+
+.demo-color-1 {
+    background-color: green;
+}
+
+.demo-color-2 {
+    background-color: green;
+}
+
+.table-column-color {
+    background-color: none;
+}
+
+.table-row-color {
+    background-color: none;
+}
+
+.table-select-highlight:hover {
+    background-color: rgb(204, 204, 204);
+    box-shadow: 0 0 6px rgb(34, 34, 34, 0.2);
+}

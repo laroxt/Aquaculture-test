@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
+	<title>Graphs | KS Aquaculture | Operator</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+		type="text/css">
+	<link href="../main/global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="../main/global_assets/js/main/jquery.min.js"></script>
+	<script src="../main/global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="../main/global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="../main/global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="../main/global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="../main/global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="../main/global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="../main/global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<!-- /theme JS files -->
+
+
+
+
+	<!-- Theme JS files -->
+	<script src="assets/js/app.js"></script>
+	<script src="./global_assets/js/plugins/visualization/echarts/echarts.min.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/bars/columns_basic.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/bars/columns_stacked.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/bars/columns_thermometer.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/bars/columns_stacked_clustered.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/bars/waterfall_compositive.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/bars/waterfall_change.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/bars/columns_timeline.js"></script>
+	<script src="./global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="./global_assets/js/plugins/visualization/c3/c3.min.js"></script>
+	<script src="./global_assets/js/demo_charts/c3/c3_bars_pies.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/dark/lines/lines_zoom.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/lines/area_point_values.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/lines/lines_stacked.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/dark/lines/lines_zoom.js"></script>
+
+	<!-- /theme JS files -->
+
+
+</head>
+
+<body>
+
+
+	<!-- Main navbar -->
+	<!-- Browser-Nav-Logo -->
+	<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="./brand_img/hummingsoft logo_light.png" alt="">
+			</a>
+		</div>
+
+		<!-- Mobile-Nav -->
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+
+				<!-- Notification -->
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+						<i class="icon-bell2"></i>
+						<span class="badge badge-pill bg-warning-400 ml-auto ml-md-0">9</span>
+					</a>
+
+					<div class="dropdown-menu dropdown-content wmin-md-350">
+						<div class="dropdown-content-header">
+							<span class="font-weight-semibold">Notifications</span>
+							<a href="#" class="text-default"><i class="icon-sync"></i></a>
+						</div>
+
+						<div class="dropdown-content-body dropdown-scrollable">
+							<ul class="media-list">
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-primary text-primary rounded-round border-2 btn-icon"><i
+												class="icon-git-pull-request"></i></a>
+									</div>
+
+									<div class="media-body">
+										Drop the IE <a href="#">specific hacks</a> for temporal inputs
+										<div class="text-muted font-size-sm">4 minutes ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-warning text-warning rounded-round border-2 btn-icon"><i
+												class="icon-git-commit"></i></a>
+									</div>
+
+									<div class="media-body">
+										Add full font overrides for popovers and tooltips
+										<div class="text-muted font-size-sm">36 minutes ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-info text-info rounded-round border-2 btn-icon"><i
+												class="icon-git-branch"></i></a>
+									</div>
+
+									<div class="media-body">
+										<a href="#">Chris Arney</a> created a new <span
+											class="font-weight-semibold">Design</span> branch
+										<div class="text-muted font-size-sm">2 hours ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-success text-success rounded-round border-2 btn-icon"><i
+												class="icon-git-merge"></i></a>
+									</div>
+
+									<div class="media-body">
+										<a href="#">Eugene Kopyov</a> merged <span
+											class="font-weight-semibold">Master</span> and <span
+											class="font-weight-semibold">Dev</span> branches
+										<div class="text-muted font-size-sm">Dec 18, 18:36</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-primary text-primary rounded-round border-2 btn-icon"><i
+												class="icon-git-pull-request"></i></a>
+									</div>
+
+									<div class="media-body">
+										Have Carousel ignore keyboard events
+										<div class="text-muted font-size-sm">Dec 12, 05:46</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<span class=" ml-md-3 mr-md-auto"></span>
+
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
+						data-toggle="dropdown">
+						<img src="../main/global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2"
+							height="34" alt="">
+						<span>Mr.Cyprian</span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>
+						<a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user">
+					<div class="card-body">
+						<div class="media">
+							<div class="mr-3">
+								<!-- user-profile-image -->
+								<a href="#"><img src="../main/global_assets/images/placeholders/placeholder.jpg"
+										width="38" height="38" class="rounded-circle" alt=""></a>
+							</div>
+							<div class="media-body">
+								<div class="media-title font-weight-semibold">Cyprian Aidan Chong</div>
+								<div class="font-size-xs opacity-50">
+									<i class="icon-pin font-size-sm"></i> &nbsp;Farm 1, Pulau Ketam, MY
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<!-- Account -->
+						<li class="nav-item">
+							<a href="index.html" class="nav-link active">
+								<i class="icon-home4"></i>
+								<span>
+									Dashboard
+								</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="index.html" class="nav-link ">
+								<i class="icon-home4"></i>
+								<span>
+									Report
+								</span>
+							</a>
+						</li>
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Account</div> <i class="icon-menu"
+								title="Main"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Floorplan Entry</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="index.html" class="nav-link">Reservation</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-credit-card"></i> <span>Purchase</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Themes">
+								<li class="nav-item"><a href="index.html" class="nav-link">Fries</a></li>
+								<li class="nav-item"><a href="../../../LTR/material/full/index.html"
+										class="nav-link">Item</a></li>
+								<li class="nav-item"><a href="../../../LTR/dark/full/index.html"
+										class="nav-link">Feed</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Cost Center</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								<li class="nav-item"><a href="../seed/layout_nav_horizontal.html"
+										class="nav-link">Verify Fries</a></li>
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Monthly
+										Overhead
+										Entry</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_main.html" class="nav-link">Batch Cost
+										Transfer</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_main.html" class="nav-link">Pellet
+										Standard Price</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_main.html" class="nav-link">Trash Fish
+										Standard Price</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-file-text2"></i> <span>Report</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Movement
+										Cost</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Fries
+										Verification</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /Account -->
+
+						<!-- Operation -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Operation</div> <i class="icon-menu"
+								title="Main"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Floorplan Entry</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="index.html" class="nav-link">Feed</a>
+								</li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="index.html" class="nav-link">Mortality</a>
+								</li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="index.html" class="nav-link">Stock Count</a>
+								</li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="index.html" class="nav-link">Reservation</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-color-sampler"></i> <span>Farm</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Themes">
+								<li class="nav-item"><a href="index.html" class="nav-link">Delivery Order Entery</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Net</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Create</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Split</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Merge</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Fries</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								<li class="nav-item"><a href="../seed/layout_nav_horizontal.html"
+										class="nav-link">Verify Fries</a></li>
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Check In</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_main.html" class="nav-link">Varify</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_main.html" class="nav-link">Pellet
+										Standard Price</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_main.html" class="nav-link">Medication
+										Standard Price</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_main.html" class="nav-link">Trash Fish
+										Standard Price</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Werehouse</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Feed
+										Transfer</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Transfer Check
+										In</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Cost Center</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Pellet
+										Standard Price</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Trash Fish
+										Standard Price</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /Operation -->
+
+						<!-- Report -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Report</div> <i class="icon-menu"
+								title="Main"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>FCR</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="index.html" class="nav-link">Farm/Special FCR</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-color-sampler"></i> <span>Stock</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Themes">
+								<li class="nav-item"><a href="index.html" class="nav-link">Movement</a></li>
+								<li class="nav-item"><a href="../../../LTR/material/full/index.html"
+										class="nav-link">Mortality</a></li>
+								<li class="nav-item"><a href="../../../LTR/dark/full/index.html"
+										class="nav-link">Discrepancy</a></li>
+								<li class="nav-item"><a href="../../../LTR/dark/full/index.html" class="nav-link">Last
+										Count</a></li>
+								<li class="nav-item"><a href="../../../LTR/dark/full/index.html"
+										class="nav-link">Survival Rate</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Farm Usage</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								<li class="nav-item"><a href="../seed/layout_nav_horizontal.html"
+										class="nav-link">Verify Fries</a></li>
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Farm(By
+										Cage)</a>
+								</li>
+								<li class="nav-item"><a href="../seed/sidebar_main.html" class="nav-link">Feed</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Batch</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Profiling</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Werehouse</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Inventory</a>
+								</li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								<li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">Farm
+										Management</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /Report -->
+
+						<!-- System -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">System</div> <i class="icon-menu"
+								title="Main"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Master Value</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="index.html" class="nav-link">Feed Management</a>
+								</li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="index.html" class="nav-link">Species Management</a>
+								</li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="index.html" class="nav-link">Farm Management</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /System -->
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+
+				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+					<div class="d-flex">
+						<div class="breadcrumb">
+							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+							<span class="breadcrumb-item active">Dashboard</span>
+						</div>
+
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+
+					<div class="header-elements d-none">
+						<div class="breadcrumb justify-content-center">
+							<div class="breadcrumb-elements-item dropdown p-0">
+								<a href="#" class="breadcrumb-elements-item dropdown-toggle" data-toggle="dropdown">
+									<i class="icon-gear mr-2"></i>
+									Product Visualizer Filter
+								</a>
+
+								<div class="dropdown-menu dropdown-menu-right">
+									<a href="#" class="dropdown-item"><i class="icon-user-lock"></i> Daily</a>
+									<a href="#" class="dropdown-item"><i class="icon-user-lock"></i> Weekly</a>
+									<a href="#" class="dropdown-item"><i class="icon-statistics"></i> Montly</a>
+									<a href="#" class="dropdown-item"><i class="icon-accessibility"></i>
+										Yearly</a>
+									<div class="dropdown-divider"></div>
+									<a href="#" class="dropdown-item"><i class="icon-gear"></i> Custom Filter</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+
+				<div class="row">
+					<div class="col-xl-3">
+
+						<!-- Traffic sources -->
+						<div class="card">
+							<div class="card-header header-elements-inline ">
+								<h5 class="card-title font-weight-bold">Number of Sales</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+									</div>
+								</div>
+							</div>
+							<div>
+								<h1 class=" pt-4 text-center  quick-view-card">RM600K
+								</h1>
+								<h1 class="font-size-lg text-center   text-success">
+									(6.8%)
+								</h1>
+
+								<i class="icon-circle-up2 counter-icon border-success text-success"
+									style="top:50px"></i>
+							</div>
+						</div>
+						<!-- /traffic sources -->
+					</div>
+
+					<div class="col-xl-3">
+
+						<!-- Sales stats -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title font-weight-bold">Revenue</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+									</div>
+								</div>
+							</div>
+							<div>
+								<h1 class=" pt-4 text-center  quick-view-card">RM600K
+								</h1>
+								<h1 class="font-size-lg text-center   text-success">
+									(6.8%)
+								</h1>
+
+								<i class="icon-circle-up2 counter-icon border-success text-success"
+									style="top:50px"></i>
+							</div>
+						</div>
+						<!-- /sales stats -->
+					</div>
+
+					<div class="col-xl-3">
+
+						<!-- Sales stats -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title font-weight-bold">Profit</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+									</div>
+								</div>
+							</div>
+							<div>
+								<h1 class=" pt-4 text-center  quick-view-card">RM600K
+								</h1>
+								<h1 class="font-size-lg text-center   text-success">
+									(6.8%)
+								</h1>
+
+								<i class="icon-circle-up2 counter-icon border-success text-success"
+									style="top:50px"></i>
+							</div>
+						</div>
+						<!-- /sales stats -->
+					</div>
+
+
+					<div class="col-xl-3">
+
+						<!-- Sales stats -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title font-weight-bold">Cost</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+									</div>
+								</div>
+							</div>
+							<div>
+								<h1 class=" pt-4 text-center  quick-view-card">RM600K
+								</h1>
+								<h1 class="font-size-lg text-center  text-success">
+									(6.8%)
+								</h1>
+
+								<i class="icon-circle-up2 counter-icon border-success text-success"
+									style="top:50px"></i>
+							</div>
+						</div>
+						<!-- /sales stats -->
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col-xl-12">
+
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title font-weight-bold">Sales Revenue</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body">
+								<div class="chart-container">
+									<div class="chart has-fixed-height" id="columns_timeline"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Main charts -->
+				<div class="row">
+					<div class="col-xl-6">
+
+						<!-- Traffic sources -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title font-weight-bold">FCR</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="chart-container">
+									<div class="chart has-fixed-height" id="area_values"></div>
+								</div>
+							</div>
+						</div>
+						<!-- /traffic sources -->
+					</div>
+
+					<div class="col-xl-6">
+
+						<!-- Sales stats -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title font-weight-bold">Market Forecast</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="chart-container">
+									<div class="chart has-fixed-height" id="line_zoom"></div>
+								</div>
+							</div>
+						</div>
+						<!-- /sales stats -->
+					</div>
+				</div>
+
+				<!-- /main charts -->
+				<div class="row">
+					<div class="col-xl-7">
+
+						<!-- Traffic sources -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title font-weight-bold">Overhead Cost</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="chart-container">
+									<div class="chart has-fixed-height" id="line_stacked"></div>
+								</div>
+							</div>
+						</div>
+						<!-- /traffic sources -->
+					</div>
+
+
+
+					<div class="col-xl-5">
+
+						<!-- Traffic sources -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title font-weight-bold">Cost Breakdown</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="chart-container text-center">
+									<div class="d-inline-block" id="c3-pie-chart-1"></div>
+								</div>
+							</div>
+						</div>
+						<!-- /traffic sources -->
+					</div>
+
+				</div>
+
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<div class="navbar navbar-expand-lg navbar-light">
+				<div class="text-center d-lg-none w-100">
+					<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+						data-target="#navbar-footer">
+						<i class="icon-unfold mr-2"></i>
+						Footer
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse" id="navbar-footer">
+					<span class="navbar-text">
+						&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a href="http://themeforest.net/user/Kopyov"
+							target="_blank">Cyprian Aidan Chong</a>
+					</span>
+
+					<ul class="navbar-nav ml-lg-auto">
+						<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
+								target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+						<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
+								class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+</body>
+
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
+	<title>KS Aquaculture | Recorder | Stock Count Form Entry</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+		type="text/css">
+	<link href="./global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="./global_assets/js/main/jquery.min.js"></script>
+	<script src="./global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="./global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="./global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/selects/select3.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="./global_assets/js/demo_pages/form_multiselect.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
+	<script src="./global_assets/js/demo_pages/form_wizard3.js"></script>
+
+	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
+
+	<script src="./global_assets/js/demo_pages/extra_pnotify.js"></script>
+	<script src="./global_assets/js/plugins/notifications/pnotify.min.js"></script>
+
+
+	<!-- Theme JS files -->
+	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
+	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
+	<!-- /theme JS files -->
+
+
+
+
+	<!-- /theme JS files -->
+
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<!-- Browser-Nav-Logo -->
+	<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="./brand_img/hummingsoft logo_light.png" alt="">
+			</a>
+		</div>
+
+		<!-- Mobile-Nav -->
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+
+				<!-- Notification -->
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+						<i class="icon-bell2"></i>
+						<span class="badge badge-pill bg-warning-400 ml-auto ml-md-0">9+</span>
+					</a>
+
+					<div class="dropdown-menu dropdown-content wmin-md-350">
+						<div class="dropdown-content-header">
+							<span class="font-weight-semibold">Notifications</span>
+							<a href="#" class="text-default"><i class="icon-sync"></i></a>
+						</div>
+
+						<div class="dropdown-content-body dropdown-scrollable">
+							<ul class="media-list">
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-primary text-primary rounded-round border-2 btn-icon"><i
+												class="icon-git-pull-request"></i></a>
+									</div>
+
+									<div class="media-body">
+										Drop the IE <a href="#">specific hacks</a> for temporal inputs
+										<div class="text-muted font-size-sm">4 minutes ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-warning text-warning rounded-round border-2 btn-icon"><i
+												class="icon-git-commit"></i></a>
+									</div>
+
+									<div class="media-body">
+										Add full font overrides for popovers and tooltips
+										<div class="text-muted font-size-sm">36 minutes ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-info text-info rounded-round border-2 btn-icon"><i
+												class="icon-git-branch"></i></a>
+									</div>
+
+									<div class="media-body">
+										<a href="#">Chris Arney</a> created a new <span
+											class="font-weight-semibold">Design</span> branch
+										<div class="text-muted font-size-sm">2 hours ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-success text-success rounded-round border-2 btn-icon"><i
+												class="icon-git-merge"></i></a>
+									</div>
+
+									<div class="media-body">
+										<a href="#">Eugene Kopyov</a> merged <span
+											class="font-weight-semibold">Master</span> and <span
+											class="font-weight-semibold">Dev</span> branches
+										<div class="text-muted font-size-sm">Dec 18, 18:36</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#"
+											class="btn bg-transparent border-primary text-primary rounded-round border-2 btn-icon"><i
+												class="icon-git-pull-request"></i></a>
+									</div>
+
+									<div class="media-body">
+										Have Carousel ignore keyboard events
+										<div class="text-muted font-size-sm">Dec 12, 05:46</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<span class=" ml-md-3 mr-md-auto"></span>
+
+
+
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
+						data-toggle="dropdown">
+						<img src="../main/global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2"
+							height="34" alt="">
+						<span>Mr.Cyprian</span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>
+						<a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user">
+					<div class="card-body">
+						<div class="media">
+							<div class="mr-3">
+								<!-- user-profile-image -->
+								<a href="#"><img src="../main/global_assets/images/placeholders/placeholder.jpg"
+										width="38" height="38" class="rounded-circle" alt=""></a>
+							</div>
+							<div class="media-body">
+								<div class="media-title font-weight-semibold">Cyprian Aidan Chong</div>
+								<div class="font-size-xs opacity-50">
+									<i class="icon-pin font-size-sm"></i> &nbsp;Farm 1, Pulau Ketam, MY
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<!-- Account -->
+						<li class="nav-item">
+							<a href="./recorder-overview.html" class="nav-link">
+								<i class="icon-home4"></i>
+								<span>
+									Overview
+								</span>
+							</a>
+						</li>
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Floorplan Entery</div> <i
+								class="icon-menu" title="Main"></i>
+						</li>
+						<li class="nav-item">
+							<a href="./recorder-feed-form-overview.html" class="nav-link"><i class="icon-power2"></i>
+								<span>Feeding</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="./recorder-stock-count-form-overview.html" class="nav-link active"><i
+									class="icon-graph"></i> <span>Stock Count</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="./recorder-mortality-form-overview.html" class="nav-link"><i
+									class="icon-heart5"></i>
+								<span>Mortality</span></a>
+						</li>
+						<!-- /Account -->
+
+
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+
+				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+					<div class="d-flex">
+						<div class="breadcrumb">
+							<h class="breadcrumb-item active">Floorplan
+								Entry</h>
+							<a href="./recorder-stock-count-form-overview.html" class="breadcrumb-item active">Stock
+								Count</a>
+							<a href="./recorder-stock-count-form-entry.html" class="breadcrumb-item">Stock Count
+								Entry</a>
+						</div>
+
+
+					</div>
+
+
+				</div>
+			</div>
+			<!-- /page header -->
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+				<!-- Content area -->
+				<div class="content">
+					<!-- /fieldset legend -->
+
+					<div class="row">
+						<div class="col-md-12">
+							<!-- 2 columns form -->
+							<div class="card">
+								<div class="card-header header-elements-inline">
+									<h5 class="card-title font-weight-bold">Stock Count Entry</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+											<a class="list-icons-item" data-action="remove"></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="card-body">
+									<form action="#">
+										<div class="row">
+
+											<div class="col-md-3">
+												<fieldset>
+
+													<div class="form-group">
+														<label>Net Id:</label>
+														<input type="text" class="form-control" placeholder="A5-11"
+															disabled>
+													</div>
+
+													<div class="form-group">
+														<label>Net Size:</label>
+														<select data-placeholder="Select your state"
+															class="form-control form-control-select2" data-fouc>
+															<option value="Farm-1">1 INCH</option>
+															<option value="Farm-2">2 INCH</option>
+															<option value="Farm-3">3 INCH</option>
+															<option value="Farm-3">4 INCH</option>
+
+														</select>
+													</div>
+													<div class="form-group2" style="margin-top:-5px;">
+														<label class="d-block">Type:</label>
+
+														<div class="form-check form-check-inline">
+															<label class="form-check-label">
+																<input type="radio" class="form-input-styled"
+																	name="gender" checked data-fouc>
+																Total Stock
+															</label>
+														</div>
+														<div class="form-check form-check-inline">
+															<label class="form-check-label">
+																<input type="radio" class="form-input-styled"
+																	name="gender" data-fouc>
+																Batch Stock
+															</label>
+														</div>
+													</div>
+													<div class="form-group">
+														<label>Size Update:</label><br>
+														<label>Min:</label>
+														<input type="text" class="form-control" placeholder="A5-11"
+															disabled>
+													</div>
+													<div class="form-group">
+														<label>Max:</label>
+														<input type="text" class="form-control" placeholder="A5-11"
+															disabled>
+													</div>
+												</fieldset>
+											</div>
+
+											<div class="col-md-9">
+												<label>Batch Stock:</label>
+												<div class="table-responsive table-scrollable2">
+													<table class="table">
+														<thead>
+															<tr>
+																<th class=table-row-color>Batch</th>
+																<th class=table-row-color>Quality</th>
+																<th class=table-row-color>Size(KG)</th>
+																<th class=table-row-color>Total Stock</th>
+															</tr>
+															<style>
+																.table thead th {
+																	position: sticky;
+																	top: 0;
+																}
+															</style>
+														</thead>
+														<tbody>
+															<tr>
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+															<tr>
+																<td>BA11AS103-A5-12</td>
+																<td>1000</td>
+																<td>0.050-0.100</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+															<tr>
+																<td>BA12AR122-A12-7</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+															<tr>
+																<td>BA12AR122-A12-7</td>
+																<td>5000</td>
+																<td>0.050-0.100</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+															<tr>
+																<td>BA12AR122-A12-7</td>
+																<td>5000</td>
+																<td>0.050-0.100</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+															<tr>
+																<td>BA12AR122-A12-7</td>
+																<td>5000</td>
+																<td>0.050-0.100</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+															<tr>
+																<td>BA12AR122-A12-7</td>
+																<td>5000</td>
+																<td>0.050-0.100</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+															<tr>
+																<td>BA12AR122-A12-7</td>
+																<td>5000</td>
+																<td>0.050-0.100</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+															<tr>
+																<td>BA12AR122-A12-7</td>
+																<td>5000</td>
+																<td>0.050-0.100</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+															<tr>
+																<td>BA12AR122-A12-7</td>
+																<td>5000</td>
+																<td>0.050-0.100</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+															<tr>
+																<td>BA12AR122-A12-7</td>
+																<td>5000</td>
+																<td>0.050-0.100</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+
+
+											</div>
+										</div>
+
+										<div class="text-right" style="margin-top:20px;">
+											<button type="button" class="btn btn-primary"
+												id="pnotify-solid-primary">Submit</button>
+										</div>
+									</form>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /2 columns form -->
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<div class="navbar navbar-expand-lg navbar-light">
+				<div class="text-center d-lg-none w-100">
+					<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+						data-target="#navbar-footer">
+						<i class="icon-unfold mr-2"></i>
+						Footer
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse" id="navbar-footer">
+					<span class="navbar-text">
+						&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a href="http://themeforest.net/user/Kopyov"
+							target="_blank">Cyprian Aidan
+							Chong</a>
+					</span>
+
+					<ul class="navbar-nav ml-lg-auto">
+						<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
+								target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+						<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
+								class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+</body>
+
+</html>
