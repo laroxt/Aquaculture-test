@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>KS Aquaculture-Fp-Mortality Floorplan</title>
+	<title>KS Aquaculture-Mf-Reservation</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -47,9 +47,13 @@
 	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
 
+
+
 	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
 	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
 	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
+
+
 	<!-- /theme JS files -->
 
 </head>
@@ -284,11 +288,11 @@
 								class="icon-circle-small" title="Main"></i>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-gear"></i>
+							<a href="#" class="nav-link ac"><i class="icon-gear"></i>
 								<span>Master Value Configuration</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
 								<li class="nav-item"><a href="./superadmin-mv-fc-farm-management.html"
-										class="nav-link">Farm
+										class="nav-link active">Farm
 										Management</a>
 								</li>
 								<li class="nav-item"><a href="./superadmin-mv-feed.html" class="nav-link">Feed
@@ -317,11 +321,11 @@
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
+							<a href="#" class="nav-link active"><i class="icon-drawer3"></i>
 								<span> Account Data Entry</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
 								<li class="nav-item"><a href="./superadmin-mf-account-reservation.html"
-										class="nav-link">Reservation</a>
+										class="nav-link active">Reservation</a>
 								</li>
 								<li class="nav-item"><a href="./superadmin-mf-account-purchase-fries.html"
 										class="nav-link ">Purchase Fries</a>
@@ -367,6 +371,7 @@
 								</li>
 							</ul>
 						</li>
+
 						<!-- Account -->
 						<li class="nav-item-header">
 							<div class="text-uppercase font-size-xs line-height-xs">Configuration</div> <i
@@ -406,7 +411,7 @@
 								class="icon-circle-small" title="Main"></i>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href=" #" class="nav-link ac"><i class="icon-gear"></i>
+							<a href=" #" class="nav-link "><i class="icon-gear"></i>
 								<span>Floorplan Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
 								<li class="nav-item"><a href="./superadmin-floorplan-overview.html"
@@ -414,9 +419,9 @@
 								<li class="nav-item"><a href="./superadmin-floorplan-reservation-overview.html"
 										class="nav-link">Reservation Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-feed-overview.html"
-										class="nav-link">Feed Floorplan</a></li>
+										class="nav-link ">Feed Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-mortality-overview.html"
-										class="nav-link active">Mortality Floorplan</a></li>
+										class="nav-link">Mortality Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-stock-count-overview.html"
 										class="nav-link">Stock Floorplan</a></li>
 							</ul>
@@ -493,10 +498,11 @@
 
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
-						<h class="breadcrumb-item active">Floorplan Viewer</h>
-						<h class="breadcrumb-item active">Floorplan Management</h>
-						<a href="./superadmin-mf-rd-mortality-overview.html" class="breadcrumb-item">Mortality
-							Floorplan</a>
+						<h class="breadcrumb-item active">Master Form</h>
+						<h class="breadcrumb-item active">Account Data Entry</h>
+						<a href="./superadmin-mf-reservation.html" class="breadcrumb-item active">Reservation</a>
+						<a href="./superadmin-mf-reservation-edit.html" class="breadcrumb-item ">Reservation
+							Edit</a>
 					</div>
 
 
@@ -515,8 +521,7 @@
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Mortality Filter</h5>
-
+									<h5 class="card-title font-weight-bold">Reservation Filter</h5>
 									<div class="header-elements">
 										<div class="list-icons">
 											<a class="list-icons-item" data-action="collapse"></a>
@@ -595,6 +600,11 @@
 											</div>
 
 										</div>
+										<div class="text-right">
+											<button type="button" class="btn btn-primary-reset" id="sweet_warning"
+												style="
+												margin-bottom: 15px; margin-right: 10px ;">Confirm Reserve</button>
+										</div>
 									</form>
 								</div>
 							</div>
@@ -605,13 +615,15 @@
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header header-elements-inline">
-									<h5 class="card-title font-weight-bold">Mortality Floorplan</h5>
+									<h5 class="card-title font-weight-bold">Reservation Floorplan</h5>
 									<h style="font-weight: bold;">Farm: <span class="update-net-sucess">BA</span></h>
-									<h style="font-weight: bold;">Date: <span class="update-net-sucess">22/12/20</span>
+									<h style="font-weight: bold;">Date: <span
+											class="update-net-sucess">01/01/2021</span>
 									</h>
 									<h style="font-weight: bold;">Filter By: <span
 											class="update-net-sucess">Species</span></h>
 									<div class="header-elements">
+
 										<div class="list-icons">
 											<a class="icon-shrink7" data-action="#" onclick="zoomIn()"></a>
 											<a class="icon-enlarge7" data-action="#" onclick="zoomOut()"></a>
@@ -624,7 +636,11 @@
 
 								<div class="table-fixed table-scrollable-stock-count-form dragscroll"
 									style="margin-bottom: 20px; font-size: 11px; line-height: 1.3; cursor: grab; cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;">
-									<table class="table" class="table" id="zoom-table" style="zoom:100%;">
+
+
+
+
+									<table class="table" id="zoom-table" style="zoom:100%; ">
 										<thead>
 											<tr>
 												<th class="table-row-color">#</th>
@@ -649,16 +665,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -666,16 +682,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -683,16 +699,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -700,16 +716,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -717,16 +733,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -734,16 +750,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -751,16 +767,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -768,16 +784,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -785,16 +801,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -802,16 +818,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -819,16 +835,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -836,16 +852,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -856,16 +872,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -877,15 +893,17 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
+														Batch(es):<br> <span
+															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Places:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-
-														<i class=table-location-indicator>A1-1</i>
+															12G123</span><br>Ready for Sales</br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
+														<i class=table-location-indicator>A2-6, A2-7, A2-8, A2-9</i>
 													</div>
 												</td>
 												<td></td>
@@ -900,16 +918,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -927,14 +945,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
+														Batch(es):<br> <span
+															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Places:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -945,16 +965,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -975,19 +995,18 @@
 												<td id="A5-1"></td>
 												<td id="A5-2"></td>
 												<td>
-													<div class="floorplan-details">
-														<a href="#"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Places:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-
-														<i class=table-location-indicator>A1-1</i>
-													</div>
+													<a href="#"><i class="icon-info22"></i></a>
+													<a href="#"><i class="icon-alert"></i></a>
+													<a href="./superadmin-mf-reservation-edit.html"><i
+															class="icon-pencil7"></i></a><br>
+													Batch(es):<br> <span class="floorplan-batch-mortality-input">12F934,
+														118911,
+														12G123</span><br>Size:<span
+														class="floorplan-mortaliting-mortality-input"></span><br><span
+														class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+													Ready for Sales:<br>
+													<input type="checkbox" style="text-align:center;"></br>
+													<i class=table-location-indicator>A1-1</i>
 												</td>
 												<td></td>
 												<td></td>
@@ -1005,16 +1024,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1036,16 +1055,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1067,16 +1086,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1097,16 +1116,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1128,16 +1147,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1159,16 +1178,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1190,16 +1209,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1221,16 +1240,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1252,16 +1271,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1283,16 +1302,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1314,16 +1333,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1345,16 +1364,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1376,16 +1395,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1407,16 +1426,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1438,16 +1457,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1469,16 +1488,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1500,16 +1519,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1531,16 +1550,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1562,16 +1581,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1593,16 +1612,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1624,16 +1643,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>
@@ -1655,16 +1674,16 @@
 													<div class="floorplan-details">
 														<a href="#"><i class="icon-info22"></i></a>
 														<a href="#"><i class="icon-alert"></i></a>
-														<br>
+														<a href="./superadmin-mf-account-reservation-edit.html"><i
+																class="icon-pencil7"></i></a><br>
 														Batch(es):<br> <span
 															class="floorplan-batch-mortality-input">12F934,
 															118911,
-															12G123</span><br>Last Mortality
-														Entry:<br><span
-															class="floorplan-last-enter-mortality-input">01/01/2021
-															(5)</span></1><br>Total Mortality:<br><span
-															class="floorplan-mortaliting-mortality-input">5667</span><br>
-
+															12G123</span><br>Size:<span
+															class="floorplan-mortaliting-mortality-input"></span><br><span
+															class="floorplan-batch-mortality-input">1.10-1.20KG</span><br>
+														Ready for Sales:<br>
+														<input type="checkbox" style="text-align:center;"></br>
 														<i class=table-location-indicator>A1-1</i>
 													</div>
 												</td>

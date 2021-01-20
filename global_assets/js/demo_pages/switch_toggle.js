@@ -11,3 +11,17 @@ function toggle_nv(user, ctrl) {
     window.location.href = "./superadmin-nm-nc-management-net-fv-overview.html";
   }, 1000);
 }
+
+function toggle_verfied(user, ctrl) {
+  ctrl.setAttribute("disabled", true);
+  setTimeout(function (user, ctrl) {
+    window.location.href = "./superadmin-mf-account-cc-report-fries-vverified.html";
+  }, 1000);
+}
+
+function toggle_unverfied(user, ctrl) {
+  ctrl.setAttribute("disabled", true);
+  setTimeout(function (user, ctrl) {
+    window.location.href = "./superadmin-mf-account-cc-report-fries-vunverified.html";
+  }, 1000);
+}

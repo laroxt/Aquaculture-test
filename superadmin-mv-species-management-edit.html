@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>KS Aquaculture-Mf-Reservation Edit</title>
+	<title>KS Aquaculture-Mf-Species Managemnet Edit</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -28,27 +28,32 @@
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
-	<script src="./global_assets/js/plugins/forms/selects/select3.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<script src="./global_assets/js/demo_pages/form_multiselect.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
-	<script src="./global_assets/js/demo_pages/form_wizard3.js"></script>
+	<script src="./global_assets/js/demo_pages/form_wizard.js"></script>
 	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
 	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_pnotify.js"></script>
 	<script src="./global_assets/js/plugins/notifications/pnotify.min.js"></script>
 
+
 	<!-- Theme JS files -->
-	<script src="./global_assets/js/plugins/ui/moment/moment.min.js"></script>
-	<script src="./global_assets/js/plugins/pickers/daterangepicker.js"></script>
-	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
-
+	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
+	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
 	<!-- /theme JS files -->
 
+	<script src="./global_assets/js/plugins/pickers/color/spectrum.js"></script>
+	<script src="./global_assets/js/plugins/forms/styling/switchery.min.js"></script>
 
-	<!-- /theme JS files -->
+
+	<script src="./global_assets/js/demo_pages/picker_color.js"></script>
+
+
+
 
 </head>
 
@@ -292,7 +297,8 @@
 								<li class="nav-item"><a href="./superadmin-mv-feed.html" class="nav-link">Feed
 										Management</a>
 								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Species
+								<li class="nav-item"><a href="./superadmin-mv-species-management.html"
+										class="nav-link">Species
 										Management</a>
 								</li>
 							</ul>
@@ -313,10 +319,56 @@
 										class="nav-link">Sizing</a></li>
 							</ul>
 						</li>
-						<li class="nav-item">
-							<a href="./superadmin-mf-reservation.html" class="nav-link active"><i
-									class="icon-drawer3"></i>
-								<span>Reservation</span></a>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
+								<span> Account Data Entry</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="./superadmin-mf-account-reservation.html"
+										class="nav-link">Reservation</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mf-account-purchase-fries.html"
+										class="nav-link ">Purchase Fries</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mf-account-purchase-item.html"
+										class="nav-link">Purchase Item</a></li>
+								<li class="nav-item"><a href="./superadmin-mf-account-purchase-feed(other).html"
+										class="nav-link">Purchase Feed(Other)</a></li>
+								<li class="nav-item"><a href="superadmin-mf-account-purchase-feed(trash-fish).html"
+										class="nav-link">Purchase Feed(Trash Fish)</a></li>
+								<li class="nav-item-divider"></li>
+								<li class="nav-item"><a href="./superadmin-mf-account-cc-verify-fries.html"
+										class="nav-link">Verify Fries</a></li>
+								<li class="nav-item"><a href="superadmin-mf-account-cc-monthly-oe.html"
+										class="nav-link">Monthly Overhead Entry</a></li>
+								<li class="nav-item"><a href="superadmin-mf-account-cc-pellet-standard-price.html"
+										class="nav-link">Pellet Standard Price</a></li>
+								<li class="nav-item"><a href="superadmin-mf-account-cc-trash-fish-standard-price.html"
+										class="nav-link">Trash Fish Standard Price</a></li>
+								<li class="nav-item-divider"></li>
+								<li class="nav-item"><a href="superadmin-mf-account-cc-report-fries-vunverified.html"
+										class="nav-link">Fries Verification</a></li>
+
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
+								<span> Operation Data Entry</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="./superadmin-mf-operation-reservation.html"
+										class="nav-link">Reservation</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mf-operation-fries-vunverified.html"
+										class="nav-link ">Verify Fries</a>
+								</li>
+								<li class="nav-item-divider"></li>
+								<li class="nav-item"><a href="./superadmin-mf-operation-cc-pellet-standard-price.html"
+										class="nav-link ">Pellet Standard Price</a>
+								</li>
+								<li class="nav-item"><a
+										href="./superadmin-mf-operation-cc-trash-fish-standard-price.html"
+										class="nav-link active">Trash Fish Standard Price</a>
+								</li>
+							</ul>
 						</li>
 
 						<!-- Account -->
@@ -339,10 +391,11 @@
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-gear"></i>
+							<a href="#" class="nav-link active"><i class="icon-gear"></i>
 								<span>User Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="./superadmin-um-user-create.html" class="nav-link">Create
+								<li class="nav-item "><a href="./superadmin-um-user-create.html"
+										class="nav-link active">Create
 										User
 										Account</a></li>
 								<li class="nav-item"><a href="./superadmin-um-user-management.html" class="nav-link">
@@ -446,288 +499,92 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<h class="breadcrumb-item active">Master Form</h>
-							<a href="./superadmin-mf-reservation.html" class="breadcrumb-item active">Reservation</a>
-							<a href="./superadmin-mf-reservation-edit.html" class="breadcrumb-item ">Reservation
+							<span class="breadcrumb-item active">Master Form</span>
+							<span class="breadcrumb-item active">Master Value Configuration</span>
+							<a href="./superadmin-mv-species-management.html" class="breadcrumb-item active">Species
+								Management
 								Edit</a>
-
+							<a href="./superadmin-mv-species-management-edit.html" class="breadcrumb-item ">Species
+								Management
+								Edit</a>
 						</div>
+
+						<a href="./recorder-feed-form-overview.html"
+							class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
+
+
 				</div>
 			</div>
 			<!-- /page header -->
 
+
 			<!-- Main content -->
 			<div class="content-wrapper">
 				<!-- Content area -->
-				<div class="content3">
+				<div class="content2">
 					<!-- /fieldset legend -->
-
 					<div class="row">
 						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Reservation Entry</h5>
+									<h5 class="card-title font-weight-bold " style>New Species Value</h5>
 									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="fullscreen"></a>
-											<a class="list-icons-item" data-action="reload"></a>
-											<a class="list-icons-item" data-action="collapse"></a>
-										</div>
+
 									</div>
 								</div>
 
 								<div class="card-body">
 									<form action="#">
 										<div class="row">
-
-											<div class="col-md-2">
-												<fieldset>
-
-													<div class="form-group">
-														<label>Net Id:</label>
-														<input type="text" class="form-control" placeholder="A5-11"
-															disabled>
-													</div>
-
-													<div class="form-group">
-														<label>Department:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">Operation</option>
-															<option value="Farm-2">Operation</option>
-															<option value="Farm-3">Operation</option>
-															<option value="Farm-3">Operation</option>
-
-														</select>
-													</div>
-													<div class="form-group">
-														<label>Reserve By:</label>
-														<input type="text" class="form-control" placeholder="A5-11"
-															disabled>
-													</div>
-													<div class="form-group">
-														<label>Reserve For:</label>
-														<input type="text" class="form-control" placeholder="A5-11"
-															disabled>
-													</div>
-													<div class="form-group">
-														<label>Date:</label>
-														<div class="input-group">
-															<span class="input-group-prepend">
-																<span class="input-group-text"><i
-																		class="icon-calendar22"></i></span>
-															</span>
-															<input type="text" class="form-control daterange-basic"
-																value="01/01/2015 - 01/31/2015">
-														</div>
-												</fieldset>
-											</div>
-
-											<div class="col-md-10">
-												<label>Reservation Details:</label>
-												<div class="table-responsive table-scrollable2">
-													<table class="table">
-														<thead>
-															<tr class="table-row-highlight">
-																<th class=table-row-color>Batch</th>
-																<th class=table-row-color>Quality</th>
-																<th class=table-row-color>Size(KG)</th>
-																<th class=table-row-color>Reserve Quantity</th>
-																<th class=table-row-color>Reserve Weight</th>
-																<th class=table-row-color>Reserve Size</th>
-																<th class=table-row-color>Remark</th>
-																<th class=table-row-color>R4S</th>
-															</tr>
-															<style>
-																.table thead th {
-																	position: sticky;
-																	top: 0;
-																}
-															</style>
-														</thead>
-														<tbody>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-															<tr class="table-row-highlight">
-																<td>BA12FR023-A3-4</td>
-																<td>12000</td>
-																<td>0.200-0.250</td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type=text placeholder="Insert Value"
-																		style="text-align: center;"></td>
-																<td><input type="checkbox" style="text-align:center;">
-																</td>
-															</tr>
-														</tbody>
-													</table>
+											<div class="col-md-12">
+												<legend class="font-weight-semibold">
+													Species Details</legend>
+												<div class="form-group">
+													<label>Name:</label>
+													<input type="email" class="form-control"
+														placeholder="Eg. Eden@gamil.com">
 												</div>
-
-
+												<div class="form-group">
+													<label>Code:</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Color:</label><br>
+													<input type="text" class="form-control colorpicker-event-change"
+														value="#ffffff" data-fouc>
+													<div class="mt-1 hidden" id="change-result"></div>
+												</div>
+												<div class="form-group">
+													<label>Is Valid:</label><br>
+													<div class="form-check form-check-inline">
+														<label class="form-check-label">
+															<input type="radio" class="form-input-styled" name="gender"
+																checked data-fouc>
+															Valid
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<label class="form-check-label">
+															<input type="radio" class="form-input-styled" name="gender"
+																data-fouc>
+															Invalid
+														</label>
+													</div>
+												</div>
 											</div>
+
+
 										</div>
 
-										<div class="text-right" style="margin-top:20px;">
+										<div class="text-right">
 											<button type="button" class="btn btn-primary"
-												id="sweet_warning">Submit</button>
+												onClick="location.href='./superadmin-mv-species-management.html'">Insert</button>
+											<button type="button" class="btn btn-primary">Cancel</button>
 										</div>
 									</form>
-
-
 								</div>
 							</div>
 						</div>
@@ -736,7 +593,6 @@
 				</div>
 			</div>
 			<!-- /content area -->
-
 
 			<!-- Footer -->
 			<div class="navbar navbar-expand-lg navbar-light">

@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>KS Aquaculture-C-User Management</title>
+	<title>KS Aquaculture-Mf-Purchase Feed(Trash Fish)-Add</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -45,14 +45,24 @@
 	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
 	<!-- /theme JS files -->
+	<script src="./global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="./global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="./global_assets/js/plugins/pickers/anytime.min.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/legacy.js"></script>
+	<script src="./global_assets/js/plugins/notifications/jgrowl.min.js"></script>
 
 
-
+	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
 
 </head>
 
 <body>
 
+	<!-- Main navbar -->
+	<!-- Browser-Nav-Logo -->
 	<div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand">
 			<a href="index.html" class="d-inline-block">
@@ -312,7 +322,7 @@
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
+							<a href="#" class="nav-link active"><i class="icon-drawer3"></i>
 								<span> Account Data Entry</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
 								<li class="nav-item"><a href="./superadmin-mf-account-reservation.html"
@@ -325,8 +335,8 @@
 										class="nav-link">Purchase Item</a></li>
 								<li class="nav-item"><a href="./superadmin-mf-account-purchase-feed(other).html"
 										class="nav-link">Purchase Feed(Other)</a></li>
-								<li class="nav-item"><a href="superadmin-mf-account-purchase-feed(trash-fish).html"
-										class="nav-link">Purchase Feed(Trash Fish)</a></li>
+								<li class="nav-item"><a href="superadmin-mf-account-purchase-feed(trash-fish)-add.html"
+										class="nav-link active">Purchase Feed(Trash Fish)</a></li>
 								<li class="nav-item-divider"></li>
 								<li class="nav-item"><a href="./superadmin-mf-account-cc-verify-fries.html"
 										class="nav-link">Verify Fries</a></li>
@@ -383,14 +393,14 @@
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link active"><i class="icon-gear"></i>
+							<a href="#" class="nav-link "><i class="icon-gear"></i>
 								<span>User Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item "><a href="./superadmin-um-user-create.html" class="nav-link">Create
+								<li class="nav-item "><a href="./superadmin-um-user-create.html"
+										class="nav-link ">Create
 										User
 										Account</a></li>
-								<li class="nav-item"><a href="./superadmin-um-user-management.html"
-										class="nav-link active">
+								<li class="nav-item"><a href="./superadmin-um-user-management.html" class="nav-link">
 										Manage User
 										Account
 									</a></li>
@@ -410,8 +420,8 @@
 										class="nav-link">Overview Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-reservation-overview.html"
 										class="nav-link">Reservation Floorplan</a></li>
-								<li class="nav-item"><a href="./superadmin-floorplan-feed-overview.html" class="nav-link 
-									">Feed Floorplan</a></li>
+								<li class="nav-item"><a href="./superadmin-floorplan-feed-overview.html"
+										class="nav-link ">Feed Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-mortality-overview.html"
 										class="nav-link">Mortality Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-stock-count-overview.html"
@@ -491,14 +501,18 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<span class="breadcrumb-item active">Configuration</span>
-							<span class="breadcrumb-item active">User Management</span>
-							<a href="./superadmin-um-user-management.html" class="breadcrumb-item ">Manage User
-								Account</a>
+							<span class="breadcrumb-item active">Master Form</span>
+							<span class="breadcrumb-item active">Account Data Entry</span>
+							<a href="./superadmin-mf-account-purchase-feed(trash-fish).html"
+								class="breadcrumb-item active">Purchase Feed(Trash
+								Fish)</a>
 
+							<a href="./superadmin-mf-account-purchase-feed(trash-fish)-add.html"
+								class="breadcrumb-item ">Purchase Feed(Trash
+								Fish)-Add</a>
 						</div>
-						<a href="./recorder-feed-form-overview.html"
-							class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+
+
 					</div>
 
 
@@ -510,457 +524,194 @@
 			<!-- Main content -->
 			<div class="content-wrapper">
 				<!-- Content area -->
-				<div class="content3">
+				<div class="content2">
 					<!-- /fieldset legend -->
-					<div class=" row">
+					<div class="row">
 						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">User Account Information</h5>
+									<h5 class="card-title font-weight-bold " style>Purchase Trash Fish Form</h5>
 									<div class="header-elements">
-										<div class="list-icons">
-											<a class="sidebar-mobile-expand" data-action="fullscreen"></a>
-											<a class="sidebar-mobile-expand" data-action="reload"></a>
-											<a class="sidebar-mobile-expand" data-action="collapse"></a>
-										</div>
+
 									</div>
 								</div>
-								<div class="table-adjustment-smart">
-									<table class="table2 datatable-basic" width="100%">
-										<thead>
-											<tr>
-												<th class="table-row-color">Email</th>
-												<th class="table-row-color">Password</th>
-												<th class="table-row-color">First Name</th>
-												<th class="table-row-color">Last Name</th>
-												<th class="table-row-color">Mobile Number</th>
-												<th class="table-row-color">Home Number</th>
-												<th class="table-row-color">Address</th>
-												<th class="table-row-color">Location</th>
-												<th class="table-row-color">Department</th>
-												<th class="table-row-color">Position</th>
-												<th class="table-row-color">Action</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>B1-1</td>
-												<td>Food 1</td>
-												<td>100g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
+								<div class="card-body">
+									<form action="#">
+										<div class="row">
+											<div class="col-md-12">
+												<legend class="font-weight-semibold">
+													Account Details</legend>
+												<div class="form-group">
+													<label>Dedst. Warehouse:</label>
+													<select data-placeholder="Select your state"
+														class="form-control form-control-select2" data-fouc>
+														<optgroup label="Pulau Ketam">
+															<option value="Farm-1">BA</option>
+															<option value="Farm-2">BB</option>
+															<option value="Farm-3">BD</option>
+															<option value="Farm-3">BE</option>
+															<option value="Farm-3">BF</option>
+															<option value="Farm-3">BJ</option>
+														</optgroup>
+														<optgroup label="Johor">
+															<option value="Farm-1">JA</option>
+															<option value="Farm-2">JB</option>
+															<option value="Farm-3">JC</option>
+														</optgroup>
+														</optgroup>
+													</select>
+												</div>
+												<div class="form-group">
+													<label>PO No.:</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
 
-															</div>
-														</div>
+
+												<legend class="font-weight-semibold">
+													Grade Form</legend>
+												<div class="form-group">
+													<label>Speed Code:</label>
+													<select data-placeholder="Select your state"
+														class="form-control form-control-select2" data-fouc>
+														<optgroup label="Pulau Ketam">
+															<option value="Farm-1">BA</option>
+															<option value="Farm-2">BB</option>
+															<option value="Farm-3">BD</option>
+															<option value="Farm-3">BE</option>
+															<option value="Farm-3">BF</option>
+															<option value="Farm-3">BJ</option>
+														</optgroup>
+														<optgroup label="Johor">
+															<option value="Farm-1">JA</option>
+															<option value="Farm-2">JB</option>
+															<option value="Farm-3">JC</option>
+														</optgroup>
+														</optgroup>
+													</select>
+												</div>
+												<div class="form-group">
+													<label>Grade A:</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Unit Price(RM):</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Drum Quantity</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+
+												<div class="form-group">
+													<label>Grade B:</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Unit Price(RM):</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Drum Quantity</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+
+												<div class="form-group">
+													<label>Grade C:</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Unit Price(RM):</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Drum Quantity</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<legend class="font-weight-semibold">
+													Shipping Form</legend>
+												<div class="form-group">
+													<label>Ship No.:</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Date:</label>
+													<div class="input-group">
+														<span class="input-group-prepend"></span>
+														<span class="input-group-text"><i
+																class="icon-calendar5"></i></span>
+														</span>
+														<input type="text" class="form-control pickadate"
+															placeholder="Select Date">
 													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B2-1</td>
-												<td>Food 1</td>
-												<td>250g</td>
-												</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
+												</div>
+												<div class="form-group">
+													<label>Time:</label>
+													<div class="input-group">
+														<span class="input-group-prepend">
+															<span class="input-group-text"><i
+																	class="icon-alarm"></i></span>
+														</span>
+														<input type="text" class="form-control pickatime"
+															placeholder="Select Time">
 													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B5-1</td>
-												<td>Food 2</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												</div>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
 
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-1</td>
-												<td>Food 2</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<div class="form-group">
+													<label>Receive By:</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Remark:</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Total Drum Quantity:</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
+												<div class="form-group">
+													<label>Total Cost:</label>
+													<input type="number" class="form-control"
+														placeholder="Eg. 123@A123">
+												</div>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
 
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-5</td>
-												<td>Food 3</td>
-												<td>250g</td>
-												</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
 
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>A1-6</td>
-												<td>Food 3</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
 
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B1-6</td>
-												<td>Food 5</td>
-												<td>100g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
 
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-1</td>
-												<td>Food 2</td>
-												<td>250g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
+												</fieldset>
+											</div>
 
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>B1-6</td>
-												<td>Food 5</td>
-												<td>250g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
+										</div>
 
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>A1-2</td>
-												<td>Food 3</td>
-												<td>150g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>B1-6</td>
-												<td>Food 2</td>
-												<td>150g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B1-2</td>
-												<td>Food 1</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-7</td>
-												<td>Food 5</td>
-												<td>250g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+										<div class="text-right">
+											<button type="button" class="btn btn-primary"
+												id="sweet_warning">Add</button>
+										</div>
+									</form>
 								</div>
-								<div class="text-right" style="padding-bottom: 20px; margin-right: 20px;">
-									<button type="button" class="btn btn-primary"
-										onClick="location.href='./superadmin-um-user-management-edit.html'">Next
-									</button></td>
-								</div>
-								<!-- /scrollable datatable -->
 							</div>
 						</div>
-
 					</div>
 					<!-- /2 columns form -->
 				</div>

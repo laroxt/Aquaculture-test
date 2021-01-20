@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>KS Aquaculture-C-User Management</title>
+	<title>KS Aquaculture-Mv-Farm 12 x 12</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -17,6 +17,7 @@
 	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/floorplan_indicator.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
@@ -28,17 +29,18 @@
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/selects/select3.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<script src="./global_assets/js/demo_pages/form_multiselect.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
-	<script src="./global_assets/js/demo_pages/form_wizard.js"></script>
+	<script src="./global_assets/js/demo_pages/form_wizard3.js"></script>
 	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
 	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
-	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_pnotify.js"></script>
 	<script src="./global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="./dragscroll_js/dragscroll.js"></script>
 
 
 	<!-- Theme JS files -->
@@ -46,13 +48,12 @@
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
 	<!-- /theme JS files -->
 
-
-
-
 </head>
 
 <body>
 
+	<!-- Main navbar -->
+	<!-- Browser-Nav-Logo -->
 	<div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand">
 			<a href="index.html" class="d-inline-block">
@@ -279,11 +280,11 @@
 								class="icon-circle-small" title="Main"></i>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-gear"></i>
+							<a href="#" class="nav-link active"><i class="icon-gear"></i>
 								<span>Master Value Configuration</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
 								<li class="nav-item"><a href="./superadmin-mv-fc-farm-management.html"
-										class="nav-link">Farm
+										class="nav-link active">Farm
 										Management</a>
 								</li>
 								<li class="nav-item"><a href="./superadmin-mv-feed.html" class="nav-link">Feed
@@ -383,14 +384,13 @@
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link active"><i class="icon-gear"></i>
+							<a href="#" class="nav-link "><i class="icon-gear"></i>
 								<span>User Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item "><a href="./superadmin-um-user-create.html" class="nav-link">Create
+								<li class="nav-item"><a href="./superadmin-um-user-create.html" class="nav-link">Create
 										User
 										Account</a></li>
-								<li class="nav-item"><a href="./superadmin-um-user-management.html"
-										class="nav-link active">
+								<li class="nav-item"><a href="./superadmin-um-user-management.html" class="nav-link">
 										Manage User
 										Account
 									</a></li>
@@ -410,8 +410,8 @@
 										class="nav-link">Overview Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-reservation-overview.html"
 										class="nav-link">Reservation Floorplan</a></li>
-								<li class="nav-item"><a href="./superadmin-floorplan-feed-overview.html" class="nav-link 
-									">Feed Floorplan</a></li>
+								<li class="nav-item"><a href="./superadmin-floorplan-feed-overview.html"
+										class="nav-link ">Feed Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-mortality-overview.html"
 										class="nav-link">Mortality Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-stock-count-overview.html"
@@ -490,15 +490,12 @@
 
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
-						<div class="breadcrumb">
-							<span class="breadcrumb-item active">Configuration</span>
-							<span class="breadcrumb-item active">User Management</span>
-							<a href="./superadmin-um-user-management.html" class="breadcrumb-item ">Manage User
-								Account</a>
-
-						</div>
-						<a href="./recorder-feed-form-overview.html"
-							class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+						<h class="breadcrumb-item active">Master Form</h>
+						<h class="breadcrumb-item active">Farm Management</h>
+						<a href="./superadmin-mv-fc-farm-management.html" class="breadcrumb-item active">Farm Create
+							Form</a>
+						<a href="./superadmin-mv-fc-farm-management-create-20x20.html" class="breadcrumb-item">Farm
+							Create Form</a>
 					</div>
 
 
@@ -506,466 +503,850 @@
 			</div>
 			<!-- /page header -->
 
-
 			<!-- Main content -->
 			<div class="content-wrapper">
 				<!-- Content area -->
-				<div class="content3">
-					<!-- /fieldset legend -->
-					<div class=" row">
+				<div class="content">
+					<div class="row">
+						<!-- /fieldset legend -->
+
+					</div>
+					<div class="row">
 						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<div class="card">
+
+
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">User Account Information</h5>
+									<h5 class="card-title font-weight-bold">Farm Floorplan #1</h5>
 									<div class="header-elements">
 										<div class="list-icons">
-											<a class="sidebar-mobile-expand" data-action="fullscreen"></a>
-											<a class="sidebar-mobile-expand" data-action="reload"></a>
-											<a class="sidebar-mobile-expand" data-action="collapse"></a>
+											<a class="list-icons-item" data-action="fullscreen"></a>
+											<a class="list-icons-item" data-action="reload"></a>
+											<a class="list-icons-item" data-action="collapse"></a>
 										</div>
 									</div>
 								</div>
-								<div class="table-adjustment-smart">
-									<table class="table2 datatable-basic" width="100%">
+
+
+
+								<div class="card-header header-elements-inline">
+									<h5 class="card-title font-weight-bold">Created Farm Floorplan</h5>
+									<h style="font-weight: bold;">Farm: <span class="update-net-sucess">BA</span></h>
+									<h style="font-weight: bold;">Date: <span
+											class="update-net-sucess">01/01/2021</span>
+									</h>
+									<h style="font-weight: bold;">Dimension: <span class="update-net-sucess">12 x
+											12</span></h>
+									<div class="header-elements">
+										<div class="list-icons">
+
+										</div>
+									</div>
+								</div>
+
+
+								<div class="table-fixed table-scrollable-stock-count-form dragscroll"
+									style="margin-bottom: 20px; font-size: 11px; line-height: 1.3; cursor: grab; cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;">
+									<table class="table">
+
 										<thead>
 											<tr>
-												<th class="table-row-color">Email</th>
-												<th class="table-row-color">Password</th>
-												<th class="table-row-color">First Name</th>
-												<th class="table-row-color">Last Name</th>
-												<th class="table-row-color">Mobile Number</th>
-												<th class="table-row-color">Home Number</th>
-												<th class="table-row-color">Address</th>
-												<th class="table-row-color">Location</th>
-												<th class="table-row-color">Department</th>
-												<th class="table-row-color">Position</th>
-												<th class="table-row-color">Action</th>
+												<th class="table-row-color">#</th>
+												<th class="table-row-color">1</th>
+												<th class="table-row-color">2</th>
+												<th class="table-row-color">3</th>
+												<th class="table-row-color">4</th>
+												<th class="table-row-color">5</th>
+												<th class="table-row-color">6</th>
+												<th class="table-row-color">7</th>
+												<th class="table-row-color">8</th>
+												<th class="table-row-color">9</th>
+												<th class="table-row-color">10</th>
+												<th class="table-row-color">11</th>
+												<th class="table-row-color">12</th>
+
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>B1-1</td>
-												<td>Food 1</td>
-												<td>100g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<td class="table-column-color">A1</td>
+												<td>
+													<div class="floorplan-details-empty">
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+													</div>
+												</td>
+
+											</tr>
+											<tr>
+												<td class="table-column-color">A2</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+													</div>
+												</td>
+
+											</tr>
+											<tr>
+												<td class="table-column-color">A3</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+													</div>
+												</td>
+
+											</tr>
+											<tr>
+												<td class="table-column-color">A4</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+													</div>
+												</td>
+
+
+											</tr>
+											<tr>
+												<td class="table-column-color">A5</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+
+											</tr>
+											<tr>
+												<td class="table-column-color">A6</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+													</div>
+												</td>
+
 												</td>
 											</tr>
 											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B2-1</td>
-												<td>Food 1</td>
-												<td>250g</td>
-												</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<td class="table-column-color">A7</td>
+												<td>
+													<div class="floorplan-details-empty">
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+
 											</tr>
 											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B5-1</td>
-												<td>Food 2</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<td class="table-column-color">A8</td>
+												<td>
+													<div class="floorplan-details-empty">
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+													</div>
+												</td>
+
 											</tr>
 											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-1</td>
-												<td>Food 2</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<td class="table-column-color">A9</td>
+												<td>
+													<div class="floorplan-details-empty">
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+													</div>
+												</td>
+
 											</tr>
 											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-5</td>
-												<td>Food 3</td>
-												<td>250g</td>
-												</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<td class="table-column-color">A10</td>
+												<td>
+													<div class="floorplan-details-empty">
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+													</div>
+												</td>
+
 											</tr>
 											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>A1-6</td>
-												<td>Food 3</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
+												<td class="table-column-color">A11</td>
+												<td>
+													<div class="floorplan-details-empty">
 
-															</div>
-														</div>
 													</div>
 												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+													</div>
+												</td>
+
 											</tr>
 											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B1-6</td>
-												<td>Food 5</td>
-												<td>100g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<td class="table-column-color">A12</td>
+												<td>
+													<div class="floorplan-details-empty">
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-1</td>
-												<td>Food 2</td>
-												<td>250g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<td>
+													<div class="floorplan-details-empty">
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>B1-6</td>
-												<td>Food 5</td>
-												<td>250g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<td>
+													<div class="floorplan-details-empty">
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>A1-2</td>
-												<td>Food 3</td>
-												<td>150g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<td>
+													<div class="floorplan-details-empty">
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>B1-6</td>
-												<td>Food 2</td>
-												<td>150g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+												<td>
+													<div class="floorplan-details-empty">
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
-											</tr>
+												<td>
+													<div class="floorplan-details-empty">
 
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B1-2</td>
-												<td>Food 1</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
-											</tr>
+												<td>
+													<div class="floorplan-details-empty">
 
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-7</td>
-												<td>Food 5</td>
-												<td>250g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
 													</div>
 												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+
+													</div>
+												</td>
+												<td>
+													<div class="floorplan-details-empty">
+													</div>
+												</td>
+
 											</tr>
+
+
+
+
 										</tbody>
 									</table>
+
 								</div>
-								<div class="text-right" style="padding-bottom: 20px; margin-right: 20px;">
-									<button type="button" class="btn btn-primary"
-										onClick="location.href='./superadmin-um-user-management-edit.html'">Next
-									</button></td>
+								<div class="text-right">
+									<button type="button" class="btn btn-primary" style="margin:20px"
+										id="pnotify-solid-primary">Confirm</button>
 								</div>
-								<!-- /scrollable datatable -->
 							</div>
 						</div>
 
 					</div>
-					<!-- /2 columns form -->
+
+
+
+
+
+
+
 				</div>
 			</div>
 			<!-- /content area -->
+
+
 
 			<!-- Footer -->
 			<div class="navbar navbar-expand-lg navbar-light">
@@ -988,8 +1369,7 @@
 						<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
 								target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
 						<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
-								class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i>
-								Docs</a>
+								class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a>
 						</li>
 					</ul>
 				</div>

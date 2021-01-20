@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>KS Aquaculture-C-User Management</title>
+	<title>KS Aquaculture-Mf-Reservation Edit</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -28,31 +28,34 @@
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/selects/select3.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<script src="./global_assets/js/demo_pages/form_multiselect.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
-	<script src="./global_assets/js/demo_pages/form_wizard.js"></script>
+	<script src="./global_assets/js/demo_pages/form_wizard3.js"></script>
 	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
 	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
-	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_pnotify.js"></script>
 	<script src="./global_assets/js/plugins/notifications/pnotify.min.js"></script>
 
-
 	<!-- Theme JS files -->
-	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
-	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
+	<script src="./global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="./global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
+
 	<!-- /theme JS files -->
 
 
-
+	<!-- /theme JS files -->
 
 </head>
 
 <body>
 
+	<!-- Main navbar -->
+	<!-- Browser-Nav-Logo -->
 	<div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand">
 			<a href="index.html" class="d-inline-block">
@@ -312,11 +315,11 @@
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
+							<a href="#" class="nav-link active"><i class="icon-drawer3"></i>
 								<span> Account Data Entry</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="./superadmin-mf-account-reservation.html"
-										class="nav-link">Reservation</a>
+								<li class="nav-item active"><a href="./superadmin-mf-account-reservation.html"
+										class="nav-link active">Reservation</a>
 								</li>
 								<li class="nav-item"><a href="./superadmin-mf-account-purchase-fries.html"
 										class="nav-link ">Purchase Fries</a>
@@ -383,14 +386,13 @@
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link active"><i class="icon-gear"></i>
+							<a href="#" class="nav-link "><i class="icon-gear"></i>
 								<span>User Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item "><a href="./superadmin-um-user-create.html" class="nav-link">Create
+								<li class="nav-item"><a href="./superadmin-um-user-create.html" class="nav-link">Create
 										User
 										Account</a></li>
-								<li class="nav-item"><a href="./superadmin-um-user-management.html"
-										class="nav-link active">
+								<li class="nav-item"><a href="./superadmin-um-user-management.html" class="nav-link">
 										Manage User
 										Account
 									</a></li>
@@ -410,8 +412,8 @@
 										class="nav-link">Overview Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-reservation-overview.html"
 										class="nav-link">Reservation Floorplan</a></li>
-								<li class="nav-item"><a href="./superadmin-floorplan-feed-overview.html" class="nav-link 
-									">Feed Floorplan</a></li>
+								<li class="nav-item"><a href="./superadmin-floorplan-feed-overview.html"
+										class="nav-link ">Feed Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-mortality-overview.html"
 										class="nav-link">Mortality Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-stock-count-overview.html"
@@ -491,481 +493,298 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<span class="breadcrumb-item active">Configuration</span>
-							<span class="breadcrumb-item active">User Management</span>
-							<a href="./superadmin-um-user-management.html" class="breadcrumb-item ">Manage User
-								Account</a>
+							<h class="breadcrumb-item active">Master Form</h>
+							<h class="breadcrumb-item active">Account Data Entry</h>
+							<a href="./superadmin-mf-reservation.html" class="breadcrumb-item active">Reservation</a>
+							<a href="./superadmin-mf-reservation-edit.html" class="breadcrumb-item ">Reservation
+								Edit</a>
 
 						</div>
-						<a href="./recorder-feed-form-overview.html"
-							class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
-
-
 				</div>
 			</div>
 			<!-- /page header -->
-
 
 			<!-- Main content -->
 			<div class="content-wrapper">
 				<!-- Content area -->
 				<div class="content3">
 					<!-- /fieldset legend -->
-					<div class=" row">
+
+					<div class="row">
 						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">User Account Information</h5>
+									<h5 class="card-title font-weight-bold">Reservation Edit</h5>
 									<div class="header-elements">
 										<div class="list-icons">
-											<a class="sidebar-mobile-expand" data-action="fullscreen"></a>
-											<a class="sidebar-mobile-expand" data-action="reload"></a>
-											<a class="sidebar-mobile-expand" data-action="collapse"></a>
+											<a class="list-icons-item" data-action="fullscreen"></a>
+											<a class="list-icons-item" data-action="reload"></a>
+											<a class="list-icons-item" data-action="collapse"></a>
 										</div>
 									</div>
 								</div>
-								<div class="table-adjustment-smart">
-									<table class="table2 datatable-basic" width="100%">
-										<thead>
-											<tr>
-												<th class="table-row-color">Email</th>
-												<th class="table-row-color">Password</th>
-												<th class="table-row-color">First Name</th>
-												<th class="table-row-color">Last Name</th>
-												<th class="table-row-color">Mobile Number</th>
-												<th class="table-row-color">Home Number</th>
-												<th class="table-row-color">Address</th>
-												<th class="table-row-color">Location</th>
-												<th class="table-row-color">Department</th>
-												<th class="table-row-color">Position</th>
-												<th class="table-row-color">Action</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>B1-1</td>
-												<td>Food 1</td>
-												<td>100g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
+								<div class="card-body">
+									<form action="#">
+										<div class="row">
 
-															</div>
-														</div>
+											<div class="col-md-2">
+												<fieldset>
+
+													<div class="form-group">
+														<label>Net Id:</label>
+														<input type="text" class="form-control" placeholder="A5-11"
+															disabled>
 													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B2-1</td>
-												<td>Food 1</td>
-												<td>250g</td>
-												</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
+													<div class="form-group">
+														<label>Department:</label>
+														<select data-placeholder="Select your state"
+															class="form-control form-control-select2" data-fouc>
+															<option value="Farm-1">Operation</option>
+															<option value="Farm-2">Operation</option>
+															<option value="Farm-3">Operation</option>
+															<option value="Farm-3">Operation</option>
 
-															</div>
-														</div>
+														</select>
 													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B5-1</td>
-												<td>Food 2</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
+													<div class="form-group">
+														<label>Reserve By:</label>
+														<input type="text" class="form-control" placeholder="A5-11"
+															disabled>
 													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-1</td>
-												<td>Food 2</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
+													<div class="form-group">
+														<label>Reserve For:</label>
+														<input type="text" class="form-control" placeholder="A5-11"
+															disabled>
 													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-5</td>
-												<td>Food 3</td>
-												<td>250g</td>
-												</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
+													<div class="form-group">
+														<label>Date:</label>
+														<div class="input-group">
+															<span class="input-group-prepend">
+																<span class="input-group-text"><i
+																		class="icon-calendar22"></i></span>
+															</span>
+															<input type="text" class="form-control daterange-basic"
+																value="01/01/2015 - 01/31/2015">
 														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>A1-6</td>
-												<td>Food 3</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
+												</fieldset>
+											</div>
 
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B1-6</td>
-												<td>Food 5</td>
-												<td>100g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+											<div class="col-md-10">
+												<label>Reservation Details:</label>
+												<div class="table-responsive table-scrollable2">
+													<table class="table">
+														<thead>
+															<tr class="table-row-highlight">
+																<th class=table-row-color>Batch</th>
+																<th class=table-row-color>Quality</th>
+																<th class=table-row-color>Size(KG)</th>
+																<th class=table-row-color>Reserve Quantity</th>
+																<th class=table-row-color>Reserve Weight</th>
+																<th class=table-row-color>Reserve Size</th>
+																<th class=table-row-color>Remark</th>
+																<th class=table-row-color>R4S</th>
+															</tr>
+															<style>
+																.table thead th {
+																	position: sticky;
+																	top: 0;
+																}
+															</style>
+														</thead>
+														<tbody>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+															<tr class="table-row-highlight">
+																<td>BA12FR023-A3-4</td>
+																<td>12000</td>
+																<td>0.200-0.250</td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type=text placeholder="Insert Value"
+																		style="text-align: center;"></td>
+																<td><input type="checkbox" style="text-align:center;">
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
 
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-1</td>
-												<td>Food 2</td>
-												<td>250g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
+											</div>
+										</div>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
+										<div class="text-right" style="margin-top:20px;">
+											<button type="button" class="btn btn-primary"
+												id="sweet_warning">Submit</button>
+										</div>
+									</form>
 
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>B1-6</td>
-												<td>Food 5</td>
-												<td>250g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
 
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>A1-2</td>
-												<td>Food 3</td>
-												<td>150g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>B1-6</td>
-												<td>Food 2</td>
-												<td>150g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>B1-2</td>
-												<td>Food 1</td>
-												<td>200g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 1</td>
-												<td>Farm 2</td>
-												<td>A1-7</td>
-												<td>Food 5</td>
-												<td>250g</td>
-												<td>22 August 2020</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
 								</div>
-								<div class="text-right" style="padding-bottom: 20px; margin-right: 20px;">
-									<button type="button" class="btn btn-primary"
-										onClick="location.href='./superadmin-um-user-management-edit.html'">Next
-									</button></td>
-								</div>
-								<!-- /scrollable datatable -->
 							</div>
 						</div>
-
 					</div>
 					<!-- /2 columns form -->
 				</div>
 			</div>
 			<!-- /content area -->
+
 
 			<!-- Footer -->
 			<div class="navbar navbar-expand-lg navbar-light">

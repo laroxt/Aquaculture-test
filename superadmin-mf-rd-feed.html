@@ -17,6 +17,7 @@
 	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/floorplan_indicator.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
@@ -34,11 +35,12 @@
 	<script src="assets/js/app.js"></script>
 	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
 	<script src="./global_assets/js/demo_pages/form_wizard3.js"></script>
-	<script src="./global_assets/js/demo_pages/datatables_basic_c5.js"></script>
+	<script src="./global_assets/js/demo_pages/datatables_basic_c4.js"></script>
 	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_pnotify.js"></script>
 	<script src="./global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="./dragscroll_js/dragscroll.js"></script>
 
 
 	<!-- Theme JS files -->
@@ -282,13 +284,14 @@
 								<span>Master Value Configuration</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
 								<li class="nav-item"><a href="./superadmin-mv-fc-farm-management.html"
-										class="nav-link">Farm
+										class="nav-link ">Farm
 										Management</a>
 								</li>
 								<li class="nav-item"><a href="./superadmin-mv-feed.html" class="nav-link">Feed
 										Management</a>
 								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Species
+								<li class="nav-item"><a href="./superadmin-mv-species-management.html"
+										class="nav-link">Species
 										Management</a>
 								</li>
 							</ul>
@@ -310,9 +313,56 @@
 										class="nav-link">Sizing</a></li>
 							</ul>
 						</li>
-						<li class="nav-item">
-							<a href="./superadmin-mf-reservation.html" class="nav-link"><i class="icon-drawer3"></i>
-								<span>Reservation</span></a>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
+								<span> Account Data Entry</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="./superadmin-mf-account-reservation.html"
+										class="nav-link">Reservation</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mf-account-purchase-fries.html"
+										class="nav-link ">Purchase Fries</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mf-account-purchase-item.html"
+										class="nav-link">Purchase Item</a></li>
+								<li class="nav-item"><a href="./superadmin-mf-account-purchase-feed(other).html"
+										class="nav-link ">Purchase Feed(Other)</a></li>
+								<li class="nav-item"><a href="superadmin-mf-account-purchase-feed(trash-fish).html"
+										class="nav-link">Purchase Feed(Trash Fish)</a></li>
+								<li class="nav-item-divider"></li>
+								<li class="nav-item"><a href="./superadmin-mf-account-cc-verify-fries.html"
+										class="nav-link">Verify Fries</a></li>
+								<li class="nav-item"><a href="superadmin-mf-account-cc-monthly-oe.html"
+										class="nav-link">Monthly Overhead Entry</a></li>
+								<li class="nav-item"><a href="superadmin-mf-account-cc-pellet-standard-price.html"
+										class="nav-link">Pellet Standard Price</a></li>
+								<li class="nav-item"><a href="superadmin-mf-account-cc-trash-fish-standard-price.html"
+										class="nav-link">Trash Fish Standard Price</a></li>
+								<li class="nav-item-divider"></li>
+								<li class="nav-item"><a href="superadmin-mf-account-cc-report-fries-vunverified.html"
+										class="nav-link">Fries Verification</a></li>
+
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
+								<span> Operation Data Entry</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="./superadmin-mf-operation-reservation.html"
+										class="nav-link">Reservation</a>
+								</li>
+								<li class="nav-item"><a href="./superadmin-mf-operation-fries-vunverified.html"
+										class="nav-link ">Verify Fries</a>
+								</li>
+								<li class="nav-item-divider"></li>
+								<li class="nav-item"><a href="./superadmin-mf-operation-cc-pellet-standard-price.html"
+										class="nav-link ">Pellet Standard Price</a>
+								</li>
+								<li class="nav-item"><a
+										href="./superadmin-mf-operation-cc-trash-fish-standard-price.html"
+										class="nav-link active">Trash Fish Standard Price</a>
+								</li>
+							</ul>
 						</li>
 
 						<!-- Account -->
@@ -425,6 +475,7 @@
 					</ul>
 				</div>
 				<!-- /main navigation -->
+
 			</div>
 			<!-- /sidebar content -->
 
@@ -435,587 +486,612 @@
 		<!-- Main content -->
 		<div class="content-wrapper">
 
-
-
-			<!-- Main content -->
-			<div class="content-wrapper">
+			<!-- Page header -->
+			<div class="page-header page-header-light">
 
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
-						<div class="breadcrumb">
-							<span class="breadcrumb-item active">Recorder Data Entry</span>
-							<a href="./superadmin-mf-rd-feed.html" class="breadcrumb-item">Feed Form</a>
-						</div>
-
-
+						<span class="breadcrumb-item active">Recorder Data Entry</span>
+						<a href="./superadmin-mf-rd-feed.html" class="breadcrumb-item">Feed Form</a>
 					</div>
-
-
 				</div>
-			</div>
-			<!-- /page header -->
+				<!-- /page header -->
 
-			<!-- Main content -->
-			<div class="content-wrapper">
-				<!-- Content area -->
-				<div class="content">
-					<!-- /fieldset legend -->
-					<div class="row">
-						<div class="col-md-12">
-							<!-- 2 columns form -->
-							<div class="card">
-								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold ">Feed Form</h5>
-									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="collapse"></a>
+				<!-- Main content -->
+				<div class="content-wrapper">
+					<!-- Content area -->
+					<div class="content">
+						<div class="row">
+							<!-- /fieldset legend -->
+
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<!-- 2 columns form -->
+								<div class="card">
+
+
+									<div class="card-header bg-white header-elements-inline">
+										<h5 class="card-title font-weight-bold">Purchase Feed Details
+										</h5>
+										<div class="header-elements">
+											<div class="list-icons">
+												<a class="list-icons-item" data-action="collapse"></a>
+											</div>
 										</div>
 									</div>
-								</div>
+									<div class="card-body">
+										<form action="#">
+											<div class="row">
+												<div class="col-md-6">
+													<fieldset>
+														<legend class="font-weight-semibold"> Location</legend>
 
-								<div class="card-body">
-									<form action="#">
-										<div class="row">
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Dest.
+																Warehouse:</label>
+															<div class="col-lg-9">
+																<select data-placeholder="BA"
+																	class="form-control form-control-select2" data-fouc>
+																	<option></option>
+																	<optgroup label="Pulau Ketam">
+																		<option value="Farm-1">BA</option>
+																		<option value="Farm-2">BB</option>
+																		<option value="Farm-3">BD</option>
+																		<option value="Farm-3">BE</option>
+																		<option value="Farm-3">BF</option>
+																		<option value="Farm-3">BJ</option>
+																	</optgroup>
+																	<optgroup label="Johor">
+																		<option value="Farm-1">JA</option>
+																		<option value="Farm-2">JB</option>
+																		<option value="Farm-3">JC</option>
+																	</optgroup>
+																</select>
+															</div>
+														</div>
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Net Site A:</label>
+															<div class="col-lg-9">
+																<select data-placeholder="Select Net"
+																	class="form-control form-control-select2" data-fouc>
+																	<option></option>
+																	<optgroup label="Pulau Ketam">
+																		<option value="Farm-1">A1-1</option>
+																		<option value="Farm-2">A1-2</option>
+																		<option value="Farm-3">A1-3</option>
+																		<option value="Farm-3">A1-4</option>
+																		<option value="Farm-3">A1-5</option>
+																		<option value="Farm-3">A1-6</option>
+																	</optgroup>
 
-											<div class="col-md-6">
-												<fieldset>
-													<legend class="font-weight-semibold">
-														Net details</legend>
-													<div class="form-group">
-														<label>Farm:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<optgroup label="Pulau Ketam">
-																<option value="Farm-1">BA</option>
-																<option value="Farm-2">BB</option>
-																<option value="Farm-3">BD</option>
-																<option value="Farm-3">BE</option>
-																<option value="Farm-3">BF</option>
-																<option value="Farm-3">BJ</option>
-															</optgroup>
-															<optgroup label="Johor">
-																<option value="Farm-1">JA</option>
-																<option value="Farm-2">JB</option>
-																<option value="Farm-3">JC</option>
-															</optgroup>
-															</optgroup>
-														</select>
-													</div>
+																</select>
+															</div>
+														</div>
 
-													<div class="form-group">
-														<label><span>Net Side A:</span>
-														</label>
-														<select class="form-control multiselect-filtering"
-															multiple="multiple" data-fouc>
-															<option value="A1-1">A1-1</option>
-															<option value="A2-1">A2-1</option>
-															<option value="A3-1">A3-1</option>
-															<option value="A4-1">A4-1</option>
-															<option value="A5-1">A5-1</option>
-														</select>
-													</div>
-													<div class="form-group">
-														<label><span>Net Side B:</span>
-														</label>
-														<select class="form-control multiselect-filtering"
-															multiple="multiple" data-fouc>
-															<option value="B1-1">B1-1</option>
-															<option value="B2-1">B2-1</option>
-															<option value="B3-1">B3-1</option>
-															<option value="B4-1">B4-1</option>
-															<option value="B5-1">B5-1</option>
-														</select>
-													</div>
-												</fieldset>
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Net Site B:</label>
+															<div class="col-lg-9">
+																<select data-placeholder="Select Net"
+																	class="form-control form-control-select2" data-fouc>
+																	<option></option>
+																	<optgroup label="Pulau Ketam">
+																		<option value="Farm-1">B1-1</option>
+																		<option value="Farm-2">B1-2</option>
+																		<option value="Farm-3">B1-3</option>
+																		<option value="Farm-3">B1-4</option>
+																		<option value="Farm-3">B1-5</option>
+																		<option value="Farm-3">B1-6</option>
+																	</optgroup>
+
+																</select>
+															</div>
+														</div>
+
+
+
+													</fieldset>
+												</div>
+												<div class="col-md-6">
+													<fieldset>
+														<legend class="font-weight-semibold">
+															Feed Item details</legend>
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Food Type:</label>
+															<div class="col-lg-9">
+																<select data-placeholder="BA"
+																	class="form-control form-control-select2" data-fouc>
+																	<option></option>
+																	<option value="Farm-1">Food 1</option>
+																	<option value="Farm-2">Food 2</option>
+																	<option value="Farm-3">Food 3</option>
+																	<option value="Farm-3">Food 4</option>
+																	<option value="Farm-3">Food 5</option>
+																	<option value="Farm-3">Food 6</option>
+																	</optgroup>
+
+																</select>
+															</div>
+														</div>
+
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Fixed Amount:</label>
+															<div class="col-lg-9">
+
+
+
+																<div class="form-check form-check-inline">
+																	<label class="form-check-label">
+																		<input type="radio" class="form-input-styled"
+																			name="gender" checked data-fouc>
+																		100g
+																	</label>
+																</div>
+
+																<div class="form-check form-check-inline">
+																	<label class="form-check-label">
+																		<input type="radio" class="form-input-styled"
+																			name="gender" data-fouc>
+																		150g
+																	</label>
+																</div>
+
+																<div class="form-check form-check-inline">
+																	<label class="form-check-label">
+																		<input type="radio" class="form-input-styled"
+																			name="gender" data-fouc>
+																		200g
+																	</label>
+																</div>
+
+																<div class="form-check form-check-inline">
+																	<label class="form-check-label">
+																		<input type="radio" class="form-input-styled"
+																			name="gender" data-fouc>
+																		250g
+																	</label>
+																</div>
+
+
+															</div>
+														</div>
+
+
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Other Amount:</label>
+															<div class="col-lg-9">
+																<input type="text" placeholder="Insert Value"
+																	class="form-control">
+															</div>
+														</div>
+
+													</fieldset>
+												</div>
 											</div>
 
-											<div class="col-md-6">
-												<fieldset>
-													<legend class="font-weight-semibold">
-														Feeding details</legend>
-
-													<div class="form-group">
-														<label>Type of Feed:</label>
-														<select data-placeholder="Select position"
-															class="form-control form-control-select2" data-fouc>
-
-															<option value="Farm-1">Food 1</option>
-															<option value="Farm-2">Food 2</option>
-															<option value="Farm-3">Food 3</option>
-
-															</optgroup>
-														</select>
-													</div>
-
-													<div class="form-group2">
-														<label class="d-block">Fixed Amount:</label>
-
-														<div class="form-check form-check-inline">
-															<label class="form-check-label">
-																<input type="radio" class="form-input-styled"
-																	name="gender" checked data-fouc>
-																100g
-															</label>
-														</div>
-
-														<div class="form-check form-check-inline">
-															<label class="form-check-label">
-																<input type="radio" class="form-input-styled"
-																	name="gender" data-fouc>
-																150g
-															</label>
-														</div>
-
-														<div class="form-check form-check-inline">
-															<label class="form-check-label">
-																<input type="radio" class="form-input-styled"
-																	name="gender" data-fouc>
-																200g
-															</label>
-														</div>
-
-														<div class="form-check form-check-inline">
-															<label class="form-check-label">
-																<input type="radio" class="form-input-styled"
-																	name="gender" data-fouc>
-																250g
-															</label>
-														</div>
-
-													</div>
-
-
-													<div class="form-group3">
-														<label>Other Amount:</label>
-														<input type="number" class="form-control"
-															placeholder="Insert other amount">
-													</div>
-
-												</fieldset>
+											<div class="text-right">
+												<button type="submit" class="btn btn-primary"
+													id="pnotify-solid-primary">Add</button>
 											</div>
-										</div>
-
-										<div class="text-right">
-											<button type="button" class="btn btn-primary"
-												id="pnotify-solid-primary">Add</button>
-										</div>
-									</form>
-
-
+										</form>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<!-- /2 columns form -->
-					<div class=" row">
-						<div class="col-md-12">
-							<!-- 2 columns form -->
-							<div class="card">
-								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Feed Floorplan</h5>
-									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="fullscreen"></a>
-											<a class="list-icons-item" data-action="reload"></a>
-											<a class="list-icons-item" data-action="collapse"></a>
+						<div class=" row">
+							<div class="col-md-12">
+								<!-- 2 columns form -->
+								<div class="card">
+									<div class="card-header bg-white header-elements-inline">
+										<h5 class="card-title font-weight-bold">Feed Floorplan Table</h5>
+										<div class="header-elements">
+											<div class="list-icons">
+												<a class="list-icons-item" data-action="fullscreen"></a>
+												<a class="list-icons-item" data-action="reload"></a>
+												<a class="list-icons-item" data-action="collapse"></a>
+											</div>
 										</div>
 									</div>
+									<div class="table-adjustment-smart">
+										<table class="table datatable-basic" width="100%">
+											<thead>
+												<tr>
+													<th class="table-row-color">Farm</th>
+													<th class="table-row-color">Net Site</th>
+													<th class="table-row-color">Type of Feed</th>
+													<th class="table-row-color">Amount of Feed</th>
+													<th class="table-row-color">Latest Update</th>
+													<th class="table-row-color">Actions</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="table-row-highlight">
+													<td>Farm 1</td>
+													<td>B1-1</td>
+													<td>Food 1</td>
+													<td>100g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 2</td>
+													<td>B2-1</td>
+													<td>Food 1</td>
+													<td>250g</td>
+													</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 2</td>
+													<td>B5-1</td>
+													<td>Food 2</td>
+													<td>200g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 2</td>
+													<td>A1-1</td>
+													<td>Food 2</td>
+													<td>200g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 2</td>
+													<td>A1-5</td>
+													<td>Food 3</td>
+													<td>250g</td>
+													</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 1</td>
+													<td>A1-6</td>
+													<td>Food 3</td>
+													<td>200g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 2</td>
+													<td>B1-6</td>
+													<td>Food 5</td>
+													<td>100g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 2</td>
+													<td>A1-1</td>
+													<td>Food 2</td>
+													<td>250g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 1</td>
+													<td>B1-6</td>
+													<td>Food 5</td>
+													<td>250g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 1</td>
+													<td>A1-2</td>
+													<td>Food 3</td>
+													<td>150g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 1</td>
+													<td>B1-6</td>
+													<td>Food 2</td>
+													<td>150g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 2</td>
+													<td>B1-2</td>
+													<td>Food 1</td>
+													<td>200g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr class="table-row-highlight">
+													<td>Farm 2</td>
+													<td>A1-7</td>
+													<td>Food 5</td>
+													<td>250g</td>
+													<td>01/01/2021</td>
+													<td class="text-center">
+														<div class="list-icons">
+															<div class="dropdown">
+																<a href="#" class="list-icons-item"
+																	data-toggle="dropdown">
+																	<i class="icon-menu9"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-right">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-plus2"></i>
+																		Edit</a>
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-minus2"></i>
+																		Remove</a>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="text-right" style="padding-bottom: 20px; margin-right: 20px;">
+										<button type="button" class="btn btn-primary" id="sweet_warning">Submit
+										</button></td>
+										<input type="reset" class="btn btn-primary-reset">
+									</div>
+									<!-- /scrollable datatable -->
 								</div>
-								<div class="table-adjustment-smart">
-									<table class="table datatable-basic" width="100%">
-										<thead>
-											<tr>
-												<th class="table-row-color">Farm</th>
-												<th class="table-row-color">Net Site</th>
-												<th class="table-row-color">Type of Feed</th>
-												<th class="table-row-color">Amount of Feed</th>
-												<th class="table-row-color">Latest Update</th>
-												<th class="table-row-color">Actions</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr class="table-row-highlight">
-												<td>Farm 1</td>
-												<td>B1-1</td>
-												<td>Food 1</td>
-												<td>100g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 2</td>
-												<td>B2-1</td>
-												<td>Food 1</td>
-												<td>250g</td>
-												</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 2</td>
-												<td>B5-1</td>
-												<td>Food 2</td>
-												<td>200g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 2</td>
-												<td>A1-1</td>
-												<td>Food 2</td>
-												<td>200g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 2</td>
-												<td>A1-5</td>
-												<td>Food 3</td>
-												<td>250g</td>
-												</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 1</td>
-												<td>A1-6</td>
-												<td>Food 3</td>
-												<td>200g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 2</td>
-												<td>B1-6</td>
-												<td>Food 5</td>
-												<td>100g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 2</td>
-												<td>A1-1</td>
-												<td>Food 2</td>
-												<td>250g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 1</td>
-												<td>B1-6</td>
-												<td>Food 5</td>
-												<td>250g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 1</td>
-												<td>A1-2</td>
-												<td>Food 3</td>
-												<td>150g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 1</td>
-												<td>B1-6</td>
-												<td>Food 2</td>
-												<td>150g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 2</td>
-												<td>B1-2</td>
-												<td>Food 1</td>
-												<td>200g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr class="table-row-highlight">
-												<td>Farm 2</td>
-												<td>A1-7</td>
-												<td>Food 5</td>
-												<td>250g</td>
-												<td>01/01/2021</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<div class="text-right" style="padding-bottom: 20px; margin-right: 20px;">
-									<button type="button" class="btn btn-primary" id="sweet_warning">Submit
-									</button></td>
-									<input type="reset" class="btn btn-primary-reset">
-								</div>
-								<!-- /scrollable datatable -->
 							</div>
+
+						</div>
+					</div>
+					<!-- /content area -->
+
+
+
+					<!-- Footer -->
+					<div class="navbar navbar-expand-lg navbar-light">
+						<div class="text-center d-lg-none w-100">
+							<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+								data-target="#navbar-footer">
+								<i class="icon-unfold mr-2"></i>
+								Footer
+							</button>
 						</div>
 
+						<div class="navbar-collapse collapse" id="navbar-footer">
+							<span class="navbar-text">
+								&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a
+									href="http://themeforest.net/user/Kopyov" target="_blank">Cyprian Aidan
+									Chong</a>
+							</span>
+
+							<ul class="navbar-nav ml-lg-auto">
+								<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
+										target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+								<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
+										class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i>
+										Docs</a>
+								</li>
+							</ul>
+						</div>
 					</div>
+					<!-- /footer -->
 
 				</div>
-
-
-
-
-
-
+				<!-- /main content -->
 
 			</div>
-			<!-- /content area -->
-
-
-			<!-- Footer -->
-			<div class="navbar navbar-expand-lg navbar-light">
-				<div class="text-center d-lg-none w-100">
-					<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
-						data-target="#navbar-footer">
-						<i class="icon-unfold mr-2"></i>
-						Footer
-					</button>
-				</div>
-
-				<div class="navbar-collapse collapse" id="navbar-footer">
-					<span class="navbar-text">
-						&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a href="http://themeforest.net/user/Kopyov"
-							target="_blank">Cyprian Aidan
-							Chong</a>
-					</span>
-
-					<ul class="navbar-nav ml-lg-auto">
-						<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
-								target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
-						<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
-								class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i>
-								Docs</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<!-- /footer -->
-
-		</div>
-		<!-- /main content -->
-
-	</div>
-	<!-- /page content -->
+			<!-- /page content -->
 
 </body>
 

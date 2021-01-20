@@ -201,7 +201,7 @@ var ColorPicker = function() {
         $('.colorpicker-event-change').spectrum({
             change: function(c) {
                 var label = $('#change-result');
-                label.removeClass('hidden').html('Change called: ' + '<span class="font-weight-semibold">' + c.toHexString() + '</span>');
+                label.removeClass('hidden').html('Selected Color: ' + '<span class="font-weight-semibold">' + c.toHexString() + '</span>');
             }
         });
 
