@@ -554,12 +554,11 @@ body {
 }
 
 .sidebar-dark .nav-sidebar .nav-item-open>.nav-link:not(.disabled), .sidebar-dark .nav-sidebar>.nav-item-expanded:not(.nav-item-open)>.nav-link, .sidebar-light .card[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent) .nav-sidebar .nav-item-open>.nav-link:not(.disabled), .sidebar-light .card[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent) .nav-sidebar>.nav-item-expanded:not(.nav-item-open)>.nav-link {
-    background-color: rgba(255, 255, 255, .1);
+    background-color: #0061e1;
     color: #fff
 }
 
 .sidebar-dark .nav-sidebar>.nav-item-open>.nav-link:not(.disabled), .sidebar-dark .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light .card[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent) .nav-sidebar>.nav-item-open>.nav-link:not(.disabled), .sidebar-light .card[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent) .nav-sidebar>.nav-item>.nav-link.active {
-    background-color: #0455BF;
     color: #fff;
 }
 

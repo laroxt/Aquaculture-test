@@ -1,0 +1,20 @@
+.box-species {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    text-align: center;
+    display: inline-block;
+}
+
+.blue {
+    background: #13b4ff;
+}
+
+.purple {
+    background: #ab3fdd;
+}
+
+.red {
+    background: #ae163e;
+}

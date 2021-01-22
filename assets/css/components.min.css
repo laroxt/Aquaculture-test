@@ -14380,7 +14380,6 @@ a.fc-more:hover {
 
 .datatable-scroll, .datatable-scroll-lg, .datatable-scroll-sm {
     min-height: .01%;
-    overflow-x: auto;
 }
 
 .datatable-scroll-wrap {

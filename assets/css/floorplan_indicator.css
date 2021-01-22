@@ -1,3 +1,15 @@
+.floorplan-color-fish-yellow {
+    background-color: rgb(255, 255, 122);
+}
+
+.floorplan-color-fish-blue {
+    background-color: rgb(122, 175, 255);
+}
+
+.floorplan-color-fish-purple {
+    background-color: rgb(239, 122, 255);
+}
+
 .floorplan-batch-size-input {
     color: green;
 }
@@ -44,8 +56,8 @@
 }
 
 .floorplan-details-empty {
-    width: 30px;
-    height: 5px;
+    width: 100px;
+    height: 30px;
 }
 
 table.example-table .selected {
@@ -71,4 +83,29 @@ table.example-table .selected {
 .table-select-highlight:hover {
     background-color: rgb(204, 204, 204);
     box-shadow: 0 0 6px rgb(34, 34, 34, 0.2);
+}
+
+.icon-alert {
+    color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes example {
+    0% {
+        color: red;
+    }
+    25% {
+        color: red;
+    }
+    50% {
+        color: yellow;
+    }
+    100% {
+        color: green;
+    }
+}
+
 }
