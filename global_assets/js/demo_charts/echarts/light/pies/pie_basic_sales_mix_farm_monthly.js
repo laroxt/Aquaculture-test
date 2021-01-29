@@ -9,7 +9,7 @@
 // Setup module
 // ------------------------------
 
-var EchartsPieBasicLight = (function () {
+var salesMixFarmMonthly = (function () {
   //
   // Setup module components
   //
@@ -68,6 +68,19 @@ var EchartsPieBasicLight = (function () {
           fontSize: 13,
         },
 
+        // Add title
+        title: {
+          text: "Mix Sale Profit(RM)",
+          left: "center",
+          textStyle: {
+            fontSize: 17,
+            fontWeight: 500,
+          },
+          subtextStyle: {
+            fontSize: 12,
+          },
+        },
+
         // Add tooltip
         tooltip: {
           trigger: "item",
@@ -93,10 +106,10 @@ var EchartsPieBasicLight = (function () {
         // Add series
         series: [
           {
-            name: "Browsers",
+            name: "Farm",
             type: "pie",
             radius: "80%",
-            center: ["50%", "45.5%"],
+            center: ["50%", "50%"],
             itemStyle: {
               normal: {
                 borderRadius: 8,
@@ -154,5 +167,5 @@ var EchartsPieBasicLight = (function () {
 // ------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  EchartsPieBasicLight.init();
+  salesMixFarmMonthly.init();
 });

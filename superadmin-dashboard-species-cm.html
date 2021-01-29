@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>KS Aquaculture-Mf-Pellet Standard Price</title>
+	<title>KS Aquaculture-Fp-Feed Floorplan</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -17,6 +17,7 @@
 	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/floorplan_indicator.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
@@ -39,16 +40,30 @@
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_pnotify.js"></script>
 	<script src="./global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="./dragscroll_js/dragscroll.js"></script>
 
 
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
-
 	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
 	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
 	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
+
+	<!-- Theme JS files -->
+	<script src="./global_assets/js/plugins/visualization/echarts/echarts.min.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/bars/bars_basic_speciesCm_overview.min.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/pies/pie_basic_sales_cm_yearly.js"></script>
+	<script src="./global_assets/js/demo_charts/echarts/light/pies/pie_basic_sales_cm_monthly.js"></script>
 	<!-- /theme JS files -->
+
+	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/styling/switch.min.js"></script>
+	<script src="./global_assets/js/demo_pages/switch_toggle.js"></script>
+	<script src="./global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
+
+
 
 </head>
 
@@ -300,7 +315,7 @@
 
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link  "><i class="icon-drawer3"></i>
+							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
 								<span> Recorder Data Entry</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
 								<li class="nav-item"><a href="./superadmin-mf-rd-feed.html" class="nav-link">Feed</a>
@@ -345,10 +360,10 @@
 
 							</ul>
 						</li>
-						<li class="nav-item nav-item-submenu nav-item-open">
-							<a href="#" class="nav-link active"><i class="icon-drawer3"></i>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
 								<span> Operation Data Entry</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts" style="display:block;">
+							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
 								<li class="nav-item"><a href="./superadmin-mf-operation-reservation.html"
 										class="nav-link">Reservation</a>
 								</li>
@@ -357,7 +372,7 @@
 								</li>
 								<li class="nav-item-divider"></li>
 								<li class="nav-item"><a href="./superadmin-mf-operation-cc-pellet-standard-price.html"
-										class="nav-link  active">Pellet Standard Price</a>
+										class="nav-link ">Pellet Standard Price</a>
 								</li>
 								<li class="nav-item"><a
 										href="./superadmin-mf-operation-cc-trash-fish-standard-price.html"
@@ -365,7 +380,6 @@
 								</li>
 							</ul>
 						</li>
-
 						<!-- Account -->
 						<li class="nav-item-header">
 							<div class="text-uppercase font-size-xs line-height-xs">Configuration</div> <i
@@ -403,7 +417,7 @@
 							<div class="text-uppercase font-size-xs line-height-xs">Floorplan Viewer</div> <i
 								class="icon-circle-small" title="Main"></i>
 						</li>
-						<li class="nav-item nav-item-submenu">
+						<li class="nav-item nav-item-submenu ">
 							<a href=" #" class="nav-link "><i class="icon-gear"></i>
 								<span>Floorplan Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
@@ -485,258 +499,296 @@
 
 		<!-- Main content -->
 		<div class="content-wrapper">
-
-
-			<!-- Main content -->
-			<div class="content-wrapper">
-
-				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline"
+					style="padding-right:35px;">
 					<div class="d-flex">
-						<div class="breadcrumb">
-							<h class="breadcrumb-item active">Master Form</h>
-							<h class="breadcrumb-item active">Operation Data Entry</h>
-							<a href="./superadmin-mf-operation-cc-pellet-standard-price.html"
-								class="breadcrumb-item">Pellete
-								Standard Price</a>
+						<div class="d-flex">
+							<span class="breadcrumb-item active">Dashboard</span>
+							<a href="#" class="breadcrumb-item">Pulau Ketam Species Cumulative Margin</a>
 						</div>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
-				</div>
-				<!-- /page header -->
 
-				<!-- Main content -->
-				<div class="content-wrapper">
-					<!-- Content area -->
-					<div class="content">
-						<div class="row">
-							<div class="col-md-12">
-								<!-- 2 columns form -->
-								<div class="card">
-									<div class="card-header bg-white header-elements-inline">
-										<h5 class="card-title font-weight-bold">Pellet Standard Price</h5>
-										<div class="header-elements">
-											<div class="list-icons">
-												<a class="list-icons-item" data-action="fullscreen"></a>
-												<a class="list-icons-item" data-action="collapse"></a>
-											</div>
-										</div>
-									</div>
+					<div class="header-elements d-none">
+						<div class="breadcrumb justify-content-center">
+							<div class="breadcrumb-elements-item dropdown p-0">
+								<a href="#" class="breadcrumb-elements-item">
+									<i class="icon-file-text3 mr-2"></i>
+									View Report
+								</a>
+								<a href="#" class="breadcrumb-elements-item dropdown-toggle" data-toggle="dropdown">
+									<i class="icon-location3"></i>
+									Farm Location
+								</a>
 
-									<div class="card-body">
-										<form action="#">
-											<div class="row">
+								<div class="dropdown-menu dropdown-menu-right">
+									<a href="#" class="dropdown-item">Pulau Ketam, Selangor</a>
+									<a href="#" class="dropdown-item">Kong Kong, Johor</a>
 
-												<div class="col-md-2">
-													<fieldset>
-
-														<div class="form-group">
-															<div class="form-group">
-																<label>Site:</label>
-																<select data-placeholder="Select your state"
-																	class="form-control form-control-select2" data-fouc>
-																	<option value="Farm-1">Lim June</option>
-																	<option value="Farm-2">Lim June</option>
-																	<option value="Farm-3">Lim June</option>
-																	<option value="Farm-3">Lim June</option>
-																	<option value="Farm-3">Lim June</option>
-																</select>
-															</div>
-														</div>
-													</fieldset>
-												</div>
-
-												<div class="col-md-10">
-													<label>Site Pellet Standard Price Table:</label>
-													<div class="table-responsive table-scrollable2">
-														<table class="table">
-															<thead>
-																<tr>
-																	<th class="table-row-color">Code</th>
-																	<th class="table-row-color">Name</th>
-																	<th class="table-row-color">Supplier</th>
-																	<th class="table-row-color">Unit Price(RM)</th>
-																	<th class="table-row-color">Remark</th>
-
-																</tr>
-																<style>
-																	.table thead th {
-																		position: sticky;
-																		top: 0;
-																	}
-																</style>
-															</thead>
-															<tbody>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																<tr class="table-row-highlight">
-																	<td>EP</td>
-																	<td>Unit President</td>
-																	<td>City Marine Products</td>
-																	<td>1.10</td>
-																	<td>Last Update:<br><span
-																			class="trash-fish-price-input">01/01/2021</span>
-																	</td>
-
-																</tr>
-															</tbody>
-														</table>
-													</div>
-
-
-												</div>
-											</div>
-
-
-										</form>
-									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- /content area -->
+			</div>
+			<!-- /page header -->
+			<!-- Content area -->
+			<div class="content3">
+				<!-- /fieldset legend -->
+				<div class="row">
+					<!-- /fieldset legend -->
+					<div class="col-md-12">
+						<!-- 2 columns form -->
+						<!-- Basic bars -->
+						<div class="card">
+							<div class="card-header bg-white header-elements-inline">
+								<h5 class="card-title font-weight-bold">PK Species Overall CM</h5>
+								<h style="font-weight: bold;">Status: <span class="update-net-sucess">Ongoing</span>
+								</h>
+								<h style="font-weight: bold;">Active Species: <span class="update-net-sucess">6</span>
+								</h>
+								<h style="font-weight: bold;">Lastest Update: <span
+										class="update-net-sucess">01/01/2021</span></h>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="reload"></a>
+										<a class="list-icons-item" data-action="collapse"></a>
+									</div>
+								</div>
+							</div>
 
-
-				<!-- Footer -->
-				<div class="navbar navbar-expand-lg navbar-light">
-					<div class="text-center d-lg-none w-100">
-						<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
-							data-target="#navbar-footer">
-							<i class="icon-unfold mr-2"></i>
-							Footer
-						</button>
+							<div class="card-body">
+								<div class="chart-container">
+									<div class="chart has-fixed-height" id="speciesCm_overview"></div>
+								</div>
+							</div>
+						</div>
+						<!-- /basic bars -->
 					</div>
 
-					<div class="navbar-collapse collapse" id="navbar-footer">
-						<span class="navbar-text">
-							&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a
-								href="http://themeforest.net/user/Kopyov" target="_blank">Cyprian Aidan
-								Chong</a>
-						</span>
+					<div class="col-xl-6">
+						<!-- Progress counters -->
+						<div class="row">
+							<div class="col-sm-12">
 
-						<ul class="navbar-nav ml-lg-auto">
-							<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
-									target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
-							<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
-									class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i>
-									Docs</a>
-							</li>
-						</ul>
+								<div class="card">
+									<div class="card-header bg-white header-elements-inline">
+										<h5 class="card-title font-weight-bold">Species CM Filter</h5>
+										<div class="header-elements">
+											<div class="list-icons">
+												<a class="list-icons-item" data-action="reload"></a>
+												<a class="list-icons-item" data-action="collapse"></a>
+											</div>
+										</div>
+									</div>
+
+									<div class="card-body" style="padding-bottom: 0;">
+										<form action="#">
+											<div class="row">
+												<div class="col-md-4">
+													<fieldset>
+														<div class="form-group">
+															<label>Species:</label>
+															<select data-placeholder="Select your state"
+																class="form-control form-control-select2" data-fouc>
+																<option value="Farm-2">Golden Snapper</option>
+																<option value="Farm-3">Pomfret</option>
+																<option value="Farm-3">Seabass</option>
+																<option value="Farm-2">Hybrid Grouper</option>
+																<option value="Farm-3">Giant Grouper</option>
+															</select>
+														</div>
+													</fieldset>
+												</div>
+												<div class="col-md-4">
+													<fieldset>
+														<div class="form-group">
+															<label>Month:</label>
+															<select data-placeholder="Select your state"
+																class="form-control form-control-select2" data-fouc>
+																<option value="Farm-1">Jan</option>
+																<option value="Farm-2">Feb</option>
+																<option value="Farm-3">Mar</option>
+																<option value="Farm-3">Apr</option>
+																<option value="Farm-2">May</option>
+																<option value="Farm-3">June</option>
+															</select>
+														</div>
+													</fieldset>
+												</div>
+												<div class="col-md-4">
+													<fieldset>
+														<div class="form-group">
+															<label>Year:</label>
+															<select data-placeholder="Select your state"
+																class="form-control form-control-select2" data-fouc>
+																<option value="Farm-1">2021</option>
+																<option value="Farm-2">2021</option>
+																<option value="Farm-3">2021</option>
+																<option value="Farm-3">2021</option>
+																<option value="Farm-2">2021</option>
+																<option value="Farm-3">2021</option>
+															</select>
+														</div>
+													</fieldset>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /progress counters -->
+						<!-- Daily sales -->
+						<div class="card">
+							<div class="card-header bg-white header-elements-inline">
+								<h5 class="card-title font-weight-bold">PK Red Snapper CM</h5>
+								<h style="font-weight: bold;">Status: <span class="update-net-sucess">Ongoing</span>
+								</h>
+								<h style="font-weight: bold;">Valid: <span class="update-net-sucess">Yes</span>
+								</h>
+								<h style="font-weight: bold;">Lastest Update: <span
+										class="update-net-sucess">01/01/2021</span></h>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="reload"></a>
+										<a class="list-icons-item" data-action="collapse"></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body">
+								<div class="chart-container">
+									<div class="chart has-fixed-height" id="species_sales_cm_month"></div>
+								</div>
+							</div>
+						</div>
+						<!-- /daily sales -->
+					</div>
+
+
+
+					<div class="col-xl-6">
+						<!-- Progress counters -->
+						<div class="row">
+							<div class="col-sm-12">
+
+								<div class="card">
+									<div class="card-header bg-white header-elements-inline">
+										<h5 class="card-title font-weight-bold">Species CM Filter</h5>
+										<div class="header-elements">
+											<div class="list-icons">
+												<a class="list-icons-item" data-action="reload"></a>
+												<a class="list-icons-item" data-action="collapse"></a>
+											</div>
+										</div>
+									</div>
+
+									<div class="card-body" style="padding-bottom: 0;">
+										<form action="#">
+											<div class="row">
+												<div class="col-md-6">
+													<fieldset>
+														<div class="form-group">
+															<label>Species:</label>
+															<select data-placeholder="Select your state"
+																class="form-control form-control-select2" data-fouc>
+																<option value="Farm-1">Red Snapper</option>
+																<option value="Farm-2">Golden Snapper</option>
+																<option value="Farm-3">Pomfret</option>
+																<option value="Farm-3">Seabass</option>
+																<option value="Farm-2">Hybrid Grouper</option>
+																<option value="Farm-3">Giant Grouper</option>
+															</select>
+															</select>
+														</div>
+													</fieldset>
+												</div>
+												<div class="col-md-6">
+													<fieldset>
+														<div class="form-group">
+															<label>Year:</label>
+															<select data-placeholder="Select your state"
+																class="form-control form-control-select2" data-fouc>
+																<option value="Farm-1">2021</option>
+																<option value="Farm-2">2021</option>
+																<option value="Farm-3">2021</option>
+																<option value="Farm-3">2021</option>
+																<option value="Farm-2">2021</option>
+																<option value="Farm-3">2021</option>
+															</select>
+														</div>
+													</fieldset>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /progress counters -->
+						<!-- Daily sales -->
+						<div class="card">
+							<div class="card-header bg-white header-elements-inline">
+								<h5 class="card-title font-weight-bold">PK Red Snapper CM</h5>
+								<h style="font-weight: bold;">Status: <span class="update-net-sucess">Ongoing</span>
+								</h>
+								<h style="font-weight: bold;">Valid: <span class="update-net-sucess">Yes</span>
+								</h>
+								<h style="font-weight: bold;">Lastest Update: <span
+										class="update-net-sucess">01/01/2021</span></h>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="reload"></a>
+										<a class="list-icons-item" data-action="collapse"></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body">
+								<div class="chart-container">
+									<div class="chart has-fixed-height" id="species_sales_cm_year"></div>
+								</div>
+							</div>
+						</div>
+						<!-- /daily sales -->
 					</div>
 				</div>
-				<!-- /footer -->
-
 			</div>
-			<!-- /main content -->
+			<!-- Footer -->
+			<div class="navbar navbar-expand-lg navbar-light">
+				<div class="text-center d-lg-none w-100">
+					<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+						data-target="#navbar-footer">
+						<i class="icon-unfold mr-2"></i>
+						Footer
+					</button>
+				</div>
 
+				<div class="navbar-collapse collapse" id="navbar-footer">
+					<span class="navbar-text">
+						&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a href="http://themeforest.net/user/Kopyov"
+							target="_blank">Cyprian Aidan
+							Chong</a>
+					</span>
+
+					<ul class="navbar-nav ml-lg-auto">
+						<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
+								target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+						<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
+								class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /footer -->
 		</div>
-		<!-- /page content -->
+		<!-- /content area -->
+
+	</div>
+	<!-- /page content -->
 
 </body>
 

@@ -9,35 +9,35 @@
 // Setup module
 // ------------------------------
 
-var EchartsPieBasicLight = (function () {
+var salesFarmCmYear = (function () {
   //
   // Setup module components
   //
 
   // Basic pie chart
-  var salesMixFarmMonthlyExample = function () {
+  var salesFarmCmYearExample = function () {
     if (typeof echarts == "undefined") {
       console.warn("Warning - echarts.min.js is not loaded.");
       return;
     }
 
     // Define element
-    var sales_mix_farm_monthly_element = document.getElementById("sales_mix_farm_monthly");
+    var farm_sales_cm_year_element = document.getElementById("farm_sales_cm_year");
 
     //
     // Charts configuration
     //
 
-    if (sales_mix_farm_monthly_element) {
+    if (farm_sales_cm_year_element) {
       // Initialize chart
-      var sales_mix_farm_monthly = echarts.init(sales_mix_farm_monthly_element);
+      var farm_sales_cm_year = echarts.init(farm_sales_cm_year_element);
 
       //
       // Chart config
       //
 
       // Options
-      sales_mix_farm_monthly.setOption({
+      farm_sales_cm_year.setOption({
         // Colors
         color: [
           "#2ec7c9",
@@ -68,6 +68,19 @@ var EchartsPieBasicLight = (function () {
           fontSize: 13,
         },
 
+        // Add title
+        title: {
+          text: "Yearly Red Snapper CM",
+          left: "center",
+          textStyle: {
+            fontSize: 17,
+            fontWeight: 500,
+          },
+          subtextStyle: {
+            fontSize: 12,
+          },
+        },
+
         // Add tooltip
         tooltip: {
           trigger: "item",
@@ -85,7 +98,7 @@ var EchartsPieBasicLight = (function () {
           orient: "horizontal",
           top: "bottom",
 
-          data: ["BA1", "BA2", "BA3", "BA4", "BA5"],
+          data: ["BA1", "BA2", "BA3", "BA4", "BA5", "BA6"],
           itemHeight: 8,
           itemWidth: 8,
         },
@@ -93,10 +106,10 @@ var EchartsPieBasicLight = (function () {
         // Add series
         series: [
           {
-            name: "Browsers",
+            name: "Species",
             type: "pie",
             radius: "80%",
-            center: ["50%", "45.5%"],
+            center: ["50%", "50%"],
             itemStyle: {
               normal: {
                 borderRadius: 8,
@@ -110,19 +123,19 @@ var EchartsPieBasicLight = (function () {
               { value: 234, name: "BA3" },
               { value: 135, name: "BA4" },
               { value: 1548, name: "BA5" },
+              { value: 235, name: "BA6" },
             ],
           },
         ],
       });
     }
-
     //
     // Resize charts
     //
 
     // Resize function
     var triggerChartResize = function () {
-      sales_mix_farm_monthly_element && sales_mix_farm_monthly.resize();
+      farm_sales_cm_year_element && farm_sales_cm_year.resize();
     };
 
     // On sidebar width change
@@ -145,7 +158,7 @@ var EchartsPieBasicLight = (function () {
 
   return {
     init: function () {
-      salesMixFarmMonthlyExample();
+      salesFarmCmYearExample();
     },
   };
 })();
@@ -154,5 +167,5 @@ var EchartsPieBasicLight = (function () {
 // ------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  EchartsPieBasicLight.init();
+  salesFarmCmYear.init();
 });

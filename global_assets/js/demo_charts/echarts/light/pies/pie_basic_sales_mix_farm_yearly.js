@@ -9,35 +9,35 @@
 // Setup module
 // ------------------------------
 
-var EchartsPieBasicLight = (function () {
+var salesMixSpeciesMonthly = (function () {
   //
   // Setup module components
   //
 
   // Basic pie chart
-  var salesMixFarmMonthlyExample = function () {
+  var salesMixSpeciesMonthlyExample = function () {
     if (typeof echarts == "undefined") {
       console.warn("Warning - echarts.min.js is not loaded.");
       return;
     }
 
     // Define element
-    var sales_mix_farm_monthly_element = document.getElementById("sales_mix_farm_monthly");
+    var sales_mix_species_monthly_element = document.getElementById("sales_mix_species_monthly");
 
     //
     // Charts configuration
     //
 
-    if (sales_mix_farm_monthly_element) {
+    if (sales_mix_species_monthly_element) {
       // Initialize chart
-      var sales_mix_farm_monthly = echarts.init(sales_mix_farm_monthly_element);
+      var sales_mix_species_monthly = echarts.init(sales_mix_species_monthly_element);
 
       //
       // Chart config
       //
 
       // Options
-      sales_mix_farm_monthly.setOption({
+      sales_mix_species_monthly.setOption({
         // Colors
         color: [
           "#2ec7c9",
@@ -68,6 +68,19 @@ var EchartsPieBasicLight = (function () {
           fontSize: 13,
         },
 
+        // Add title
+        title: {
+          text: "Mix Sale Profit(RM)",
+          left: "center",
+          textStyle: {
+            fontSize: 17,
+            fontWeight: 500,
+          },
+          subtextStyle: {
+            fontSize: 12,
+          },
+        },
+
         // Add tooltip
         tooltip: {
           trigger: "item",
@@ -85,7 +98,7 @@ var EchartsPieBasicLight = (function () {
           orient: "horizontal",
           top: "bottom",
 
-          data: ["BA1", "BA2", "BA3", "BA4", "BA5"],
+          data: ["Species1", "Species2", "Species3", "Species4", "Species5"],
           itemHeight: 8,
           itemWidth: 8,
         },
@@ -93,10 +106,10 @@ var EchartsPieBasicLight = (function () {
         // Add series
         series: [
           {
-            name: "Browsers",
+            name: "Species",
             type: "pie",
             radius: "80%",
-            center: ["50%", "45.5%"],
+            center: ["50%", "50%"],
             itemStyle: {
               normal: {
                 borderRadius: 8,
@@ -105,11 +118,11 @@ var EchartsPieBasicLight = (function () {
               },
             },
             data: [
-              { value: 335, name: "BA1" },
-              { value: 310, name: "BA2" },
-              { value: 234, name: "BA3" },
-              { value: 135, name: "BA4" },
-              { value: 1548, name: "BA5" },
+              { value: 335, name: "Species1" },
+              { value: 310, name: "Species2" },
+              { value: 234, name: "Species3" },
+              { value: 135, name: "Species4" },
+              { value: 1548, name: "Species5" },
             ],
           },
         ],
@@ -122,7 +135,7 @@ var EchartsPieBasicLight = (function () {
 
     // Resize function
     var triggerChartResize = function () {
-      sales_mix_farm_monthly_element && sales_mix_farm_monthly.resize();
+      sales_mix_species_monthly_element && sales_mix_species_monthly.resize();
     };
 
     // On sidebar width change
@@ -145,7 +158,7 @@ var EchartsPieBasicLight = (function () {
 
   return {
     init: function () {
-      salesMixFarmMonthlyExample();
+      salesMixSpeciesMonthlyExample();
     },
   };
 })();
@@ -154,5 +167,5 @@ var EchartsPieBasicLight = (function () {
 // ------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  EchartsPieBasicLight.init();
+  salesMixSpeciesMonthly.init();
 });

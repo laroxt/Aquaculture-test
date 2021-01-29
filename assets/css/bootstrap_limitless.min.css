@@ -3098,6 +3098,7 @@ a.breadcrumb-elements-item, a.breadcrumb-item {
 
 .update-net-sucess {
     color: green;
+    font-size: 12px;
 }
 
 .update-net-fail {
