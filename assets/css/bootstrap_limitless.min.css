@@ -1804,7 +1804,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 }
 
 .navbar-brand img {
-    height: 1rem;
+    height: 1.1rem;
     display: block
 }
 
@@ -1829,7 +1829,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 
 @media (prefers-reduced-motion:reduce) {
     .navbar-nav-link {
-        transition: 1s;
+        transition: 0.7s;
     }
 }
 
@@ -1871,7 +1871,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 }
 
 .navbar-collapse {
-    margin-left: -2.25rem;
+    margin-left: -0.25rem;
     margin-right: -1.25rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem

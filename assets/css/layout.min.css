@@ -240,6 +240,11 @@ body {
     display: block
 }
 
+.profile-margin {
+    padding-bottom: 0;
+    padding-top: 24px;
+}
+
 .nav-sidebar {
     -ms-flex-direction: column;
     flex-direction: column
@@ -272,13 +277,14 @@ body {
     -ms-flex-align: start;
     align-items: flex-start;
     padding: .65rem 1.25rem;
-    margin: 1px;
+    margin: 0.7 px;
+    margin-bottom: 5px;
     transition: background-color ease-in-out .15s, color ease-in-out .15s
 }
 
 @media (prefers-reduced-motion:reduce) {
     .nav-sidebar .nav-link {
-        transition: 1s;
+        transition: 0s;
     }
 }
 
@@ -356,7 +362,7 @@ body {
 }
 
 .nav-group-sub .nav-link {
-    padding: .625rem 1.25rem .625rem 3.5rem
+    padding: .625rem 1.25rem .625rem 3rem
 }
 
 .nav-group-sub .nav-group-sub .nav-link {
@@ -510,7 +516,7 @@ body {
 }
 
 .sidebar-dark {
-    background-color: #2D78DB;
+    background-color: #063474;
     color: #fff
 }
 
@@ -789,8 +795,8 @@ body {
         background-color: rgba(255, 255, 255, .1)
     }
     .sidebar-xs .sidebar-main.sidebar-dark .nav-sidebar>.nav-item-submenu>.nav-group-sub {
-        background-color: #304047;
-        border-left: 1px solid rgba(255, 255, 255, .1)
+        background-color: #063474;
+        border-left: 2px solid rgba(255, 255, 255, .1)
     }
     .sidebar-xs .sidebar-main.sidebar-light .nav-sidebar>.nav-item:not(.nav-item-open):hover>.nav-link:not(.active):not(.disabled) {
         color: #333;
@@ -1386,4 +1392,9 @@ body {
     .breadcrumb-line>.content-boxed>:last-child {
         margin-right: 1.25rem
     }
+}
+
+.chart-badge {
+    text-align: center;
+    margin-top: 10px;
 }
