@@ -27,20 +27,16 @@ Highcharts.chart("farmCm_overview", {
   },
 
   yAxis: {
-    min: 0,
-    max: 100,
     title: {
       text: "Contribution Margin Revenue(%)",
     },
     stackLabels: {
-      enabled: true,
       style: {
-        fontWeight: "bold",
+        color: "black",
       },
-    },
-    labels: {
+      enabled: true,
       formatter: function () {
-        return this.value + "%";
+        return this.total + "%";
       },
     },
   },
@@ -86,7 +82,6 @@ Highcharts.chart("farmCm_overview", {
 
   plotOptions: {
     series: {
-      stacking: "percent",
       pointWidth: 50,
       dataLabels: {
         enabled: true,
@@ -94,6 +89,7 @@ Highcharts.chart("farmCm_overview", {
       },
     },
     column: {
+      stacking: "normal",
       pointPadding: 0.2,
       borderWidth: 0,
     },
@@ -101,20 +97,13 @@ Highcharts.chart("farmCm_overview", {
 
   series: [
     {
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          var pcnt = this.y;
-          return Highcharts.numberFormat(pcnt) + "%";
-        },
-      },
       name: "Pulau Ketam",
-      color: "#be29ec",
+      color: "#84d9e5",
       data: [
         {
           name: "Jan",
           y: 30,
-          drilldown: "All Farm, Jan, 2021",
+          drilldown: "Pulau Ketam, Jan, 2021",
         },
         {
           name: "Feb",
@@ -164,19 +153,12 @@ Highcharts.chart("farmCm_overview", {
     },
     {
       name: "Kong Kong",
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          var pcnt = this.y;
-          return Highcharts.numberFormat(pcnt) + "%";
-        },
-      },
-      color: "#be29ec",
+      color: "#064a89",
       data: [
         {
           name: "Jan",
           y: 30,
-          drilldown: "All Farm, Jan, 2021",
+          drilldown: "Kong Kong, Jan, 2021",
         },
         {
           name: "Feb",
@@ -224,14 +206,97 @@ Highcharts.chart("farmCm_overview", {
         },
       ],
     },
+    {
+      name: "YTD",
+      color: "#99cc33",
+      data: [
+        {
+          name: "Jan",
+          y: null,
+        },
+        {
+          name: "Feb",
+          y: null,
+        },
+        {
+          name: "Mar",
+          y: null,
+        },
+        {
+          name: "Apr",
+          y: null,
+        },
+        {
+          name: "May",
+          y: null,
+        },
+        {
+          name: "Jun",
+          y: null,
+        },
+        {
+          name: "July",
+          y: null,
+        },
+        {
+          name: "Aug",
+          y: null,
+        },
+        {
+          name: "Sept",
+          y: null,
+        },
+        {
+          name: "Oct",
+          y: null,
+        },
+        {
+          name: "Nov",
+          y: null,
+        },
+        {
+          name: "Dec",
+          y: null,
+        },
+        {
+          name: "YTD",
+          y: 112,
+        },
+      ],
+    },
   ],
 
   drilldown: {
+    drillUpButton: {
+      relativeTo: "spacingBox",
+      position: {
+        y: 0,
+        x: 0,
+      },
+    },
     series: [
       {
-        name: "All Farm, Jan, 2021",
-        id: "All Farm, Jan, 2021",
-        color: "#be29ec",
+        name: "Pulau Ketam, Jan, 2021",
+        id: "Pulau Ketam, Jan, 2021",
+        color: "#84d9e5",
+
+        data: [
+          ["BA1", 32],
+          ["BA2", 51],
+          ["BA3", 63],
+          ["BA4", 43.2],
+          ["BA5", 52.7],
+          ["BA6", 60],
+          ["BA7", 23],
+          ["BA8", 53],
+          ["BA9", 68],
+        ],
+      },
+      {
+        name: "Kong Kong, Jan, 2021",
+        id: "Kong Kong, Jan, 2021",
+        color: "#064a89",
+
         data: [
           ["BA1", 32],
           ["BA2", 51],

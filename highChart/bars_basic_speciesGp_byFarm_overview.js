@@ -271,6 +271,13 @@ Highcharts.chart("speciesSales_byFarm_overview", {
   ],
 
   drilldown: {
+    drillUpButton: {
+      relativeTo: "spacingBox",
+      position: {
+        y: 0,
+        x: 0,
+      },
+    },
     series: [
       {
         name: "Pulau Ketam, Jan, 2021",

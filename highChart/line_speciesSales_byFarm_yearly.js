@@ -181,6 +181,13 @@ Highcharts.chart("speciesSales_yearly", {
     },
   ],
   drilldown: {
+    drillUpButton: {
+      relativeTo: "spacingBox",
+      position: {
+        y: 0,
+        x: 0,
+      },
+    },
     series: [
       {
         //Pulau Ketam, Jan

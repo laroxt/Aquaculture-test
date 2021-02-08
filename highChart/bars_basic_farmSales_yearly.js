@@ -145,6 +145,13 @@ Highcharts.chart("farm_sales_monthly", {
     },
   ],
   drilldown: {
+    drillUpButton: {
+      relativeTo: "spacingBox",
+      position: {
+        y: 0,
+        x: 0,
+      },
+    },
     series: [
       {
         name: "Farm BA in 2014",

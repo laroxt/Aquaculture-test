@@ -1,85 +1,229 @@
 // Create the chart
 Highcharts.chart("farm_sales_cm_month", {
-  chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 0,
-    spacingRight: 15,
-    type: "pie",
-  },
   title: {
-    text: '<span style="font-weight: bold">Monthly Red Snapper CM</span>',
-    align: "center",
-  },
-  subtitle: {
-    text: "Pulau Ketam<br> Jan, 2021",
+    text: '<span style="font-weight: bold">Farm Contribution Margin</span>',
     align: "center",
   },
 
-  tooltip: {
-    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+  chart: {
+    spacingTop: 0,
+    spacingBottom: 0,
+    spacingLeft: 15,
+    spacingRight: 15,
+    type: "column",
   },
-  accessibility: {
-    point: {
-      valueSuffix: "%",
+
+  subtitle: {
+    text: "Pulau Ketam, 2021 ",
+    align: "center",
+    verticalAlign: "top",
+  },
+
+  yAxis: {
+    title: {
+      text: "Contribution Margin Revenue(%)",
     },
   },
+
+  credits: {
+    enabled: false,
+  },
+
+  legend: {
+    layout: "horizontal",
+    align: "center",
+    verticalAlign: "bottom",
+    borderWidth: 0,
+  },
+
+  xAxis: {
+    type: "category",
+    crosshair: true,
+  },
+
+  tooltip: {
+    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
+    pointFormatter: function () {
+      var value;
+      if (this.y >= 0) {
+        value = this.y + "% ";
+      } else {
+        value = -this.y + "-% ";
+      }
+      return (
+        "<br/>" +
+        '<span style="color:' +
+        this.series.color +
+        '"> ● </span>' +
+        " " +
+        this.series.name +
+        "</span>: <b>" +
+        value +
+        "</b><br />"
+      );
+    },
+  },
+
   plotOptions: {
-    pie: {
-      allowPointSelect: true,
-      cursor: "pointer",
+    series: {
+      pointWidth: 50,
       dataLabels: {
         enabled: true,
-        format: "<b>{point.name}</b>: {point.percentage:.1f} %",
+        format: "{point.y:.1f}%",
       },
-      showInLegend: true,
+    },
+    column: {
+      stacking: "normal",
+      pointPadding: 0.2,
+      borderWidth: 0,
     },
   },
 
   series: [
     {
-      name: "Fish",
-      colorByPoint: true,
+      name: "Pulau Ketam",
+      color: "#84d9e5",
       data: [
         {
-          name: "BA1",
-          y: 31.41,
+          name: "Jan",
+          y: 30,
+          drilldown: "Pulau Ketam, Jan, 2021",
         },
         {
-          name: "BA2",
-          y: 11.84,
+          name: "Feb",
+          y: 25.3,
         },
         {
-          name: "BA3",
-          y: 10.85,
+          name: "Mar",
+          y: 32,
         },
         {
-          name: "BA4",
-          y: 4.67,
+          name: "Apr",
+          y: 54,
         },
         {
-          name: "BA5",
-          y: 4.18,
+          name: "May",
+          y: 67.3,
         },
         {
-          name: "BA6",
-          y: 16.64,
+          name: "Jun",
+          y: 51,
         },
         {
-          name: "BA7",
-          y: 20.64,
+          name: "July",
+          y: 23,
         },
         {
-          name: "BA8",
-          y: 31.64,
+          name: "Aug",
+          y: 34.8,
         },
         {
-          name: "BA9",
-          y: 24.64,
+          name: "Sept",
+          y: 23.3,
+        },
+        {
+          name: "Oct",
+          y: 41,
+        },
+        {
+          name: "Nov",
+          y: 52,
+        },
+        {
+          name: "Dec",
+          y: 52,
+        },
+      ],
+    },
+    {
+      name: "YTD",
+      color: "#99cc33",
+      data: [
+        {
+          name: "Jan",
+          y: null,
+        },
+        {
+          name: "Feb",
+          y: null,
+        },
+        {
+          name: "Mar",
+          y: null,
+        },
+        {
+          name: "Apr",
+          y: null,
+        },
+        {
+          name: "May",
+          y: null,
+        },
+        {
+          name: "Jun",
+          y: null,
+        },
+        {
+          name: "July",
+          y: null,
+        },
+        {
+          name: "Aug",
+          y: null,
+        },
+        {
+          name: "Sept",
+          y: null,
+        },
+        {
+          name: "Oct",
+          y: null,
+        },
+        {
+          name: "Nov",
+          y: null,
+        },
+        {
+          name: "Dec",
+          y: null,
+        },
+        {
+          name: "YTD",
+          y: 80.5,
         },
       ],
     },
   ],
+
+  drilldown: {
+    drillUpButton: {
+      relativeTo: "spacingBox",
+      position: {
+        y: 0,
+        x: 0,
+      },
+    },
+    series: [
+      {
+        name: "Pulau Ketam, Jan, 2021",
+        id: "Pulau Ketam, Jan, 2021",
+        color: "#84d9e5",
+
+        data: [
+          ["BA1", 32],
+          ["BA2", 51],
+          ["BA3", 63],
+          ["BA4", 43.2],
+          ["BA5", 52.7],
+          ["BA6", 60],
+          ["BA7", 23],
+          ["BA8", 53],
+          ["BA9", 68],
+        ],
+      },
+    ],
+  },
+
   responsive: {
     rules: [
       {
@@ -87,15 +231,39 @@ Highcharts.chart("farm_sales_cm_month", {
           maxWidth: 500,
         },
         chartOptions: {
+          legend: {
+            align: "center",
+            verticalAlign: "bottom",
+            layout: "horizontal",
+          },
+          yAxis: {
+            labels: {
+              align: "left",
+              x: 0,
+              y: -5,
+            },
+            title: {
+              text: null,
+            },
+          },
+          subtitle: {
+            text: null,
+          },
+          credits: {
+            enabled: false,
+          },
           plotOptions: {
-            pie: {
-              allowPointSelect: true,
-              cursor: "pointer",
+            series: {
+              pointWidth: 23,
+            },
+            column: {
+              stacking: "percent",
+              pointPadding: 0.2,
+              borderWidth: 0,
               dataLabels: {
-                enabled: false,
-                format: "<b>{point.name}</b>:         {point.percentage:.1f} %",
-                style: {
-                  color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || "black",
+                enabled: true,
+                formatter: function () {
+                  return this.y != 0 ? this.y : "";
                 },
               },
             },

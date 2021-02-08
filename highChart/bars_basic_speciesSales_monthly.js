@@ -145,6 +145,13 @@ Highcharts.chart("speciesSales_monthly", {
     },
   ],
   drilldown: {
+    drillUpButton: {
+      relativeTo: "spacingBox",
+      position: {
+        y: 0,
+        x: 0,
+      },
+    },
     series: [
       {
         name: "Red Snapper, Jan, 2017",
