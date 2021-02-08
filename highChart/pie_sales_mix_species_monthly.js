@@ -3,68 +3,180 @@ Highcharts.chart("sales_mix_species_monthly", {
   chart: {
     spacingTop: 0,
     spacingBottom: 0,
-    spacingLeft: 0,
-    spacingRight: 0,
-    type: "pie",
+    spacingLeft: 10,
+    spacingRight: 15,
+    type: "column",
   },
   title: {
-    text: '<span style="font-weight: bold">Mix Species Sales Profit</span>',
+    text: '<span style="font-weight: bold">Species Sales(YTD)</span>',
     align: "center",
   },
   subtitle: {
-    text: "All Species<br>Jan, 2021",
+    text: "B1, Pulau Ketam, 2021",
     align: "center",
+  },
+  accessibility: {
+    announceNewData: {
+      enabled: true,
+    },
+  },
+
+  yAxis: {
+    min: 0,
+    title: {
+      text: "Sales Revenue(RM)",
+    },
+  },
+
+  xAxis: {
+    type: "category",
+    crosshair: true,
   },
 
   tooltip: {
-    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
-  },
-  accessibility: {
-    point: {
-      valueSuffix: "%",
+    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
+    pointFormatter: function () {
+      var value;
+      if (this.y >= 0) {
+        value = "RM " + this.y;
+      } else {
+        value = "-RM " + -this.y;
+      }
+      return (
+        "<br/>" +
+        '<span style="color:' +
+        this.series.color +
+        '"> ● </span>' +
+        " " +
+        this.series.name +
+        "</span>: <b>" +
+        value +
+        "</b><br />"
+      );
     },
   },
+
   plotOptions: {
-    pie: {
-      allowPointSelect: true,
-      cursor: "pointer",
+    series: {
+      pointWidth: 45,
+    },
+    column: {
+      stacking: "normal",
+      pointPadding: 0.2,
+      borderWidth: 0,
       dataLabels: {
         enabled: true,
-        format: "<b>{point.name}</b>: {point.percentage:.1f} %",
+        formatter: function () {
+          return this.y != 0 ? this.y : "";
+        },
       },
-      showInLegend: true,
     },
   },
 
   series: [
     {
-      name: "Fish",
-      colorByPoint: true,
+      name: "B1, Pulau Ketam",
+      color: "#ffc425",
       data: [
         {
-          name: "Red Snapper",
-          y: 41.41,
-          drilldown: "Fish BA1",
+          name: "Jan",
+          y: 32141,
+          drilldown: "All Species, Pulau Ketam, Jan, 2021",
         },
         {
-          name: "Golden Snapper",
-          y: 31.84,
+          name: "Feb",
+          y: 42314,
         },
         {
-          name: "Pomfret",
-          y: 10.85,
+          name: "Mar",
+          y: 52312,
         },
         {
-          name: "Seabass",
-          y: 54.67,
+          name: "Apr",
+          y: 81235,
         },
         {
-          name: "Hybrid Grouper",
-          y: 44.18,
+          name: "Jun",
+          y: 68134,
         },
         {
-          name: "Giant Grouper",
-          y: 21.64,
+          name: "July",
+          y: 29720,
+        },
+        {
+          name: "Aug",
+          y: 38121,
+        },
+        {
+          name: "Sept",
+          y: 29742,
+        },
+        {
+          name: "Oct",
+          y: 54231,
+        },
+        {
+          name: "Nov",
+          y: 32134,
+        },
+        {
+          name: "Dec",
+          y: 43123,
+        },
+      ],
+    },
+    {
+      name: "YTD",
+      color: "#99cc33",
+      data: [
+        {
+          name: "Jan",
+          y: 0,
+        },
+        {
+          name: "Feb",
+          y: 0,
+        },
+        {
+          name: "Mar",
+          y: 0,
+        },
+        {
+          name: "Apr",
+          y: 0,
+        },
+        {
+          name: "Jun",
+          y: 0,
+        },
+        {
+          name: "July",
+          y: 0,
+        },
+        {
+          name: "Aug",
+          y: 0,
+        },
+        {
+          name: "Sept",
+          y: 0,
+        },
+        {
+          name: "Oct",
+          y: 0,
+        },
+        {
+          name: "Nov",
+          y: 0,
+        },
+        {
+          name: "Dec",
+          y: 0,
+        },
+        {
+          name: "YTD",
+          y: 53023,
+          color: "#99cc33",
         },
       ],
     },
@@ -72,22 +184,47 @@ Highcharts.chart("sales_mix_species_monthly", {
   drilldown: {
     series: [
       {
-        name: "Fish BA1",
-        id: "Fish BA1",
+        //Pulau Ketam, Jan
+        name: "All Species, Pulau Ketam, Jan, 2021",
+        id: "All Species, Pulau Ketam, Jan, 2021",
+        color: "#84d9e5",
+        type: "column",
         data: [
-          ["Red Snapper BA1", 13],
-          ["Red Snapper BA2", 23],
-          ["Red Snapper BA3", 33.02],
-          ["Red Snapper BA4", 1.4],
-          ["Red Snapper BA5", 32],
-          ["Red Snapper BA6", 32],
-          ["Red Snapper BA7", 42],
-          ["Red Snapper BA8", 12],
-          ["Red Snapper BA9", 42],
+          {
+            name: "Red Snapper",
+            y: 29742,
+            color: "#fa3c4c",
+          },
+          {
+            name: "Golden Snapper",
+            y: 32490,
+            color: "#0084ff",
+          },
+          {
+            name: "Pomfret",
+            y: 52322,
+            color: "#ffc300",
+          },
+          {
+            name: "Seabass",
+            y: 42123,
+            color: "#363b74",
+          },
+          {
+            name: "Hybrid Grouper",
+            y: 29742,
+            color: "#d696bb",
+          },
+          {
+            name: "Giant Grouper",
+            y: 43934,
+            color: "#4d1b7b",
+          },
         ],
       },
     ],
   },
+
   responsive: {
     rules: [
       {
@@ -95,15 +232,39 @@ Highcharts.chart("sales_mix_species_monthly", {
           maxWidth: 500,
         },
         chartOptions: {
+          legend: {
+            align: "center",
+            verticalAlign: "bottom",
+            layout: "horizontal",
+          },
+          yAxis: {
+            labels: {
+              align: "left",
+              x: 0,
+              y: -5,
+            },
+            title: {
+              text: null,
+            },
+          },
+          subtitle: {
+            text: null,
+          },
+          credits: {
+            enabled: false,
+          },
           plotOptions: {
-            pie: {
-              allowPointSelect: true,
-              cursor: "pointer",
+            series: {
+              pointWidth: 50,
+            },
+            column: {
+              stacking: "normal",
+              pointPadding: 0.2,
+              borderWidth: 0,
               dataLabels: {
-                enabled: false,
-                format: "<b>{point.name}</b>:         {point.percentage:.1f} %",
-                style: {
-                  color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || "black",
+                enabled: true,
+                formatter: function () {
+                  return this.y != 0 ? this.y : "";
                 },
               },
             },

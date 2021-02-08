@@ -8,40 +8,67 @@ Highcharts.chart("farm_sales_monthly", {
     type: "column",
   },
   title: {
-    text: '<span style="font-weight: bold">Farm Sales(RM)</span>',
-    align: "left",
+    text: '<span style="font-weight: bold">Farm Sales(YTD)</span>',
+    align: "center",
   },
   subtitle: {
-    text: "BA 1, Pulau Ketam",
-    align: "left",
+    text: "BA1, Pulau Ketam, 2017-2021",
+    align: "center",
   },
   accessibility: {
     announceNewData: {
       enabled: true,
     },
   },
+
+  yAxis: {
+    min: 0,
+    title: {
+      text: "Sales Revenue(RM)",
+    },
+  },
+
   xAxis: {
     type: "category",
     crosshair: true,
   },
 
   tooltip: {
-    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-    footerFormat: "</table>",
-    shared: true,
-    useHTML: true,
+    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
+    pointFormatter: function () {
+      var value;
+      if (this.y >= 0) {
+        value = "RM " + this.y;
+      } else {
+        value = "-RM " + -this.y;
+      }
+      return (
+        "<br/>" +
+        '<span style="color:' +
+        this.series.color +
+        '"> ● </span>' +
+        " " +
+        this.series.name +
+        "</span>: <b>" +
+        value +
+        "</b><br />"
+      );
+    },
   },
+
   plotOptions: {
+    series: {
+      pointWidth: 50,
+    },
     column: {
+      stacking: "normal",
       pointPadding: 0.2,
       borderWidth: 0,
-    },
-    series: {
-      pointWidth: 25,
-    },
-    column: {
       dataLabels: {
         enabled: true,
+        formatter: function () {
+          return this.y != 0 ? this.y : "";
+        },
       },
     },
   },
@@ -61,39 +88,58 @@ Highcharts.chart("farm_sales_monthly", {
   series: [
     {
       name: "Farm BA",
+      color: "#4d1b7b",
       data: [
         {
-          name: "2014",
+          name: "2017",
           y: 43934,
           drilldown: "Farm BA in 2014",
         },
         {
-          name: "2015",
-          y: 52503,
-        },
-        {
-          name: "2016",
+          name: "2018",
           y: 29742,
         },
         {
-          name: "2017",
+          name: "2019",
           y: 32490,
         },
         {
-          name: "2018",
+          name: "2020",
           y: 38121,
         },
         {
+          name: "2021",
+          y: 52322,
+        },
+      ],
+    },
+    {
+      name: "YTD",
+      color: "#99cc33",
+      data: [
+        {
+          name: "2017",
+          y: 0,
+        },
+        {
+          name: "2018",
+          y: 0,
+        },
+        {
           name: "2019",
-          y: 51234,
+          y: 0,
         },
         {
           name: "2020",
-          y: 68134,
+          y: 0,
         },
         {
           name: "2021",
-          y: 12512,
+          y: 0,
+        },
+        {
+          name: "YTD",
+          y: 73512,
         },
       ],
     },
@@ -103,7 +149,7 @@ Highcharts.chart("farm_sales_monthly", {
       {
         name: "Farm BA in 2014",
         id: "Farm BA in 2014",
-        color: "yellow",
+        color: "#4d1b7b",
         data: [
           ["Jan", 43934],
           ["Feb", 29742],
@@ -117,6 +163,54 @@ Highcharts.chart("farm_sales_monthly", {
           ["Nov", 38121],
           ["Dec", 12512],
         ],
+      },
+    ],
+  },
+  responsive: {
+    rules: [
+      {
+        condition: {
+          maxWidth: 500,
+        },
+        chartOptions: {
+          legend: {
+            align: "center",
+            verticalAlign: "bottom",
+            layout: "horizontal",
+          },
+          yAxis: {
+            labels: {
+              align: "left",
+              x: 0,
+              y: -5,
+            },
+            title: {
+              text: null,
+            },
+          },
+          subtitle: {
+            text: null,
+          },
+          credits: {
+            enabled: false,
+          },
+          plotOptions: {
+            series: {
+              pointWidth: 50,
+            },
+            column: {
+              stacking: "normal",
+              pointPadding: 0.2,
+              borderWidth: 0,
+              dataLabels: {
+                enabled: true,
+                formatter: function () {
+                  return this.y != 0 ? this.y : "";
+                },
+              },
+            },
+          },
+        },
       },
     ],
   },

@@ -1,111 +1,15 @@
-// $(function () {
-//   // Create the chart
-
-//   var options = {
-//     chart: {
-//       events: {
-//         drilldown: function (e) {
-//           if (!e.seriesOptions) {
-//             var chart = this;
-
-//             // Show the loading label
-//             chart.showLoading("Loading ...");
-
-//             setTimeout(function () {
-//               chart.hideLoading();
-//               chart.addSeriesAsDrilldown(e.point, series);
-//             }, 1000);
-//           }
-//         },
-//       },
-//       plotBorderWidth: 0,
-//     },
-
-//     //
-//     xAxis: {
-//       type: "category",
-//     },
-
-//     legend: {
-//       enabled: true,
-//     },
-//     //
-//     plotOptions: {
-//       series: {
-//         pointPadding: 0.2,
-//         borderWidth: 0,
-//         dataLabels: {
-//           enabled: true,
-//         },
-//       },
-//       pie: {
-//         plotBorderWidth: 0,
-//         allowPointSelect: true,
-//         cursor: "pointer",
-//         size: "100%",
-//         dataLabels: {
-//           enabled: true,
-//           format: "{point.name}: <b>{point.y}</b>",
-//         },
-//       },
-//     },
-//     //
-//     series: [
-//       {
-//         name: "Case",
-//         colorByPoint: true,
-//         data: [3, 2, 1, 3, 4],
-//       },
-//     ],
-//     //
-//     drilldown: {
-//       series: [],
-//     },
-//   };
-
-//   // Column chart
-//   options.chart.renderTo = "speciesCm_overview";
-//   options.chart.type = "column";
-//   var chart1 = new Highcharts.Chart(options);
-
-//   chartfunc = function () {
-//     var column = document.getElementById("column");
-//     var bar = document.getElementById("bar");
-//     var pie = document.getElementById("pie");
-//     var line = document.getElementById("line");
-
-//     if (column.checked) {
-//       options.chart.renderTo = "speciesCm_overview";
-//       options.chart.type = "column";
-//       var chart1 = new Highcharts.Chart(options);
-//     } else if (bar.checked) {
-//       options.chart.renderTo = "speciesCm_overview";
-//       options.chart.type = "bar";
-//       var chart1 = new Highcharts.Chart(options);
-//     } else if (pie.checked) {
-//       options.chart.renderTo = "speciesCm_overview";
-//       options.chart.type = "pie";
-//       var chart1 = new Highcharts.Chart(options);
-//     } else {
-//       options.chart.renderTo = "speciesCm_overview";
-//       options.chart.type = "line";
-//       var chart1 = new Highcharts.Chart(options);
-//     }
-//   };
-
-//   $("#change_chart_title").click(function () {
-//     var new_title = $("#chart_title").val();
-//     var chart = $("#speciesCm_overview").highcharts();
-//     chart.setTitle({ text: new_title });
-
-//     alert("Chart title changed to " + new_title + " !");
-//   });
-// });
+$(function () {
+  Highcharts.setOptions({
+    lang: {
+      thousandsSep: ",",
+    },
+  });
+});
 
 Highcharts.chart("farmCm_overview", {
   title: {
-    text: '<span style="font-weight: bold">Farm CM(%)</span>',
-    align: "left",
+    text: '<span style="font-weight: bold">Farm Contribution Margin</span>',
+    align: "center",
   },
 
   chart: {
@@ -113,20 +17,36 @@ Highcharts.chart("farmCm_overview", {
     spacingBottom: 0,
     spacingLeft: 15,
     spacingRight: 15,
-    type: "line",
+    type: "column",
   },
 
   subtitle: {
-    text: "All Farm",
-    align: "left",
+    text: "All Farm, 2021 ",
+    align: "center",
     verticalAlign: "top",
   },
 
-  xAxis: {
-    gridLineWidth: 1,
-    accessibility: {
-      rangeDescription: "Range: 2010 to 2017",
+  yAxis: {
+    min: 0,
+    max: 100,
+    title: {
+      text: "Contribution Margin Revenue(%)",
     },
+    stackLabels: {
+      enabled: true,
+      style: {
+        fontWeight: "bold",
+      },
+    },
+    labels: {
+      formatter: function () {
+        return this.value + "%";
+      },
+    },
+  },
+
+  credits: {
+    enabled: false,
   },
 
   legend: {
@@ -136,31 +56,196 @@ Highcharts.chart("farmCm_overview", {
     borderWidth: 0,
   },
 
+  xAxis: {
+    type: "category",
+    crosshair: true,
+  },
+
   tooltip: {
-    valueSuffix: "%",
-    shared: true,
-    crosshairs: true,
+    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
+    pointFormatter: function () {
+      var value;
+      if (this.y >= 0) {
+        value = this.y + "% ";
+      } else {
+        value = -this.y + "-% ";
+      }
+      return (
+        "<br/>" +
+        '<span style="color:' +
+        this.series.color +
+        '"> ● </span>' +
+        " " +
+        this.series.name +
+        "</span>: <b>" +
+        value +
+        "</b><br />"
+      );
+    },
   },
 
   plotOptions: {
     series: {
-      label: {
-        connectorAllowed: false,
+      stacking: "percent",
+      pointWidth: 50,
+      dataLabels: {
+        enabled: true,
+        format: "{point.y:.1f}%",
       },
-      pointStart: 2014,
+    },
+    column: {
+      pointPadding: 0.2,
+      borderWidth: 0,
     },
   },
 
   series: [
     {
+      dataLabels: {
+        enabled: true,
+        formatter: function () {
+          var pcnt = this.y;
+          return Highcharts.numberFormat(pcnt) + "%";
+        },
+      },
       name: "Pulau Ketam",
-      data: [30, 23, 23, 42, 23, 42, 37, 64],
+      color: "#be29ec",
+      data: [
+        {
+          name: "Jan",
+          y: 30,
+          drilldown: "All Farm, Jan, 2021",
+        },
+        {
+          name: "Feb",
+          y: 25.3,
+        },
+        {
+          name: "Mar",
+          y: 32,
+        },
+        {
+          name: "Apr",
+          y: 54,
+        },
+        {
+          name: "May",
+          y: 67.3,
+        },
+        {
+          name: "Jun",
+          y: 51,
+        },
+        {
+          name: "July",
+          y: 23,
+        },
+        {
+          name: "Aug",
+          y: 34.8,
+        },
+        {
+          name: "Sept",
+          y: 23.3,
+        },
+        {
+          name: "Oct",
+          y: 41,
+        },
+        {
+          name: "Nov",
+          y: 52,
+        },
+        {
+          name: "Dec",
+          y: 52,
+        },
+      ],
     },
     {
       name: "Kong Kong",
-      data: [36, 24, 62, 52, 42, 32, 24, 32],
+      dataLabels: {
+        enabled: true,
+        formatter: function () {
+          var pcnt = this.y;
+          return Highcharts.numberFormat(pcnt) + "%";
+        },
+      },
+      color: "#be29ec",
+      data: [
+        {
+          name: "Jan",
+          y: 30,
+          drilldown: "All Farm, Jan, 2021",
+        },
+        {
+          name: "Feb",
+          y: 25.3,
+        },
+        {
+          name: "Mar",
+          y: 32,
+        },
+        {
+          name: "Apr",
+          y: 54,
+        },
+        {
+          name: "May",
+          y: 67.3,
+        },
+        {
+          name: "Jun",
+          y: 51,
+        },
+        {
+          name: "July",
+          y: 23,
+        },
+        {
+          name: "Aug",
+          y: 34.8,
+        },
+        {
+          name: "Sept",
+          y: 23.3,
+        },
+        {
+          name: "Oct",
+          y: 41,
+        },
+        {
+          name: "Nov",
+          y: 52,
+        },
+        {
+          name: "Dec",
+          y: 52,
+        },
+      ],
     },
   ],
+
+  drilldown: {
+    series: [
+      {
+        name: "All Farm, Jan, 2021",
+        id: "All Farm, Jan, 2021",
+        color: "#be29ec",
+        data: [
+          ["BA1", 32],
+          ["BA2", 51],
+          ["BA3", 63],
+          ["BA4", 43.2],
+          ["BA5", 52.7],
+          ["BA6", 60],
+          ["BA7", 23],
+          ["BA8", 53],
+          ["BA9", 68],
+        ],
+      },
+    ],
+  },
 
   responsive: {
     rules: [
@@ -170,9 +255,41 @@ Highcharts.chart("farmCm_overview", {
         },
         chartOptions: {
           legend: {
-            layout: "horizontal",
             align: "center",
             verticalAlign: "bottom",
+            layout: "horizontal",
+          },
+          yAxis: {
+            labels: {
+              align: "left",
+              x: 0,
+              y: -5,
+            },
+            title: {
+              text: null,
+            },
+          },
+          subtitle: {
+            text: null,
+          },
+          credits: {
+            enabled: false,
+          },
+          plotOptions: {
+            series: {
+              pointWidth: 23,
+            },
+            column: {
+              stacking: "percent",
+              pointPadding: 0.2,
+              borderWidth: 0,
+              dataLabels: {
+                enabled: true,
+                formatter: function () {
+                  return this.y != 0 ? this.y : "";
+                },
+              },
+            },
           },
         },
       },

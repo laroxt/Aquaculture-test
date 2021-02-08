@@ -33,7 +33,7 @@ Highcharts.chart("speciesCm_overview", {
     shared: true,
     useHTML: true,
     formatter: function () {
-      return "The value for <b>" + this.x + "</b> is <b>" + this.y + "</b>";
+      return "The value for <b>" + this.x + "</b> is <b>" + this.y + "%</b>";
     },
   },
   plotOptions: {
@@ -58,27 +58,27 @@ Highcharts.chart("speciesCm_overview", {
       data: [
         {
           name: "Red Snapper",
-          y: 39325,
+          y: 40,
         },
         {
           name: "Golden Snapper",
-          y: 83438,
+          y: 32,
         },
         {
           name: "Pomfret",
-          y: 131000,
+          y: 55,
         },
         {
           name: "Seabass",
-          y: 221594,
+          y: 63,
         },
         {
           name: "Hybrid Grouper",
-          y: 39325,
+          y: 51,
         },
         {
           name: "Giant Grouper",
-          y: 131000,
+          y: 24,
         },
       ],
     },

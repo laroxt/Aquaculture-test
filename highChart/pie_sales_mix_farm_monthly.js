@@ -1,60 +1,182 @@
 // Create the chart
 Highcharts.chart("sales_mix_farm_monthly", {
   chart: {
-    plotBackgroundColor: null,
-    plotBorderWidth: null,
-    plotShadow: false,
     spacingTop: 0,
     spacingBottom: 0,
-    spacingLeft: 0,
-    spacingRight: 0,
-    type: "pie",
+    spacingLeft: 10,
+    spacingRight: 15,
+    type: "column",
   },
   title: {
-    text: '<span style="font-weight: bold">Mix Farm Sales Profit</span>',
+    text: '<span style="font-weight: bold">Farm Sales(YTD)</span>',
     align: "center",
   },
   subtitle: {
-    text: "All Farm<br>Jan, 2021",
+    text: "Pulau Ketam, 2021",
     align: "center",
-  },
-
-  tooltip: {
-    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
   },
   accessibility: {
     announceNewData: {
       enabled: true,
     },
-    point: {
-      valueSuffix: "%",
+  },
+
+  yAxis: {
+    min: 0,
+    title: {
+      text: "Sales Revenue(RM)",
     },
   },
+
+  xAxis: {
+    type: "category",
+    crosshair: true,
+  },
+
+  tooltip: {
+    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
+    pointFormatter: function () {
+      var value;
+      if (this.y >= 0) {
+        value = "RM " + this.y;
+      } else {
+        value = "-RM " + -this.y;
+      }
+      return (
+        "<br/>" +
+        '<span style="color:' +
+        this.series.color +
+        '"> ● </span>' +
+        " " +
+        this.series.name +
+        "</span>: <b>" +
+        value +
+        "</b><br />"
+      );
+    },
+  },
+
   plotOptions: {
-    pie: {
-      allowPointSelect: true,
-      cursor: "pointer",
+    series: {
+      pointWidth: 45,
+    },
+    column: {
+      stacking: "normal",
+      pointPadding: 0.2,
+      borderWidth: 0,
       dataLabels: {
         enabled: true,
-        format: "<b>{point.name}</b>: {point.percentage:.1f} %",
+        formatter: function () {
+          return this.y != 0 ? this.y : "";
+        },
       },
-      showInLegend: true,
     },
   },
 
   series: [
     {
-      name: "Farm Location",
-      colorByPoint: true,
+      name: "Pulau Ketam",
+      color: "#3F51B5",
       data: [
         {
-          name: "Pulau Ketam",
-          y: 61.41,
-          drilldown: "BA1A",
+          name: "Jan",
+          y: 32141,
+          drilldown: "All Farm, Pulau Ketam, Jan, 2021",
         },
         {
-          name: "Kong Kong",
-          y: 11.84,
+          name: "Feb",
+          y: 42314,
+        },
+        {
+          name: "Mar",
+          y: 52312,
+        },
+        {
+          name: "Apr",
+          y: 81235,
+        },
+        {
+          name: "Jun",
+          y: 68134,
+        },
+        {
+          name: "July",
+          y: 29720,
+        },
+        {
+          name: "Aug",
+          y: 38121,
+        },
+        {
+          name: "Sept",
+          y: 29742,
+        },
+        {
+          name: "Oct",
+          y: 54231,
+        },
+        {
+          name: "Nov",
+          y: 32134,
+        },
+        {
+          name: "Dec",
+          y: 43123,
+        },
+      ],
+    },
+    {
+      name: "YTD",
+      color: "#99cc33",
+      data: [
+        {
+          name: "Jan",
+          y: 0,
+        },
+        {
+          name: "Feb",
+          y: 0,
+        },
+        {
+          name: "Mar",
+          y: 0,
+        },
+        {
+          name: "Apr",
+          y: 0,
+        },
+        {
+          name: "Jun",
+          y: 0,
+        },
+        {
+          name: "July",
+          y: 0,
+        },
+        {
+          name: "Aug",
+          y: 0,
+        },
+        {
+          name: "Sept",
+          y: 0,
+        },
+        {
+          name: "Oct",
+          y: 0,
+        },
+        {
+          name: "Nov",
+          y: 0,
+        },
+        {
+          name: "Dec",
+          y: 0,
+        },
+        {
+          name: "YTD",
+          y: 53023,
+          color: "#99cc33",
         },
       ],
     },
@@ -62,22 +184,54 @@ Highcharts.chart("sales_mix_farm_monthly", {
   drilldown: {
     series: [
       {
-        name: "Farms",
-        id: "BA1A",
+        //Pulau Ketam, Jan
+        name: "All Farm, Pulau Ketam, Jan, 2021",
+        id: "All Farm, Pulau Ketam, Jan, 2021",
+        color: "#84d9e5",
+        type: "column",
         data: [
-          ["BA1", 0.1],
-          ["BA2", 1.3],
-          ["BA3", 30.02],
-          ["BA4", 1.4],
-          ["BA5", 0.88],
-          ["BA6", 34.3],
-          ["BA7", 15],
-          ["BA8", 40.4],
-          ["BA9", 30.88],
+          {
+            name: "BA1",
+            y: 53023,
+            drilldown: "Farm, Pulau Ketam , Jan, 2021",
+          },
+          {
+            name: "BA2",
+            y: 42314,
+          },
+          {
+            name: "BA3",
+            y: 43123,
+          },
+          {
+            name: "BA4",
+            y: 81235,
+          },
+          {
+            name: "BA5",
+            y: 68134,
+          },
+          {
+            name: "BA6",
+            y: 29720,
+          },
+          {
+            name: "BA7",
+            y: 32134,
+          },
+          {
+            name: "BA8",
+            y: 29742,
+          },
+          {
+            name: "BA9",
+            y: 54231,
+          },
         ],
       },
     ],
   },
+
   responsive: {
     rules: [
       {
@@ -85,15 +239,39 @@ Highcharts.chart("sales_mix_farm_monthly", {
           maxWidth: 500,
         },
         chartOptions: {
+          legend: {
+            align: "center",
+            verticalAlign: "bottom",
+            layout: "horizontal",
+          },
+          yAxis: {
+            labels: {
+              align: "left",
+              x: 0,
+              y: -5,
+            },
+            title: {
+              text: null,
+            },
+          },
+          subtitle: {
+            text: null,
+          },
+          credits: {
+            enabled: false,
+          },
           plotOptions: {
-            pie: {
-              allowPointSelect: true,
-              cursor: "pointer",
+            series: {
+              pointWidth: 50,
+            },
+            column: {
+              stacking: "normal",
+              pointPadding: 0.2,
+              borderWidth: 0,
               dataLabels: {
-                enabled: false,
-                format: "<b>{point.name}</b>:         {point.percentage:.1f} %",
-                style: {
-                  color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || "black",
+                enabled: true,
+                formatter: function () {
+                  return this.y != 0 ? this.y : "";
                 },
               },
             },
