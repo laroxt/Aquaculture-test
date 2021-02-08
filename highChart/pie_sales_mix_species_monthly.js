@@ -12,7 +12,7 @@ Highcharts.chart("sales_mix_species_monthly", {
     align: "center",
   },
   subtitle: {
-    text: "B1, Pulau Ketam, 2021",
+    text: "BA1, Pulau Ketam, 2021",
     align: "center",
   },
   accessibility: {
@@ -75,7 +75,7 @@ Highcharts.chart("sales_mix_species_monthly", {
 
   series: [
     {
-      name: "B1, Pulau Ketam",
+      name: "BA1, Pulau Ketam, 2021",
       color: "#ffc425",
       data: [
         {

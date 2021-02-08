@@ -75,7 +75,7 @@ Highcharts.chart("sales_mix_farm_monthly", {
 
   series: [
     {
-      name: "Pulau Ketam",
+      name: "Pulau Ketam, 2021",
       color: "#3F51B5",
       data: [
         {
@@ -200,7 +200,6 @@ Highcharts.chart("sales_mix_farm_monthly", {
           {
             name: "BA1",
             y: 53023,
-            drilldown: "Farm, Pulau Ketam , Jan, 2021",
           },
           {
             name: "BA2",

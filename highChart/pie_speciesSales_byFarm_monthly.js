@@ -151,7 +151,7 @@ Highcharts.chart("speciesSales_monthly", {
           {
             name: "Jan",
             y: 32141,
-            drilldown: "Pulau Ketam Species, Jan, 2021",
+            drilldown: "BA1, Pulau Ketam, Jan, 2017",
           },
           {
             name: "Feb",
@@ -202,9 +202,9 @@ Highcharts.chart("speciesSales_monthly", {
       },
       {
         //Pulau Ketam, Jan
-        name: "Pulau Ketam Species, Jan, 2021",
-        id: "Pulau Ketam Species, Jan, 2021",
-        color: "#ffc425",
+        name: "BA1, Pulau Ketam, Jan, 2017",
+        id: "BA1, Pulau Ketam, Jan, 2017",
+        color: "#84d9e5",
         type: "column",
         data: [
           {

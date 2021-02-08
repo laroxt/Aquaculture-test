@@ -158,17 +158,56 @@ Highcharts.chart("farm_gp_monthly", {
         id: "Farm BA in 2014",
         color: "#4d1b7b",
         data: [
-          ["Jan", 43934],
-          ["Feb", 29742],
-          ["Mar", 53023],
-          ["Apr", 52503],
-          ["May", 38121],
-          ["June", 68134],
-          ["Aug", 38121],
-          ["Sep", 68134],
-          ["Oct", 51234],
-          ["Nov", 38121],
-          ["Dec", 12512],
+          {
+            name: "Jan",
+            y: 32141,
+            drilldown: "BA1, Pulau Ketam, Jan, 2017",
+          },
+          {
+            name: "Feb",
+            y: 42314,
+          },
+          {
+            name: "Mar",
+            y: 52312,
+          },
+          {
+            name: "Apr",
+            y: 81235,
+          },
+          {
+            name: "Jun",
+            y: 68134,
+          },
+          {
+            name: "July",
+            y: 29720,
+          },
+          {
+            name: "Aug",
+            y: 38121,
+          },
+          {
+            name: "Sept",
+            y: 29742,
+          },
+          {
+            name: "Oct",
+            y: 54231,
+          },
+          {
+            name: "Nov",
+            y: 32134,
+          },
+          {
+            name: "Dec",
+            y: 43123,
+          },
+          {
+            name: "YTD",
+            y: 53023,
+            color: "#99cc33",
+          },
         ],
       },
     ],

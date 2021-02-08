@@ -81,7 +81,7 @@ Highcharts.chart("speciesSales_yearly", {
         {
           name: "Jan",
           y: 43934,
-          drilldown: "B1, Pulau Ketam Species, 2021",
+          drilldown: "B1, Pulau Ketam, Jan, 2021",
         },
         {
           name: "Feb",
@@ -191,9 +191,9 @@ Highcharts.chart("speciesSales_yearly", {
     series: [
       {
         //Pulau Ketam, Jan
-        name: "B1, Pulau Ketam Species, 2021",
-        id: "B1, Pulau Ketam Species, 2021",
-        color: "#ffc425",
+        name: "B1, Pulau Ketam, Jan, 2021",
+        id: "B1, Pulau Ketam, Jan, 2021",
+        color: "#84d9e5",
         type: "column",
         data: [
           {

@@ -90,7 +90,7 @@ Highcharts.chart("farm_sales_cm_year", {
         {
           name: "2017",
           y: 34.4,
-          drilldown: "Red Snapper, Pulau Ketam, Jan, 2017",
+          drilldown: "BA1, Pulau Ketam, 2017",
         },
         {
           name: "2018",
@@ -151,8 +151,67 @@ Highcharts.chart("farm_sales_cm_year", {
     },
     series: [
       {
-        name: "Red Snapper, Pulau Ketam, Jan, 2017",
-        id: "Red Snapper, Pulau Ketam, Jan, 2017",
+        //Pulau Ketam, Jan
+        name: "BA1, Pulau Ketam, 2017",
+        id: "BA1, Pulau Ketam, 2017",
+        color: "#84d9e5",
+        type: "column",
+        data: [
+          {
+            name: "Jan",
+            y: 32141,
+            drilldown: "BA1, Pulau Ketam, Jan, 2017",
+          },
+          {
+            name: "Feb",
+            y: 42314,
+          },
+          {
+            name: "Mar",
+            y: 52312,
+          },
+          {
+            name: "Apr",
+            y: 81235,
+          },
+          {
+            name: "Jun",
+            y: 68134,
+          },
+          {
+            name: "July",
+            y: 29720,
+          },
+          {
+            name: "Aug",
+            y: 38121,
+          },
+          {
+            name: "Sept",
+            y: 29742,
+          },
+          {
+            name: "Oct",
+            y: 54231,
+          },
+          {
+            name: "Nov",
+            y: 32134,
+          },
+          {
+            name: "Dec",
+            y: 43123,
+          },
+          {
+            name: "YTD",
+            y: 53023,
+            color: "#99cc33",
+          },
+        ],
+      },
+      {
+        name: "BA1, Pulau Ketam, Jan, 2017",
+        id: "BA1, Pulau Ketam, Jan, 2017",
         color: "#84d9e5",
         data: [
           {
