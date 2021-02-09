@@ -14,11 +14,7 @@ Highcharts.chart("farm_sales_cm_year", {
   subtitle: {
     text: "BA1, Pulau Ketam, 2017-2021",
     align: "center",
-  },
-  accessibility: {
-    announceNewData: {
-      enabled: true,
-    },
+    verticalAlign: "top",
   },
 
   yAxis: {
@@ -37,9 +33,9 @@ Highcharts.chart("farm_sales_cm_year", {
     pointFormatter: function () {
       var value;
       if (this.y >= 0) {
-        value = "RM " + this.y;
+        value = this.y + "% ";
       } else {
-        value = "-RM " + -this.y;
+        value = -this.y + "-% ";
       }
       return (
         "<br/>" +
@@ -300,7 +296,7 @@ Highcharts.chart("farm_sales_cm_year", {
           },
           plotOptions: {
             series: {
-              pointWidth: 50,
+              pointWidth: 40,
             },
             column: {
               stacking: "normal",

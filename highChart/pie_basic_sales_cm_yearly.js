@@ -285,7 +285,7 @@ Highcharts.chart("farm_sales_cm_month", {
     rules: [
       {
         condition: {
-          maxWidth: 500,
+          maxWidth: 650,
         },
         chartOptions: {
           legend: {
@@ -311,10 +311,10 @@ Highcharts.chart("farm_sales_cm_month", {
           },
           plotOptions: {
             series: {
-              pointWidth: 23,
+              pointWidth: 15,
             },
             column: {
-              stacking: "percent",
+              stacking: "normal",
               pointPadding: 0.2,
               borderWidth: 0,
               dataLabels: {

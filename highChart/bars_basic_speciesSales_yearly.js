@@ -360,7 +360,7 @@ Highcharts.chart("speciesSales_yearly", {
     rules: [
       {
         condition: {
-          maxWidth: 500,
+          maxWidth: 750,
         },
         chartOptions: {
           legend: {
@@ -386,7 +386,7 @@ Highcharts.chart("speciesSales_yearly", {
           },
           plotOptions: {
             series: {
-              pointWidth: 23,
+              pointWidth: 25,
             },
             column: {
               stacking: "normal",

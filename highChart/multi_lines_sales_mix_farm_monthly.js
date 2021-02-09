@@ -366,7 +366,7 @@ Highcharts.chart("sales_mix_farm_overview", {
     rules: [
       {
         condition: {
-          maxWidth: 500,
+          maxWidth: 750,
         },
         chartOptions: {
           legend: {
@@ -392,7 +392,7 @@ Highcharts.chart("sales_mix_farm_overview", {
           },
           plotOptions: {
             series: {
-              pointWidth: 23,
+              pointWidth: 25,
             },
             column: {
               stacking: "normal",

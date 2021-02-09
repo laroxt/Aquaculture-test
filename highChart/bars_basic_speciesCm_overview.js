@@ -348,7 +348,7 @@ Highcharts.chart("speciesCm_overview", {
     rules: [
       {
         condition: {
-          maxWidth: 500,
+          maxWidth: 750,
         },
         chartOptions: {
           legend: {
@@ -374,10 +374,10 @@ Highcharts.chart("speciesCm_overview", {
           },
           plotOptions: {
             series: {
-              pointWidth: 23,
+              pointWidth: 25,
             },
             column: {
-              stacking: "percent",
+              stacking: "normal",
               pointPadding: 0.2,
               borderWidth: 0,
               dataLabels: {

@@ -318,7 +318,7 @@ Highcharts.chart("farm_sales_yearly", {
     rules: [
       {
         condition: {
-          maxWidth: 500,
+          maxWidth: 750,
         },
         chartOptions: {
           legend: {
@@ -344,7 +344,7 @@ Highcharts.chart("farm_sales_yearly", {
           },
           plotOptions: {
             series: {
-              pointWidth: 23,
+              pointWidth: 25,
             },
             column: {
               stacking: "normal",

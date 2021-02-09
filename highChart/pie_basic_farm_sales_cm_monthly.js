@@ -1,5 +1,5 @@
 // Create the chart
-Highcharts.chart("farm_sales_cm_month", {
+const chart = Highcharts.chart("farm_sales_cm_month", {
   title: {
     text: '<span style="font-weight: bold">Farm Contribution Margin</span>',
     align: "center",
@@ -272,4 +272,122 @@ Highcharts.chart("farm_sales_cm_month", {
       },
     ],
   },
+
+  responsive: {
+    rules: [
+      {
+        condition: {
+          maxWidth: 650,
+        },
+        chartOptions: {
+          legend: {
+            align: "center",
+            verticalAlign: "bottom",
+            layout: "horizontal",
+          },
+          yAxis: {
+            labels: {
+              align: "left",
+              x: 0,
+              y: -5,
+            },
+            title: {
+              text: null,
+            },
+          },
+          subtitle: {
+            text: null,
+          },
+          credits: {
+            enabled: false,
+          },
+          plotOptions: {
+            series: {
+              pointWidth: 15,
+            },
+            column: {
+              stacking: "normal",
+              pointPadding: 0.2,
+              borderWidth: 0,
+              dataLabels: {
+                enabled: true,
+                formatter: function () {
+                  return this.y != 0 ? this.y : "";
+                },
+              },
+            },
+          },
+        },
+      },
+    ],
+  },
 });
+
+// document.getElementById("small").addEventListener("click", () => {
+//   chart.setSize(400, 300);
+// });
+
+// document.getElementById("reflow-chart").addEventListener("click", () => {
+//   chart.setSize(1100, 400);
+// });
+
+// document.getElementById("reflow-chart").addEventListener("click", () => {
+//   chart.reflow();
+// });
+
+// $("#reflow-chart").click(function () {
+//   var chart = $("#farm_sales_cm_month").highcharts(),
+//     w = $("#farm_sales_cm_month").width(),
+//     h = $("#farm_sales_cm_month").height();
+
+//   chart.setSize(w, h);
+//   chart.hasUserSize = null;
+// });
+
+// var timesClicked = 0;
+
+// $("#reflow-chart").click(function () {
+//   timesClicked++;
+
+//   if (timesClicked > 1) {
+//     document.getElementById("reflow-chart").addEventListener("click", () => {
+//       chart.setSize(400, 300);
+//     });
+//   } else {
+//     document.getElementById("reflow-chart").addEventListener("click", () => {
+//       chart.setSize(1100, 400);
+//     });
+//   }
+// });
+
+// function myFunction() {
+//   chart.reflow();
+// }
+
+// var clicked = false;
+
+// function reflowChart() {
+//   if (clicked) {
+//     document.getElementById("reflow-chart").addEventListener("click", () => {
+//       chart.reflow();
+//     });
+//     clicked = false;
+//   } else {
+//     document.getElementById("reflow-chart").addEventListener("click", () => {
+//       chart.reflow();
+//     });
+//     clicked = true;
+//   }
+// }
+
+// var newWidth = 1300;
+
+// function reflowChart() {
+//   chart.update({
+//     chart: {
+//       width: newWidth,
+//     },
+//   });
+
+//   newWidth = newWidth === 1150 ? 1150 : 1180;
+// }

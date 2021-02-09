@@ -1,11 +1,4 @@
-$(function () {
-  Highcharts.setOptions({
-    lang: {
-      thousandsSep: ",",
-    },
-  });
-});
-
+// Create the chart
 Highcharts.chart("farmCm_overview", {
   title: {
     text: '<span style="font-weight: bold">Farm Contribution Margin</span>',
@@ -316,7 +309,7 @@ Highcharts.chart("farmCm_overview", {
     rules: [
       {
         condition: {
-          maxWidth: 500,
+          maxWidth: 1090,
         },
         chartOptions: {
           legend: {
@@ -342,10 +335,10 @@ Highcharts.chart("farmCm_overview", {
           },
           plotOptions: {
             series: {
-              pointWidth: 23,
+              pointWidth: 25,
             },
             column: {
-              stacking: "percent",
+              stacking: "normal",
               pointPadding: 0.2,
               borderWidth: 0,
               dataLabels: {
