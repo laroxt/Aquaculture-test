@@ -17,12 +17,14 @@
 	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
 	<script src="./global_assets/js/main/jquery.min.js"></script>
 	<script src="./global_assets/js/main/bootstrap.bundle.min.js"></script>
 	<script src="./global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<script src="./global_assets/js/plugins/loaders/table_ticker.js"></script>
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
@@ -489,7 +491,7 @@
 						<div class="breadcrumb">
 							<span class="breadcrumb-item active">Master Form</span>
 							<span class="breadcrumb-item active">Master Value Config</span>
-							<a href="./superadmin-mv-feed.html" class="breadcrumb-item ">Smart Feed</a>
+							<a href="./superadmin-mv-feed.html" class="breadcrumb-item ">Smart Feeding</a>
 						</div>
 
 
@@ -522,349 +524,142 @@
 								</div>
 
 								<div class="table-adjustment-smart">
-									<table class="table2 datatable-basic" width="100%">
+									<table class="table2 datatable-basic" id="tblData" width="100%">
 										<thead>
 											<tr class="table-row-highlight">
-												<th class="table-row-color">Batches ID</th>
+												<th class="table-row-color"><input type="checkbox" id="chkParent"
+														class="table-checkbox" />
 												<th class="table-row-color">Farm</th>
-												<th class="table-row-color">Type of Fish</th>
+												<th class="table-row-color">Location</th>
+												<th class="table-row-color">Species</th>
 												<th class="table-row-color">Type of Food</th>
 												<th class="table-row-color">Latest Update</th>
-												<th class="table-row-color">Edit</th>
+												</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 1</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 2</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
 
-												<td>01/01/2021</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 2</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 2</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 2</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
 
-												<td>01/01/2021</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 1</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 2</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 2</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 											<tr class="table-row-highlight">
-												<td>12F9341</td>
-												<td>Farm 1</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 1</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 1</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
+												<td><input type="checkbox" /></td>
+												<td>BA1</td>
+												<td>Pulau Ketam</td>
+												<td>Red Snapper</td>
+												<td>CMF04</td>
 												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
+													01/01/2021
 												</td>
 											</tr>
 
-											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 2</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
-												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
 
-											<tr class="table-row-highlight">
-												<td>12F934</td>
-												<td>Farm 2</td>
-												<td>Sea Bass</td>
-												<td>ABC</td>
-												<td>01/01/2021</td>
-												<td>
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-mv-feed-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
 										</tbody>
 									</table>
+									<div class="text-right">
+										<button type="button" class="btn btn-primary button-margin-bottom">Add</button>
+										<button type="button" class="btn btn-primary button-margin-bottom">Edit</button>
+										<button type="button" class="btn bg-danger button-margin-bottom">Remove</button>
+									</div>
+
 								</div>
 
 								<!-- /scrollable datatable -->

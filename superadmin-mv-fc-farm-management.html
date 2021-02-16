@@ -46,6 +46,8 @@
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
+
+	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -222,8 +224,8 @@
 						<div class="media">
 							<div class="mr-3">
 								<!-- user-profile-image -->
-								<a href="#"><img src="./global_assets/images/placeholders/placeholder.jpg"
-										width="38" height="38" class="rounded-circle" alt=""></a>
+								<a href="#"><img src="./global_assets/images/placeholders/placeholder.jpg" width="38"
+										height="38" class="rounded-circle" alt=""></a>
 							</div>
 							<div class="media-body">
 								<div class="media-title font-weight-semibold">Cyprian Aidan Chong</div>
@@ -379,7 +381,7 @@
 										class="nav-link">Merge Net</a></li>
 								<li class="nav-item"><a href="./superadmin-nm-nc-split-net-overview.html"
 										class="nav-link">Split Net</a></li>
-								
+
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
@@ -476,11 +478,8 @@
 
 			</div>
 			<!-- /sidebar content -->
-
 		</div>
 		<!-- /main sidebar -->
-
-
 		<!-- Main content -->
 		<div class="content-wrapper">
 
@@ -491,28 +490,22 @@
 					<div class="d-flex">
 						<h class="breadcrumb-item active">Master Form</h>
 						<h class="breadcrumb-item active">Farm Management</h>
-						<a href="./superadmin-mv-fc-farm-management.html" class="breadcrumb-item">Farm Create Form</a>
+						<a href="./superadmin-mv-fc-farm-management.html" class="breadcrumb-item">Create Farm</a>
 					</div>
 
 
 				</div>
 			</div>
 			<!-- /page header -->
-
 			<!-- Main content -->
 			<div class="content-wrapper">
 				<!-- Content area -->
 				<div class="content2">
-					<div class="row">
-						<!-- /fieldset legend -->
 
-					</div>
 					<div class="row">
 						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<div class="card">
-
-
 								<div class="card-header bg-white header-elements-inline">
 									<h5 class="card-title font-weight-bold">Create Farm</h5>
 									<div class="header-elements">
@@ -522,65 +515,61 @@
 								<div class="card-body">
 									<form action="#">
 										<div class="row">
-											<div class="col-md-6">
+											<div class="col-md-12">
 												<fieldset>
 													<div class="form-group">
-														<label>Site:</label>
+														<label>Location:</label>
 														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<optgroup label="Pulau Ketam">
-																<option value="Farm-1">BA</option>
-																<option value="Farm-2">BB</option>
-																<option value="Farm-3">BD</option>
-																<option value="Farm-3">BE</option>
-																<option value="Farm-3">BF</option>
-																<option value="Farm-3">BJ</option>
-															</optgroup>
-															<optgroup label="Johor">
-																<option value="Farm-1">JA</option>
-																<option value="Farm-2">JB</option>
-																<option value="Farm-3">JC</option>
-															</optgroup>
-															</optgroup>
+															class="form-control select" data-fouc>
+															<option value="Farm-1">Pulau Ketam</option>
+															<option value="Farm-2">Kong Kong</option>
 														</select>
-													</div>
-												</fieldset>
-											</div>
-
-
-											<div class="col-md-6">
-												<fieldset>
-													<div class="form-group">
-														<label>Farm Name:</label>
-														<input type="email" class="form-control"
-															placeholder="Eg. Ho Farm">
 													</div>
 												</fieldset>
 											</div>
 										</div>
+
+										<div class="row">
+											<div class="col-md-12">
+												<fieldset>
+													<div class="form-group">
+														<label>Code:</label>
+														<input type="email" class="form-control" placeholder="Eg. BA1">
+													</div>
+												</fieldset>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-12">
+												<fieldset>
+													<div class="form-group">
+														<label>Row & Column:</label>
+														<select data-placeholder="Select your state"
+															class="form-control select" data-fouc>
+															<option value="Farm-1">20 X 20</option>
+															<option value="Farm-2">30 X 30</option>
+															<option value="Farm-3">40 X 40</option>
+															<option value="Farm-3">200 X 200</option>
+														</select>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+
+										<label>Custom Dimension:</label>
 										<div class="row">
 											<div class="col-md-6">
 												<fieldset>
 													<div class="form-group">
-														<label>Code:</label>
-														<input type="email" class="form-control"
-															placeholder="Eg. 12F934">
+														<input type="email" class="form-control" placeholder="Row">
 													</div>
 												</fieldset>
 											</div>
-
-
 											<div class="col-md-6">
 												<fieldset>
 													<div class="form-group">
-														<label>Dimension:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">12 X 12</option>
-															<option value="Farm-2">12 X 16</option>
-															<option value="Farm-3">16 X 16</option>
-															<option value="Farm-3">20 X 20</option>
-														</select>
+														<input type="email" class="form-control" placeholder="Column">
 													</div>
 												</fieldset>
 											</div>
@@ -591,19 +580,8 @@
 										</div>
 									</form>
 								</div>
-
-
-
 							</div>
-
 						</div>
-
-
-
-
-
-
-
 					</div>
 				</div>
 				<!-- /content area -->

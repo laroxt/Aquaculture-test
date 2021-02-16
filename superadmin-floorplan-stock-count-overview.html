@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>KS Aquaculture-Fp-Stock Floorplan</title>
+	<title>KS Aquaculture-Fp-Feed Floorplan</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -50,6 +50,7 @@
 	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
 	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
 	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
+	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -226,8 +227,8 @@
 						<div class="media">
 							<div class="mr-3">
 								<!-- user-profile-image -->
-								<a href="#"><img src="./global_assets/images/placeholders/placeholder.jpg"
-										width="38" height="38" class="rounded-circle" alt=""></a>
+								<a href="#"><img src="./global_assets/images/placeholders/placeholder.jpg" width="38"
+										height="38" class="rounded-circle" alt=""></a>
 							</div>
 							<div class="media-body">
 								<div class="media-title font-weight-semibold">Cyprian Aidan Chong</div>
@@ -367,7 +368,6 @@
 								</li>
 							</ul>
 						</li>
-
 						<!-- Account -->
 						<li class="nav-item-header">
 							<div class="text-uppercase font-size-xs line-height-xs">Configuration</div> <i
@@ -414,11 +414,11 @@
 								<li class="nav-item"><a href="./superadmin-floorplan-reservation-overview.html"
 										class="nav-link">Reservation Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-feed-overview.html"
-										class="nav-link">Feed Floorplan</a></li>
+										class="nav-link active">Feed Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-mortality-overview.html"
 										class="nav-link">Mortality Floorplan</a></li>
 								<li class="nav-item"><a href="./superadmin-floorplan-stock-count-overview.html"
-										class="nav-link active">Stock Floorplan</a></li>
+										class="nav-link">Stock Floorplan</a></li>
 							</ul>
 						</li>
 
@@ -496,7 +496,7 @@
 						<h class="breadcrumb-item active">Floorplan Viewer</h>
 						<h class="breadcrumb-item active">Floorplan Management</h>
 						<a href="./superadmin-mf-rd-mortality-overview.html" class="breadcrumb-item">Stock Count
-							Overview</a>
+							Floorplan</a>
 					</div>
 
 
@@ -508,23 +508,20 @@
 			<div class="content-wrapper">
 				<!-- Content area -->
 				<div class="content">
+					<!-- /fieldset legend -->
 					<div class="row">
 						<!-- /fieldset legend -->
 						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Stock Filter</h5>
-									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="collapse"></a>
-										</div>
-									</div>
+									<h5 class="card-title font-weight-bold">Floorplan Filter Settings</h5>
+
 								</div>
 								<div class="card-body" style="padding-bottom: 0;">
 									<form action="#">
 										<div class="row">
-											<div class="col-md-5">
+											<div class="col-md-4">
 												<fieldset>
 													<div class="form-group">
 														<label>Farm:</label>
@@ -563,31 +560,31 @@
 													</div>
 												</fieldset>
 											</div>
-											<div class="col-md-3">
+
+											<div class="col-md-2">
 												<fieldset>
 													<div class="form-group">
-														<div class="form-group2" style="margin-top:-5px;">
-															<label class="d-block">Filter By:</label>
-															<div class="form-check form-check-inline">
-																<label class="form-check-label">
-																	<input type="radio" class="form-input-styled"
-																		name="gender" checked data-fouc>
-																	Species
-																</label>
-															</div>
-															<div class="form-check form-check-inline">
-																<label class="form-check-label">
-																	<input type="radio" class="form-input-styled"
-																		name="gender" data-fouc>
-																	Net Status
-																</label>
-															</div>
+														<div class="form-group">
+															<label>Filter By:</label>
+															<select data-placeholder="Select your state"
+																class="form-control select" data-fouc>
+																<option>Species</option>
+																<option>Net Status</option>
+															</select>
 														</div>
 													</div>
 												</fieldset>
 											</div>
-
+											<div class="col-md-2">
+												<div class="form-group">
+													<div class="input-group">
+														<button type="button" class="btn btn-primary" id="sweet_warning"
+															style="margin-top: 27px; width: 100%;">Retrieve</button>
+													</div>
+												</div>
+											</div>
 										</div>
+
 									</form>
 								</div>
 							</div>
@@ -599,24 +596,17 @@
 							<div class="card">
 								<div class="card-header header-elements-inline">
 									<h5 class="card-title font-weight-bold">Stock Count Floorplan</h5>
-									<h style="font-weight: bold;">Farm: <span class="update-net-sucess">BA</span></h>
-									<h style="font-weight: bold;">Date: <span
-											class="update-net-sucess">01/01/2021</span>
-									</h>
-									<h style="font-weight: bold;">Filter By: <span
-											class="update-net-sucess">Species</span></h>
 									<div class="header-elements">
 										<div class="list-icons">
 											<a class="icon-shrink7" data-action="#" onclick="zoomIn()"></a>
 											<a class="icon-enlarge7" data-action="#" onclick="zoomOut()"></a>
 											<a class="list-icons-item" data-action="fullscreen"></a>
-											<a class="list-icons-item" data-action="collapse"></a>
+											<a class="list-icons-item" data-action="reload"></a>
 										</div>
 									</div>
 								</div>
 
-
-								<div class="table-fixed table-scrollable-stock-count-form dragscroll"
+								<div class="table-fixed table-scrollable-stock-count-form dragscroll table-floorplan"
 									style="margin-bottom: 20px; font-size: 11px; line-height: 1.3; cursor: grab; cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;">
 									<table class="table" class="table" id="zoom-table" style="zoom:100%;">
 										<thead>
@@ -639,18 +629,21 @@
 										<tbody>
 											<tr>
 												<td class="table-column-color">A1</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-yellow">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-red text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td id="A1-2">
@@ -679,18 +672,21 @@
 
 													</div>
 												</td>
-												<td class="floorplan-color-fish-yellow">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td>
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-purple text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -716,18 +712,21 @@
 											</tr>
 											<tr>
 												<td class="table-column-color">A2</td>
-												<td id="A2-1" class="floorplan-color-fish-blue">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td id="A2-1">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-purple  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td id="A2-2"></td>
@@ -746,18 +745,21 @@
 
 													</div>
 												</td>
-												<td colspan="4" class="floorplan-color-fish-purple">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td colspan="4">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-pink  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -831,18 +833,21 @@
 
 													</div>
 												</td>
-												<td class="floorplan-color-fish-purple">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td>
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-yellow  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 											</tr>
@@ -858,18 +863,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-yellow">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-blue  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 
@@ -918,17 +926,22 @@
 												<td class="table-column-color">A5</td>
 												<td id="A5-1"></td>
 												<td id="A5-2"></td>
-												<td class="floorplan-color-fish-purple">
-														<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-													<a href="#"><i class="icon-alert"></i></a>
-													<br>
-													Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-														118911,
-														12G123</span><br>Last Stock Count:<br><span
-														class="floorplan-last-enter-stock-input">01/01/2021
-														(5)</span></1><br>Current Pieces:<br><span
-														class="floorplan-stocking-stock-input">5667</span><br>
-													<i class=table-location-indicator></i>
+												<td>
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-yellow  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
+													</div>
 												</td>
 												<td>
 													<div class="floorplan-details">
@@ -998,18 +1011,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-blue">
-													<div class="floorplan-details">
-															<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-orange  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1066,18 +1082,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-yellow">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-red  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1141,18 +1160,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-purple">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-orange  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1183,18 +1205,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-yellow">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-orange  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1236,18 +1261,21 @@
 											</tr>
 											<tr>
 												<td class="table-column-color">A10</td>
-												<td id="A10-1" class="floorplan-color-fish-yellow">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td id="A10-1">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-orange  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td id="A10-2"></td>
@@ -1341,18 +1369,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-purple">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-yellow  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1384,18 +1415,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-blue">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-pink  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1459,18 +1493,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-purple">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-purple  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1522,18 +1559,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-yellow">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-yellow  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1582,18 +1622,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-purple">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-red  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1635,32 +1678,38 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-blue">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-pink  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-yellow">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-yellow  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1728,36 +1777,40 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-purple">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-purple  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-blue">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-blue  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
-
-
 											</tr>
 											<tr>
 												<td class="table-column-color">A18</td>
@@ -1772,18 +1825,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-yellow">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-red  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 
@@ -1836,18 +1892,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-purple">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-blue  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1911,18 +1970,21 @@
 
 													</div>
 												</td>
-												<td rowspan="1" colspan="2" class="floorplan-color-fish-purple">
-													<div class="floorplan-details">
-																<a href="./superadmin-overall-floorplan-stock.html" target="_blank" rel="noopener noreferrer"><i class="icon-info22"></i></a>
-														<a href="#"><i class="icon-alert"></i></a>
-														<br>
-														Batch(es):<br> <span class="floorplan-batch-stock-input">12F934,
-															118911,
-															12G123</span><br>Last Stock Count:<br><span
-															class="floorplan-last-enter-stock-input">01/01/2021
-															(5)</span></1><br>Current Pieces:<br><span
-															class="floorplan-stocking-stock-input">5667</span><br>
-														<i class=table-location-indicator></i>
+												<td rowspan="1" colspan="2">
+													<div class="col-md-12">
+														<div class="floorplan-card-block">
+															<div class="card-header floorplan-batch-purple  text-white">
+															</div>
+															<div class="floorplan-card">
+																Batch(es): <span
+																	class="floorplan-card-details">19FW923</span> <br>
+
+																Current Pieces: <span
+																	class="floorplan-card-details">5568</span><br>
+																<span><a href="#"><i
+																			class="icon-circle2 floorplan-icon-circle2"></i></a></span>
+															</div>
+														</div>
 													</div>
 												</td>
 												<td>
@@ -1960,17 +2022,9 @@
 						</div>
 
 					</div>
-
-
-
-
-
-
-
 				</div>
 			</div>
 			<!-- /content area -->
-
 
 
 			<!-- Footer -->
