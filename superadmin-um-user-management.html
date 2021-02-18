@@ -17,12 +17,15 @@
 	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<link href="./global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="./global_assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
 	<script src="./global_assets/js/main/jquery.min.js"></script>
 	<script src="./global_assets/js/main/bootstrap.bundle.min.js"></script>
 	<script src="./global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<script src="./global_assets/js/plugins/loaders/table_ticker.js"></script>
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
@@ -33,7 +36,7 @@
 	<script src="assets/js/app.js"></script>
 	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
 	<script src="./global_assets/js/demo_pages/form_wizard.js"></script>
-	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="./global_assets/js/demo_pages/datatables_basic_c3.js"></script>
 	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
@@ -221,8 +224,8 @@
 						<div class="media">
 							<div class="mr-3">
 								<!-- user-profile-image -->
-								<a href="#"><img src="./global_assets/images/placeholders/placeholder.jpg"
-										width="38" height="38" class="rounded-circle" alt=""></a>
+								<a href="#"><img src="./global_assets/images/placeholders/placeholder.jpg" width="38"
+										height="38" class="rounded-circle" alt=""></a>
 							</div>
 							<div class="media-body">
 								<div class="media-title font-weight-semibold">Cyprian Aidan Chong</div>
@@ -242,234 +245,196 @@
 				<div class="card card-sidebar-mobile">
 					<ul class="nav nav-sidebar" data-nav-type="accordion">
 
-						<!-- Account -->
-
-						<!-- Account -->
 						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Master Dashboard</div> <i
+							<div class="text-uppercase font-size-xs line-height-xs">Dashboard</div> <i
 								class="icon-circle-small" title="Main"></i>
 						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-gear"></i>
-								<span>Product Visualizer</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="./superadmin-mv-fc-farm-management.html"
-										class="nav-link">Recorder Data</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-mv-feed.html" class="nav-link">Purchasing
-										Data</a>
-								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Accounting Data</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-mv-fc-farm-management.html"
-										class="nav-link">Operational Admin Data</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-mv-feed.html" class="nav-link">Bagan
-										Warehouse Data</a>
-								</li>
 
+						<!-- Sale Mix Dashboard -->
+						<li class="nav-item ">
+							<a href="superadmin-dashboard-sales-mix.html" class="nav-link"><i
+									class="icon-stats-bars2"></i>
+								<span>Sales Mix</span></a>
+						</li>
+						<!-- /Sale Mix Dashboard -->
+
+						<!-- Farm Dashboard -->
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-stats-bars4"></i>
+								<span>Farm Dashboard</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Farm Dashboard">
+								<li class="nav-item"><a href="superadmin-dashboard-farm-sales.html"
+										class="nav-link">Farm Sales</a>
+								</li>
+								<li class="nav-item"><a href="superadmin-dashboard-farm-gp.html" class="nav-link">Farm
+										GP</a>
+								</li>
+								<li class="nav-item"><a href="superadmin-dashboard-farm-cm.html" class="nav-link ">Farm
+										CM</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /Farm Dashboard -->
+
+						<!-- /Species Dashboard -->
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-stats-bars4"></i>
+								<span>Species Dashboard</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Species Dashboard">
+								<li class="nav-item"><a href="superadmin-dashboard-species-sales.html"
+										class="nav-link">Species Sales</a>
+								</li>
+								<li class="nav-item"><a href="superadmin-dashboard-species-farm-sales.html"
+										class="nav-link">Species Sales By Farm</a>
+								</li>
+								<li class="nav-item"><a href="superadmin-dashboard-species-gp.html"
+										class="nav-link">Species GP</a>
+								</li>
+								<li class="nav-item"><a href="superadmin-dashboard-species-farm-gp.html"
+										class="nav-link">Species GP By Farm</a>
+								</li>
+								<li class="nav-item"><a href="superadmin-dashboard-species-cm.html"
+										class="nav-link">Species CM</a>
+							</ul>
+						</li>
+						<!-- /Sepcies Dashboard -->
+
+						<!-- Forecast Dashboard -->
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-chart"></i>
+								<span>Forecast Dashboard</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Species Dashboard">
+								<li class="nav-item"><a href="#" class="nav-link">Account Management</a>
+								</li>
+								<li class="nav-item"><a href="#" class="nav-link">Operation Management</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /Forecast Dashboard -->
+
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Super Admin Menu</div> <i
+								class="icon-circle-small" title="Main"></i>
+						</li>
+
+						<!-- Account -->
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="fas fa-file-invoice-dollar"></i>
+								<span>Account Management</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Accounting Management">
+								<li class="nav-item"><a href="#" class="nav-link">Fries
+										Management</a>
+								</li>
+								<li class="nav-item"><a href="#" class="nav-link">Inventory
+										Management</a>
+								</li>
+								<li class="nav-item"><a href="#" class="nav-link">Feed
+										Management</a>
+								</li>
+								<li class="nav-item"><a href="#" class="nav-link">Overhead
+										Management</a>
+								</li>
 							</ul>
 
 						</li>
 						<!-- /Account -->
 
-						<!-- Account -->
-						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Master Form</div> <i
-								class="icon-circle-small" title="Main"></i>
-						</li>
+						<!-- Operation -->
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-gear"></i>
-								<span>Master Value Configuration</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="./superadmin-mv-fc-farm-management.html"
-										class="nav-link">Farm
-										Management</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-mv-feed.html" class="nav-link">Feed
-										Management</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-mv-species-management.html"
-										class="nav-link">Species
-										Management</a>
-								</li>
+							<a href="#" class="nav-link "><i class="fas fa-briefcase"></i>
+								<span>Operation Management </span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Operational Management">
+								<li class="nav-item"><a href="#" class="nav-link">Fries Management</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Feed Management</a></li>
 							</ul>
+						</li>
+						<!-- /Operation -->
 
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
-								<span> Recorder Data Entry</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="./superadmin-mf-rd-feed.html" class="nav-link">Feed</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-mf-rd-mortality-overview.html"
-										class="nav-link ">Mortality</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-mf-rd-stock-count-overview.html"
-										class="nav-link">Stock Count</a></li>
-								<li class="nav-item"><a href="superadmin-mf-rd-sizing-overview.html"
-										class="nav-link">Sizing</a></li>
+						<!-- Farm Creation -->
+						<li class="nav-item nav-item-submenu ">
+							<a href="#" class="nav-link "><i class="icon-map"></i>
+								<span>Farm Creation</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Farm Creation">
+								<li class="nav-item"><a href="superadmin-fc-farm-management.html"
+										class="nav-link">Create New Farm</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Farm Validation</a></li>
 							</ul>
 						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
-								<span> Account Data Entry</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="./superadmin-mf-account-reservation.html"
-										class="nav-link">Reservation</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-mf-account-purchase-fries.html"
-										class="nav-link ">Purchase Fries</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-mf-account-purchase-item.html"
-										class="nav-link">Purchase Item</a></li>
-								<li class="nav-item"><a href="./superadmin-mf-account-purchase-feed(other).html"
-										class="nav-link">Purchase Feed(Other)</a></li>
-								<li class="nav-item"><a href="superadmin-mf-account-purchase-feed(trash-fish).html"
-										class="nav-link">Purchase Feed(Trash Fish)</a></li>
-								<li class="nav-item-divider"></li>
-								<li class="nav-item"><a href="./superadmin-mf-account-cc-verify-fries.html"
-										class="nav-link">Verify Fries</a></li>
-								<li class="nav-item"><a href="superadmin-mf-account-cc-monthly-oe.html"
-										class="nav-link">Monthly Overhead Entry</a></li>
-								<li class="nav-item"><a href="superadmin-mf-account-cc-pellet-standard-price.html"
-										class="nav-link">Pellet Standard Price</a></li>
-								<li class="nav-item"><a href="superadmin-mf-account-cc-trash-fish-standard-price.html"
-										class="nav-link">Trash Fish Standard Price</a></li>
-								<li class="nav-item-divider"></li>
-								<li class="nav-item"><a href="superadmin-mf-account-cc-report-fries-vunverified.html"
-										class="nav-link">Fries Verification</a></li>
+						<!-- /Farm Creation -->
 
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="icon-drawer3"></i>
-								<span> Operation Data Entry</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="./superadmin-mf-operation-reservation.html"
-										class="nav-link">Reservation</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-mf-operation-fries-vunverified.html"
-										class="nav-link ">Verify Fries</a>
-								</li>
-								<li class="nav-item-divider"></li>
-								<li class="nav-item"><a href="./superadmin-mf-operation-cc-pellet-standard-price.html"
-										class="nav-link ">Pellet Standard Price</a>
-								</li>
-								<li class="nav-item"><a
-										href="./superadmin-mf-operation-cc-trash-fish-standard-price.html"
-										class="nav-link ">Trash Fish Standard Price</a>
-								</li>
-							</ul>
-						</li>
-
-						<!-- Account -->
-						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Configuration</div> <i
-								class="icon-circle-small" title="Main"></i>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href=" #" class="nav-link "><i class="icon-gear"></i>
+						<!-- Net Management -->
+						<li class="nav-item nav-item-submenu ">
+							<a href="#" class="nav-link "><i class="fas fa-network-wired"></i>
 								<span>Net Management</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="./superadmin-nm-nc-create-net-overview.html"
-										class="nav-link">Create Net</a></li>
-								<li class="nav-item"><a href="./superadmin-nm-nc-merge-net-overview.html"
-										class="nav-link">Merge Net</a></li>
-								<li class="nav-item"><a href="./superadmin-nm-nc-split-net-overview.html"
-										class="nav-link">Split Net</a></li>
-
+							<ul class="nav2 nav-group-sub" data-submenu-title="Net Management">
+								<li class="nav-item"><a href="superadmin-nm-create-net-overview.html"
+										class="nav-link">Net
+										Creation</a></li>
+								<li class="nav-item"><a href="superadmin-nm-merge-net-overview.html"
+										class="nav-link">Net Merge</a></li>
+								<li class="nav-item"><a href="superadmin-nm-nc-split-net-overview.html"
+										class="nav-link ">Net Split</a></li>
 							</ul>
 						</li>
-						<li class="nav-item nav-item-submenu nav-item-open">
-							<a href="#" class="nav-link active"><i class="icon-gear"></i>
-								<span>User Management</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts" style="display:block;">
-								<li class="nav-item "><a href="./superadmin-um-user-create.html" class="nav-link">Create
-										User
-										Account</a></li>
-								<li class="nav-item"><a href="./superadmin-um-user-management.html"
-										class="nav-link active">
-										Manage User
-										Account
-									</a></li>
-							</ul>
-						</li>
+						<!-- /Net Management -->
 
-						<!-- Account -->
-						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Floorplan Viewer</div> <i
-								class="icon-circle-small" title="Main"></i>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href=" #" class="nav-link "><i class="icon-gear"></i>
+						<!-- Floorplan Management -->
+						<li class="nav-item nav-item-submenu ">
+							<a href=" #" class="nav-link "><i class="icon-grid-alt"></i>
 								<span>Floorplan Management</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="./superadmin-floorplan-overview.html"
-										class="nav-link">Overview Floorplan</a></li>
-								<li class="nav-item"><a href="./superadmin-floorplan-reservation-overview.html"
-										class="nav-link">Reservation Floorplan</a></li>
-								<li class="nav-item"><a href="./superadmin-floorplan-feed-overview.html" class="nav-link 
-									">Feed Floorplan</a></li>
-								<li class="nav-item"><a href="./superadmin-floorplan-mortality-overview.html"
-										class="nav-link">Mortality Floorplan</a></li>
-								<li class="nav-item"><a href="./superadmin-floorplan-stock-count-overview.html"
-										class="nav-link">Stock Floorplan</a></li>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Net Management">
+								<li class="nav-item"><a href="superadmin-fm-overview.html" class="nav-link">Overview
+										Floorplan</a></li>
+								<li class="nav-item"><a href="superadmin-fm-feed-overview.html" class="nav-link ">Feed
+										Floorplan</a></li>
+								<li class="nav-item"><a href="superadmin-fm-mortality-overview.html"
+										class="nav-link ">Mortality Floorplan</a></li>
+								<li class="nav-item"><a href="superadmin-fm-stock-count-overview.html"
+										class="nav-link ">Stock Count Floorplan</a></li>
 							</ul>
 						</li>
+						<!-- /Floorplan Management -->
 
+						<!-- Species Management -->
+						<li class="nav-item nav-item-submenu ">
+							<a href=" #" class="nav-link "><i class="fas fa-fish"></i>
+								<span>Species Management</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Species Management">
+								<li class="nav-item"><a href="superadmin-sm-species-management.html"
+										class="nav-link">New
+										Species Entry</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Species Validation</a></li>
+							</ul>
+						</li>
+						<!-- /Species Management -->
 
-						<!-- Account -->
+						<!-- Smart Feeding-->
+						<li class="nav-item nav-item-submenu ">
+							<a href=" #" class="nav-link "><i class="icon-heart5"></i>
+								<span>Smart Feeding</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Smart Feeding">
+								<li class="nav-item"><a href="superadmin-sf-feed.html" class="nav-link">New Feed
+										Entry</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Feed Entry Validation</a></li>
+							</ul>
+						</li>
+						<!-- /Smart Feeding-->
 
-						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Report</div> <i
-								class="icon-circle-small" title="Main"></i>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-file-text "></i>
-								<span>FCR</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="#" class="nav-link">Batch FCR</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Farm/Species FCR</a></li>
+						<!-- User Management -->
+						<li class="nav-item nav-item-submenu nav-item-open">
+							<a href="#" class="nav-link active"><i class="icon-user"></i>
+								<span>User Management</span></a>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Species Dashboard"
+								style="display: block;">
+								<li class="nav-item"><a href="superadmin-um-user-create.html" class="nav-link">Create
+										User Account</a>
+								</li>
+								<li class="nav-item"><a href="superadmin-um-user-management.html"
+										class="nav-link active">Manage User Account</a>
+								</li>
 							</ul>
 						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="./recorder-stock-count-form-overview.html" class="nav-link"><i
-									class="icon-file-text "></i> <span>Stock</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="#" class="nav-link">Movement By Farm</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Movement By batch</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Mortality</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Discrepency</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Last Count</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Survivor Rate</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-file-text "></i>
-								<span>Farm Usage</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="#" class="nav-link">Farm By Cage</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Farm By Species</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Feed</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-file-text "></i>
-								<span>Batch</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="#" class="nav-link">Profiling</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-file-text "></i>
-								<span>Werehouse</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="#" class="nav-link">Stock Movement</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Inventory</a></li>
-							</ul>
-						</li>
-						<!-- /Account -->
+						<!-- /User Management -->
 					</ul>
 				</div>
 				<!-- /main navigation -->
@@ -490,11 +455,9 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<span class="breadcrumb-item active">Configuration</span>
-							<span class="breadcrumb-item active">User Management</span>
+							<h class="breadcrumb-item active">User Management</h>
 							<a href="./superadmin-um-user-management.html" class="breadcrumb-item ">Manage User
 								Account</a>
-
 						</div>
 						<a href="./recorder-feed-form-overview.html"
 							class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -516,6 +479,192 @@
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
+									<h5 class="card-title font-weight-bold">General Information</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+											<a class="sidebar-mobile-expand" data-action="fullscreen"></a>
+											<a class="sidebar-mobile-expand" data-action="reload"></a>
+											<a class="sidebar-mobile-expand" data-action="collapse"></a>
+										</div>
+									</div>
+								</div>
+								<div class="table-adjustment-smart">
+									<table class="table2 datatable-basic" id="tblData" width="100%">
+										<thead>
+											<tr>
+												<th class="table-row-color"><input type="checkbox" id="chkParent"
+														class="table-checkbox" />
+												<th class="table-row-color">Identification Card</th>
+												<th class="table-row-color">First Name</th>
+												<th class="table-row-color">Last Name</th>
+												<th class="table-row-color">Mobile Number</th>
+												<th class="table-row-color">Home Number</th>
+												<th class="table-row-color">Address</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>016-333 9923</td>
+												<td>088-7170071</td>
+												<td>Casa Damai, Kuala Lumpur</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>016-333 9923</td>
+												<td>088-7170071</td>
+												<td>Casa Damai, Kuala Lumpur</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>016-333 9923</td>
+												<td>088-7170071</td>
+												<td>Casa Damai, Kuala Lumpur</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>016-333 9923</td>
+												<td>088-7170071</td>
+												<td>Casa Damai, Kuala Lumpur</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>016-333 9923</td>
+												<td>088-7170071</td>
+												<td>Casa Damai, Kuala Lumpur</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>016-333 9923</td>
+												<td>088-7170071</td>
+												<td>Casa Damai, Kuala Lumpur</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="text-right" style="margin-right: 20px;">
+									<button type="button" class="btn btn-primary button-margin-bottom"
+										onclick="location.href='superadmin-um-general-edit.html'">Edit</button>
+									<button type="button" class="btn bg-danger button-margin-bottom">Remove</button>
+								</div>
+								<!-- /scrollable datatable -->
+							</div>
+						</div>
+						<div class="col-md-12">
+							<!-- 2 columns form -->
+							<div class="card">
+								<div class="card-header bg-white header-elements-inline">
+									<h5 class="card-title font-weight-bold">Employee Information</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+											<a class="sidebar-mobile-expand" data-action="fullscreen"></a>
+											<a class="sidebar-mobile-expand" data-action="reload"></a>
+											<a class="sidebar-mobile-expand" data-action="collapse"></a>
+										</div>
+									</div>
+								</div>
+								<div class="table-adjustment-smart">
+									<table class="table2 datatable-basic" id="tblData" width="100%">
+										<thead>
+											<tr>
+												<th class="table-row-color"><input type="checkbox" id="chkParent"
+														class="table-checkbox" />
+												<th class="table-row-color">Identification Card</th>
+												<th class="table-row-color">First Name</th>
+												<th class="table-row-color">Last Name</th>
+												<th class="table-row-color">Location</th>
+												<th class="table-row-color">Department</th>
+												<th class="table-row-color">Position</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>Kuala Lumpur</td>
+												<td>Account</td>
+												<td>Accoutant</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>Kuala Lumpur</td>
+												<td>Account</td>
+												<td>Accoutant</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>Kuala Lumpur</td>
+												<td>Account</td>
+												<td>Accoutant</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>Kuala Lumpur</td>
+												<td>Account</td>
+												<td>Accoutant</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>Kuala Lumpur</td>
+												<td>Account</td>
+												<td>Accoutant</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
+												<td>Kuala Lumpur</td>
+												<td>Account</td>
+												<td>Accoutant</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="text-right" style="margin-right: 20px;">
+									<button type="button" class="btn btn-primary button-margin-bottom"
+										onclick="location.href='superadmin-um-employee-edit.html'">Edit</button>
+									<button type="button" class="btn bg-danger button-margin-bottom">Remove</button>
+								</div>
+								<!-- /scrollable datatable -->
+							</div>
+						</div>
+						<div class="col-md-12">
+							<!-- 2 columns form -->
+							<div class="card">
+								<div class="card-header bg-white header-elements-inline">
 									<h5 class="card-title font-weight-bold">User Account Information</h5>
 									<div class="header-elements">
 										<div class="list-icons">
@@ -526,446 +675,78 @@
 									</div>
 								</div>
 								<div class="table-adjustment-smart">
-									<table class="table2 datatable-basic" width="100%">
+									<table class="table2 datatable-basic" id="tblData" width="100%">
 										<thead>
 											<tr>
-												<th class="table-row-color">Email</th>
-												<th class="table-row-color">Password</th>
+												<th class="table-row-color"><input type="checkbox" id="chkParent"
+														class="table-checkbox" />
+												<th class="table-row-color">Identification Card</th>
 												<th class="table-row-color">First Name</th>
 												<th class="table-row-color">Last Name</th>
-												<th class="table-row-color">Mobile Number</th>
-												<th class="table-row-color">Home Number</th>
-												<th class="table-row-color">Address</th>
-												<th class="table-row-color">Location</th>
-												<th class="table-row-color">Department</th>
-												<th class="table-row-color">Position</th>
-												<th class="table-row-color">Action</th>
+												<th class="table-row-color">Email</th>
+												<th class="table-row-color">Password</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
 												<td>A@gmail.com</td>
 												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
 											</tr>
 											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
 												<td>A@gmail.com</td>
 												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
 											</tr>
 											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
 												<td>A@gmail.com</td>
 												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
 											</tr>
 											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
 												<td>A@gmail.com</td>
 												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
 											</tr>
 											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
 												<td>A@gmail.com</td>
 												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
 											</tr>
 											<tr>
+												<td><input type="checkbox" /></td>
+												<td>961212-13-1212</td>
+												<td>James</td>
+												<td>Wong</td>
 												<td>A@gmail.com</td>
 												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>A@gmail.com</td>
-												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>A@gmail.com</td>
-												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>A@gmail.com</td>
-												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>A@gmail.com</td>
-												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>A@gmail.com</td>
-												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<td>A@gmail.com</td>
-												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<td>A@gmail.com</td>
-												<td>1233213</td>
-												<td>James</td>
-												<td>Fangnail</td>
-												<td>016-333 2213</td>
-												<td>-</td>
-												<td>Casa Damai, Kuala Lumpur</td>
-												<td>Kuala Lumpur</td>
-												<td>Account</td>
-												<td>Accoutant</td>
-												<td class="text-center">
-													<div class="list-icons">
-														<div class="dropdown">
-															<a href="#" class="list-icons-item" data-toggle="dropdown">
-																<i class="icon-menu9"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a href="./superadmin-um-user-management-edit.html"
-																	class="dropdown-item"><i
-																		class="icon-file-plus2"></i>
-																	Edit</a>
-																<a href="#" class="dropdown-item"><i
-																		class="icon-file-minus2"></i>
-																	Remove</a>
-
-															</div>
-														</div>
-													</div>
-												</td>
 											</tr>
 										</tbody>
 									</table>
 								</div>
-
+								<div class="text-right" style="margin-right: 20px;">
+									<button type="button" class="btn btn-primary button-margin-bottom"
+										onclick="location.href='superadmin-um-user-account-edit.html'">Edit</button>
+									<button type="button" class="btn bg-danger button-margin-bottom">Remove</button>
+								</div>
 								<!-- /scrollable datatable -->
 							</div>
 						</div>
-
 					</div>
 					<!-- /2 columns form -->
 				</div>

@@ -33,14 +33,22 @@ body {
     overflow: auto
 }
 
-.content3 {
-    padding: 1.25rem 1.25rem;
+.content {
+    padding: 2.25rem 5.25rem;
     -ms-flex-positive: 1;
     flex-grow: 1
 }
 
+@media only screen and (max-width: 600px) {
+    .content {
+        padding: 1.25rem 1.25rem;
+        -ms-flex-positive: 1;
+        flex-grow: 1
+    }
+}
+
 .content2 {
-    padding: 1.25rem 20.25rem;
+    padding: 2.25rem 20.25rem;
     -ms-flex-positive: 1;
     flex-grow: 1
 }
@@ -61,14 +69,28 @@ body {
     }
 }
 
-.content {
-    padding: 1.25rem 5.25rem;
+.content3 {
+    padding: 2.25rem 1.25rem;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+.content4 {
+    padding: 2.25rem 26.25rem;
     -ms-flex-positive: 1;
     flex-grow: 1
 }
 
 @media only screen and (max-width: 600px) {
-    .content {
+    .content4 {
+        padding: 1.25rem 1.25rem;
+        -ms-flex-positive: 1;
+        flex-grow: 1
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .content4 {
         padding: 1.25rem 1.25rem;
         -ms-flex-positive: 1;
         flex-grow: 1
@@ -1413,4 +1435,16 @@ body {
 
 .table-checkbox {
     text-align: center;
+}
+
+.input-required {
+    color: red;
+}
+
+.table-input-fixed-width {
+    width: 200px;
+}
+
+.table-input-fixed-width-2 {
+    width: 250;
 }

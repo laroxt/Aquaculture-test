@@ -1502,7 +1502,7 @@ input[type=number] {
 }
 
 .table2 td, .table2 th {
-    padding: .45rem 0.25rem;
+    padding: .45rem 2rem;
     border: 1px solid rgb(184, 184, 184);
     text-align: center;
 }

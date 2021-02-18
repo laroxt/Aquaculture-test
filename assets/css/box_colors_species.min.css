@@ -5,6 +5,7 @@
     border: 1px solid rgba(0, 0, 0, .2);
     text-align: center;
     display: inline-block;
+    border-radius: 50%;
 }
 
 .blue {
