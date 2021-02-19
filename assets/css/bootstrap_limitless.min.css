@@ -2677,8 +2677,6 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 .card.fixed-top {
     overflow: auto;
     max-height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(30px);
 }
 
 }
