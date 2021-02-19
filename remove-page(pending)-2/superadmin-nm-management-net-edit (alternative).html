@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>KS Aquaculture-C-Net Management Table View</title>
+	<title>KS Aquaculture-C-Net Management Edit</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -56,11 +56,6 @@
 
 
 	<script src="./global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
-
-	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
-	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
-	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
-
 
 </head>
 
@@ -236,8 +231,8 @@
 						<div class="media">
 							<div class="mr-3">
 								<!-- user-profile-image -->
-								<a href="#"><img src="./global_assets/images/placeholders/placeholder.jpg"
-										width="38" height="38" class="rounded-circle" alt=""></a>
+								<a href="#"><img src="./global_assets/images/placeholders/placeholder.jpg" width="38"
+										height="38" class="rounded-circle" alt=""></a>
 							</div>
 							<div class="media-body">
 								<div class="media-title font-weight-semibold">Cyprian Aidan Chong</div>
@@ -331,24 +326,25 @@
 						</li>
 
 						<!-- Account -->
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link "><i class="fas fa-file-invoice-dollar"></i>
+							<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
 								<span>Account Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Accounting Management">
-								<li class="nav-item"><a href="#" class="nav-link">Fries
+								<li class="nav-item"><a href="./superadmin-accm-fries-management.html"
+										class="nav-link">Fries
 										Management</a>
 								</li>
 								<li class="nav-item"><a href="#" class="nav-link">Inventory
 										Management</a>
 								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Feed
+								<li class="nav-item"><a href="./superadmin-accm-feed-management.html"
+										class="nav-link">Feed
 										Management</a>
 								</li>
 								<li class="nav-item"><a href="#" class="nav-link">Overhead
 										Management</a>
 								</li>
 							</ul>
-
 						</li>
 						<!-- /Account -->
 
@@ -450,10 +446,8 @@
 					</ul>
 				</div>
 				<!-- /main navigation -->
-
 			</div>
 			<!-- /sidebar content -->
-
 		</div>
 		<!-- /main sidebar -->
 
@@ -466,10 +460,19 @@
 
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
-						<h class="breadcrumb-item active">Configuration</h>
-						<h class="breadcrumb-item active">Net Management</h>
-						<a href="./superadmin-nm-nc-management-net-nv-overview.html" class="breadcrumb-item ">Net
-							Management Table View</a>
+						<div class="breadcrumb">
+							<h class="breadcrumb-item active">Configuration</h>
+							<h class="breadcrumb-item active">Net Management</h>
+							<a href="./superadmin-nm-nc-management-net-nv-overview.html"
+								class="breadcrumb-item  active">Net
+								Management Table View</a>
+							<a href="./superadmin-nm-nc-management-net-edit (alternative).html"
+								class="breadcrumb-item ">Net
+								Management Table View Edit</a>
+						</div>
+
+						<a href="./recorder-feed-form-overview.html"
+							class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
 
@@ -477,150 +480,19 @@
 			</div>
 			<!-- /page header -->
 
+
 			<!-- Main content -->
 			<div class="content-wrapper">
 				<!-- Content area -->
 				<div class="content3">
-					<!-- /fieldset legend -->
 					<div class="row">
-						<div class="col-md-9">
-							<div class="card">
-								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Floorplan Filter</h5>
-									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="collapse"></a>
-										</div>
-									</div>
-								</div>
-								<div class="card-body" style="padding-bottom: 0;">
-									<form action="#">
-										<div class="row">
-											<div class="col-md-5">
-												<fieldset>
-													<div class="form-group">
-														<label>Farm:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<optgroup label="Pulau Ketam">
-																<option value="Farm-1">BA</option>
-																<option value="Farm-2">BB</option>
-																<option value="Farm-3">BD</option>
-																<option value="Farm-3">BE</option>
-																<option value="Farm-3">BF</option>
-																<option value="Farm-3">BJ</option>
-															</optgroup>
-															<optgroup label="Johor">
-																<option value="Farm-1">JA</option>
-																<option value="Farm-2">JB</option>
-																<option value="Farm-3">JC</option>
-															</optgroup>
-															</optgroup>
-														</select>
-													</div>
-												</fieldset>
-											</div>
-
-
-											<div class="col-md-4">
-												<fieldset>
-													<div class="form-group">
-														<label>Date:</label>
-														<div class="input-group">
-															<span class="input-group-prepend"></span>
-															<span class="input-group-text"><i
-																	class="icon-calendar5"></i></span>
-															</span>
-															<input type="text" class="form-control pickadate"
-																placeholder="Select Date">
-														</div>
-													</div>
-												</fieldset>
-											</div>
-
-
-											<div class="col-md-3">
-												<fieldset>
-													<div class="form-group style=">
-														<div class="form-group2" style="padding-top: -0.5rem; padding-bottom:
-													0rem;">
-															<label class="d-block">Filter By:</label>
-
-															<div class="form-check form-check-inline">
-																<label class="form-check-label">
-																	<input type="radio" class="form-input-styled"
-																		name="gender" checked data-fouc>
-																	Species
-																</label>
-															</div>
-															<div class="form-check form-check-inline">
-																<label class="form-check-label">
-																	<input type="radio" class="form-input-styled"
-																		name="gender" data-fouc>
-																	Net Status
-																</label>
-															</div>
-														</div>
-													</div>
-												</fieldset>
-											</div>
-										</div>
-
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- /fieldset legend -->
-						<div class="col-md-3">
-							<!-- 2 columns form -->
-							<div class="card">
-								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">View Mode</h5>
-									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="collapse"></a>
-										</div>
-									</div>
-								</div>
-
-								<div class="card-body" style="padding-bottom: 0;">
-									<form action="#">
-										<div class="row">
-											<div class="col-md-12">
-												<label> Table View Mode:</label>
-												<fieldset>
-													<div class="form-group">
-														<div class="form-check form-check-switchery">
-															<label class="form-check-label">
-																<input type="checkbox"
-																	class="form-check-input-switchery" checked
-																	id="toggle-nc-fv" onclick="toggle_nv('user',this);">
-
-															</label>
-														</div>
-													</div>
-												</fieldset>
-											</div>
-
-
-										</div>
-
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- /fieldset legend -->
-					<div class=" row">
 						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Current Floorplan Table</h5>
+									<h5 class="card-title font-weight-bold">Delete Selected Net</h5>
 									<div class="header-elements">
 										<div class="list-icons">
-
 											<a class="sidebar-mobile-expand" data-action="fullscreen"></a>
 											<a class="sidebar-mobile-expand" data-action="reload"></a>
 											<a class="sidebar-mobile-expand" data-action="collapse"></a>
@@ -642,7 +514,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -651,7 +523,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -660,7 +532,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -669,7 +541,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -678,7 +550,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -687,7 +559,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -696,7 +568,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -705,7 +577,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -714,7 +586,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -723,7 +595,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -732,17 +604,7 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
-												<td><span class="badge badge-success">Open</span></td>
-												<td>
-													<input type="checkbox" style="text-align:center;">
-												</td>
-											</tr>
-
-											<tr>
-												<td>12F934</td>
-												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -752,7 +614,17 @@
 											<tr>
 												<td>12F934</td>
 												<td>A1-1, A1-2</td>
-												<td>01/01/2021</td>
+												<td>1/01/2021</td>
+												<td><span class="badge badge-success">Open</span></td>
+												<td>
+													<input type="checkbox" style="text-align:center;">
+												</td>
+											</tr>
+
+											<tr>
+												<td>12F934</td>
+												<td>A1-1, A1-2</td>
+												<td>1/01/2021</td>
 												<td><span class="badge badge-success">Open</span></td>
 												<td>
 													<input type="checkbox" style="text-align:center;">
@@ -763,7 +635,8 @@
 
 								</div>
 								<div class="text-right" style="padding-bottom: 20px; margin-right: 20px;">
-									<button type="button" class="btn btn-primary-reset" id="sweet_warning">Confirm
+									<button type="button" class="btn btn-primary-reset"
+										onClick="location.href='./superadmin-uc-user-management-edit.html'">Confirm
 									</button></td>
 								</div>
 								<!-- /scrollable datatable -->
@@ -771,12 +644,17 @@
 						</div>
 
 					</div>
-					<!-- /2 columns form -->
 
 				</div>
+
+
+
+
+
+
+
 			</div>
 			<!-- /content area -->
-
 
 			<!-- Footer -->
 			<div class="navbar navbar-expand-lg navbar-light">

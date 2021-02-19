@@ -1448,3 +1448,7 @@ body {
 .table-input-fixed-width-2 {
     width: 250;
 }
+
+.textarea-size {
+    height: 1000px;
+}

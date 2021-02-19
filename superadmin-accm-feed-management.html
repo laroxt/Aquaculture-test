@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>KS Aquaculture-Mv-Farm Management</title>
+	<title>KS Aquaculture-Mf-Species Managemnet Edit</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -17,7 +17,6 @@
 	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/floorplan_indicator.css" rel="stylesheet" type="text/css">
 	<link href="./global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
 	<link href="./global_assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
@@ -26,31 +25,38 @@
 	<script src="./global_assets/js/main/jquery.min.js"></script>
 	<script src="./global_assets/js/main/bootstrap.bundle.min.js"></script>
 	<script src="./global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<script src="./global_assets/js/plugins/loaders/table_ticker.js"></script>
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
-	<script src="./global_assets/js/plugins/forms/selects/select3.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<script src="./global_assets/js/demo_pages/form_multiselect.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
-	<script src="./global_assets/js/demo_pages/form_wizard3.js"></script>
-	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="./global_assets/js/demo_pages/form_wizard.js"></script>
+	<script src="./global_assets/js/demo_pages/datatables_basic_c3.js"></script>
 	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_pnotify.js"></script>
 	<script src="./global_assets/js/plugins/notifications/pnotify.min.js"></script>
-	<script src="./dragscroll_js/dragscroll.js"></script>
 
 
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
-
-	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<!-- /theme JS files -->
+
+	<script src="./global_assets/js/plugins/pickers/color/spectrum.js"></script>
+	<script src="./global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+
+
+	<script src="./global_assets/js/demo_pages/picker_color.js"></script>
+
+
+
 
 </head>
 
@@ -261,8 +267,8 @@
 						<!-- /Sale Mix Dashboard -->
 
 						<!-- Farm Dashboard -->
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stats-bars4"></i>
+						<li class="nav-item nav-item-submenu ">
+							<a href="#" class="nav-link "><i class="icon-stats-bars4"></i>
 								<span>Farm Dashboard</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Farm Dashboard">
 								<li class="nav-item"><a href="superadmin-dashboard-farm-sales.html"
@@ -271,7 +277,7 @@
 								<li class="nav-item"><a href="superadmin-dashboard-farm-gp.html" class="nav-link">Farm
 										GP</a>
 								</li>
-								<li class="nav-item"><a href="superadmin-dashboard-farm-cm.html" class="nav-link">Farm
+								<li class="nav-item"><a href="superadmin-dashboard-farm-cm.html" class="nav-link ">Farm
 										CM</a>
 								</li>
 							</ul>
@@ -320,10 +326,11 @@
 						</li>
 
 						<!-- Account -->
-							<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
+						<li class="nav-item nav-item-submenu nav-item-open">
+							<a href="#" class="nav-link active"><i class="fas fa-file-invoice-dollar"></i>
 								<span>Account Management</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Accounting Management">
+							<ul class="nav2 nav-group-sub" data-submenu-title="Accounting Management"
+								style="display: block;">
 								<li class="nav-item"><a href="./superadmin-accm-fries-management.html"
 										class="nav-link">Fries
 										Management</a>
@@ -332,13 +339,14 @@
 										Management</a>
 								</li>
 								<li class="nav-item"><a href="./superadmin-accm-feed-management.html"
-										class="nav-link">Feed
+										class="nav-link active">Feed
 										Management</a>
 								</li>
 								<li class="nav-item"><a href="#" class="nav-link">Overhead
 										Management</a>
 								</li>
 							</ul>
+
 						</li>
 						<!-- /Account -->
 
@@ -354,12 +362,12 @@
 						<!-- /Operation -->
 
 						<!-- Farm Creation -->
-						<li class="nav-item nav-item-submenu nav-item-open">
-							<a href="#" class="nav-link active"><i class="icon-map"></i>
+						<li class="nav-item nav-item-submenu ">
+							<a href="#" class="nav-link "><i class="icon-map"></i>
 								<span>Farm Creation</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Farm Creation" style="display: block;">
+							<ul class="nav2 nav-group-sub" data-submenu-title="Farm Creation">
 								<li class="nav-item"><a href="superadmin-fc-farm-management.html"
-										class="nav-link active">Create New Farm</a></li>
+										class="nav-link">Create New Farm</a></li>
 								<li class="nav-item"><a href="#" class="nav-link">Farm Validation</a></li>
 							</ul>
 						</li>
@@ -399,14 +407,14 @@
 						<!-- /Floorplan Management -->
 
 						<!-- Species Management -->
-						<li class="nav-item nav-item-submenu ">
+						<li class="nav-item nav-item-submenu">
 							<a href=" #" class="nav-link "><i class="fas fa-fish"></i>
 								<span>Species Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Species Management">
 								<li class="nav-item"><a href="superadmin-sm-species-management.html"
-										class="nav-link">New
+										class="nav-link ">New
 										Species Entry</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Species Validation</a></li>
+								<li class="nav-item"><a href="#" class="nav-link ">Species Validation</a></li>
 							</ul>
 						</li>
 						<!-- /Species Management -->
@@ -416,7 +424,7 @@
 							<a href=" #" class="nav-link "><i class="icon-heart5"></i>
 								<span>Smart Feeding</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Smart Feeding">
-								<li class="nav-item"><a href="superadmin-sf-feed.html" class="nav-link">New Feed
+								<li class="nav-item"><a href="superadmin-sf-feed.html" class="nav-link ">New Feed
 										Entry</a></li>
 								<li class="nav-item"><a href="#" class="nav-link">Feed Entry Validation</a></li>
 							</ul>
@@ -443,8 +451,11 @@
 
 			</div>
 			<!-- /sidebar content -->
+
 		</div>
 		<!-- /main sidebar -->
+
+
 		<!-- Main content -->
 		<div class="content-wrapper">
 
@@ -453,139 +464,368 @@
 
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
-						<h class="breadcrumb-item active">Farm Creation</h>
-						<a href="./superadmin-fc-farm-management.html" class="breadcrumb-item">Create New Farm</a>
+						<div class="breadcrumb">
+							<h class="breadcrumb-item active">Account Management</h>
+							<a href="./superadmin-accm-feed-management.html" class="breadcrumb-item ">Feed
+								Management</a>
+						</div>
 					</div>
 
 
 				</div>
 			</div>
 			<!-- /page header -->
+
+
 			<!-- Main content -->
 			<div class="content-wrapper">
 				<!-- Content area -->
-				<div class="content2">
-
-					<div class="row">
+				<div class="content">
+					<!-- /fieldset legend -->
+					<div class=" row">
 						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Create New Farm</h5>
+									<h5 class="card-title font-weight-bold">Feed(Pellet) Purchase Management</h5>
 									<div class="header-elements">
-
+										<div class="list-icons">
+											<a class="sidebar-mobile-expand" data-action="fullscreen"></a>
+											<a class="sidebar-mobile-expand" data-action="reload"></a>
+											<a class="sidebar-mobile-expand" data-action="collapse"></a>
+										</div>
 									</div>
 								</div>
-								<div class="card-body">
-									<form action="#">
-										<div class="row">
-											<div class="col-md-12">
-												<fieldset>
-													<div class="form-group">
-														<label>Location:</label>
-														<select data-placeholder="Select your state"
-															class="form-control select" data-fouc>
-															<option value="Farm-1">Pulau Ketam</option>
-															<option value="Farm-2">Kong Kong</option>
-														</select>
-													</div>
-												</fieldset>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<fieldset>
-													<div class="form-group">
-														<label>Code:</label>
-														<input type="email" class="form-control" placeholder="Eg. BA1">
-													</div>
-												</fieldset>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<fieldset>
-													<div class="form-group">
-														<label>Row & Column:</label>
-														<select data-placeholder="Select your state"
-															class="form-control select" data-fouc>
-															<option value="Farm-1">20 X 20</option>
-															<option value="Farm-2">30 X 30</option>
-															<option value="Farm-3">40 X 40</option>
-															<option value="Farm-3">200 X 200</option>
-														</select>
-													</div>
-												</fieldset>
-											</div>
-										</div>
-
-										<label>Custom Dimension:</label>
-										<div class="row">
-											<div class="col-md-6">
-												<fieldset>
-													<div class="form-group">
-														<input type="email" class="form-control" placeholder="Row">
-													</div>
-												</fieldset>
-											</div>
-											<div class="col-md-6">
-												<fieldset>
-													<div class="form-group">
-														<input type="email" class="form-control" placeholder="Column">
-													</div>
-												</fieldset>
-											</div>
-										</div>
-										<div class="text-right">
-											<button type="button" class="btn btn-primary"
-												onClick="location.href='superadmin-fc-farm-20x20.html'">Next</button>
-										</div>
-									</form>
+								<div class="table-adjustment-smart">
+									<table class="table2 datatable-basic" id="tblData" width="100%">
+										<thead>
+											<tr>
+												<th class="table-row-color"><input type="checkbox" id="chkParent"
+														class="table-checkbox" style='text-align: left'>
+												<th class="table-row-color">Type of Pellet</th>
+												<th class="table-row-color">Unit Price(RM)</th>
+												<th class="table-row-color">Quantity</th>
+												<th class="table-row-color">Dest.Warehouse</th>
+												<th class="table-row-color">PO NO.</th>
+												<th class="table-row-color">Remark</th>
+												<th class="table-row-color">Subtotal(RM)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>UP6</td>
+												<td>1.50</td>
+												<td>1,000</td>
+												<td>Red Snapper</td>
+												<td>12FR012</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
+								<div class="text-right" style="margin-right: 20px;">
+									<button type="button" class="btn btn-primary button-margin-bottom"
+										onClick="location.href='superadmin-accm-feed-pellet-management-add.html'">Add</button>
+									<button type="button" class="btn bg-danger button-margin-bottom">Remove</button>
+								</div>
+								<!-- /scrollable datatable -->
 							</div>
 						</div>
+
 					</div>
+					<!-- /2 columns form -->
+					<div class=" row">
+						<div class="col-md-12">
+							<!-- 2 columns form -->
+							<div class="card">
+								<div class="card-header bg-white header-elements-inline">
+									<h5 class="card-title font-weight-bold">Feed(Trash Fish) Purchase Management</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+											<a class="sidebar-mobile-expand" data-action="fullscreen"></a>
+											<a class="sidebar-mobile-expand" data-action="reload"></a>
+											<a class="sidebar-mobile-expand" data-action="collapse"></a>
+										</div>
+									</div>
+								</div>
+								<div class="table-adjustment-smart">
+									<table class="table2 datatable-basic" id="tblData" width="100%">
+										<thead>
+											<tr>
+												<th class="table-row-color"><input type="checkbox" id="chkParent"
+														class="table-checkbox" />
+												<th class="table-row-color">Type of Trash Fish</th>
+												<th class="table-row-color">Grade</th>
+												<th class="table-row-color">Unit Price(RM)</th>
+												<th class="table-row-color">Quantity</th>
+												<th class="table-row-color">Remark</th>
+												<th class="table-row-color">Subtotal(RM)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" /></td>
+												<td>IB</td>
+												<td>A</td>
+												<td>1.50</td>
+												<td>10,000</td>
+												<td>Boat No: ABC123<br>Date: 01/01/2021<br>Received By: Wong Ah Kow</td>
+												<td>1,500.00</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="text-right" style="margin-right: 20px;">
+									<button type="button" class="btn btn-primary button-margin-bottom"
+										onClick="location.href='superadmin-accm-feed-tfish-management-add.html'">Add</button>
+									<button type="button" class="btn bg-danger button-margin-bottom">Remove</button>
+								</div>
+								<!-- /scrollable datatable -->
+							</div>
+						</div>
+
+					</div>
+					<!-- /2 columns form -->
 				</div>
-				<!-- /content area -->
-
-
-
-				<!-- Footer -->
-				<div class="navbar navbar-expand-lg navbar-light">
-					<div class="text-center d-lg-none w-100">
-						<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
-							data-target="#navbar-footer">
-							<i class="icon-unfold mr-2"></i>
-							Footer
-						</button>
-					</div>
-
-					<div class="navbar-collapse collapse" id="navbar-footer">
-						<span class="navbar-text">
-							&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a
-								href="http://themeforest.net/user/Kopyov" target="_blank">Cyprian Aidan
-								Chong</a>
-						</span>
-
-						<ul class="navbar-nav ml-lg-auto">
-							<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
-									target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
-							<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
-									class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i>
-									Docs</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!-- /footer -->
-
 			</div>
-			<!-- /main content -->
+			<!-- /content area -->
+
+			<!-- Footer -->
+			<div class="navbar navbar-expand-lg navbar-light">
+				<div class="text-center d-lg-none w-100">
+					<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+						data-target="#navbar-footer">
+						<i class="icon-unfold mr-2"></i>
+						Footer
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse" id="navbar-footer">
+					<span class="navbar-text">
+						&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a href="http://themeforest.net/user/Kopyov"
+							target="_blank">Cyprian Aidan
+							Chong</a>
+					</span>
+
+					<ul class="navbar-nav ml-lg-auto">
+						<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
+								target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+						<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
+								class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i>
+								Docs</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /footer -->
 
 		</div>
-		<!-- /page content -->
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
 
 </body>
 
