@@ -48,10 +48,11 @@
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
-
 	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
 	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
 	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
+	<script src="./global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="./global_assets/js/plugins/pickers/daterangepicker.js"></script>
 	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<!-- /theme JS files -->
 
@@ -323,7 +324,7 @@
 						</li>
 
 						<!-- Account -->
-							<li class="nav-item nav-item-submenu">
+						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
 								<span>Account Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Accounting Management">
@@ -420,6 +421,8 @@
 							<a href=" #" class="nav-link "><i class="icon-heart5"></i>
 								<span>Smart Feeding</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Smart Feeding">
+								<li class="nav-item"><a href="superadmin-sf-rd-feed.html" class="nav-link">Feeding
+										Entry</a></li>
 								<li class="nav-item"><a href="superadmin-sf-feed.html" class="nav-link">New Feed
 										Entry</a></li>
 								<li class="nav-item"><a href="#" class="nav-link">Feed Entry Validation</a></li>
@@ -517,12 +520,12 @@
 													<div class="form-group">
 														<label>Date:</label>
 														<div class="input-group">
-															<span class="input-group-prepend"></span>
-															<span class="input-group-text"><i
-																	class="icon-calendar5"></i></span>
+															<span class="input-group-prepend">
+																<span class="input-group-text"><i
+																		class="icon-calendar22"></i></span>
 															</span>
-															<input type="text" class="form-control pickadate"
-																placeholder="Select Date">
+															<input type="text" class="form-control daterange-single"
+																value="01/01/2021">
 														</div>
 													</div>
 												</fieldset>
