@@ -29,10 +29,13 @@ Highcharts.chart("speciesSales_byFarm_overview", {
   yAxis: {
     min: 0,
     title: {
-      text: "Gross Profit Revenue(RM)",
+      text: "Sales Revenue(RM)",
     },
     stackLabels: {
       enabled: true,
+      formatter: function () {
+        return this.total + "k";
+      },
       style: {
         fontWeight: "bold",
       },
@@ -56,42 +59,23 @@ Highcharts.chart("speciesSales_byFarm_overview", {
   },
 
   tooltip: {
-    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
-    pointFormatter: function () {
-      var value;
-      if (this.y >= 0) {
-        value = "RM " + this.y;
-      } else {
-        value = "-RM " + -this.y;
-      }
-      return (
-        "<br/>" +
-        '<span style="color:' +
-        this.series.color +
-        '"> ● </span>' +
-        " " +
-        this.series.name +
-        "</span>: <b>" +
-        value +
-        "</b><br />"
-      );
-    },
+    pointFormat:
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b>',
+    shared: true,
   },
 
   plotOptions: {
     series: {
       pointWidth: 50,
+      dataLabels: {
+        enabled: true,
+        format: "{point.y}k",
+      },
     },
     column: {
       stacking: "normal",
       pointPadding: 0.2,
       borderWidth: 0,
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          return this.y != 0 ? this.y : "";
-        },
-      },
     },
   },
 
@@ -102,52 +86,52 @@ Highcharts.chart("speciesSales_byFarm_overview", {
       data: [
         {
           name: "Jan",
-          y: 43934,
+          y: 43,
           drilldown: "Pulau Ketam, Jan, 2021",
         },
         {
           name: "Feb",
-          y: 29742,
+          y: 29.2,
         },
         {
           name: "Mar",
-          y: 32490,
+          y: 32,
         },
         {
           name: "Apr",
-          y: 38121,
+          y: 38.1,
         },
         {
           name: "May",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Jun",
-          y: 52322,
+          y: 52.2,
         },
         {
           name: "July",
-          y: 52322,
+          y: 52,
         },
         {
           name: "Aug",
-          y: 52322,
+          y: 52,
         },
         {
           name: "Sept",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Oct",
-          y: 52322,
+          y: 52,
         },
         {
           name: "Nov",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Dec",
-          y: 52322,
+          y: 52.2,
         },
       ],
     },
@@ -157,52 +141,52 @@ Highcharts.chart("speciesSales_byFarm_overview", {
       data: [
         {
           name: "Jan",
-          y: 43934,
+          y: 43.9,
           drilldown: "Kong Kong, Jan, 2021",
         },
         {
           name: "Feb",
-          y: 29742,
+          y: 29.2,
         },
         {
           name: "Mar",
-          y: 42123,
+          y: 42,
         },
         {
           name: "Apr",
-          y: 23154,
+          y: 23.4,
         },
         {
           name: "May",
-          y: 89323,
+          y: 89.3,
         },
         {
           name: "Jun",
-          y: 74353,
+          y: 74.53,
         },
         {
           name: "July",
-          y: 32141,
+          y: 32.1,
         },
         {
           name: "Aug",
-          y: 64345,
+          y: 64.3,
         },
         {
           name: "Sept",
-          y: 25123,
+          y: 25.3,
         },
         {
           name: "Oct",
-          y: 31231,
+          y: 31.2,
         },
         {
           name: "Nov",
-          y: 32512,
+          y: 32.6,
         },
         {
           name: "Dec",
-          y: 52312,
+          y: 52.2,
         },
       ],
     },
@@ -212,59 +196,59 @@ Highcharts.chart("speciesSales_byFarm_overview", {
       data: [
         {
           name: "Jan",
-          y: 0,
+          y: null,
         },
         {
           name: "Feb",
-          y: 0,
+          y: null,
         },
         {
           name: "Mar",
-          y: 0,
+          y: null,
         },
         {
           name: "Apr",
-          y: 0,
+          y: null,
         },
         {
           name: "May",
-          y: 0,
+          y: null,
         },
         {
           name: "May",
-          y: 0,
+          y: null,
         },
         {
           name: "Jun",
-          y: 0,
+          y: null,
         },
         {
           name: "July",
-          y: 0,
+          y: null,
         },
         {
           name: "Aug",
-          y: 0,
+          y: null,
         },
         {
           name: "Sept",
-          y: 0,
+          y: null,
         },
         {
           name: "Oct",
-          y: 0,
+          y: null,
         },
         {
           name: "Nov",
-          y: 0,
+          y: null,
         },
         {
           name: "Dec",
-          y: 0,
+          y: null,
         },
         {
           name: "YTD",
-          y: 81235,
+          y: 81.2,
         },
       ],
     },
@@ -284,15 +268,15 @@ Highcharts.chart("speciesSales_byFarm_overview", {
         id: "Pulau Ketam, Jan, 2021",
         color: "#84d9e5",
         data: [
-          ["BA1", 43934],
-          ["BA2", 29742],
-          ["BA3", 53023],
-          ["BA4", 52503],
-          ["BA5", 38121],
-          ["BA6", 68134],
-          ["BA7", 38121],
-          ["BA8", 68134],
-          ["BA9", 51234],
+          ["BA1", 43.4],
+          ["BA2", 29.2],
+          ["BA3", 53],
+          ["BA4", 52],
+          ["BA5", 38.1],
+          ["BA6", 68.4],
+          ["BA7", 38.1],
+          ["BA8", 68.1],
+          ["BA9", 51.4],
         ],
       },
       {
@@ -300,15 +284,15 @@ Highcharts.chart("speciesSales_byFarm_overview", {
         id: "Kong Kong, Jan, 2021",
         color: "#064a89",
         data: [
-          ["BA1", 43934],
-          ["BA2", 29742],
-          ["BA3", 53023],
-          ["BA4", 52503],
-          ["BA5", 38121],
-          ["BA6", 68134],
-          ["BA7", 38121],
-          ["BA8", 68134],
-          ["BA9", 51234],
+          ["BA1", 43.4],
+          ["BA2", 29.2],
+          ["BA3", 53],
+          ["BA4", 52.3],
+          ["BA5", 38.1],
+          ["BA6", 68.4],
+          ["BA7", 38.1],
+          ["BA8", 68.4],
+          ["BA9", 51],
         ],
       },
     ],

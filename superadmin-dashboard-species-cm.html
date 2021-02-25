@@ -60,6 +60,11 @@
 	<script src="./global_assets/js/demo_pages/switch_toggle.js"></script>
 	<script src="./global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
 
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
+	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
+
 
 
 </head>
@@ -274,15 +279,14 @@
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link "><i class="icon-stats-bars4"></i>
 								<span>Farm Dashboard</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Farm Dashboard" >
+							<ul class="nav2 nav-group-sub" data-submenu-title="Farm Dashboard">
 								<li class="nav-item"><a href="superadmin-dashboard-farm-sales.html"
 										class="nav-link">Farm Sales</a>
 								</li>
 								<li class="nav-item"><a href="superadmin-dashboard-farm-gp.html" class="nav-link">Farm
 										GP</a>
 								</li>
-								<li class="nav-item"><a href="superadmin-dashboard-farm-cm.html"
-										class="nav-link ">Farm
+								<li class="nav-item"><a href="superadmin-dashboard-farm-cm.html" class="nav-link ">Farm
 										CM</a>
 								</li>
 							</ul>
@@ -332,7 +336,7 @@
 						</li>
 
 						<!-- Account -->
-							<li class="nav-item nav-item-submenu">
+						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
 								<span>Account Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Accounting Management">
@@ -340,14 +344,8 @@
 										class="nav-link">Fries
 										Management</a>
 								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Inventory
-										Management</a>
-								</li>
 								<li class="nav-item"><a href="./superadmin-accm-feed-management.html"
 										class="nav-link">Feed
-										Management</a>
-								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Overhead
 										Management</a>
 								</li>
 							</ul>
@@ -430,7 +428,7 @@
 								<span>Smart Feeding</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Smart Feeding">
 								<li class="nav-item"><a href="superadmin-sf-rd-feed.html" class="nav-link">Feeding
-									Entry</a></li>
+										Entry</a></li>
 								<li class="nav-item"><a href="superadmin-sf-feed.html" class="nav-link">New Feed
 										Entry</a></li>
 								<li class="nav-item"><a href="#" class="nav-link">Feed Entry Validation</a></li>
@@ -502,11 +500,23 @@
 						<div class="card">
 							<div class="card-header bg-white header-elements-inline">
 								<h5 class="card-title font-weight-bold">Overall Species CM</h5>
-
 								<div class="header-elements">
 									<div class="list-icons">
-										<a class="list-icons-item" data-action="reload"></a>
-										<a class="list-icons-item" data-action="collapse"></a>
+										<div class="form-group">
+											<div class="input-group">
+												<div class="wmin-200">
+													<select class="form-control select" data-fouc>
+														<optgroup label="Select Year">
+															<option>2017</option>
+															<option>2018</option>
+															<option>2019</option>
+															<option>2020</option>
+															<option selected>2021</option>
+														</optgroup>
+													</select>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>

@@ -52,8 +52,7 @@
 	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
 	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
 
-
-
+	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/styling/switchery.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/styling/switch.min.js"></script>
@@ -338,14 +337,8 @@
 										class="nav-link">Fries
 										Management</a>
 								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Inventory
-										Management</a>
-								</li>
 								<li class="nav-item"><a href="./superadmin-accm-feed-management.html"
 										class="nav-link">Feed
-										Management</a>
-								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Overhead
 										Management</a>
 								</li>
 							</ul>
@@ -504,17 +497,30 @@
 							<!-- Basic bars -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Overall Sales Mix</h5>
+									<h5 class="card-title font-weight-bold">Farm Sales Mix</h5>
 									<div class="header-elements">
 										<div class="list-icons">
-											<a class="list-icons-item" data-action="reload"></a>
-											<a class="list-icons-item" data-action="collapse"></a>
+											<div class="form-group">
+												<div class="input-group">
+													<div class="wmin-200">
+														<select class="form-control select" data-fouc>
+															<optgroup label="Select Year">
+																<option>2017</option>
+																<option>2018</option>
+																<option>2019</option>
+																<option>2020</option>
+																<option selected>2021</option>
+															</optgroup>
+														</select>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 								<div class="card-body">
 									<div class="chart-container">
-										<div class="chart has-fixed-height" id="sales_mix_farm_overview"></div>
+										<div class="chart has-fixed-height" id="sales_mix_farm"></div>
 									</div>
 									<div class="chart-badge">
 										<h style="font-weight: bold;">Status: <span
@@ -527,194 +533,54 @@
 												class="badge bg-success ml-md-1 mr-md-1 ">01/01/2021</span></h>
 									</div>
 								</div>
-
 							</div>
 							<!-- /basic bars -->
 						</div>
-						<!-- /fieldset legend -->
-						<div class="col-md-3">
-							<!-- 2 columns form -->
-							<div class="card">
-								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Farm Sales Filter</h5>
-									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="collapse"></a>
-										</div>
-									</div>
-								</div>
-
-								<div class="card-body" style="padding-bottom: 0px;">
-									<form action="#">
-										<div class="row">
-											<div class="col-md-12">
-												<fieldset>
-													<div class="form-group">
-														<label>Location:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">Pulau Ketam</option>
-															<option value="Farm-2">Kong Kong</option>
-														</select>
-													</div>
-													<div class="form-group">
-														<label>Year:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">2021</option>
-															<option value="Farm-2">2020</option>
-															<option value="Farm-2">2019</option>
-															<option value="Farm-2">2018</option>
-															<option value="Farm-2">2017</option>
-															<option value="Farm-2">2016</option>
-														</select>
-													</div>
-													<div class="text-right">
-														<button type="button" class="btn btn-primary"
-															onclick="location.href='./superadmin-nm-nc-merge-snet.html'"
-															style="
-															margin-bottom: 15px; ">Retrieve</button>
-													</div>
-
-												</fieldset>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-9">
+						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<!-- Basic bars -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Farm Sales(YTD)</h5>
-
-
+									<h5 class="card-title font-weight-bold">Species Sales Mix</h5>
 									<div class="header-elements">
 										<div class="list-icons">
-											<a class="list-icons-item" data-action="reload"></a>
-											<a class="list-icons-item" data-action="collapse"></a>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="card-body">
-									<div class="chart-container">
-										<div class="chart has-fixed-height" id="sales_mix_farm_monthly"></div>
-									</div>
-									<div class="chart-badge">
-										<h style="font-weight: bold;">Location: <span
-												class="badge bg-success ml-md-1 mr-md-1 ">Pulau Ketam</span>
-										</h>
-										<h style="font-weight: bold;">Active Farm: <span
-												class="badge bg-success ml-md-1 mr-md-1 ">BA1</span></h>
-										<h style="font-weight: bold;">Lastest Update: <span
-												class="badge bg-success ml-md-1 mr-md-1 ">01/01/2021</span></h>
-									</div>
-
-								</div>
-							</div>
-							<!-- /basic bars -->
-						</div>
-						<div class="col-md-3">
-							<!-- 2 columns form -->
-							<div class="card">
-								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Species Sales Filter</h5>
-									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="collapse"></a>
-										</div>
-									</div>
-								</div>
-
-								<div class="card-body" style="padding-bottom: 0px;">
-									<form action="#">
-										<div class="row">
-											<div class="col-md-12">
-												<fieldset>
-													<div class="form-group">
-														<label>Farm:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">B1</option>
-															<option value="Farm-2">B2</option>
-															<option value="Farm-2">B3</option>
-															<option value="Farm-2">B4</option>
-															<option value="Farm-2">B5</option>
+											<div class="form-group">
+												<div class="input-group">
+													<div class="wmin-200">
+														<select class="form-control select" data-fouc>
+															<optgroup label="Select Year">
+																<option>2017</option>
+																<option>2018</option>
+																<option>2019</option>
+																<option>2020</option>
+																<option selected>2021</option>
+															</optgroup>
 														</select>
 													</div>
-													<div class="form-group">
-														<label>Location:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">Pulau Ketam</option>
-															<option value="Farm-2">Kong Kong</option>
-														</select>
-													</div>
-													<div class="form-group">
-														<label>Year:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">2021</option>
-															<option value="Farm-2">2020</option>
-															<option value="Farm-2">2019</option>
-															<option value="Farm-2">2018</option>
-															<option value="Farm-2">2017</option>
-															<option value="Farm-2">2016</option>
-														</select>
-													</div>
-													<div class="text-right">
-														<button type="button" class="btn btn-primary"
-															onclick="location.href='./superadmin-nm-nc-merge-snet.html'"
-															style="
-															margin-bottom: 15px; ">Retrieve</button>
-													</div>
-
-												</fieldset>
+												</div>
 											</div>
 										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-9">
-							<!-- 2 columns form -->
-							<!-- Basic bars -->
-							<div class="card">
-								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Species Sales(YTD)</h5>
-
-
-									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="reload"></a>
-											<a class="list-icons-item" data-action="collapse"></a>
-										</div>
 									</div>
-
 								</div>
-
 								<div class="card-body">
 									<div class="chart-container">
-										<div class="chart has-fixed-height" id="sales_mix_species_monthly"></div>
+										<div class="chart has-fixed-height" id="sales_mix_species"></div>
 									</div>
 									<div class="chart-badge">
-										<h style="font-weight: bold;">Location: <span
-												class="badge bg-success ml-md-1 mr-md-1 ">Pulau Ketam</span>
+										<h style="font-weight: bold;">Status: <span
+												class="badge bg-success ml-md-1 mr-md-1 ">Ongoing</span>
 										</h>
-										<h style="font-weight: bold;">Active Farm: <span
-												class="badge bg-success ml-md-1 mr-md-1 ">BA1</span></h>
+										<h style="font-weight: bold;">Active: <span
+												class="badge bg-success ml-md-1 mr-md-1 ">Total Farm & Species</span>
+										</h>
 										<h style="font-weight: bold;">Lastest Update: <span
 												class="badge bg-success ml-md-1 mr-md-1 ">01/01/2021</span></h>
 									</div>
-
 								</div>
 							</div>
 							<!-- /basic bars -->
 						</div>
+
 
 
 
@@ -766,8 +632,6 @@
 	<script src="./highChart/code/highcharts.js"></script>
 	<script src="./highChart/code/modules/drilldown.js"></script>
 
-
-	<script src="./highChart/multi_lines_sales_mix_farm_monthly.js"></script>
 	<script src="./highChart/pie_sales_mix_farm_monthly.js"></script>
 	<script src="./highChart/pie_sales_mix_species_monthly.js"></script>
 

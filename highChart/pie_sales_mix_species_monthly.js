@@ -1,31 +1,55 @@
 // Create the chart
-Highcharts.chart("sales_mix_species_monthly", {
+Highcharts.chart("sales_mix_species", {
+  title: {
+    text: '<span style="font-weight: bold">Farm Contribution Margin</span>',
+    align: "center",
+  },
+
   chart: {
     spacingTop: 0,
     spacingBottom: 0,
-    spacingLeft: 10,
+    spacingLeft: 15,
     spacingRight: 15,
     type: "column",
   },
-  title: {
-    text: '<span style="font-weight: bold">Species Sales(YTD)</span>',
-    align: "center",
-  },
+
   subtitle: {
-    text: "BA1, Pulau Ketam, 2021",
+    text: "All Farm, 2021 ",
     align: "center",
+    verticalAlign: "top",
   },
-  accessibility: {
-    announceNewData: {
-      enabled: true,
+
+  yAxis: [
+    {
+      min: 0,
+      title: {
+        text: "Employees",
+      },
+    },
+    {
+      title: {
+        text: "Profit (millions)",
+      },
+      opposite: true,
+    },
+  ],
+
+  legend: {
+    shadow: false,
+  },
+  tooltip: {
+    shared: true,
+  },
+  plotOptions: {
+    column: {
+      grouping: false,
+      shadow: false,
+      borderWidth: 0,
     },
   },
 
-  yAxis: {
-    min: 0,
-    title: {
-      text: "Sales Revenue(RM)",
-    },
+  credits: {
+    enabled: false,
   },
 
   xAxis: {
@@ -34,153 +58,144 @@ Highcharts.chart("sales_mix_species_monthly", {
   },
 
   tooltip: {
-    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
-    pointFormatter: function () {
-      var value;
-      if (this.y >= 0) {
-        value = "RM " + this.y;
-      } else {
-        value = "-RM " + -this.y;
-      }
-      return (
-        "<br/>" +
-        '<span style="color:' +
-        this.series.color +
-        '"> ● </span>' +
-        " " +
-        this.series.name +
-        "</span>: <b>" +
-        value +
-        "</b><br />"
-      );
+    pointFormat:
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}({point.percentage:.0f}%)<br/></b>',
+    shared: true,
+  },
+  plotOptions: {
+    column: {
+      stacking: "percent",
     },
   },
 
   plotOptions: {
     series: {
-      pointWidth: 45,
+      pointWidth: 50,
+      dataLabels: {
+        enabled: true,
+        format: "{point.y:.1f}%",
+      },
     },
     column: {
       stacking: "normal",
       pointPadding: 0.2,
       borderWidth: 0,
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          return this.y != 0 ? this.y : "";
-        },
-      },
     },
   },
 
   series: [
     {
-      name: "BA1, Pulau Ketam, 2021",
-      color: "#ffc425",
+      name: "Pulau Ketam",
+      color: "#84d9e5",
       data: [
         {
           name: "Jan",
-          y: 32141,
-          drilldown: "All Species, Pulau Ketam, Jan, 2021",
+          y: 30,
+          drilldown: "Pulau Ketam, Jan, 2021",
         },
         {
           name: "Feb",
-          y: 42314,
+          y: 25.3,
         },
         {
           name: "Mar",
-          y: 52312,
+          y: 32,
         },
         {
           name: "Apr",
-          y: 81235,
+          y: 54,
+        },
+        {
+          name: "May",
+          y: 67.3,
         },
         {
           name: "Jun",
-          y: 68134,
+          y: 51,
         },
         {
           name: "July",
-          y: 29720,
+          y: 23,
         },
         {
           name: "Aug",
-          y: 38121,
+          y: 34.8,
         },
         {
           name: "Sept",
-          y: 29742,
+          y: 23.3,
         },
         {
           name: "Oct",
-          y: 54231,
+          y: 41,
         },
         {
           name: "Nov",
-          y: 32134,
+          y: 52,
         },
         {
           name: "Dec",
-          y: 43123,
+          y: 52,
         },
       ],
     },
     {
-      name: "YTD",
-      color: "#99cc33",
+      name: "Kong Kong",
+      color: "#064a89",
       data: [
         {
           name: "Jan",
-          y: 0,
+          y: 30,
+          drilldown: "Kong Kong, Jan, 2021",
         },
         {
           name: "Feb",
-          y: 0,
+          y: 25.3,
         },
         {
           name: "Mar",
-          y: 0,
+          y: 32,
         },
         {
           name: "Apr",
-          y: 0,
+          y: 54,
+        },
+        {
+          name: "May",
+          y: 67.3,
         },
         {
           name: "Jun",
-          y: 0,
+          y: 51,
         },
         {
           name: "July",
-          y: 0,
+          y: 23,
         },
         {
           name: "Aug",
-          y: 0,
+          y: 34.8,
         },
         {
           name: "Sept",
-          y: 0,
+          y: 23.3,
         },
         {
           name: "Oct",
-          y: 0,
+          y: 41,
         },
         {
           name: "Nov",
-          y: 0,
+          y: 52,
         },
         {
           name: "Dec",
-          y: 0,
-        },
-        {
-          name: "YTD",
-          y: 53023,
-          color: "#99cc33",
+          y: 52,
         },
       ],
     },
   ],
+
   drilldown: {
     drillUpButton: {
       relativeTo: "spacingBox",
@@ -191,42 +206,93 @@ Highcharts.chart("sales_mix_species_monthly", {
     },
     series: [
       {
-        //Pulau Ketam, Jan
-        name: "All Species, Pulau Ketam, Jan, 2021",
-        id: "All Species, Pulau Ketam, Jan, 2021",
+        name: "Pulau Ketam, Jan, 2021",
+        id: "Pulau Ketam, Jan, 2021",
         color: "#84d9e5",
-        type: "column",
         data: [
           {
-            name: "Red Snapper",
-            y: 29742,
-            color: "#fa3c4c",
+            name: "Jan",
+            y: 30,
+            drilldown: "Kong Kong, Jan, 2021",
           },
           {
-            name: "Golden Snapper",
-            y: 32490,
-            color: "#0084ff",
+            name: "Feb",
+            y: 25.3,
           },
           {
-            name: "Pomfret",
-            y: 52322,
-            color: "#ffc300",
+            name: "Mar",
+            y: 32,
           },
           {
-            name: "Seabass",
-            y: 42123,
-            color: "#363b74",
+            name: "Apr",
+            y: 54,
           },
           {
-            name: "Hybrid Grouper",
-            y: 29742,
-            color: "#d696bb",
+            name: "May",
+            y: 67.3,
           },
           {
-            name: "Giant Grouper",
-            y: 43934,
-            color: "#4d1b7b",
+            name: "Jun",
+            y: 51,
           },
+          {
+            name: "July",
+            y: 23,
+          },
+          {
+            name: "Aug",
+            y: 34.8,
+          },
+          {
+            name: "Sept",
+            y: 23.3,
+          },
+          {
+            name: "Oct",
+            y: 41,
+          },
+          {
+            name: "Nov",
+            y: 52,
+          },
+          {
+            name: "Dec",
+            y: 52,
+          },
+        ],
+      },
+
+      {
+        name: "Pulau Ketam, Jan, 2021",
+        id: "Pulau Ketam, Jan, 2021",
+        color: "#84d9e5",
+        data: [
+          ["BA1", 32],
+          ["BA2", 51],
+          ["BA3", 63],
+          ["BA4", 43.2],
+          ["BA5", 52.7],
+          ["BA6", 60],
+          ["BA7", 23],
+          ["BA8", 53],
+          ["BA9", 68],
+        ],
+      },
+      {
+        name: "Kong Kong, Jan, 2021",
+        id: "Kong Kong, Jan, 2021",
+        color: "#064a89",
+
+        data: [
+          ["BA1", 32],
+          ["BA2", 51],
+          ["BA3", 63],
+          ["BA4", 43.2],
+          ["BA5", 52.7],
+          ["BA6", 60],
+          ["BA7", 23],
+          ["BA8", 53],
+          ["BA9", 68],
         ],
       },
     ],
@@ -236,7 +302,7 @@ Highcharts.chart("sales_mix_species_monthly", {
     rules: [
       {
         condition: {
-          maxWidth: 650,
+          maxWidth: 1090,
         },
         chartOptions: {
           legend: {
@@ -262,7 +328,7 @@ Highcharts.chart("sales_mix_species_monthly", {
           },
           plotOptions: {
             series: {
-              pointWidth: 15,
+              pointWidth: 25,
             },
             column: {
               stacking: "normal",

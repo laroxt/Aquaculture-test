@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>UM-MUA-General-Edit</title>
+	<title>SM-Feeding Entry</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -17,6 +17,7 @@
 	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/floorplan_indicator.css" rel="stylesheet" type="text/css">
 	<link href="./global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
 	<link href="./global_assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
@@ -25,33 +26,41 @@
 	<script src="./global_assets/js/main/jquery.min.js"></script>
 	<script src="./global_assets/js/main/bootstrap.bundle.min.js"></script>
 	<script src="./global_assets/js/plugins/loaders/blockui.min.js"></script>
-	<script src="./global_assets/js/plugins/loaders/table_ticker.js"></script>
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/selects/select3.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<script src="./global_assets/js/demo_pages/form_multiselect.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
-	<script src="./global_assets/js/demo_pages/form_wizard.js"></script>
-	<script src="./global_assets/js/demo_pages/datatables_basic_c3.js"></script>
+	<script src="./global_assets/js/demo_pages/form_wizard3.js"></script>
+	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
 	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
-	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
-	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_pnotify.js"></script>
 	<script src="./global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="./dragscroll_js/dragscroll.js"></script>
 
 
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
+	<script src="./global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="./global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<!-- /theme JS files -->
+
 </head>
 
 <body>
 
+	<!-- Main navbar -->
+	<!-- Browser-Nav-Logo -->
 	<div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand">
 			<a href="index.html" class="d-inline-block">
@@ -314,7 +323,7 @@
 						</li>
 
 						<!-- Account -->
-							<li class="nav-item nav-item-submenu">
+						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
 								<span>Account Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Accounting Management">
@@ -322,14 +331,8 @@
 										class="nav-link">Fries
 										Management</a>
 								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Inventory
-										Management</a>
-								</li>
 								<li class="nav-item"><a href="./superadmin-accm-feed-management.html"
 										class="nav-link">Feed
-										Management</a>
-								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Overhead
 										Management</a>
 								</li>
 							</ul>
@@ -407,12 +410,13 @@
 						<!-- /Species Management -->
 
 						<!-- Smart Feeding-->
-						<li class="nav-item nav-item-submenu ">
-							<a href=" #" class="nav-link "><i class="icon-heart5"></i>
+						<li class="nav-item nav-item-submenu nav-item-open">
+							<a href=" #" class="nav-link active"><i class="icon-heart5"></i>
 								<span>Smart Feeding</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Smart Feeding">
-								<li class="nav-item"><a href="superadmin-sf-rd-feed.html" class="nav-link">Feeding
-									Entry</a></li>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Smart Feeding" style="display: block;">
+								<li class="nav-item"><a href="superadmin-sf-rd-feed.html"
+										class="nav-link active">Feeding
+										Entry</a></li>
 								<li class="nav-item"><a href="superadmin-sf-feed.html" class="nav-link">New Feed
 										Entry</a></li>
 								<li class="nav-item"><a href="#" class="nav-link">Feed Entry Validation</a></li>
@@ -421,16 +425,15 @@
 						<!-- /Smart Feeding-->
 
 						<!-- User Management -->
-						<li class="nav-item nav-item-submenu nav-item-open">
-							<a href="#" class="nav-link active"><i class="icon-user"></i>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link "><i class="icon-user"></i>
 								<span>User Management</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Species Dashboard"
-								style="display: block;">
+							<ul class="nav2 nav-group-sub" data-submenu-title="Species Dashboard">
 								<li class="nav-item"><a href="superadmin-um-user-create.html" class="nav-link">Create
 										User Account</a>
 								</li>
 								<li class="nav-item"><a href="superadmin-um-user-management.html"
-										class="nav-link active">Manage User Account</a>
+										class="nav-link">Manage User Account</a>
 								</li>
 							</ul>
 						</li>
@@ -455,14 +458,12 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<h class="breadcrumb-item active">User Management</h>
-							<a href="./superadmin-um-user-management.html" class="breadcrumb-item active">Manage User
-								Account</a>
-							<a href="./superadmin-um-user-general-edit.html" class="breadcrumb-item ">Edit General
-								Account</a>
+							<span class="breadcrumb-item active">Master Form</span>
+							<span class="breadcrumb-item active">Recorder Data Entry</span>
+							<a href="./superadmin-mf-rd-feed.html" class="breadcrumb-item ">Mortality Location</a>
 						</div>
-						<a href="./recorder-feed-form-overview.html"
-							class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+
+
 					</div>
 
 
@@ -474,145 +475,106 @@
 			<!-- Main content -->
 			<div class="content-wrapper">
 				<!-- Content area -->
-				<div class="content3">
-					<!-- /fieldset legend -->
-					<div class=" row">
+				<div class="content2">
+
+					<div class="row">
 						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">General Information</h5>
+									<h5 class="card-title font-weight-bold">Mortality Location</h5>
 									<div class="header-elements">
-										<div class="list-icons">
-											<a class="sidebar-mobile-expand" data-action="fullscreen"></a>
-											<a class="sidebar-mobile-expand" data-action="reload"></a>
-											<a class="sidebar-mobile-expand" data-action="collapse"></a>
-										</div>
 									</div>
 								</div>
-								<div class="table-adjustment-smart">
-									<table class="table2 datatable-basic" id="tblData" width="100%">
-										<thead>
-											<tr>
-												<th class="table-row-color">Identification</th>
-												<th class="table-row-color">First Name</th>
-												<th class="table-row-color">Last Name</th>
-												<th class="table-row-color">Mobile Number</th>
-												<th class="table-row-color">Home Number</th>
-												<th class="table-row-color">Address</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>961212-13-1212</td>
-												<td><input type="text"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="James"></td>
-												<td><input type="text"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="Wong"></td>
-												<td><input type="number"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="088-7170071">
-												</td>
-												<td><input type="number"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="088-7170071">
-												</td>
-												<td><textarea
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="Casa Damai, Kuala Lumpur"></textarea></td>
-											</tr>
-											<tr>
-												<td>961212-13-1212</td>
-												<td><input type="text"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="James"></td>
-												<td><input type="text"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="Wong"></td>
-												<td><input type="number"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="088-7170071">
-												</td>
-												<td><input type="number"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="088-7170071">
-												</td>
-												<td><textarea
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="Casa Damai, Kuala Lumpur"></textarea></td>
-											</tr>
-											<tr>
-												<td>961212-13-1212</td>
-												<td><input type="text"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="James"></td>
-												<td><input type="text"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="Wong"></td>
-												<td><input type="number"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="088-7170071">
-												</td>
-												<td><input type="number"
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="088-7170071">
-												</td>
-												<td><textarea
-														class="form-control form-control-sm table-input-fixed-width"
-														placeholder="Casa Damai, Kuala Lumpur"></textarea></td>
-											</tr>
-										</tbody>
-									</table>
+								<div class="card-body">
+									<form action="#">
+										<div class="row">
+
+											<div class="col-md-12">
+												<fieldset>
+													<div class="form-group">
+														<label>Location:</label>
+														<select data-placeholder="Select your state"
+															class="form-control form-control-select2" data-fouc>
+															<optgroup label="Pulau Ketam">
+																<option>BA1</option>
+																<option>BA2</option>
+																<option>BA3</option>
+																<option>BA4</option>
+																<option>BA5</option>
+															</optgroup>
+															<optgroup label="Kong Kong">
+																<option>BA6</option>
+																<option>BA7</option>
+																<option>BA8</option>
+																<option>BA10</option>
+															</optgroup>
+														</select>
+													</div>
+												</fieldset>
+											</div>
+											<div class="col-md-12">
+												<div class=" form-group">
+													<div class="form-group">
+														<label>Date:</label>
+														<div class="input-group">
+															<span class="input-group-prepend">
+																<span class="input-group-text"><i
+																		class="icon-calendar22"></i></span>
+															</span>
+															<input type="text" class="form-control daterange-single"
+																value="01/01/2021">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="text-right">
+											<button type="button" class="btn btn-primary"
+												onClick="location.href='superadmin-sf-rd-feed-entry.html'">Next</button>
+										</div>
+									</form>
 								</div>
-								<div class="text-right" style="margin-right: 20px;">
-									<button type="button" class="btn btn-success button-margin-bottom">Confirm</button>
-								</div>
-								<!-- /scrollable datatable -->
 							</div>
 						</div>
-
 					</div>
-					<!-- /2 columns form -->
 				</div>
+				<!-- /content area -->
+
+				<!-- Footer -->
+				<div class="navbar navbar-expand-lg navbar-light">
+					<div class="text-center d-lg-none w-100">
+						<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+							data-target="#navbar-footer">
+							<i class="icon-unfold mr-2"></i>
+							Footer
+						</button>
+					</div>
+
+					<div class="navbar-collapse collapse" id="navbar-footer">
+						<span class="navbar-text">
+							&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a
+								href="http://themeforest.net/user/Kopyov" target="_blank">Cyprian Aidan
+								Chong</a>
+						</span>
+
+						<ul class="navbar-nav ml-lg-auto">
+							<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
+									target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+							<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
+									class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i>
+									Docs</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /footer -->
+
 			</div>
-			<!-- /content area -->
-
-			<!-- Footer -->
-			<div class="navbar navbar-expand-lg navbar-light">
-				<div class="text-center d-lg-none w-100">
-					<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
-						data-target="#navbar-footer">
-						<i class="icon-unfold mr-2"></i>
-						Footer
-					</button>
-				</div>
-
-				<div class="navbar-collapse collapse" id="navbar-footer">
-					<span class="navbar-text">
-						&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a href="http://themeforest.net/user/Kopyov"
-							target="_blank">Cyprian Aidan
-							Chong</a>
-					</span>
-
-					<ul class="navbar-nav ml-lg-auto">
-						<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
-								target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
-						<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
-								class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i>
-								Docs</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<!-- /footer -->
+			<!-- /main content -->
 
 		</div>
-		<!-- /main content -->
-
-	</div>
-	<!-- /page content -->
+		<!-- /page content -->
 
 </body>
 

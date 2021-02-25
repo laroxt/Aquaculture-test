@@ -1,289 +1,323 @@
-// Create the chart
-Highcharts.chart("sales_mix_farm_monthly", {
-  chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 10,
-    spacingRight: 15,
-    type: "column",
-  },
-  title: {
-    text: '<span style="font-weight: bold">Farm Sales(YTD)</span>',
-    align: "center",
-  },
-  subtitle: {
-    text: "Pulau Ketam, 2021",
-    align: "center",
-  },
-  accessibility: {
-    announceNewData: {
-      enabled: true,
+$(function () {
+  Highcharts.setOptions({
+    lang: {
+      thousandsSep: ",",
     },
-  },
+  });
+});
 
-  yAxis: {
-    min: 0,
+$(function () {
+  // Create the chart
+  $("#sales_mix_farm").highcharts({
+    chart: {
+      type: "column",
+      events: {
+        drilldown: function (e) {
+          if (!e.seriesOptions) {
+            var chart = this,
+              drilldowns = {
+                Jan: {
+                  name: "BA1",
+                  data: [["Farm", 2]],
+                  pointWidth: 150,
+                },
+                Jan2: {
+                  name: "BA2",
+                  color: "blue",
+                  pointWidth: 150,
+                  data: [["Farm", 2]],
+                },
+                Jan3: {
+                  name: "BA3",
+                  color: "red",
+                  pointWidth: 150,
+                  data: [["Farm", 2]],
+                },
+                Jan4: {
+                  name: "BA4",
+                  color: "yellow",
+                  pointWidth: 150,
+                  data: [["Farm", 2]],
+                },
+                Jan5: {
+                  name: "BA5",
+                  color: "green",
+                  pointWidth: 150,
+                  data: [["Farm", 2]],
+                },
+                Jan6: {
+                  name: "BA6",
+                  color: "blue",
+                  pointWidth: 150,
+                  data: [["Farm", 2]],
+                },
+                Jan7: {
+                  name: "BA7",
+                  color: "purple",
+                  pointWidth: 150,
+                  data: [["Farm", 2]],
+                },
+                Jan8: {
+                  name: "BA8",
+                  color: "purple",
+                  pointWidth: 150,
+                  data: [["Farm", 2]],
+                },
+                Jan9: {
+                  name: "BA9",
+                  color: "black",
+                  pointWidth: 150,
+                  data: [["Farm", 2]],
+                },
+              },
+              series = [
+                drilldowns[e.point.name],
+                drilldowns[e.point.name + "2"],
+                drilldowns[e.point.name + "3"],
+                drilldowns[e.point.name + "4"],
+                drilldowns[e.point.name + "5"],
+                drilldowns[e.point.name + "6"],
+                drilldowns[e.point.name + "7"],
+                drilldowns[e.point.name + "8"],
+                drilldowns[e.point.name + "9"],
+              ];
+
+            chart.addSingleSeriesAsDrilldown(e.point, series[0]);
+            chart.addSingleSeriesAsDrilldown(e.point, series[1]);
+            chart.addSingleSeriesAsDrilldown(e.point, series[2]);
+            chart.addSingleSeriesAsDrilldown(e.point, series[3]);
+            chart.addSingleSeriesAsDrilldown(e.point, series[4]);
+            chart.addSingleSeriesAsDrilldown(e.point, series[5]);
+            chart.addSingleSeriesAsDrilldown(e.point, series[6]);
+            chart.addSingleSeriesAsDrilldown(e.point, series[7]);
+            chart.addSingleSeriesAsDrilldown(e.point, series[8]);
+            chart.applyDrilldown();
+          }
+        },
+      },
+    },
     title: {
-      text: "Sales Revenue(RM)",
+      text: '<span style="font-weight: bold">Farm Contribution Margin</span>',
+      align: "center",
     },
-  },
 
-  xAxis: {
-    type: "category",
-    crosshair: true,
-  },
-
-  tooltip: {
-    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
-    pointFormatter: function () {
-      var value;
-      if (this.y >= 0) {
-        value = "RM " + this.y;
-      } else {
-        value = "-RM " + -this.y;
-      }
-      return (
-        "<br/>" +
-        '<span style="color:' +
-        this.series.color +
-        '"> ● </span>' +
-        " " +
-        this.series.name +
-        "</span>: <b>" +
-        value +
-        "</b><br />"
-      );
+    subtitle: {
+      text: "All Farm, 2021 ",
+      align: "center",
+      verticalAlign: "top",
     },
-  },
 
-  plotOptions: {
-    series: {
-      pointWidth: 45,
+    xAxis: {
+      type: "category",
+      crosshair: true,
     },
-    column: {
-      stacking: "normal",
-      pointPadding: 0.2,
-      borderWidth: 0,
-      dataLabels: {
+
+    yAxis: {
+      min: 0,
+      title: {
+        text: "Sales Revenue(RM)",
+      },
+      stackLabels: {
         enabled: true,
-        formatter: function () {
-          return this.y != 0 ? this.y : "";
+        style: {
+          fontWeight: "bold",
         },
       },
     },
-  },
 
-  series: [
-    {
-      name: "Pulau Ketam, 2021",
-      color: "#3F51B5",
-      data: [
-        {
-          name: "Jan",
-          y: 32141,
-          drilldown: "All Farm, Pulau Ketam, Jan, 2021",
-        },
-        {
-          name: "Feb",
-          y: 42314,
-        },
-        {
-          name: "Mar",
-          y: 52312,
-        },
-        {
-          name: "Apr",
-          y: 81235,
-        },
-        {
-          name: "Jun",
-          y: 68134,
-        },
-        {
-          name: "July",
-          y: 29720,
-        },
-        {
-          name: "Aug",
-          y: 38121,
-        },
-        {
-          name: "Sept",
-          y: 29742,
-        },
-        {
-          name: "Oct",
-          y: 54231,
-        },
-        {
-          name: "Nov",
-          y: 32134,
-        },
-        {
-          name: "Dec",
-          y: 43123,
-        },
-      ],
+    tooltip: {
+      pointFormat:
+        '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}({point.percentage:.0f}%)<br/></b>',
+      shared: true,
     },
-    {
-      name: "YTD",
-      color: "#99cc33",
-      data: [
-        {
-          name: "Jan",
-          y: 0,
-        },
-        {
-          name: "Feb",
-          y: 0,
-        },
-        {
-          name: "Mar",
-          y: 0,
-        },
-        {
-          name: "Apr",
-          y: 0,
-        },
-        {
-          name: "Jun",
-          y: 0,
-        },
-        {
-          name: "July",
-          y: 0,
-        },
-        {
-          name: "Aug",
-          y: 0,
-        },
-        {
-          name: "Sept",
-          y: 0,
-        },
-        {
-          name: "Oct",
-          y: 0,
-        },
-        {
-          name: "Nov",
-          y: 0,
-        },
-        {
-          name: "Dec",
-          y: 0,
-        },
-        {
-          name: "YTD",
-          y: 53023,
-          color: "#99cc33",
-        },
-      ],
-    },
-  ],
-  drilldown: {
-    drillUpButton: {
-      relativeTo: "spacingBox",
-      position: {
-        y: 0,
-        x: 0,
+
+    plotOptions: {
+      column: {
+        stacking: "percent",
       },
     },
+
+    credits: {
+      enabled: false,
+    },
+
+    plotOptions: {
+      series: {
+        pointWidth: 50,
+        dataLabels: {
+          enabled: true,
+          format: "RM{point.y}",
+        },
+      },
+      column: {
+        stacking: "normal",
+        pointPadding: 0.2,
+        borderWidth: 0,
+      },
+    },
+
     series: [
       {
-        //Pulau Ketam, Jan
-        name: "All Farm, Pulau Ketam, Jan, 2021",
-        id: "All Farm, Pulau Ketam, Jan, 2021",
-        color: "#84d9e5",
-        type: "column",
+        name: "Pulau Ketam",
         data: [
           {
-            name: "BA1",
-            y: 53023,
+            name: "Jan",
+            y: 5,
+            drilldown: true,
           },
           {
-            name: "BA2",
-            y: 42314,
+            name: "Feb",
+            y: 2,
           },
           {
-            name: "BA3",
-            y: 43123,
+            name: "Mar",
+            y: 4,
           },
           {
-            name: "BA4",
-            y: 81235,
+            name: "Apr",
+            y: 5,
           },
           {
-            name: "BA5",
-            y: 68134,
+            name: "May",
+            y: 2,
           },
           {
-            name: "BA6",
-            y: 29720,
+            name: "June",
+            y: 4,
           },
           {
-            name: "BA7",
-            y: 32134,
+            name: "July",
+            y: 5,
           },
           {
-            name: "BA8",
-            y: 29742,
+            name: "Aug",
+            y: 2,
           },
           {
-            name: "BA9",
-            y: 54231,
+            name: "Sept",
+            y: 4,
+          },
+          {
+            name: "Oct",
+            y: 5,
+          },
+          {
+            name: "Nov",
+            y: 2,
+          },
+          {
+            name: "Dec",
+            y: 4,
+          },
+        ],
+      },
+      {
+        name: "Kong Kong",
+        data: [
+          {
+            name: "Jan",
+            y: 5,
+            drilldown: true,
+          },
+          {
+            name: "Feb",
+            y: 2,
+          },
+          {
+            name: "Mar",
+            y: 4,
+          },
+          {
+            name: "Apr",
+            y: 5,
+          },
+          {
+            name: "May",
+            y: 2,
+          },
+          {
+            name: "June",
+            y: 4,
+          },
+          {
+            name: "July",
+            y: 5,
+          },
+          {
+            name: "Aug",
+            y: 2,
+          },
+          {
+            name: "Sept",
+            y: 4,
+          },
+          {
+            name: "Oct",
+            y: 5,
+          },
+          {
+            name: "Nov",
+            y: 2,
+          },
+          {
+            name: "Dec",
+            y: 4,
           },
         ],
       },
     ],
-  },
 
-  responsive: {
-    rules: [
-      {
-        condition: {
-          maxWidth: 650,
-        },
-        chartOptions: {
-          legend: {
-            align: "center",
-            verticalAlign: "bottom",
-            layout: "horizontal",
+    drilldown: {
+      series: [],
+    },
+
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 1090,
           },
-          yAxis: {
-            labels: {
-              align: "left",
-              x: 0,
-              y: -5,
+          chartOptions: {
+            legend: {
+              align: "center",
+              verticalAlign: "bottom",
+              layout: "horizontal",
             },
-            title: {
+            yAxis: {
+              labels: {
+                align: "left",
+                x: 0,
+                y: -5,
+              },
+              title: {
+                text: null,
+              },
+            },
+            subtitle: {
               text: null,
             },
-          },
-          subtitle: {
-            text: null,
-          },
-          credits: {
-            enabled: false,
-          },
-          plotOptions: {
-            series: {
-              pointWidth: 15,
+            credits: {
+              enabled: false,
             },
-            column: {
-              stacking: "normal",
-              pointPadding: 0.2,
-              borderWidth: 0,
-              dataLabels: {
-                enabled: true,
-                formatter: function () {
-                  return this.y != 0 ? this.y : "";
+            plotOptions: {
+              series: {
+                pointWidth: 25,
+              },
+              column: {
+                stacking: "normal",
+                pointPadding: 0.2,
+                borderWidth: 0,
+                dataLabels: {
+                  enabled: true,
+                  formatter: function () {
+                    return this.y != 0 ? this.y : "";
+                  },
                 },
               },
             },
           },
         },
-      },
-    ],
-  },
+      ],
+    },
+  });
 });

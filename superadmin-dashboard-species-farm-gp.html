@@ -58,6 +58,11 @@
 	<script src="./global_assets/js/demo_pages/switch_toggle.js"></script>
 	<script src="./global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
 
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
+	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
+
 
 
 </head>
@@ -337,14 +342,8 @@
 										class="nav-link">Fries
 										Management</a>
 								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Inventory
-										Management</a>
-								</li>
 								<li class="nav-item"><a href="./superadmin-accm-feed-management.html"
 										class="nav-link">Feed
-										Management</a>
-								</li>
-								<li class="nav-item"><a href="#" class="nav-link">Overhead
 										Management</a>
 								</li>
 							</ul>
@@ -503,11 +502,23 @@
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
 									<h5 class="card-title font-weight-bold">Overall Species GP</h5>
-
 									<div class="header-elements">
 										<div class="list-icons">
-											<a class="list-icons-item" data-action="reload"></a>
-											<a class="list-icons-item" data-action="collapse"></a>
+											<div class="form-group">
+												<div class="input-group">
+													<div class="wmin-200">
+														<select class="form-control select" data-fouc>
+															<optgroup label="Select Year">
+																<option>2017</option>
+																<option>2018</option>
+																<option>2019</option>
+																<option>2020</option>
+																<option selected>2021</option>
+															</optgroup>
+														</select>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>

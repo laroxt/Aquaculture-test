@@ -33,6 +33,9 @@ Highcharts.chart("speciesSales_overview", {
     },
     stackLabels: {
       enabled: true,
+      formatter: function () {
+        return this.total + "k";
+      },
       style: {
         fontWeight: "bold",
       },
@@ -56,42 +59,23 @@ Highcharts.chart("speciesSales_overview", {
   },
 
   tooltip: {
-    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
-    pointFormatter: function () {
-      var value;
-      if (this.y >= 0) {
-        value = "RM " + this.y;
-      } else {
-        value = "-RM " + -this.y;
-      }
-      return (
-        "<br/>" +
-        '<span style="color:' +
-        this.series.color +
-        '"> ● </span>' +
-        " " +
-        this.series.name +
-        "</span>: <b>" +
-        value +
-        "</b><br />"
-      );
-    },
+    pointFormat:
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b>',
+    shared: true,
   },
 
   plotOptions: {
     series: {
       pointWidth: 50,
+      dataLabels: {
+        enabled: true,
+        format: "{point.y}k",
+      },
     },
     column: {
       stacking: "normal",
       pointPadding: 0.2,
       borderWidth: 0,
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          return this.y != 0 ? this.y : "";
-        },
-      },
     },
   },
 
@@ -102,52 +86,52 @@ Highcharts.chart("speciesSales_overview", {
       data: [
         {
           name: "Jan",
-          y: 43934,
+          y: 43.9,
           drilldown: "Pulau Ketam Farm, Jan, 2021",
         },
         {
           name: "Feb",
-          y: 29742,
+          y: 29.2,
         },
         {
           name: "Mar",
-          y: 32490,
+          y: 32,
         },
         {
           name: "Apr",
-          y: 38121,
+          y: 38.1,
         },
         {
           name: "May",
-          y: 52322,
+          y: 52.2,
         },
         {
           name: "Jun",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "July",
-          y: 52322,
+          y: 52.2,
         },
         {
           name: "Aug",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Sept",
-          y: 52322,
+          y: 52.2,
         },
         {
           name: "Oct",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Nov",
-          y: 52322,
+          y: 52.2,
         },
         {
           name: "Dec",
-          y: 52322,
+          y: 53.2,
         },
       ],
     },
@@ -157,52 +141,52 @@ Highcharts.chart("speciesSales_overview", {
       data: [
         {
           name: "Jan",
-          y: 43934,
+          y: 43.9,
           drilldown: "Kong Kong Farm, Jan, 2021",
         },
         {
           name: "Feb",
-          y: 29742,
+          y: 29.2,
         },
         {
           name: "Mar",
-          y: 42123,
+          y: 42.3,
         },
         {
           name: "Apr",
-          y: 23154,
+          y: 23.4,
         },
         {
           name: "May",
-          y: 89323,
+          y: 89.3,
         },
         {
           name: "Jun",
-          y: 74353,
+          y: 74.3,
         },
         {
           name: "July",
-          y: 32141,
+          y: 32.1,
         },
         {
           name: "Aug",
-          y: 64345,
+          y: 64.5,
         },
         {
           name: "Sept",
-          y: 25123,
+          y: 25.3,
         },
         {
           name: "Oct",
-          y: 31231,
+          y: 31.1,
         },
         {
           name: "Nov",
-          y: 32512,
+          y: 32.5,
         },
         {
           name: "Dec",
-          y: 52312,
+          y: 52,
         },
       ],
     },
@@ -212,59 +196,59 @@ Highcharts.chart("speciesSales_overview", {
       data: [
         {
           name: "Jan",
-          y: 0,
+          y: null,
         },
         {
           name: "Feb",
-          y: 0,
+          y: null,
         },
         {
           name: "Mar",
-          y: 0,
+          y: null,
         },
         {
           name: "Apr",
-          y: 0,
+          y: null,
         },
         {
           name: "May",
-          y: 0,
+          y: null,
         },
         {
           name: "May",
-          y: 0,
+          y: null,
         },
         {
           name: "Jun",
-          y: 0,
+          y: null,
         },
         {
           name: "July",
-          y: 0,
+          y: null,
         },
         {
           name: "Aug",
-          y: 0,
+          y: null,
         },
         {
           name: "Sept",
-          y: 0,
+          y: null,
         },
         {
           name: "Oct",
-          y: 0,
+          y: null,
         },
         {
           name: "Nov",
-          y: 0,
+          y: null,
         },
         {
           name: "Dec",
-          y: 0,
+          y: null,
         },
         {
           name: "YTD",
-          y: 81235,
+          y: 81.5,
         },
       ],
     },
@@ -288,40 +272,40 @@ Highcharts.chart("speciesSales_overview", {
         data: [
           {
             name: "BA1",
-            y: 32141,
+            y: 32.1,
             drilldown: "Pulau Ketam Species, Jan, 2021",
           },
           {
             name: "BA2",
-            y: 32512,
+            y: 32.2,
           },
           {
             name: "BA3",
-            y: 52312,
+            y: 52.3,
           },
           {
             name: "BA4",
-            y: 81235,
+            y: 81.2,
           },
           {
             name: "BA5",
-            y: 68134,
+            y: 68,
           },
           {
             name: "BA6",
-            y: 29720,
+            y: 29,
           },
           {
             name: "BA7",
-            y: 38121,
+            y: 38.1,
           },
           {
             name: "BA8",
-            y: 29742,
+            y: 29.7,
           },
           {
             name: "BA9",
-            y: 53023,
+            y: 53.3,
           },
         ],
       },
@@ -334,32 +318,32 @@ Highcharts.chart("speciesSales_overview", {
         data: [
           {
             name: "Red Snapper",
-            y: 29742,
+            y: 29.2,
             color: "#fa3c4c",
           },
           {
             name: "Golden Snapper",
-            y: 32490,
+            y: 32,
             color: "#0084ff",
           },
           {
             name: "Pomfret",
-            y: 52322,
+            y: 52.2,
             color: "#ffc300",
           },
           {
             name: "Seabass",
-            y: 42123,
+            y: 42,
             color: "#363b74",
           },
           {
             name: "Hybrid Grouper",
-            y: 29742,
+            y: 29.2,
             color: "#d696bb",
           },
           {
             name: "Giant Grouper",
-            y: 43934,
+            y: 43.4,
             color: "#4d1b7b",
           },
         ],
@@ -373,40 +357,40 @@ Highcharts.chart("speciesSales_overview", {
         data: [
           {
             name: "BA1",
-            y: 32141,
+            y: 32,
             drilldown: "Kong Kong Species, Jan, 2021",
           },
           {
             name: "BA2",
-            y: 32512,
+            y: 32.5,
           },
           {
             name: "BA3",
-            y: 52312,
+            y: 52.2,
           },
           {
             name: "BA4",
-            y: 81235,
+            y: 81.5,
           },
           {
             name: "BA5",
-            y: 68134,
+            y: 68.1,
           },
           {
             name: "BA6",
-            y: 29720,
+            y: 29,
           },
           {
             name: "BA7",
-            y: 38121,
+            y: 38.1,
           },
           {
             name: "BA8",
-            y: 29742,
+            y: 29.2,
           },
           {
             name: "BA9",
-            y: 53023,
+            y: 53,
           },
         ],
       },
@@ -419,32 +403,32 @@ Highcharts.chart("speciesSales_overview", {
         data: [
           {
             name: "Red Snapper",
-            y: 29742,
+            y: 29.2,
             color: "#fa3c4c",
           },
           {
             name: "Golden Snapper",
-            y: 32490,
+            y: 32.4,
             color: "#0084ff",
           },
           {
             name: "Pomfret",
-            y: 52322,
+            y: 52,
             color: "#ffc300",
           },
           {
             name: "Seabass",
-            y: 42123,
+            y: 42.3,
             color: "#363b74",
           },
           {
             name: "Hybrid Grouper",
-            y: 29742,
+            y: 29.2,
             color: "#d696bb",
           },
           {
             name: "Giant Grouper",
-            y: 43934,
+            y: 43.9,
             color: "#4d1b7b",
           },
         ],

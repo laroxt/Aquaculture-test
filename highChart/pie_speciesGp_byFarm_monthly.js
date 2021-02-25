@@ -6,10 +6,12 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
     spacingRight: 15,
     type: "column",
   },
+
   title: {
     text: '<span style="font-weight: bold">Species Sales By Farm(YTD)</span>',
     align: "center",
   },
+
   subtitle: {
     text: "B1, Pulau Ketam, 2017-2021",
     align: "center",
@@ -25,6 +27,15 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
     title: {
       text: "Sales Revenue(RM)",
     },
+    stackLabels: {
+      enabled: true,
+      formatter: function () {
+        return this.total + "k";
+      },
+      style: {
+        fontWeight: "bold",
+      },
+    },
   },
 
   xAxis: {
@@ -33,42 +44,23 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
   },
 
   tooltip: {
-    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
-    pointFormatter: function () {
-      var value;
-      if (this.y >= 0) {
-        value = "RM " + this.y;
-      } else {
-        value = "-RM " + -this.y;
-      }
-      return (
-        "<br/>" +
-        '<span style="color:' +
-        this.series.color +
-        '"> ● </span>' +
-        " " +
-        this.series.name +
-        "</span>: <b>" +
-        value +
-        "</b><br />"
-      );
-    },
+    pointFormat:
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b>',
+    shared: true,
   },
 
   plotOptions: {
     series: {
-      pointWidth: 45,
+      pointWidth: 50,
+      dataLabels: {
+        enabled: true,
+        format: "{point.y}k",
+      },
     },
     column: {
       stacking: "normal",
       pointPadding: 0.2,
       borderWidth: 0,
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          return this.y != 0 ? this.y : "";
-        },
-      },
     },
   },
 
@@ -79,24 +71,24 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
       data: [
         {
           name: "2017",
-          y: 43934,
+          y: 43,
           drilldown: "B1, Pulau Ketam, 2017",
         },
         {
           name: "2018",
-          y: 29742,
+          y: 29.7,
         },
         {
           name: "2019",
-          y: 32490,
+          y: 32,
         },
         {
           name: "2020",
-          y: 38121,
+          y: 35,
         },
         {
           name: "2021",
-          y: 52322,
+          y: 52.3,
         },
       ],
     },
@@ -106,27 +98,27 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
       data: [
         {
           name: "2017",
-          y: 0,
+          y: null,
         },
         {
           name: "2018",
-          y: 0,
+          y: null,
         },
         {
           name: "2019",
-          y: 0,
+          y: null,
         },
         {
           name: "2020",
-          y: 0,
+          y: null,
         },
         {
           name: "2021",
-          y: 0,
+          y: null,
         },
         {
           name: "YTD",
-          y: 73512,
+          y: 73.5,
         },
       ],
     },
@@ -149,52 +141,52 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
         data: [
           {
             name: "Jan",
-            y: 32141,
+            y: 32,
             drilldown: "BA1, Pulau Ketam, Jan, 2017",
           },
           {
             name: "Feb",
-            y: 42314,
+            y: 42.3,
           },
           {
             name: "Mar",
-            y: 52312,
+            y: 52.3,
           },
           {
             name: "Apr",
-            y: 81235,
+            y: 81.5,
           },
           {
             name: "Jun",
-            y: 68134,
+            y: 68.4,
           },
           {
             name: "July",
-            y: 29720,
+            y: 29,
           },
           {
             name: "Aug",
-            y: 38121,
+            y: 38,
           },
           {
             name: "Sept",
-            y: 29742,
+            y: 29.2,
           },
           {
             name: "Oct",
-            y: 54231,
+            y: 54.2,
           },
           {
             name: "Nov",
-            y: 32134,
+            y: 32,
           },
           {
             name: "Dec",
-            y: 43123,
+            y: 43.1,
           },
           {
             name: "YTD",
-            y: 53023,
+            y: 53,
             color: "#99cc33",
           },
         ],
@@ -208,32 +200,32 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
         data: [
           {
             name: "Red Snapper",
-            y: 29742,
+            y: 29.2,
             color: "#fa3c4c",
           },
           {
             name: "Golden Snapper",
-            y: 32490,
+            y: 32,
             color: "#0084ff",
           },
           {
             name: "Pomfret",
-            y: 52322,
+            y: 52.2,
             color: "#ffc300",
           },
           {
             name: "Seabass",
-            y: 42123,
+            y: 42.3,
             color: "#363b74",
           },
           {
             name: "Hybrid Grouper",
-            y: 29742,
+            y: 29.2,
             color: "#d696bb",
           },
           {
             name: "Giant Grouper",
-            y: 43934,
+            y: 43.4,
             color: "#4d1b7b",
           },
         ],

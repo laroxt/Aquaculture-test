@@ -33,6 +33,9 @@ Highcharts.chart("farm_sales_yearly", {
     },
     stackLabels: {
       enabled: true,
+      formatter: function () {
+        return this.total + "k";
+      },
       style: {
         fontWeight: "bold",
       },
@@ -56,42 +59,23 @@ Highcharts.chart("farm_sales_yearly", {
   },
 
   tooltip: {
-    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
-    pointFormatter: function () {
-      var value;
-      if (this.y >= 0) {
-        value = "RM " + this.y;
-      } else {
-        value = "-RM " + -this.y;
-      }
-      return (
-        "<br/>" +
-        '<span style="color:' +
-        this.series.color +
-        '"> ● </span>' +
-        " " +
-        this.series.name +
-        "</span>: <b>" +
-        value +
-        "</b><br />"
-      );
-    },
+    pointFormat:
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b>',
+    shared: true,
   },
 
   plotOptions: {
     series: {
       pointWidth: 50,
+      dataLabels: {
+        enabled: true,
+        format: "{point.y}k",
+      },
     },
     column: {
       stacking: "normal",
       pointPadding: 0.2,
       borderWidth: 0,
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          return this.y != 0 ? this.y : "";
-        },
-      },
     },
   },
 
@@ -102,52 +86,52 @@ Highcharts.chart("farm_sales_yearly", {
       data: [
         {
           name: "Jan",
-          y: 43934,
+          y: 43.9,
           drilldown: "Pulau Ketam, Jan, 2021",
         },
         {
           name: "Feb",
-          y: 29742,
+          y: 29.7,
         },
         {
           name: "Mar",
-          y: 32490,
+          y: 32.4,
         },
         {
           name: "Apr",
-          y: 38121,
+          y: 38.1,
         },
         {
           name: "May",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Jun",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "July",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Aug",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Sept",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Oct",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Nov",
-          y: 52322,
+          y: 52.3,
         },
         {
           name: "Dec",
-          y: 52322,
+          y: 52.3,
         },
       ],
     },
@@ -157,52 +141,52 @@ Highcharts.chart("farm_sales_yearly", {
       data: [
         {
           name: "Jan",
-          y: 43934,
+          y: 43.9,
           drilldown: "Kong Kong, Jan, 2021",
         },
         {
           name: "Feb",
-          y: 29742,
+          y: 29.7,
         },
         {
           name: "Mar",
-          y: 42123,
+          y: 32.4,
         },
         {
           name: "Apr",
-          y: 23154,
+          y: 38.1,
         },
         {
           name: "May",
-          y: 89323,
+          y: 52.3,
         },
         {
           name: "Jun",
-          y: 74353,
+          y: 23.3,
         },
         {
           name: "July",
-          y: 32141,
+          y: 42.3,
         },
         {
           name: "Aug",
-          y: 64345,
+          y: 51.5,
         },
         {
           name: "Sept",
-          y: 25123,
+          y: 63.8,
         },
         {
           name: "Oct",
-          y: 31231,
+          y: 42.2,
         },
         {
           name: "Nov",
-          y: 32512,
+          y: 64.1,
         },
         {
           name: "Dec",
-          y: 52312,
+          y: 64.2,
         },
       ],
     },
@@ -212,59 +196,59 @@ Highcharts.chart("farm_sales_yearly", {
       data: [
         {
           name: "Jan",
-          y: 0,
+          y: null,
         },
         {
           name: "Feb",
-          y: 0,
+          y: null,
         },
         {
           name: "Mar",
-          y: 0,
+          y: null,
         },
         {
           name: "Apr",
-          y: 0,
+          y: null,
         },
         {
           name: "May",
-          y: 0,
+          y: null,
         },
         {
           name: "May",
-          y: 0,
+          y: null,
         },
         {
           name: "Jun",
-          y: 0,
+          y: null,
         },
         {
           name: "July",
-          y: 0,
+          y: null,
         },
         {
           name: "Aug",
-          y: 0,
+          y: null,
         },
         {
           name: "Sept",
-          y: 0,
+          y: null,
         },
         {
           name: "Oct",
-          y: 0,
+          y: null,
         },
         {
           name: "Nov",
-          y: 0,
+          y: null,
         },
         {
           name: "Dec",
-          y: 0,
+          y: null,
         },
         {
           name: "YTD",
-          y: 81235,
+          y: 81.2,
         },
       ],
     },
@@ -284,31 +268,32 @@ Highcharts.chart("farm_sales_yearly", {
         id: "Pulau Ketam, Jan, 2021",
         color: "#84d9e5",
         data: [
-          ["BA1", 43934],
-          ["BA2", 29742],
-          ["BA3", 53023],
-          ["BA4", 52503],
-          ["BA5", 38121],
-          ["BA6", 68134],
-          ["BA7", 38121],
-          ["BA8", 68134],
-          ["BA9", 51234],
+          ["BA1", 43.9],
+          ["BA2", 29.7],
+          ["BA3", 53.0],
+          ["BA4", 52.5],
+          ["BA5", 38.1],
+          ["BA6", 68.1],
+          ["BA7", 38.1],
+          ["BA8", 68.1],
+          ["BA9", 51.2],
         ],
       },
       {
         name: "Kong Kong, Jan, 2021",
         id: "Kong Kong, Jan, 2021",
         color: "#064a89",
+        stackLabels: false,
         data: [
-          ["BA1", 43934],
-          ["BA2", 29742],
-          ["BA3", 53023],
-          ["BA4", 52503],
-          ["BA5", 38121],
-          ["BA6", 68134],
-          ["BA7", 38121],
-          ["BA8", 68134],
-          ["BA9", 51234],
+          ["BA1", 43.9],
+          ["BA2", 29.7],
+          ["BA3", 53.0],
+          ["BA4", 52.5],
+          ["BA5", 38.1],
+          ["BA6", 68.1],
+          ["BA7", 38.1],
+          ["BA8", 68.1],
+          ["BA9", 51.2],
         ],
       },
     ],
