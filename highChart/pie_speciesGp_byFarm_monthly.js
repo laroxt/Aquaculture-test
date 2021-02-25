@@ -25,7 +25,7 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
   yAxis: {
     min: 0,
     title: {
-      text: "Sales Revenue(RM)",
+      text: "Gross Profit Revenue(RM)",
     },
     stackLabels: {
       enabled: true,
