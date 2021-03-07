@@ -62,7 +62,7 @@ Highcharts.chart("farm_sales_monthly", {
         {
           name: "2017",
           y: 43.4,
-          drilldown: "Farm BA in 2014",
+          drilldown: "Farm BA in 2017",
         },
         {
           name: "2018",
@@ -123,8 +123,8 @@ Highcharts.chart("farm_sales_monthly", {
     },
     series: [
       {
-        name: "Farm BA in 2014",
-        id: "Farm BA in 2014",
+        name: "Farm BA in 2017",
+        id: "Farm BA in 2017",
         color: "#4d1b7b",
 
         data: [
