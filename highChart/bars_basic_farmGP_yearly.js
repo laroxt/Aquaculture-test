@@ -92,8 +92,8 @@ Highcharts.chart("farm_gp_monthly", {
       ],
     },
     {
-      name: "YTD",
-      color: "#99cc33",
+      name: "BA1, Pulau Ketam, Year To Date(YTD)",
+      color: "#142d04",
       data: [
         {
           name: "2017",
@@ -184,7 +184,7 @@ Highcharts.chart("farm_gp_monthly", {
           {
             name: "YTD",
             y: 53.3,
-            color: "#99cc33",
+            color: "#142d04",
           },
         ],
       },

@@ -1,5 +1,5 @@
 // Create the chart
-Highcharts.chart("farm_sales_cm_year", {
+Highcharts.chart("farm_sales_cm_year2", {
   chart: {
     spacingTop: 0,
     spacingBottom: 0,
@@ -8,11 +8,11 @@ Highcharts.chart("farm_sales_cm_year", {
     type: "column",
   },
   title: {
-    text: '<span style="font-weight: bold">Farm Contribution Margin(YTD)</span>',
+    text: '<span style="font-weight: bold">Species Contribution Margin(YTD)</span>',
     align: "center",
   },
   subtitle: {
-    text: "BA1, Pulau Ketam, 2017-2021",
+    text: "BA1, Pulau Ketam, 2021",
     align: "center",
   },
   accessibility: {
@@ -37,9 +37,9 @@ Highcharts.chart("farm_sales_cm_year", {
     pointFormatter: function () {
       var value;
       if (this.y >= 0) {
-        value = "RM " + this.y;
+        value = this.y + "% ";
       } else {
-        value = "-RM " + -this.y;
+        value = -this.y + "-% ";
       }
       return (
         "<br/>" +
@@ -88,59 +88,40 @@ Highcharts.chart("farm_sales_cm_year", {
       color: "#84d9e5",
       data: [
         {
-          name: "2017",
-          y: 34.4,
-          drilldown: "BA1, Pulau Ketam, 2017",
+          name: "Red Snapper",
+          y: 60,
+          color: "#fa3c4c",
+          drilldown: "Red Snapper, Pulau Ketam, Jan, 2021",
         },
         {
-          name: "2018",
-          y: 51,
+          name: "Golden Snapper",
+          y: 42,
+          color: "#0084ff",
         },
         {
-          name: "2019",
+          name: "Pomfret",
+          y: 55,
+          color: "#ffc300",
+        },
+        {
+          name: "Seabass",
           y: 63,
+          color: "#363b74",
         },
         {
-          name: "2020",
-          y: 43.6,
+          name: "Hybrid Grouper",
+          y: 45,
+          color: "#d696bb",
         },
         {
-          name: "2021",
-          y: 60.5,
-        },
-      ],
-    },
-    {
-      name: "YTD",
-      color: "#99cc33",
-      data: [
-        {
-          name: "2017",
-          y: null,
-        },
-        {
-          name: "2018",
-          y: null,
-        },
-        {
-          name: "2019",
-          y: null,
-        },
-        {
-          name: "2020",
-          y: null,
-        },
-        {
-          name: "2021",
-          y: null,
-        },
-        {
-          name: "YTD",
-          y: 40.2,
+          name: "Giant Grouper",
+          y: 64,
+          color: "#4d1b7b",
         },
       ],
     },
   ],
+
   drilldown: {
     drillUpButton: {
       relativeTo: "spacingBox",
@@ -151,98 +132,63 @@ Highcharts.chart("farm_sales_cm_year", {
     },
     series: [
       {
-        //Pulau Ketam, Jan
-        name: "BA1, Pulau Ketam, 2017",
-        id: "BA1, Pulau Ketam, 2017",
-        color: "#84d9e5",
-        type: "column",
+        name: "Red Snapper, Pulau Ketam, Jan, 2021",
+        id: "Red Snapper, Pulau Ketam, Jan, 2021",
+        color: "#fa3c4c",
+
         data: [
           {
             name: "Jan",
-            y: 32141,
-            drilldown: "BA1, Pulau Ketam, Jan, 2017",
+            y: 43.9,
           },
           {
             name: "Feb",
-            y: 42314,
+            y: 29.7,
           },
           {
             name: "Mar",
-            y: 52312,
+            y: 32,
           },
           {
             name: "Apr",
-            y: 81235,
+            y: 61,
+          },
+          {
+            name: "May",
+            y: 42,
           },
           {
             name: "Jun",
-            y: 68134,
+            y: 42,
           },
           {
             name: "July",
-            y: 29720,
+            y: 51,
           },
           {
             name: "Aug",
-            y: 38121,
+            y: 61,
           },
           {
             name: "Sept",
-            y: 29742,
+            y: 31,
           },
           {
             name: "Oct",
-            y: 54231,
+            y: 52,
           },
           {
             name: "Nov",
-            y: 32134,
+            y: 61,
           },
           {
             name: "Dec",
-            y: 43123,
+            y: 51,
           },
           {
             name: "YTD",
-            y: 53023,
             color: "#99cc33",
-          },
-        ],
-      },
-      {
-        name: "BA1, Pulau Ketam, Jan, 2017",
-        id: "BA1, Pulau Ketam, Jan, 2017",
-        color: "#84d9e5",
-        data: [
-          {
-            name: "Red Snapper",
-            y: 81235,
-            color: "#fa3c4c",
-          },
-          {
-            name: "Golden Snapper",
-            y: 41234,
-            color: "#0084ff",
-          },
-          {
-            name: "Pomfret",
-            y: 54512,
-            color: "#ffc300",
-          },
-          {
-            name: "Seabass",
-            y: 85123,
-            color: "#363b74",
-          },
-          {
-            name: "Hybrid Grouper",
-            y: 51235,
-            color: "#d696bb",
-          },
-          {
-            name: "Giant Grouper",
-            y: 42351,
-            color: "#4d1b7b",
+            y: 52,
           },
         ],
       },

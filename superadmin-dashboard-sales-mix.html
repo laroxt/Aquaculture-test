@@ -269,6 +269,14 @@
 						</li>
 						<!-- /Sale Mix Dashboard -->
 
+								<!-- Contribution Margin Dashboard -->
+								<li class="nav-item ">
+									<a href="superadmin-dashboard-cm.html" class="nav-link"><i
+											class="icon-pie-chart3"></i>
+										<span>Contribution Margin</span></a>
+								</li>
+								<!-- /Contribution Margin Dashboard -->
+
 						<!-- Farm Dashboard -->
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link "><i class="icon-stats-bars4"></i>
@@ -279,9 +287,6 @@
 								</li>
 								<li class="nav-item"><a href="superadmin-dashboard-farm-gp.html" class="nav-link">Farm
 										GP</a>
-								</li>
-								<li class="nav-item"><a href="superadmin-dashboard-farm-cm.html" class="nav-link ">Farm
-										CM</a>
 								</li>
 							</ul>
 						</li>
@@ -304,8 +309,6 @@
 								<li class="nav-item"><a href="superadmin-dashboard-species-farm-gp.html"
 										class="nav-link">Species GP By Farm</a>
 								</li>
-								<li class="nav-item"><a href="superadmin-dashboard-species-cm.html"
-										class="nav-link">Species CM</a>
 							</ul>
 						</li>
 						<!-- /Sepcies Dashboard -->
@@ -492,32 +495,60 @@
 				<div class="content3">
 					<!-- /fieldset legend -->
 					<div class="row">
-						<div class="col-md-12">
+						<div class="col-md-3">
 							<!-- 2 columns form -->
-							<!-- Basic bars -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Farm Sales Mix</h5>
+									<h5 class="card-title font-weight-bold">Farm Sales Mix Filter</h5>
 									<div class="header-elements">
 										<div class="list-icons">
-											<div class="form-group">
-												<div class="input-group">
-													<div class="wmin-200">
-														<select class="form-control select" data-fouc>
-															<optgroup label="Select Year">
-																<option>2017</option>
-																<option>2018</option>
-																<option>2019</option>
-																<option>2020</option>
-																<option selected>2021</option>
-															</optgroup>
-														</select>
-													</div>
-												</div>
-											</div>
+											<a class="list-icons-item" data-action="collapse"></a>
 										</div>
 									</div>
 								</div>
+
+								<div class="card-body" style="padding-bottom: 0px;">
+									<form action="#">
+										<div class="row">
+											<div class="col-md-12">
+												<fieldset>
+													<div class="form-group">
+														<label>Location:</label>
+														<select data-placeholder="Select your state"
+															class="form-control form-control-select2" data-fouc>
+															<option value="Farm-1">Pulau Ketam</option>
+															<option value="Farm-2">Kong Kong</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label>Year:</label>
+														<select data-placeholder="Select your state"
+															class="form-control form-control-select2" data-fouc>
+															<option>2017</option>
+															<option>2018</option>
+															<option>2019</option>
+															<option>2020</option>
+															<option selected>2021</option>
+														</select>
+													</div>
+													<div class="text-right">
+														<button type="button" class="btn btn-primary"
+															onclick="location.href='./superadmin-nm-nc-merge-snet.html'"
+															style="
+														margin-bottom: 15px; ">Retrieve</button>
+													</div>
+
+												</fieldset>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-9">
+							<!-- 2 columns form -->
+							<!-- Basic bars -->
+							<div class="card">
 								<div class="card-body">
 									<div class="chart-container">
 										<div class="chart has-fixed-height" id="sales_mix_farm"></div>
@@ -536,32 +567,71 @@
 							</div>
 							<!-- /basic bars -->
 						</div>
-						<div class="col-md-12">
+						<div class="col-md-3">
 							<!-- 2 columns form -->
-							<!-- Basic bars -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Species Sales Mix</h5>
+									<h5 class="card-title font-weight-bold">Species Sales Mix Filter</h5>
 									<div class="header-elements">
 										<div class="list-icons">
-											<div class="form-group">
-												<div class="input-group">
-													<div class="wmin-200">
-														<select class="form-control select" data-fouc>
-															<optgroup label="Select Year">
-																<option>2017</option>
-																<option>2018</option>
-																<option>2019</option>
-																<option>2020</option>
-																<option selected>2021</option>
-															</optgroup>
-														</select>
-													</div>
-												</div>
-											</div>
+											<a class="list-icons-item" data-action="collapse"></a>
 										</div>
 									</div>
 								</div>
+
+								<div class="card-body" style="padding-bottom: 0px;">
+									<form action="#">
+										<div class="row">
+											<div class="col-md-12">
+												<fieldset>
+													<div class="form-group">
+														<label>Location:</label>
+														<select data-placeholder="Select your state"
+															class="form-control form-control-select2" data-fouc>
+															<option value="Farm-1">Pulau Ketam</option>
+															<option value="Farm-2">Kong Kong</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label>Farm:</label>
+														<select data-placeholder="Select your state"
+															class="form-control form-control-select2" data-fouc>
+															<option value="Farm-1">B1</option>
+															<option value="Farm-2">B2</option>
+															<option value="Farm-2">B3</option>
+															<option value="Farm-2">B4</option>
+															<option value="Farm-2">B5</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label>Year:</label>
+														<select data-placeholder="Select your state"
+															class="form-control form-control-select2" data-fouc>
+															<option>2017</option>
+															<option>2018</option>
+															<option>2019</option>
+															<option>2020</option>
+															<option selected>2021</option>
+														</select>
+													</div>
+													<div class="text-right">
+														<button type="button" class="btn btn-primary"
+															onclick="location.href='./superadmin-nm-nc-merge-snet.html'"
+															style="
+														margin-bottom: 15px; ">Retrieve</button>
+													</div>
+
+												</fieldset>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-9">
+							<!-- 2 columns form -->
+							<!-- Basic bars -->
+							<div class="card">
 								<div class="card-body">
 									<div class="chart-container">
 										<div class="chart has-fixed-height" id="sales_mix_species"></div>
@@ -580,14 +650,6 @@
 							</div>
 							<!-- /basic bars -->
 						</div>
-
-
-
-
-
-
-
-
 					</div>
 				</div>
 			</div>

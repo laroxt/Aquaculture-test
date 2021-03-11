@@ -66,7 +66,7 @@ Highcharts.chart("speciesSales_monthly", {
   series: [
     {
       name: "B1, Pulau Ketam",
-      color: "#84d9e5",
+      color: "#FA3C4C",
       data: [
         {
           name: "2017",
@@ -92,8 +92,8 @@ Highcharts.chart("speciesSales_monthly", {
       ],
     },
     {
-      name: "YTD",
-      color: "#99cc33",
+      name: "Red Snapper, Pulau Ketam, Year To Date(YTD)",
+      color: "#242d04",
       data: [
         {
           name: "2017",
@@ -135,7 +135,7 @@ Highcharts.chart("speciesSales_monthly", {
         //Pulau Ketam, Jan
         name: "B1, Pulau Ketam, 2017",
         id: "B1, Pulau Ketam, 2017",
-        color: "#84d9e5",
+        color: "#FA3C4C",
         type: "column",
         data: [
           {
@@ -186,7 +186,7 @@ Highcharts.chart("speciesSales_monthly", {
           {
             name: "YTD",
             y: 53.3,
-            color: "#99cc33",
+            color: "#242d04",
           },
         ],
       },
@@ -197,36 +197,15 @@ Highcharts.chart("speciesSales_monthly", {
         color: "#84d9e5",
         type: "column",
         data: [
-          {
-            name: "Red Snapper",
-            y: 29.2,
-            color: "#fa3c4c",
-          },
-          {
-            name: "Golden Snapper",
-            y: 32,
-            color: "#0084ff",
-          },
-          {
-            name: "Pomfret",
-            y: 52,
-            color: "#ffc300",
-          },
-          {
-            name: "Seabass",
-            y: 42.1,
-            color: "#363b74",
-          },
-          {
-            name: "Hybrid Grouper",
-            y: 29.2,
-            color: "#d696bb",
-          },
-          {
-            name: "Giant Grouper",
-            y: 43.9,
-            color: "#4d1b7b",
-          },
+          ["BA1", 43.9],
+          ["BA2", 29.7],
+          ["BA3", 53.0],
+          ["BA4", 52.5],
+          ["BA5", 38.1],
+          ["BA6", 68.1],
+          ["BA7", 38.1],
+          ["BA8", 68.1],
+          ["BA9", 51.2],
         ],
       },
     ],

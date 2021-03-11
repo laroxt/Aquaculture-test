@@ -191,7 +191,7 @@ Highcharts.chart("farm_sales_yearly", {
       ],
     },
     {
-      name: "YTD",
+      name: "Kong Kong, Year To Date(YTD)",
       color: "#99cc33",
       data: [
         {
@@ -249,6 +249,64 @@ Highcharts.chart("farm_sales_yearly", {
         {
           name: "YTD",
           y: 81.2,
+        },
+      ],
+    },
+    {
+      name: "Kong Kong, Year To Date(YTD)",
+      color: "#0a8f0b",
+      data: [
+        {
+          name: "Jan",
+          y: null,
+        },
+        {
+          name: "Feb",
+          y: null,
+        },
+        {
+          name: "Mar",
+          y: null,
+        },
+        {
+          name: "Apr",
+          y: null,
+        },
+        {
+          name: "May",
+          y: null,
+        },
+        {
+          name: "Jun",
+          y: null,
+        },
+        {
+          name: "July",
+          y: null,
+        },
+        {
+          name: "Aug",
+          y: null,
+        },
+        {
+          name: "Sept",
+          y: null,
+        },
+        {
+          name: "Oct",
+          y: null,
+        },
+        {
+          name: "Nov",
+          y: null,
+        },
+        {
+          name: "Dec",
+          y: null,
+        },
+        {
+          name: "YTD",
+          y: 40,
         },
       ],
     },

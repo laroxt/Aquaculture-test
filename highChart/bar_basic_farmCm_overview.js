@@ -20,18 +20,19 @@ Highcharts.chart("farmCm_overview", {
   },
 
   yAxis: {
+    min: 0,
     title: {
       text: "Contribution Margin Revenue(%)",
     },
-    stackLabels: {
-      style: {
-        color: "black",
-      },
-      enabled: true,
-      formatter: function () {
-        return this.total + "%";
-      },
-    },
+    // stackLabels: {
+    //   enabled: true,
+    //   formatter: function () {
+    //     return this.total + "%";
+    //   },
+    //   style: {
+    //     fontWeight: "bold",
+    //   },
+    // },
   },
 
   credits: {
@@ -51,6 +52,7 @@ Highcharts.chart("farmCm_overview", {
   },
 
   tooltip: {
+    shared: true,
     pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
     pointFormatter: function () {
       var value;
@@ -78,7 +80,7 @@ Highcharts.chart("farmCm_overview", {
       pointWidth: 50,
       dataLabels: {
         enabled: true,
-        format: "{point.y:.1f}%",
+        format: "{point.y}%",
       },
     },
     column: {
@@ -95,52 +97,52 @@ Highcharts.chart("farmCm_overview", {
       data: [
         {
           name: "Jan",
-          y: 30,
+          y: 60,
           drilldown: "Pulau Ketam, Jan, 2021",
         },
         {
           name: "Feb",
-          y: 25.3,
+          y: 55,
         },
         {
           name: "Mar",
-          y: 32,
+          y: 55,
         },
         {
           name: "Apr",
-          y: 54,
+          y: 60,
         },
         {
           name: "May",
-          y: 67.3,
+          y: 70,
         },
         {
           name: "Jun",
-          y: 51,
+          y: 55,
         },
         {
           name: "July",
-          y: 23,
+          y: 40,
         },
         {
           name: "Aug",
-          y: 34.8,
+          y: 45,
         },
         {
           name: "Sept",
-          y: 23.3,
+          y: 50,
         },
         {
           name: "Oct",
-          y: 41,
+          y: 55,
         },
         {
           name: "Nov",
-          y: 52,
+          y: 45,
         },
         {
           name: "Dec",
-          y: 52,
+          y: 55,
         },
       ],
     },
@@ -150,57 +152,57 @@ Highcharts.chart("farmCm_overview", {
       data: [
         {
           name: "Jan",
-          y: 30,
+          y: 40,
           drilldown: "Kong Kong, Jan, 2021",
         },
         {
           name: "Feb",
-          y: 25.3,
+          y: 45,
         },
         {
           name: "Mar",
-          y: 32,
+          y: 45,
         },
         {
           name: "Apr",
-          y: 54,
+          y: 40,
         },
         {
           name: "May",
-          y: 67.3,
+          y: 30,
         },
         {
           name: "Jun",
-          y: 51,
+          y: 45,
         },
         {
           name: "July",
-          y: 23,
+          y: 60,
         },
         {
           name: "Aug",
-          y: 34.8,
+          y: 55,
         },
         {
           name: "Sept",
-          y: 23.3,
+          y: 50,
         },
         {
           name: "Oct",
-          y: 41,
+          y: 45,
         },
         {
           name: "Nov",
-          y: 52,
+          y: 55,
         },
         {
           name: "Dec",
-          y: 52,
+          y: 45,
         },
       ],
     },
     {
-      name: "YTD",
+      name: "Pulau Ketam To Date(YTD)",
       color: "#99cc33",
       data: [
         {
@@ -253,7 +255,65 @@ Highcharts.chart("farmCm_overview", {
         },
         {
           name: "YTD",
-          y: 112,
+          y: 42,
+        },
+      ],
+    },
+    {
+      name: "Kong Kong, Year To Date(YTD)",
+      color: "#0a8f0b",
+      data: [
+        {
+          name: "Jan",
+          y: null,
+        },
+        {
+          name: "Feb",
+          y: null,
+        },
+        {
+          name: "Mar",
+          y: null,
+        },
+        {
+          name: "Apr",
+          y: null,
+        },
+        {
+          name: "May",
+          y: null,
+        },
+        {
+          name: "Jun",
+          y: null,
+        },
+        {
+          name: "July",
+          y: null,
+        },
+        {
+          name: "Aug",
+          y: null,
+        },
+        {
+          name: "Sept",
+          y: null,
+        },
+        {
+          name: "Oct",
+          y: null,
+        },
+        {
+          name: "Nov",
+          y: null,
+        },
+        {
+          name: "Dec",
+          y: null,
+        },
+        {
+          name: "YTD",
+          y: 58,
         },
       ],
     },
@@ -274,13 +334,13 @@ Highcharts.chart("farmCm_overview", {
         color: "#84d9e5",
 
         data: [
-          ["BA1", 32],
+          ["BA1", 52],
           ["BA2", 51],
           ["BA3", 63],
           ["BA4", 43.2],
           ["BA5", 52.7],
           ["BA6", 60],
-          ["BA7", 23],
+          ["BA7", 51],
           ["BA8", 53],
           ["BA9", 68],
         ],
@@ -291,13 +351,13 @@ Highcharts.chart("farmCm_overview", {
         color: "#064a89",
 
         data: [
-          ["BA1", 32],
+          ["BA1", 52],
           ["BA2", 51],
           ["BA3", 63],
           ["BA4", 43.2],
           ["BA5", 52.7],
           ["BA6", 60],
-          ["BA7", 23],
+          ["BA7", 61],
           ["BA8", 53],
           ["BA9", 68],
         ],

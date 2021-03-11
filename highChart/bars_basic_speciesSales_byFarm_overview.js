@@ -191,7 +191,7 @@ Highcharts.chart("speciesSales_overview", {
       ],
     },
     {
-      name: "YTD",
+      name: "Pulau Ketam, Year To Date(YTD)",
       color: "#99cc33",
       data: [
         {
@@ -252,6 +252,64 @@ Highcharts.chart("speciesSales_overview", {
         },
       ],
     },
+    {
+      name: "Kong Kong, Year To Date(YTD)",
+      color: "#0a8f0b",
+      data: [
+        {
+          name: "Jan",
+          y: null,
+        },
+        {
+          name: "Feb",
+          y: null,
+        },
+        {
+          name: "Mar",
+          y: null,
+        },
+        {
+          name: "Apr",
+          y: null,
+        },
+        {
+          name: "May",
+          y: null,
+        },
+        {
+          name: "Jun",
+          y: null,
+        },
+        {
+          name: "July",
+          y: null,
+        },
+        {
+          name: "Aug",
+          y: null,
+        },
+        {
+          name: "Sept",
+          y: null,
+        },
+        {
+          name: "Oct",
+          y: null,
+        },
+        {
+          name: "Nov",
+          y: null,
+        },
+        {
+          name: "Dec",
+          y: null,
+        },
+        {
+          name: "YTD",
+          y: 40,
+        },
+      ],
+    },
   ],
 
   drilldown: {
@@ -265,15 +323,14 @@ Highcharts.chart("speciesSales_overview", {
     series: [
       {
         //Pulau Ketam, Jan
-        name: "Pulau Ketam Farm, Jan, 2021",
-        id: "Pulau Ketam Farm, Jan, 2021",
+        name: "Pulau Ketam Species, Jan, 2021",
+        id: "Pulau Ketam Species, Jan, 2021",
         color: "#84d9e5",
         type: "column",
         data: [
           {
             name: "BA1",
             y: 32.1,
-            drilldown: "Pulau Ketam Species, Jan, 2021",
           },
           {
             name: "BA2",
@@ -311,8 +368,8 @@ Highcharts.chart("speciesSales_overview", {
       },
       {
         //Pulau Ketam, Jan
-        name: "Pulau Ketam Species, Jan, 2021",
-        id: "Pulau Ketam Species, Jan, 2021",
+        name: "Pulau Ketam Farm, Jan, 2021",
+        id: "Pulau Ketam Farm, Jan, 2021",
         color: "#ffc425",
         type: "column",
         data: [
@@ -320,6 +377,7 @@ Highcharts.chart("speciesSales_overview", {
             name: "Red Snapper",
             y: 29.2,
             color: "#fa3c4c",
+            drilldown: "Pulau Ketam Species, Jan, 2021",
           },
           {
             name: "Golden Snapper",
@@ -350,15 +408,14 @@ Highcharts.chart("speciesSales_overview", {
       },
       {
         //Kong Kong, Jan
-        name: "Kong Kong Farm, Jan, 2021",
-        id: "Kong Kong Farm, Jan, 2021",
+        name: "Kong Kong Species, Jan, 2021",
+        id: "Kong Kong Species, Jan, 2021",
         color: "#064a89",
         type: "column",
         data: [
           {
             name: "BA1",
             y: 32,
-            drilldown: "Kong Kong Species, Jan, 2021",
           },
           {
             name: "BA2",
@@ -396,8 +453,8 @@ Highcharts.chart("speciesSales_overview", {
       },
       {
         //Kong Kong, Jan
-        name: "Kong Kong Species, Jan, 2021",
-        id: "Kong Kong Species, Jan, 2021",
+        name: "Kong Kong Farm, Jan, 2021",
+        id: "Kong Kong Farm, Jan, 2021",
         color: "#ffc425",
         type: "column",
         data: [
@@ -405,6 +462,7 @@ Highcharts.chart("speciesSales_overview", {
             name: "Red Snapper",
             y: 29.2,
             color: "#fa3c4c",
+            drilldown: "Kong Kong Species, Jan, 2021",
           },
           {
             name: "Golden Snapper",

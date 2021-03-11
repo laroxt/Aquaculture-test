@@ -97,8 +97,8 @@ Highcharts.chart("speciesSales_monthly", {
       ],
     },
     {
-      name: "YTD",
-      color: "#99cc33",
+      name: "Red Snapper, B1, Pulau Ketam, Year To Date(YTD)",
+      color: "#142d04",
       data: [
         {
           name: "2017",
@@ -122,7 +122,7 @@ Highcharts.chart("speciesSales_monthly", {
         },
         {
           name: "YTD",
-          y: 73.5,
+          y: 63.5,
         },
       ],
     },
@@ -144,7 +144,6 @@ Highcharts.chart("speciesSales_monthly", {
           {
             name: "Jan",
             y: 32,
-            drilldown: "BA1, Pulau Ketam, Jan, 2017",
           },
           {
             name: "Feb",
@@ -188,8 +187,8 @@ Highcharts.chart("speciesSales_monthly", {
           },
           {
             name: "YTD",
-            y: 53,
-            color: "#99cc33",
+            y: 73,
+            color: "#142d04",
           },
         ],
       },

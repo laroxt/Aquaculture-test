@@ -273,6 +273,14 @@
 						</li>
 						<!-- /Sale Mix Dashboard -->
 
+								<!-- Contribution Margin Dashboard -->
+								<li class="nav-item ">
+									<a href="superadmin-dashboard-cm.html" class="nav-link"><i
+											class="icon-pie-chart3"></i>
+										<span>Contribution Margin</span></a>
+								</li>
+								<!-- /Contribution Margin Dashboard -->
+
 						<!-- Farm Dashboard -->
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link "><i class="icon-stats-bars4"></i>
@@ -284,9 +292,7 @@
 								<li class="nav-item"><a href="superadmin-dashboard-farm-gp.html" class="nav-link">Farm
 										GP</a>
 								</li>
-								<li class="nav-item"><a href="superadmin-dashboard-farm-cm.html" class="nav-link ">Farm
-										CM</a>
-								</li>
+								
 							</ul>
 						</li>
 						<!-- /Farm Dashboard -->
@@ -309,8 +315,7 @@
 								<li class="nav-item"><a href="superadmin-dashboard-species-farm-gp.html"
 										class="nav-link active">Species GP By Farm</a>
 								</li>
-								<li class="nav-item"><a href="superadmin-dashboard-species-cm.html"
-										class="nav-link">Species CM</a>
+								
 							</ul>
 						</li>
 						<!-- /Sepcies Dashboard -->
@@ -559,106 +564,17 @@
 											<div class="col-md-12">
 												<fieldset>
 													<div class="form-group">
-														<label>Farm:</label>
+														<label>Species:</label>
 														<select data-placeholder="Select your state"
 															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">BA1</option>
-															<option value="Farm-2">BA2</option>
-															<option value="Farm-2">BA3</option>
-															<option value="Farm-2">BA4</option>
-															<option value="Farm-2">BA5</option>
-															<option value="Farm-2">BA6</option>
-															<option value="Farm-2">BA7</option>
-															<option value="Farm-2">BA8</option>
-															<option value="Farm-2">BA9</option>
+															<option value="Farm-1">Red Snapper</option>
+															<option value="Farm-2">Golden Snapper</option>
+															<option value="Farm-3">Pomfret</option>
+															<option value="Farm-3">Seabass</option>
+															<option value="Farm-3">Hybrid Grouper</option>
+															<option value="Farm-3">Giant Grouper</option>
 														</select>
 													</div>
-													<div class="form-group">
-														<label>Location:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">Pulau Ketam</option>
-															<option value="Farm-2">Kong Kong</option>
-														</select>
-													</div>
-													<div class="form-group">
-														<label>Year:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">2021</option>
-															<option value="Farm-2">2020</option>
-															<option value="Farm-2">2019</option>
-															<option value="Farm-2">2018</option>
-															<option value="Farm-2">2017</option>
-															<option value="Farm-2">2016</option>
-														</select>
-													</div>
-													<div class="text-right">
-														<button type="button" class="btn btn-primary"
-															onclick="location.href='./superadmin-nm-nc-merge-snet.html'"
-															style="
-															margin-bottom: 15px; ">Retrieve</button>
-													</div>
-
-												</fieldset>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-9">
-							<!-- 2 columns form -->
-							<!-- Basic bars -->
-							<div class="card">
-								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Species GP By Farm(YTD)</h5>
-
-
-									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="reload"></a>
-											<a class="list-icons-item" data-action="collapse"></a>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="card-body">
-									<div class="chart-container">
-										<div class="chart has-fixed-height" id="speciesSales_byFarm_yearly"></div>
-									</div>
-									<div class="chart-badge">
-										<h style="font-weight: bold;">Location: <span
-												class="badge bg-success ml-md-1 mr-md-1 ">Pulau Ketam</span>
-										</h>
-										<h style="font-weight: bold;">Active Farm: <span
-												class="badge bg-success ml-md-1 mr-md-1 ">BA1</span></h>
-										<h style="font-weight: bold;">Lastest Update: <span
-												class="badge bg-success ml-md-1 mr-md-1 ">01/01/2021</span></h>
-									</div>
-
-								</div>
-							</div>
-							<!-- /basic bars -->
-						</div>
-						<div class="col-md-3">
-							<!-- 2 columns form -->
-							<div class="card">
-								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Species GP Filter</h5>
-									<div class="header-elements">
-										<div class="list-icons">
-											<a class="list-icons-item" data-action="collapse"></a>
-										</div>
-									</div>
-								</div>
-
-								<div class="card-body" style="padding-bottom: 0px;">
-									<form action="#">
-										<div class="row">
-											<div class="col-md-12">
-												<fieldset>
 													<div class="form-group">
 														<label>Farm:</label>
 														<select data-placeholder="Select your state"
@@ -672,14 +588,6 @@
 															<option value="Farm-2">BA7</option>
 															<option value="Farm-2">BA8</option>
 															<option value="Farm-2">BA9</option>
-														</select>
-													</div>
-													<div class="form-group">
-														<label>Location:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">Pulau Ketam</option>
-															<option value="Farm-2">Kong Kong</option>
 														</select>
 													</div>
 													<div class="text-right">
@@ -783,7 +691,6 @@
 	<script src="./highChart/code/modules/drilldown.js"></script>
 
 	<script src="./highChart/bars_basic_speciesGp_byFarm_overview.js"></script>
-	<script src="./highChart/line_speciesGp_byFarm_yearly.js"></script>
 	<script src="./highChart/pie_speciesGp_byFarm_monthly.js"></script>
 
 

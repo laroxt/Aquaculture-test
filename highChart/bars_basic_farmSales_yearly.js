@@ -83,8 +83,8 @@ Highcharts.chart("farm_sales_monthly", {
       ],
     },
     {
-      name: "YTD",
-      color: "#99cc33",
+      name: "BA1, Pulau Ketam, Year To Date",
+      color: "#142d04",
       data: [
         {
           name: "2017",
@@ -108,7 +108,7 @@ Highcharts.chart("farm_sales_monthly", {
         },
         {
           name: "YTD",
-          y: 73.5,
+          y: 33.5,
         },
       ],
     },
@@ -131,7 +131,6 @@ Highcharts.chart("farm_sales_monthly", {
           {
             name: "Jan",
             y: 32.2,
-            drilldown: "BA1, Pulau Ketam, Jan, 2017",
           },
           {
             name: "Feb",
@@ -176,7 +175,7 @@ Highcharts.chart("farm_sales_monthly", {
           {
             name: "YTD",
             y: 53,
-            color: "#99cc33",
+            color: "#142d04",
           },
         ],
       },

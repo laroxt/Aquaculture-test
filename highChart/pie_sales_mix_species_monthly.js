@@ -1,7 +1,14 @@
-// Create the chart
+$(function () {
+  Highcharts.setOptions({
+    lang: {
+      thousandsSep: ",",
+    },
+  });
+});
+
 Highcharts.chart("sales_mix_species", {
   title: {
-    text: '<span style="font-weight: bold">Farm Contribution Margin</span>',
+    text: '<span style="font-weight: bold">Species Sales Mix</span>',
     align: "center",
   },
 
@@ -14,42 +21,21 @@ Highcharts.chart("sales_mix_species", {
   },
 
   subtitle: {
-    text: "All Farm, 2021 ",
+    text: "All Species, B1, Pulau Ketam, 2021 ",
     align: "center",
     verticalAlign: "top",
   },
 
-  yAxis: [
-    {
-      min: 0,
-      title: {
-        text: "Employees",
-      },
-    },
-    {
-      title: {
-        text: "Profit (millions)",
-      },
-      opposite: true,
-    },
-  ],
-
-  legend: {
-    shadow: false,
-  },
-  tooltip: {
-    shared: true,
-  },
-  plotOptions: {
-    column: {
-      grouping: false,
-      shadow: false,
-      borderWidth: 0,
+  accessibility: {
+    announceNewData: {
+      enabled: true,
     },
   },
 
-  credits: {
-    enabled: false,
+  yAxis: {
+    title: {
+      text: "Sales Mix Revenue(%)",
+    },
   },
 
   xAxis: {
@@ -58,13 +44,25 @@ Highcharts.chart("sales_mix_species", {
   },
 
   tooltip: {
-    pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}({point.percentage:.0f}%)<br/></b>',
-    shared: true,
-  },
-  plotOptions: {
-    column: {
-      stacking: "percent",
+    pointFormat: "<b>{point.x} :</b>" + "Count: <b>{point.y:,.0f}</b>",
+    pointFormatter: function () {
+      var value;
+      if (this.y >= 0) {
+        value = this.y + "% ";
+      } else {
+        value = -this.y + "-% ";
+      }
+      return (
+        "<br/>" +
+        '<span style="color:' +
+        this.series.color +
+        '"> ● </span>' +
+        " " +
+        this.series.name +
+        "</span>: <b>" +
+        value +
+        "</b><br />"
+      );
     },
   },
 
@@ -85,112 +83,39 @@ Highcharts.chart("sales_mix_species", {
 
   series: [
     {
-      name: "Pulau Ketam",
+      name: "B1, Pulau Ketam",
       color: "#84d9e5",
       data: [
         {
-          name: "Jan",
-          y: 30,
-          drilldown: "Pulau Ketam, Jan, 2021",
+          name: "Red Snapper",
+          y: 15,
+          color: "#fa3c4c",
+          drilldown: "Red Snapper, Pulau Ketam, Jan, 2021",
         },
         {
-          name: "Feb",
-          y: 25.3,
+          name: "Golden Snapper",
+          y: 20,
+          color: "#0084ff",
         },
         {
-          name: "Mar",
-          y: 32,
+          name: "Pomfret",
+          y: 16,
+          color: "#ffc300",
         },
         {
-          name: "Apr",
-          y: 54,
+          name: "Seabass",
+          y: 11,
+          color: "#363b74",
         },
         {
-          name: "May",
-          y: 67.3,
+          name: "Hybrid Grouper",
+          y: 15,
+          color: "#d696bb",
         },
         {
-          name: "Jun",
-          y: 51,
-        },
-        {
-          name: "July",
-          y: 23,
-        },
-        {
-          name: "Aug",
-          y: 34.8,
-        },
-        {
-          name: "Sept",
-          y: 23.3,
-        },
-        {
-          name: "Oct",
-          y: 41,
-        },
-        {
-          name: "Nov",
-          y: 52,
-        },
-        {
-          name: "Dec",
-          y: 52,
-        },
-      ],
-    },
-    {
-      name: "Kong Kong",
-      color: "#064a89",
-      data: [
-        {
-          name: "Jan",
-          y: 30,
-          drilldown: "Kong Kong, Jan, 2021",
-        },
-        {
-          name: "Feb",
-          y: 25.3,
-        },
-        {
-          name: "Mar",
-          y: 32,
-        },
-        {
-          name: "Apr",
-          y: 54,
-        },
-        {
-          name: "May",
-          y: 67.3,
-        },
-        {
-          name: "Jun",
-          y: 51,
-        },
-        {
-          name: "July",
-          y: 23,
-        },
-        {
-          name: "Aug",
-          y: 34.8,
-        },
-        {
-          name: "Sept",
-          y: 23.3,
-        },
-        {
-          name: "Oct",
-          y: 41,
-        },
-        {
-          name: "Nov",
-          y: 52,
-        },
-        {
-          name: "Dec",
-          y: 52,
+          name: "Giant Grouper",
+          y: 21,
+          color: "#4d1b7b",
         },
       ],
     },
@@ -206,93 +131,64 @@ Highcharts.chart("sales_mix_species", {
     },
     series: [
       {
-        name: "Pulau Ketam, Jan, 2021",
-        id: "Pulau Ketam, Jan, 2021",
-        color: "#84d9e5",
+        name: "Red Snapper, Pulau Ketam, Jan, 2021",
+        id: "Red Snapper, Pulau Ketam, Jan, 2021",
+        color: "#fa3c4c",
+
         data: [
           {
             name: "Jan",
-            y: 30,
-            drilldown: "Kong Kong, Jan, 2021",
+            y: 0.6,
           },
           {
             name: "Feb",
-            y: 25.3,
+            y: 1.2,
           },
           {
             name: "Mar",
-            y: 32,
+            y: 0.9,
           },
           {
             name: "Apr",
-            y: 54,
+            y: 1.3,
           },
           {
             name: "May",
-            y: 67.3,
+            y: 1.5,
           },
           {
             name: "Jun",
-            y: 51,
+            y: 0.9,
           },
           {
             name: "July",
-            y: 23,
+            y: 0.9,
           },
           {
             name: "Aug",
-            y: 34.8,
+            y: 1.3,
           },
           {
             name: "Sept",
-            y: 23.3,
+            y: 1.5,
           },
           {
             name: "Oct",
-            y: 41,
+            y: 1.4,
           },
           {
             name: "Nov",
-            y: 52,
+            y: 0.9,
           },
           {
             name: "Dec",
-            y: 52,
+            y: 0.7,
           },
-        ],
-      },
-
-      {
-        name: "Pulau Ketam, Jan, 2021",
-        id: "Pulau Ketam, Jan, 2021",
-        color: "#84d9e5",
-        data: [
-          ["BA1", 32],
-          ["BA2", 51],
-          ["BA3", 63],
-          ["BA4", 43.2],
-          ["BA5", 52.7],
-          ["BA6", 60],
-          ["BA7", 23],
-          ["BA8", 53],
-          ["BA9", 68],
-        ],
-      },
-      {
-        name: "Kong Kong, Jan, 2021",
-        id: "Kong Kong, Jan, 2021",
-        color: "#064a89",
-
-        data: [
-          ["BA1", 32],
-          ["BA2", 51],
-          ["BA3", 63],
-          ["BA4", 43.2],
-          ["BA5", 52.7],
-          ["BA6", 60],
-          ["BA7", 23],
-          ["BA8", 53],
-          ["BA9", 68],
+          {
+            name: "YTD",
+            color: "#99cc33",
+            y: 1.1,
+          },
         ],
       },
     ],
@@ -302,7 +198,7 @@ Highcharts.chart("sales_mix_species", {
     rules: [
       {
         condition: {
-          maxWidth: 1090,
+          maxWidth: 750,
         },
         chartOptions: {
           legend: {

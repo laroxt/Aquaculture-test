@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>Farm Creation-Create New Farm</title>
+	<title>Dashboard-CM</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -48,9 +48,21 @@
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
 
+
+	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/styling/switch.min.js"></script>
+	<script src="./global_assets/js/demo_pages/switch_toggle.js"></script>
+	<script src="./global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
+
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
 	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
-	<!-- /theme JS files -->
 
 </head>
 
@@ -179,7 +191,7 @@
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
 						data-toggle="dropdown">
-						<img src="./global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2"
+						<img src="../main/global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2"
 							height="34" alt="">
 						<span>Mr.Cyprian</span>
 					</a>
@@ -260,6 +272,14 @@
 						</li>
 						<!-- /Sale Mix Dashboard -->
 
+						<!-- Contribution Margin Dashboard -->
+						<li class="nav-item ">
+							<a href="superadmin-dashboard-cm.html" class="nav-link active"><i
+									class="icon-pie-chart3"></i>
+								<span>Contribution Margin</span></a>
+						</li>
+						<!-- /Contribution Margin Dashboard -->
+
 						<!-- Farm Dashboard -->
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-stats-bars4"></i>
@@ -295,7 +315,6 @@
 								<li class="nav-item"><a href="superadmin-dashboard-species-farm-gp.html"
 										class="nav-link">Species GP By Farm</a>
 								</li>
-								
 							</ul>
 						</li>
 						<!-- /Sepcies Dashboard -->
@@ -348,12 +367,12 @@
 						<!-- /Operation -->
 
 						<!-- Farm Creation -->
-						<li class="nav-item nav-item-submenu nav-item-open">
-							<a href="#" class="nav-link active"><i class="icon-map"></i>
+						<li class="nav-item nav-item-submenu ">
+							<a href="#" class="nav-link "><i class="icon-map"></i>
 								<span>Farm Creation</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Farm Creation" style="display: block;">
+							<ul class="nav2 nav-group-sub" data-submenu-title="Farm Creation">
 								<li class="nav-item"><a href="superadmin-fc-farm-management.html"
-										class="nav-link active">Create New Farm</a></li>
+										class="nav-link">Create New Farm</a></li>
 								<li class="nav-item"><a href="#" class="nav-link">Farm Validation</a></li>
 							</ul>
 						</li>
@@ -439,149 +458,228 @@
 
 			</div>
 			<!-- /sidebar content -->
+
 		</div>
 		<!-- /main sidebar -->
+
+
 		<!-- Main content -->
 		<div class="content-wrapper">
-
 			<!-- Page header -->
 			<div class="page-header page-header-light">
-
-				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline"
+					style="padding-right:35px;">
 					<div class="d-flex">
-						<h class="breadcrumb-item active">Farm Creation</h>
-						<a href="./superadmin-fc-farm-management.html" class="breadcrumb-item">Create New Farm</a>
+						<div class="d-flex">
+							<span class="breadcrumb-item active">Dashboard</span>
+							<a href="#" class="breadcrumb-item">Farm CM</a>
+						</div>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
+					<div class="header-elements d-none">
+						<div class="breadcrumb justify-content-center">
+							<div class="breadcrumb-elements-item dropdown p-0">
+								<a href="#" class="breadcrumb-elements-item">
+									<i class="icon-file-text3 mr-2"></i>
+									View Report
+								</a>
 
-				</div>
-			</div>
-			<!-- /page header -->
-			<!-- Main content -->
-			<div class="content-wrapper">
-				<!-- Content area -->
-				<div class="content2">
-
-					<div class="row">
-						<div class="col-md-12">
-							<!-- 2 columns form -->
-							<div class="card">
-								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold">Create New Farm</h5>
-									<div class="header-elements">
-
-									</div>
-								</div>
-								<div class="card-body profile-margin">
-									<form action="#">
-										<div class="row">
-											<div class="col-md-12">
-												<fieldset>
-													<div class="form-group">
-														<label>Location:</label>
-														<select data-placeholder="Select your state"
-															class="form-control select" data-fouc>
-															<option value="Farm-1">Pulau Ketam</option>
-															<option value="Farm-2">Kong Kong</option>
-														</select>
-													</div>
-												</fieldset>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<fieldset>
-													<div class="form-group">
-														<label>Code:</label>
-														<input type="email" class="form-control" placeholder="Eg. BA1">
-													</div>
-												</fieldset>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<fieldset>
-													<div class="form-group">
-														<label>Row & Column:</label>
-														<select data-placeholder="Select your state"
-															class="form-control select" data-fouc>
-															<option value="Farm-1">20 X 20</option>
-															<option value="Farm-2">30 X 30</option>
-															<option value="Farm-3">40 X 40</option>
-															<option value="Farm-3">200 X 200</option>
-														</select>
-													</div>
-												</fieldset>
-											</div>
-										</div>
-
-										<label>Custom Dimension:</label>
-										<div class="row">
-											<div class="col-md-6">
-												<fieldset>
-													<div class="form-group">
-														<input type="email" class="form-control" placeholder="Row">
-													</div>
-												</fieldset>
-											</div>
-											<div class="col-md-6">
-												<fieldset>
-													<div class="form-group">
-														<input type="email" class="form-control" placeholder="Column">
-													</div>
-												</fieldset>
-											</div>
-										</div>
-										<div class="text-right">
-											<button type="button" class="btn btn-primary" style="margin:20px"
-												onClick="location.href='superadmin-fc-farm-20x20.html'">Next</button>
-										</div>
-									</form>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- /content area -->
-
-
-
-				<!-- Footer -->
-				<div class="navbar navbar-expand-lg navbar-light">
-					<div class="text-center d-lg-none w-100">
-						<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
-							data-target="#navbar-footer">
-							<i class="icon-unfold mr-2"></i>
-							Footer
-						</button>
-					</div>
-
-					<div class="navbar-collapse collapse" id="navbar-footer">
-						<span class="navbar-text">
-							&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a
-								href="http://themeforest.net/user/Kopyov" target="_blank">Cyprian Aidan
-								Chong</a>
-						</span>
-
-						<ul class="navbar-nav ml-lg-auto">
-							<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
-									target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
-							<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
-									class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i>
-									Docs</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!-- /footer -->
-
 			</div>
-			<!-- /main content -->
+			<!-- /page header -->
+			<!-- Content area -->
+			<div class="content3">
+				<!-- /fieldset legend -->
+				<div class="row">
+					<!-- /fieldset legend -->
+					<div class="col-md-12">
+						<!-- 2 columns form -->
+						<!-- Basic bars -->
+						<div class="card">
+							<div class="card-header bg-white header-elements-inline">
+								<h5 class="card-title font-weight-bold">Farm CM</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<div class="form-group">
+											<div class="input-group">
+												<div class="wmin-200">
+													<select class="form-control select" data-fouc>
+														<optgroup label="Select Year">
+															<option>2017</option>
+															<option>2018</option>
+															<option>2019</option>
+															<option>2020</option>
+															<option selected>2021</option>
+														</optgroup>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 
+							<div class="card-body">
+								<div class="chart-container">
+									<div class="chart has-fixed-height" id="farmCm_overview"></div>
+								</div>
+								<div class="chart-badge">
+									<h style="font-weight: bold;">Status: <span
+											class="badge bg-success ml-md-1 mr-md-1 ">Ongoing</span>
+									</h>
+									<h style="font-weight: bold;">Active Farm: <span
+											class="badge bg-success ml-md-1 mr-md-1 ">12</span>
+									</h>
+									<h style="font-weight: bold;">Lastest Update: <span
+											class="badge bg-success ml-md-1 mr-md-1 ">01/01/2021</span></h>
+								</div>
+							</div>
+						</div>
+						<!-- /basic bars -->
+					</div>
+					<div class="col-md-3">
+						<!-- 2 columns form -->
+						<div class="card">
+							<div class="card-header bg-white header-elements-inline">
+								<h5 class="card-title font-weight-bold">Species CM</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body" style="padding-bottom: 0;">
+								<form action="#">
+									<div class="row">
+										<div class="col-md-12">
+											<fieldset>
+												<div class="form-group">
+													<label>Location:</label>
+													<select data-placeholder="Select your state"
+														class="form-control form-control-select2" data-fouc>
+														<option value="Farm-1">Pulau Ketam</option>
+														<option value="Farm-2">Kong Kong</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label>Farm:</label>
+													<select data-placeholder="Select your state"
+														class="form-control form-control-select2" data-fouc>
+														<option value="Farm-1">BA1</option>
+														<option value="Farm-2">BA2</option>
+														<option value="Farm-2">BA3</option>
+														<option value="Farm-2">BA4</option>
+														<option value="Farm-2">BA5</option>
+														<option value="Farm-2">BA6</option>
+														<option value="Farm-2">BA7</option>
+														<option value="Farm-2">BA8</option>
+														<option value="Farm-2">BA9</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label>Year:</label>
+													<select data-placeholder="Select your state"
+														class="form-control form-control-select2" data-fouc>
+														<option>2017</option>
+														<option>2018</option>
+														<option>2019</option>
+														<option>2020</option>
+														<option selected>2021</option>
+													</select>
+												</div>
+												<div class="text-right">
+													<button type="button" class="btn btn-primary"
+														onclick="location.href='./superadmin-nm-nc-merge-snet.html'"
+														style="
+														margin-bottom: 15px; ">Retrieve</button>
+												</div>
+
+
+											</fieldset>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<!-- 2 columns form -->
+						<!-- Basic bars -->
+						<div class="card">
+							<div class="card-header bg-white header-elements-inline">
+								<h5 class="card-title font-weight-bold">Species CM</h5>
+							</div>
+
+							<div class="card-body">
+								<div class="chart-container">
+									<div class="chart has-fixed-height" id="farm_sales_cm_year2"></div>
+								</div>
+								<div class="chart-badge">
+									<h style="font-weight: bold;">Status: <span
+											class="badge bg-success ml-md-1 mr-md-1 ">Ongoing</span>
+									</h>
+									<h style="font-weight: bold;">Active Farm: <span
+											class="badge bg-success ml-md-1 mr-md-1 ">12</span>
+									</h>
+									<h style="font-weight: bold;">Lastest Update: <span
+											class="badge bg-success ml-md-1 mr-md-1 ">01/01/2021</span></h>
+								</div>
+							</div>
+						</div>
+						<!-- /basic bars -->
+					</div>
+
+
+				</div>
+			</div>
+			<!-- Footer -->
+			<div class="navbar navbar-expand-lg navbar-light">
+				<div class="text-center d-lg-none w-100">
+					<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+						data-target="#navbar-footer">
+						<i class="icon-unfold mr-2"></i>
+						Footer
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse" id="navbar-footer">
+					<span class="navbar-text">
+						&copy; 2020 <a href="#">Hummingsoft Sdh Bhd</a> by <a href="http://themeforest.net/user/Kopyov"
+							target="_blank">Cyprian Aidan
+							Chong</a>
+					</span>
+
+					<ul class="navbar-nav ml-lg-auto">
+						<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
+								target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+						<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
+								class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /footer -->
 		</div>
-		<!-- /page content -->
+		<!-- /content area -->
+	</div>
+	<!-- /page content -->
+
+	<!-- HighChart -->
+	<script src="./highChart/code/highcharts.js"></script>
+	<script src="./highChart/code/modules/series-label.js"></script>
+	<script src="./highChart/code/modules/drilldown.js"></script>
+
+	<script src="./highChart/bar_basic_farmCm_overview.js"></script>
+	<script src="./highChart/pie_basic_sales_cm_monthly.js"></script>
+
+
+
+
 
 </body>
 
