@@ -56,7 +56,7 @@ Highcharts.chart("farm_sales_yearly", {
         format: "{value}m",
       },
       title: {
-        text: '<span style="font-weight: bold">YTD Revenue (RM)</span>',
+        text: '<span style="font-weight: bold">YTD Sales Revenue(RM)</span>',
       },
       stackLabels: {
         enabled: true,

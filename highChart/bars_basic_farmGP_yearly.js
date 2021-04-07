@@ -1,31 +1,37 @@
-// Create the chart
+var titles2 = ["Gross Profit, 2017-2021"];
+
 Highcharts.chart("farm_gp_monthly", {
   chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 10,
-    spacingRight: 15,
     type: "column",
-  },
-  title: {
-    text: '<span style="font-weight: bold">Farm Gross Profit(YTD)</span>',
-    align: "center",
-  },
-  subtitle: {
-    text: "BA1, Pulau Ketam, 2017-2021",
-    align: "center",
-  },
-  accessibility: {
-    announceNewData: {
-      enabled: true,
+    events: {
+      drilldown: function (e) {
+        this.setTitle({
+          text: "Farm Sales, " + e.point.name,
+        });
+      },
+      drillup: function (e) {
+        this.setTitle({
+          text: titles2[0],
+        });
+      },
     },
   },
 
-  yAxis: {
-    min: 0,
-    title: {
-      text: '<span style="font-weight: bold">Gross Profit Revenue(RM)</span>',
+  title: {
+    text: titles2[0],
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
     },
+  },
+
+  subtitle: {
+    text: "Farm BA1, Pulau Ketam",
+    align: "center",
+    verticalAlign: "top",
+  },
+
+  yAxis: {
     stackLabels: {
       enabled: true,
       formatter: function () {
@@ -34,6 +40,10 @@ Highcharts.chart("farm_gp_monthly", {
       style: {
         fontWeight: "bold",
       },
+    },
+    min: 0,
+    title: {
+      text: '<span style="font-weight: bold">Sales Revenue(RM)</span>',
     },
   },
 
@@ -51,10 +61,6 @@ Highcharts.chart("farm_gp_monthly", {
   plotOptions: {
     series: {
       pointWidth: 50,
-      dataLabels: {
-        enabled: true,
-        format: "{point.y}m",
-      },
     },
     column: {
       stacking: "normal",
@@ -65,13 +71,13 @@ Highcharts.chart("farm_gp_monthly", {
 
   series: [
     {
-      name: "Farm BA",
+      name: "Farm BA1",
       color: "#4d1b7b",
       data: [
         {
           name: "2017",
           y: 43.4,
-          drilldown: "Farm BA in 2017",
+          // drilldown: "Farm BA, 2017",
         },
         {
           name: "2018",
@@ -83,11 +89,11 @@ Highcharts.chart("farm_gp_monthly", {
         },
         {
           name: "2020",
-          y: 38.1,
+          y: 38.2,
         },
         {
           name: "2021",
-          y: 52.2,
+          y: 52.3,
         },
       ],
     },
@@ -102,34 +108,34 @@ Highcharts.chart("farm_gp_monthly", {
     },
     series: [
       {
-        name: "Farm BA in 2017",
-        id: "Farm BA in 2017",
+        name: "Farm BA, 2017",
+        id: "Farm BA, 2017",
         color: "#4d1b7b",
+
         data: [
           {
             name: "Jan",
-            y: 32.1,
-            drilldown: "BA1, Pulau Ketam, Jan, 2017",
+            y: 32.2,
           },
           {
             name: "Feb",
-            y: 42.4,
+            y: 42.3,
           },
           {
             name: "Mar",
-            y: 52.2,
+            y: 52.3,
           },
           {
             name: "Apr",
-            y: 81.5,
+            y: 81,
           },
           {
             name: "Jun",
-            y: 68.4,
+            y: 68.1,
           },
           {
             name: "July",
-            y: 29,
+            y: 29.0,
           },
           {
             name: "Aug",
@@ -141,19 +147,19 @@ Highcharts.chart("farm_gp_monthly", {
           },
           {
             name: "Oct",
-            y: 54.1,
+            y: 54.2,
           },
           {
             name: "Nov",
-            y: 32.4,
+            y: 32.1,
           },
           {
             name: "Dec",
-            y: 43.3,
+            y: 43.1,
           },
           {
             name: "YTD",
-            y: 53.3,
+            y: 53,
             color: "#142d04",
           },
         ],

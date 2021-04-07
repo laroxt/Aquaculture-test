@@ -1,46 +1,75 @@
-$(function () {
-  Highcharts.setOptions({
-    lang: {
-      thousandsSep: ",",
-    },
-  });
-});
+var titles1 = ["Farm GP, 2021"];
 
 Highcharts.chart("farm_gp_yearly", {
-  title: {
-    text: '<span style="font-weight: bold">Farm Gross Profit</span>',
-    align: "center",
+  chart: {
+    type: "column",
+    events: {
+      drilldown: function (e) {
+        this.setTitle({
+          text: "Farm GP, " + e.point.name + "," + " 2021",
+        });
+      },
+      drillup: function (e) {
+        this.setTitle({
+          text: titles1[0],
+        });
+      },
+    },
   },
 
-  chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 15,
-    spacingRight: 15,
-    type: "column",
+  title: {
+    text: titles1[0],
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
+    },
   },
 
   subtitle: {
-    text: "All Farm, 2021 ",
+    text: "All Farm ",
     align: "center",
     verticalAlign: "top",
   },
 
-  yAxis: {
-    min: 0,
-    title: {
-      text: '<span style="font-weight: bold">Gross Profit Revenue(RM)</span>',
-    },
-    stackLabels: {
-      enabled: true,
-      formatter: function () {
-        return this.total + "m";
+  yAxis: [
+    {
+      // Primary yAxis
+      labels: {
+        format: "{value}m",
       },
-      style: {
-        fontWeight: "bold",
+      title: {
+        text: '<span style="font-weight: bold">Gross Profit(RM)</span>',
+      },
+      stackLabels: {
+        enabled: true,
+        formatter: function () {
+          return this.total + "m";
+        },
+        style: {
+          fontWeight: "bold",
+        },
       },
     },
-  },
+    {
+      // Secondary yAxis
+      labels: {
+        format: "{value}m",
+      },
+      title: {
+        text: '<span style="font-weight: bold">YTD Gross Profit(RM)</span>',
+      },
+      stackLabels: {
+        enabled: true,
+        formatter: function () {
+          return this.total + "m";
+        },
+        style: {
+          fontWeight: "bold",
+        },
+      },
+      opposite: true,
+    },
+  ],
 
   credits: {
     enabled: false,
@@ -67,10 +96,6 @@ Highcharts.chart("farm_gp_yearly", {
   plotOptions: {
     series: {
       pointWidth: 50,
-      dataLabels: {
-        enabled: true,
-        format: "{point.y}m",
-      },
     },
     column: {
       stacking: "normal",
@@ -81,13 +106,14 @@ Highcharts.chart("farm_gp_yearly", {
 
   series: [
     {
+      yAxis: 0,
       name: "Pulau Ketam",
       color: "#84d9e5",
       data: [
         {
           name: "Jan",
-          y: 43,
-          drilldown: "Pulau Ketam, Jan, 2021",
+          y: 43.9,
+          drilldown: "Pulau Ketam Farms",
         },
         {
           name: "Feb",
@@ -103,7 +129,7 @@ Highcharts.chart("farm_gp_yearly", {
         },
         {
           name: "May",
-          y: 52,
+          y: 52.3,
         },
         {
           name: "Jun",
@@ -115,34 +141,35 @@ Highcharts.chart("farm_gp_yearly", {
         },
         {
           name: "Aug",
-          y: 52.2,
+          y: 52.3,
         },
         {
           name: "Sept",
-          y: 52.2,
+          y: 52.3,
         },
         {
           name: "Oct",
-          y: 52.2,
+          y: 52.3,
         },
         {
           name: "Nov",
-          y: 52.2,
+          y: 52.3,
         },
         {
           name: "Dec",
-          y: 52.2,
+          y: 52.3,
         },
       ],
     },
     {
+      yAxis: 0,
       name: "Kong Kong",
       color: "#064a89",
       data: [
         {
           name: "Jan",
-          y: 43.4,
-          drilldown: "Kong Kong, Jan, 2021",
+          y: 43.9,
+          drilldown: "Kong Kong Farms",
         },
         {
           name: "Feb",
@@ -150,47 +177,48 @@ Highcharts.chart("farm_gp_yearly", {
         },
         {
           name: "Mar",
-          y: 42.3,
+          y: 32.4,
         },
         {
           name: "Apr",
-          y: 23.1,
+          y: 38.1,
         },
         {
           name: "May",
-          y: 89.3,
+          y: 52.3,
         },
         {
           name: "Jun",
-          y: 74.3,
+          y: 23.3,
         },
         {
           name: "July",
-          y: 32.1,
+          y: 42.3,
         },
         {
           name: "Aug",
-          y: 64.3,
+          y: 51.5,
         },
         {
           name: "Sept",
-          y: 25.3,
+          y: 63.8,
         },
         {
           name: "Oct",
-          y: 31.1,
+          y: 42.2,
         },
         {
           name: "Nov",
-          y: 32.2,
+          y: 64.1,
         },
         {
           name: "Dec",
-          y: 52,
+          y: 64.2,
         },
       ],
     },
     {
+      yAxis: 1,
       name: "Pulau Ketam, Year To Date(YTD)",
       color: "#99cc33",
       data: [
@@ -248,11 +276,12 @@ Highcharts.chart("farm_gp_yearly", {
         },
         {
           name: "YTD",
-          y: 81.5,
+          y: 510.2,
         },
       ],
     },
     {
+      yAxis: 1,
       name: "Kong Kong, Year To Date(YTD)",
       color: "#0a8f0b",
       data: [
@@ -306,7 +335,7 @@ Highcharts.chart("farm_gp_yearly", {
         },
         {
           name: "YTD",
-          y: 40,
+          y: 509.9,
         },
       ],
     },
@@ -322,35 +351,37 @@ Highcharts.chart("farm_gp_yearly", {
     },
     series: [
       {
-        name: "Pulau Ketam, Jan, 2021",
-        id: "Pulau Ketam, Jan, 2021",
+        name: "Pulau Ketam Farms",
+        id: "Pulau Ketam Farms",
         color: "#84d9e5",
+        showEmpty: false,
         data: [
-          ["BA1", 43.4],
-          ["BA2", 29.2],
-          ["BA3", 53.3],
-          ["BA4", 52.3],
+          ["BA1", 43.9],
+          ["BA2", 29.7],
+          ["BA3", 53.0],
+          ["BA4", 52.5],
           ["BA5", 38.1],
-          ["BA6", 68.4],
+          ["BA6", 68.1],
           ["BA7", 38.1],
-          ["BA8", 68.4],
+          ["BA8", 68.1],
           ["BA9", 51.2],
         ],
       },
       {
-        name: "Kong Kong, Jan, 2021",
-        id: "Kong Kong, Jan, 2021",
+        name: "Kong Kong Farms",
+        id: "Kong Kong Farms",
         color: "#064a89",
+
         data: [
-          ["BA1", 43.4],
-          ["BA2", 29.2],
-          ["BA3", 53.3],
-          ["BA4", 52.3],
+          ["BA1", 43.9],
+          ["BA2", 29.7],
+          ["BA3", 53.0],
+          ["BA4", 52.5],
           ["BA5", 38.1],
-          ["BA6", 68],
+          ["BA6", 68.1],
           ["BA7", 38.1],
-          ["BA8", 68.4],
-          ["BA9", 51.4],
+          ["BA8", 68.1],
+          ["BA9", 51.2],
         ],
       },
     ],
