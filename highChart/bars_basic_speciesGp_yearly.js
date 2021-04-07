@@ -29,12 +29,12 @@ Highcharts.chart("speciesGp_yearly", {
   yAxis: {
     min: 0,
     title: {
-      text: "Gross Profit Revenue(RM)",
+      text: '<span style="font-weight: bold">Gross Profit Revenue(RM)</span>',
     },
     stackLabels: {
       enabled: true,
       formatter: function () {
-        return this.total + "k";
+        return this.total + "m";
       },
       style: {
         fontWeight: "bold",
@@ -60,7 +60,7 @@ Highcharts.chart("speciesGp_yearly", {
 
   tooltip: {
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}m<br/></b>',
     shared: true,
   },
 
@@ -69,7 +69,7 @@ Highcharts.chart("speciesGp_yearly", {
       pointWidth: 50,
       dataLabels: {
         enabled: true,
-        format: "{point.y}k",
+        format: "{point.y}m",
       },
     },
     column: {

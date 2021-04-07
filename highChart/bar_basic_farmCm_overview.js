@@ -22,7 +22,7 @@ Highcharts.chart("farmCm_overview", {
   yAxis: {
     min: 0,
     title: {
-      text: "Contribution Margin Revenue(%)",
+      text: '<span style="font-weight: bold">Contribution Margin Revenue(%)</span>',
     },
     // stackLabels: {
     //   enabled: true,
@@ -369,7 +369,7 @@ Highcharts.chart("farmCm_overview", {
     rules: [
       {
         condition: {
-          maxWidth: 1090,
+          maxWidth: 650,
         },
         chartOptions: {
           legend: {

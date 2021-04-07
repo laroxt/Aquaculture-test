@@ -26,12 +26,12 @@ Highcharts.chart("speciesGp_monthly", {
   yAxis: {
     min: 0,
     title: {
-      text: "Gross Profit Revenue(RM)",
+      text: '<span style="font-weight: bold">Gross Profit Revenue(RM)</span>',
     },
     stackLabels: {
       enabled: true,
       formatter: function () {
-        return this.total + "k";
+        return this.total + "m";
       },
       style: {
         fontWeight: "bold",
@@ -46,7 +46,7 @@ Highcharts.chart("speciesGp_monthly", {
 
   tooltip: {
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}m<br/></b>',
     shared: true,
   },
 
@@ -55,7 +55,7 @@ Highcharts.chart("speciesGp_monthly", {
       pointWidth: 50,
       dataLabels: {
         enabled: true,
-        format: "{point.y}k",
+        format: "{point.y}m",
       },
     },
     column: {
@@ -90,36 +90,6 @@ Highcharts.chart("speciesGp_monthly", {
         {
           name: "2021",
           y: 52.2,
-        },
-      ],
-    },
-    {
-      name: "Red Snapper, B1, Pulau Ketam, Year To Date(YTD)",
-      color: "#142d04",
-      data: [
-        {
-          name: "2017",
-          y: null,
-        },
-        {
-          name: "2018",
-          y: null,
-        },
-        {
-          name: "2019",
-          y: null,
-        },
-        {
-          name: "2020",
-          y: null,
-        },
-        {
-          name: "2021",
-          y: null,
-        },
-        {
-          name: "YTD",
-          y: 63,
         },
       ],
     },

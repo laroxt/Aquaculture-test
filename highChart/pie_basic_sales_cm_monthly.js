@@ -23,7 +23,7 @@ Highcharts.chart("farm_sales_cm_year2", {
 
   yAxis: {
     title: {
-      text: "Contribution Margin Revenue(%)",
+      text: '<span style="font-weight: bold">Contribution Margin Revenue(%)</span>',
     },
   },
 

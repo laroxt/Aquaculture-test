@@ -1,46 +1,75 @@
-$(function () {
-  Highcharts.setOptions({
-    lang: {
-      thousandsSep: ",",
-    },
-  });
-});
+var titles1 = ["Farm Sales, 2021"];
 
 Highcharts.chart("farm_sales_yearly", {
-  title: {
-    text: '<span style="font-weight: bold">Farm Sales</span>',
-    align: "center",
+  chart: {
+    type: "column",
+    events: {
+      drilldown: function (e) {
+        this.setTitle({
+          text: "Farm Sales, " + e.point.name + "," + " 2021",
+        });
+      },
+      drillup: function (e) {
+        this.setTitle({
+          text: titles1[0],
+        });
+      },
+    },
   },
 
-  chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 15,
-    spacingRight: 15,
-    type: "column",
+  title: {
+    text: titles1[0],
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
+    },
   },
 
   subtitle: {
-    text: "All Farm, 2021 ",
+    text: "All Farm ",
     align: "center",
     verticalAlign: "top",
   },
 
-  yAxis: {
-    min: 0,
-    title: {
-      text: "Sales Revenue(RM)",
-    },
-    stackLabels: {
-      enabled: true,
-      formatter: function () {
-        return this.total + "k";
+  yAxis: [
+    {
+      // Primary yAxis
+      labels: {
+        format: "{value}m",
       },
-      style: {
-        fontWeight: "bold",
+      title: {
+        text: '<span style="font-weight: bold">Sales Revenue(RM)</span>',
+      },
+      stackLabels: {
+        enabled: true,
+        formatter: function () {
+          return this.total + "m";
+        },
+        style: {
+          fontWeight: "bold",
+        },
       },
     },
-  },
+    {
+      // Secondary yAxis
+      labels: {
+        format: "{value}m",
+      },
+      title: {
+        text: '<span style="font-weight: bold">YTD Revenue (RM)</span>',
+      },
+      stackLabels: {
+        enabled: true,
+        formatter: function () {
+          return this.total + "m";
+        },
+        style: {
+          fontWeight: "bold",
+        },
+      },
+      opposite: true,
+    },
+  ],
 
   credits: {
     enabled: false,
@@ -60,17 +89,13 @@ Highcharts.chart("farm_sales_yearly", {
 
   tooltip: {
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}m<br/></b>',
     shared: true,
   },
 
   plotOptions: {
     series: {
       pointWidth: 50,
-      dataLabels: {
-        enabled: true,
-        format: "{point.y}k",
-      },
     },
     column: {
       stacking: "normal",
@@ -81,13 +106,14 @@ Highcharts.chart("farm_sales_yearly", {
 
   series: [
     {
+      yAxis: 0,
       name: "Pulau Ketam",
       color: "#84d9e5",
       data: [
         {
           name: "Jan",
           y: 43.9,
-          drilldown: "Pulau Ketam, Jan, 2021",
+          drilldown: "Pulau Ketam Farms",
         },
         {
           name: "Feb",
@@ -136,13 +162,14 @@ Highcharts.chart("farm_sales_yearly", {
       ],
     },
     {
+      yAxis: 0,
       name: "Kong Kong",
       color: "#064a89",
       data: [
         {
           name: "Jan",
           y: 43.9,
-          drilldown: "Kong Kong, Jan, 2021",
+          drilldown: "Kong Kong Farms",
         },
         {
           name: "Feb",
@@ -191,7 +218,8 @@ Highcharts.chart("farm_sales_yearly", {
       ],
     },
     {
-      name: "Kong Kong, Year To Date(YTD)",
+      yAxis: 1,
+      name: "Pulau Ketam, Year To Date(YTD)",
       color: "#99cc33",
       data: [
         {
@@ -248,11 +276,12 @@ Highcharts.chart("farm_sales_yearly", {
         },
         {
           name: "YTD",
-          y: 81.2,
+          y: 510.2,
         },
       ],
     },
     {
+      yAxis: 1,
       name: "Kong Kong, Year To Date(YTD)",
       color: "#0a8f0b",
       data: [
@@ -306,7 +335,7 @@ Highcharts.chart("farm_sales_yearly", {
         },
         {
           name: "YTD",
-          y: 40,
+          y: 509.9,
         },
       ],
     },
@@ -322,9 +351,10 @@ Highcharts.chart("farm_sales_yearly", {
     },
     series: [
       {
-        name: "Pulau Ketam, Jan, 2021",
-        id: "Pulau Ketam, Jan, 2021",
+        name: "Pulau Ketam Farms",
+        id: "Pulau Ketam Farms",
         color: "#84d9e5",
+        showEmpty: false,
         data: [
           ["BA1", 43.9],
           ["BA2", 29.7],
@@ -338,10 +368,10 @@ Highcharts.chart("farm_sales_yearly", {
         ],
       },
       {
-        name: "Kong Kong, Jan, 2021",
-        id: "Kong Kong, Jan, 2021",
+        name: "Kong Kong Farms",
+        id: "Kong Kong Farms",
         color: "#064a89",
-        stackLabels: false,
+
         data: [
           ["BA1", 43.9],
           ["BA2", 29.7],

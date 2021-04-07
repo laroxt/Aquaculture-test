@@ -1,30 +1,49 @@
-// Create the chart
+var titles2 = ["Farm Sales, 2017-2021"];
+
 Highcharts.chart("farm_sales_monthly", {
   chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 10,
-    spacingRight: 15,
     type: "column",
-  },
-  title: {
-    text: '<span style="font-weight: bold">Farm Sales(YTD)</span>',
-    align: "center",
-  },
-  subtitle: {
-    text: "BA1, Pulau Ketam, 2017-2021",
-    align: "center",
-  },
-  accessibility: {
-    announceNewData: {
-      enabled: true,
+    events: {
+      drilldown: function (e) {
+        this.setTitle({
+          text: "Farm Sales, " + e.point.name,
+        });
+      },
+      drillup: function (e) {
+        this.setTitle({
+          text: titles2[0],
+        });
+      },
     },
   },
 
+  title: {
+    text: titles2[0],
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
+    },
+  },
+
+  subtitle: {
+    text: "Farm BA1, Pulau Ketam",
+    align: "center",
+    verticalAlign: "top",
+  },
+
   yAxis: {
+    stackLabels: {
+      enabled: true,
+      formatter: function () {
+        return this.total + "m";
+      },
+      style: {
+        fontWeight: "bold",
+      },
+    },
     min: 0,
     title: {
-      text: "Sales Revenue(RM)",
+      text: '<span style="font-weight: bold">Sales Revenue(RM)</span>',
     },
   },
 
@@ -35,17 +54,13 @@ Highcharts.chart("farm_sales_monthly", {
 
   tooltip: {
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}m<br/></b>',
     shared: true,
   },
 
   plotOptions: {
     series: {
       pointWidth: 50,
-      dataLabels: {
-        enabled: true,
-        format: "{point.y}k",
-      },
     },
     column: {
       stacking: "normal",
@@ -56,13 +71,13 @@ Highcharts.chart("farm_sales_monthly", {
 
   series: [
     {
-      name: "Farm BA",
+      name: "Farm BA1",
       color: "#4d1b7b",
       data: [
         {
           name: "2017",
           y: 43.4,
-          drilldown: "Farm BA in 2017",
+          // drilldown: "Farm BA, 2017",
         },
         {
           name: "2018",
@@ -82,36 +97,6 @@ Highcharts.chart("farm_sales_monthly", {
         },
       ],
     },
-    {
-      name: "BA1, Pulau Ketam, Year To Date",
-      color: "#142d04",
-      data: [
-        {
-          name: "2017",
-          y: null,
-        },
-        {
-          name: "2018",
-          y: null,
-        },
-        {
-          name: "2019",
-          y: null,
-        },
-        {
-          name: "2020",
-          y: null,
-        },
-        {
-          name: "2021",
-          y: null,
-        },
-        {
-          name: "YTD",
-          y: 33.5,
-        },
-      ],
-    },
   ],
   drilldown: {
     drillUpButton: {
@@ -123,8 +108,8 @@ Highcharts.chart("farm_sales_monthly", {
     },
     series: [
       {
-        name: "Farm BA in 2017",
-        id: "Farm BA in 2017",
+        name: "Farm BA, 2017",
+        id: "Farm BA, 2017",
         color: "#4d1b7b",
 
         data: [
@@ -185,7 +170,7 @@ Highcharts.chart("farm_sales_monthly", {
     rules: [
       {
         condition: {
-          maxWidth: 750,
+          maxWidth: 650,
         },
         chartOptions: {
           legend: {
@@ -211,7 +196,7 @@ Highcharts.chart("farm_sales_monthly", {
           },
           plotOptions: {
             series: {
-              pointWidth: 25,
+              pointWidth: 15,
             },
             column: {
               stacking: "normal",

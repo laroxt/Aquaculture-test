@@ -24,12 +24,12 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
   yAxis: {
     min: 0,
     title: {
-      text: "Gross Profit Revenue(RM)",
+      text: '<span style="font-weight: bold">Gross Profit Revenue(RM)</span>',
     },
     stackLabels: {
       enabled: true,
       formatter: function () {
-        return this.total + "k";
+        return this.total + "m";
       },
       style: {
         fontWeight: "bold",
@@ -44,7 +44,7 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
 
   tooltip: {
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}m<br/></b>',
     shared: true,
   },
 
@@ -53,7 +53,7 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
       pointWidth: 50,
       dataLabels: {
         enabled: true,
-        format: "{point.y}k",
+        format: "{point.y}m",
       },
     },
     column: {
@@ -88,36 +88,6 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
         {
           name: "2021",
           y: 52,
-        },
-      ],
-    },
-    {
-      name: "Red Snapper, Pulau Ketam, Year To Date(YTD)",
-      color: "#242d04",
-      data: [
-        {
-          name: "2017",
-          y: null,
-        },
-        {
-          name: "2018",
-          y: null,
-        },
-        {
-          name: "2019",
-          y: null,
-        },
-        {
-          name: "2020",
-          y: null,
-        },
-        {
-          name: "2021",
-          y: null,
-        },
-        {
-          name: "YTD",
-          y: 72,
         },
       ],
     },
@@ -182,11 +152,6 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
           {
             name: "Dec",
             y: 43,
-          },
-          {
-            name: "YTD",
-            y: 53.3,
-            color: "#242d04",
           },
         ],
       },

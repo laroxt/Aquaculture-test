@@ -22,7 +22,7 @@ Highcharts.chart("sales_mix_farm", {
   yAxis: {
     min: 0,
     title: {
-      text: "Sales Mix Revenue(%)",
+      text: '<span style="font-weight: bold">Sales Mix Revenue(%)</span>',
     },
     // stackLabels: {
     //   enabled: true,
@@ -213,7 +213,7 @@ Highcharts.chart("sales_mix_farm", {
     rules: [
       {
         condition: {
-          maxWidth: 750,
+          maxWidth: 650,
         },
         chartOptions: {
           legend: {

@@ -24,12 +24,12 @@ Highcharts.chart("speciesSales_monthly", {
   yAxis: {
     min: 0,
     title: {
-      text: "Sales Revenue(RM)",
+      text: '<span style="font-weight: bold">Sales Revenue(RM)</span>',
     },
     stackLabels: {
       enabled: true,
       formatter: function () {
-        return this.total + "k";
+        return this.total + "m";
       },
       style: {
         fontWeight: "bold",
@@ -44,7 +44,7 @@ Highcharts.chart("speciesSales_monthly", {
 
   tooltip: {
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}m<br/></b>',
     shared: true,
   },
 
@@ -53,7 +53,7 @@ Highcharts.chart("speciesSales_monthly", {
       pointWidth: 50,
       dataLabels: {
         enabled: true,
-        format: "{point.y}k",
+        format: "{point.y}m",
       },
     },
     column: {
@@ -114,10 +114,6 @@ Highcharts.chart("speciesSales_monthly", {
         {
           name: "2021",
           y: null,
-        },
-        {
-          name: "YTD",
-          y: 72,
         },
       ],
     },

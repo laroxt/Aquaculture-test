@@ -34,7 +34,7 @@ Highcharts.chart("sales_mix_species", {
 
   yAxis: {
     title: {
-      text: "Sales Mix Revenue(%)",
+      text: '<span style="font-weight: bold">Sales Mix Revenue(%)</span>',
     },
   },
 
@@ -198,7 +198,7 @@ Highcharts.chart("sales_mix_species", {
     rules: [
       {
         condition: {
-          maxWidth: 750,
+          maxWidth: 650,
         },
         chartOptions: {
           legend: {
