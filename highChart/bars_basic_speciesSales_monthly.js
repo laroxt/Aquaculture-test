@@ -8,9 +8,13 @@ Highcharts.chart("speciesSales_monthly", {
     type: "column",
   },
   title: {
-    text: '<span style="font-weight: bold">Species Sales, 2017-2021</span>',
-    align: "center",
+    text: "Species Sales, 2017-2021",
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
+    },
   },
+
   subtitle: {
     text: "All Species",
     align: "center",
@@ -96,138 +100,138 @@ Highcharts.chart("speciesSales_monthly", {
         },
       ],
     },
-    {
-      name: "Golden Snapper",
-      color: "#0084ff",
-      data: [
-        {
-          name: "2017",
-          y: 48,
-        },
-        {
-          name: "2018",
-          y: 35.1,
-        },
-        {
-          name: "2019",
-          y: 28.5,
-        },
-        {
-          name: "2020",
-          y: 30,
-        },
-        {
-          name: "2021",
-          y: 41,
-        },
-      ],
-    },
-    {
-      name: "Pomfret",
-      color: "#ffc300",
-      data: [
-        {
-          name: "2017",
-          y: 43,
-        },
-        {
-          name: "2018",
-          y: 29.2,
-        },
-        {
-          name: "2019",
-          y: 32.4,
-        },
-        {
-          name: "2020",
-          y: 38.1,
-        },
-        {
-          name: "2021",
-          y: 52.3,
-        },
-      ],
-    },
-    {
-      name: "Seabass",
-      color: "#363b74",
-      data: [
-        {
-          name: "2017",
-          y: 55,
-        },
-        {
-          name: "2018",
-          y: 32,
-        },
-        {
-          name: "2019",
-          y: 41,
-        },
-        {
-          name: "2020",
-          y: 38.1,
-        },
-        {
-          name: "2021",
-          y: 50.5,
-        },
-      ],
-    },
-    {
-      name: "Hybrid Grouper",
-      color: "#d696bb",
-      data: [
-        {
-          name: "2017",
-          y: 48.2,
-          drilldown: "Red Snapper, Jan, 2017",
-        },
-        {
-          name: "2018",
-          y: 31.2,
-        },
-        {
-          name: "2019",
-          y: 30,
-        },
-        {
-          name: "2020",
-          y: 42,
-        },
-        {
-          name: "2021",
-          y: 52.3,
-        },
-      ],
-    },
-    {
-      name: "Giant Grouper",
-      color: "#4d1b7b",
-      data: [
-        {
-          name: "2017",
-          y: 53,
-          drilldown: "Red Snapper, Jan, 2017",
-        },
-        {
-          name: "2018",
-          y: 32.6,
-        },
-        {
-          name: "2019",
-          y: 42.8,
-        },
-        {
-          name: "2020",
-          y: 58.1,
-        },
-        {
-          name: "2021",
-          y: 52.3,
-        },
-      ],
-    },
+    // {
+    //   name: "Golden Snapper",
+    //   color: "#0084ff",
+    //   data: [
+    //     {
+    //       name: "2017",
+    //       y: 48,
+    //     },
+    //     {
+    //       name: "2018",
+    //       y: 35.1,
+    //     },
+    //     {
+    //       name: "2019",
+    //       y: 28.5,
+    //     },
+    //     {
+    //       name: "2020",
+    //       y: 30,
+    //     },
+    //     {
+    //       name: "2021",
+    //       y: 41,
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Pomfret",
+    //   color: "#ffc300",
+    //   data: [
+    //     {
+    //       name: "2017",
+    //       y: 43,
+    //     },
+    //     {
+    //       name: "2018",
+    //       y: 29.2,
+    //     },
+    //     {
+    //       name: "2019",
+    //       y: 32.4,
+    //     },
+    //     {
+    //       name: "2020",
+    //       y: 38.1,
+    //     },
+    //     {
+    //       name: "2021",
+    //       y: 52.3,
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Seabass",
+    //   color: "#363b74",
+    //   data: [
+    //     {
+    //       name: "2017",
+    //       y: 55,
+    //     },
+    //     {
+    //       name: "2018",
+    //       y: 32,
+    //     },
+    //     {
+    //       name: "2019",
+    //       y: 41,
+    //     },
+    //     {
+    //       name: "2020",
+    //       y: 38.1,
+    //     },
+    //     {
+    //       name: "2021",
+    //       y: 50.5,
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Hybrid Grouper",
+    //   color: "#d696bb",
+    //   data: [
+    //     {
+    //       name: "2017",
+    //       y: 48.2,
+    //       drilldown: "Red Snapper, Jan, 2017",
+    //     },
+    //     {
+    //       name: "2018",
+    //       y: 31.2,
+    //     },
+    //     {
+    //       name: "2019",
+    //       y: 30,
+    //     },
+    //     {
+    //       name: "2020",
+    //       y: 42,
+    //     },
+    //     {
+    //       name: "2021",
+    //       y: 52.3,
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Giant Grouper",
+    //   color: "#4d1b7b",
+    //   data: [
+    //     {
+    //       name: "2017",
+    //       y: 53,
+    //       drilldown: "Red Snapper, Jan, 2017",
+    //     },
+    //     {
+    //       name: "2018",
+    //       y: 32.6,
+    //     },
+    //     {
+    //       name: "2019",
+    //       y: 42.8,
+    //     },
+    //     {
+    //       name: "2020",
+    //       y: 58.1,
+    //     },
+    //     {
+    //       name: "2021",
+    //       y: 52.3,
+    //     },
+    //   ],
+    // },
   ],
   // drilldown: {
   //   drillUpButton: {

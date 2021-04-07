@@ -1,20 +1,32 @@
-// Create the chart
+var titles1 = ["Farm Sales Mix, 2021"];
+
 Highcharts.chart("sales_mix_farm", {
-  title: {
-    text: '<span style="font-weight: bold">Farm Sales Mix</span>',
-    align: "center",
+  chart: {
+    type: "column",
+    events: {
+      drilldown: function (e) {
+        this.setTitle({
+          text: "Farm Sales Mix, " + e.point.name + "," + " 2021",
+        });
+      },
+      drillup: function (e) {
+        this.setTitle({
+          text: titles1[0],
+        });
+      },
+    },
   },
 
-  chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 15,
-    spacingRight: 15,
-    type: "column",
+  title: {
+    text: titles1[0],
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
+    },
   },
 
   subtitle: {
-    text: "All Farm, 2021 ",
+    text: "All Farm",
     align: "center",
     verticalAlign: "top",
   },
@@ -24,26 +36,30 @@ Highcharts.chart("sales_mix_farm", {
     title: {
       text: '<span style="font-weight: bold">Sales Mix Revenue(%)</span>',
     },
-    // stackLabels: {
-    //   enabled: true,
-    //   formatter: function () {
-    //     return this.total + "k";
-    //   },
-    //   style: {
-    //     fontWeight: "bold",
-    //   },
-    // },
+    stackLabels: {
+      enabled: true,
+      formatter: function () {
+        return this.total + "%";
+      },
+      style: {
+        fontWeight: "bold",
+      },
+    },
   },
 
   credits: {
     enabled: false,
   },
 
+  // legend: {
+  //   layout: "horizontal",
+  //   align: "center",
+  //   verticalAlign: "bottom",
+  //   borderWidth: 0,
+  // },
+
   legend: {
-    layout: "horizontal",
-    align: "center",
-    verticalAlign: "bottom",
-    borderWidth: 0,
+    enabled: false,
   },
 
   xAxis: {
@@ -78,10 +94,10 @@ Highcharts.chart("sales_mix_farm", {
   plotOptions: {
     series: {
       pointWidth: 50,
-      dataLabels: {
-        enabled: true,
-        format: "{point.y}%",
-      },
+      // dataLabels: {
+      //   enabled: true,
+      //   format: "{point.y}%",
+      // },
     },
     column: {
       stacking: "normal",
@@ -153,7 +169,7 @@ Highcharts.chart("sales_mix_farm", {
         data: [
           {
             name: "Jan",
-            y: 0.5,
+            y: 0.9,
           },
           {
             name: "Feb",
@@ -197,13 +213,13 @@ Highcharts.chart("sales_mix_farm", {
           },
           {
             name: "Dec",
-            y: 0.6,
+            y: 0.8,
           },
-          {
-            name: "YTD",
-            color: "#99cc33",
-            y: 1,
-          },
+          // {
+          //   name: "YTD",
+          //   color: "#99cc33",
+          //   y: 1,
+          // },
         ],
       },
     ],

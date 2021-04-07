@@ -1,46 +1,75 @@
-$(function () {
-  Highcharts.setOptions({
-    lang: {
-      thousandsSep: ",",
-    },
-  });
-});
+var titles1 = ["Species Gross Profit, 2021"];
 
 Highcharts.chart("speciesGp_yearly", {
-  title: {
-    text: '<span style="font-weight: bold">Species GP</span>',
-    align: "center",
+  chart: {
+    type: "column",
+    events: {
+      drilldown: function (e) {
+        this.setTitle({
+          text: "Species Gross Profit, " + e.point.name + "," + " 2021",
+        });
+      },
+      drillup: function (e) {
+        this.setTitle({
+          text: titles1[0],
+        });
+      },
+    },
   },
 
-  chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 15,
-    spacingRight: 15,
-    type: "column",
+  title: {
+    text: titles1[0],
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
+    },
   },
 
   subtitle: {
-    text: "All Species, 2021 ",
+    text: "All Species ",
     align: "center",
     verticalAlign: "top",
   },
 
-  yAxis: {
-    min: 0,
-    title: {
-      text: '<span style="font-weight: bold">Gross Profit Revenue(RM)</span>',
-    },
-    stackLabels: {
-      enabled: true,
-      formatter: function () {
-        return this.total + "m";
+  yAxis: [
+    {
+      // Primary yAxis
+      labels: {
+        format: "{value}m",
       },
-      style: {
-        fontWeight: "bold",
+      title: {
+        text: '<span style="font-weight: bold">Sales Gross Profit(RM)</span>',
+      },
+      stackLabels: {
+        enabled: true,
+        formatter: function () {
+          return this.total + "m";
+        },
+        style: {
+          fontWeight: "bold",
+        },
       },
     },
-  },
+    {
+      // Secondary yAxis
+      labels: {
+        format: "{value}m",
+      },
+      title: {
+        text: '<span style="font-weight: bold">YTD Gross Profit(RM)</span>',
+      },
+      stackLabels: {
+        enabled: true,
+        formatter: function () {
+          return this.total + "m";
+        },
+        style: {
+          fontWeight: "bold",
+        },
+      },
+      opposite: true,
+    },
+  ],
 
   credits: {
     enabled: false,
@@ -67,10 +96,6 @@ Highcharts.chart("speciesGp_yearly", {
   plotOptions: {
     series: {
       pointWidth: 50,
-      dataLabels: {
-        enabled: true,
-        format: "{point.y}m",
-      },
     },
     column: {
       stacking: "normal",
@@ -81,13 +106,14 @@ Highcharts.chart("speciesGp_yearly", {
 
   series: [
     {
-      name: "Pulau Ketam",
-      color: "#ffc425",
+      yAxis: 0,
+      name: "Red Snapper",
+      color: "#fa3c4c",
       data: [
         {
           name: "Jan",
-          y: 43,
-          drilldown: "Pulau Ketam, Jan, 2021",
+          y: 43.9,
+          // drilldown: "Pulau Ketam Farms",
         },
         {
           name: "Feb",
@@ -95,7 +121,7 @@ Highcharts.chart("speciesGp_yearly", {
         },
         {
           name: "Mar",
-          y: 32,
+          y: 32.4,
         },
         {
           name: "Apr",
@@ -103,15 +129,15 @@ Highcharts.chart("speciesGp_yearly", {
         },
         {
           name: "May",
-          y: 52.2,
+          y: 52.3,
         },
         {
           name: "Jun",
-          y: 52,
+          y: 52.3,
         },
         {
           name: "July",
-          y: 52.2,
+          y: 52.3,
         },
         {
           name: "Aug",
@@ -127,7 +153,7 @@ Highcharts.chart("speciesGp_yearly", {
         },
         {
           name: "Nov",
-          y: 52.2,
+          y: 52.3,
         },
         {
           name: "Dec",
@@ -136,63 +162,286 @@ Highcharts.chart("speciesGp_yearly", {
       ],
     },
     {
-      name: "Kong Kong",
-      color: "#f37735",
+      yAxis: 0,
+      name: "Golden Snapper",
+      color: "#0084ff",
       data: [
         {
           name: "Jan",
-          y: 43.9,
-          drilldown: "Kong Kong, Jan, 2021",
+          y: 33.2,
         },
         {
           name: "Feb",
-          y: 29.2,
+          y: 32.4,
         },
         {
           name: "Mar",
+          y: 38.1,
+        },
+        {
+          name: "Apr",
           y: 42.1,
         },
         {
-          name: "Apr",
-          y: 23.4,
-        },
-        {
           name: "May",
-          y: 89.3,
+          y: 52.3,
         },
         {
           name: "Jun",
-          y: 74.3,
+          y: 26.3,
         },
         {
           name: "July",
-          y: 32.1,
+          y: 39.3,
         },
         {
           name: "Aug",
-          y: 64.5,
+          y: 55.1,
         },
         {
           name: "Sept",
+          y: 59.8,
+        },
+        {
+          name: "Oct",
+          y: 45.9,
+        },
+        {
+          name: "Nov",
+          y: 62,
+        },
+        {
+          name: "Dec",
+          y: 60,
+        },
+      ],
+    },
+    {
+      yAxis: 0,
+      name: "Pomfret",
+      color: "#ffc300",
+      data: [
+        {
+          name: "Jan",
+          y: 40,
+        },
+        {
+          name: "Feb",
+          y: 23.1,
+        },
+        {
+          name: "Mar",
+          y: 26.4,
+        },
+        {
+          name: "Apr",
+          y: 42.1,
+        },
+        {
+          name: "May",
+          y: 55,
+        },
+        {
+          name: "Jun",
           y: 25.1,
         },
         {
+          name: "July",
+          y: 48.3,
+        },
+        {
+          name: "Aug",
+          y: 42.1,
+        },
+        {
+          name: "Sept",
+          y: 60,
+        },
+        {
           name: "Oct",
-          y: 31.1,
+          y: 45.2,
         },
         {
           name: "Nov",
-          y: 32.2,
+          y: 61.1,
         },
         {
           name: "Dec",
+          y: 52,
+        },
+      ],
+    },
+    {
+      yAxis: 0,
+      name: "Seabass",
+      color: "#363b74",
+      data: [
+        {
+          name: "Jan",
+          y: 37,
+          // drilldown: "Kong Kong Farms",
+        },
+        {
+          name: "Feb",
+          y: 25,
+        },
+        {
+          name: "Mar",
+          y: 32.4,
+        },
+        {
+          name: "Apr",
+          y: 38.5,
+        },
+        {
+          name: "May",
+          y: 56,
+        },
+        {
+          name: "Jun",
+          y: 25.5,
+        },
+        {
+          name: "July",
+          y: 42,
+        },
+        {
+          name: "Aug",
+          y: 56.1,
+        },
+        {
+          name: "Sept",
+          y: 60.8,
+        },
+        {
+          name: "Oct",
           y: 52.2,
         },
+        {
+          name: "Nov",
+          y: 62.1,
+        },
+        {
+          name: "Dec",
+          y: 54,
+        },
       ],
     },
     {
-      name: "Pulau Ketam, Year To Date(YTD)",
-      color: "#99cc33",
+      yAxis: 0,
+      name: "Hybrid Grouper",
+      color: "#d696bb",
+      data: [
+        {
+          name: "Jan",
+          y: 43,
+        },
+        {
+          name: "Feb",
+          y: 21.7,
+        },
+        {
+          name: "Mar",
+          y: 42.4,
+        },
+        {
+          name: "Apr",
+          y: 35,
+        },
+        {
+          name: "May",
+          y: 46.3,
+        },
+        {
+          name: "Jun",
+          y: 23.3,
+        },
+        {
+          name: "July",
+          y: 42.3,
+        },
+        {
+          name: "Aug",
+          y: 50,
+        },
+        {
+          name: "Sept",
+          y: 67.8,
+        },
+        {
+          name: "Oct",
+          y: 42,
+        },
+        {
+          name: "Nov",
+          y: 55,
+        },
+        {
+          name: "Dec",
+          y: 64.2,
+        },
+      ],
+    },
+    {
+      yAxis: 0,
+      name: "Giant Grouper",
+      color: "#4d1b7b",
+      data: [
+        {
+          name: "Jan",
+          y: 45.1,
+        },
+        {
+          name: "Feb",
+          y: 29,
+        },
+        {
+          name: "Mar",
+          y: 36.3,
+        },
+        {
+          name: "Apr",
+          y: 38.1,
+        },
+        {
+          name: "May",
+          y: 50,
+        },
+        {
+          name: "Jun",
+          y: 25.1,
+        },
+        {
+          name: "July",
+          y: 42.1,
+        },
+        {
+          name: "Aug",
+          y: 51,
+        },
+        {
+          name: "Sept",
+          y: 42.1,
+        },
+        {
+          name: "Oct",
+          y: 49.2,
+        },
+        {
+          name: "Nov",
+          y: 66.1,
+        },
+        {
+          name: "Dec",
+          y: 54.2,
+        },
+      ],
+    },
+
+    {
+      yAxis: 1,
+      name: "Species Sales, Year To Date(YTD)",
+      color: "#78fd79",
       data: [
         {
           name: "Jan",
@@ -208,10 +457,6 @@ Highcharts.chart("speciesGp_yearly", {
         },
         {
           name: "Apr",
-          y: null,
-        },
-        {
-          name: "May",
           y: null,
         },
         {
@@ -248,159 +493,57 @@ Highcharts.chart("speciesGp_yearly", {
         },
         {
           name: "YTD",
-          y: 81.2,
-        },
-      ],
-    },
-    {
-      name: "Kong Kong, Year To Date(YTD)",
-      color: "#0a8f0b",
-      data: [
-        {
-          name: "Jan",
-          y: null,
-        },
-        {
-          name: "Feb",
-          y: null,
-        },
-        {
-          name: "Mar",
-          y: null,
-        },
-        {
-          name: "Apr",
-          y: null,
-        },
-        {
-          name: "May",
-          y: null,
-        },
-        {
-          name: "May",
-          y: null,
-        },
-        {
-          name: "Jun",
-          y: null,
-        },
-        {
-          name: "July",
-          y: null,
-        },
-        {
-          name: "Aug",
-          y: null,
-        },
-        {
-          name: "Sept",
-          y: null,
-        },
-        {
-          name: "Oct",
-          y: null,
-        },
-        {
-          name: "Nov",
-          y: null,
-        },
-        {
-          name: "Dec",
-          y: null,
-        },
-        {
-          name: "YTD",
-          y: 81.2,
+          y: 3232.3,
         },
       ],
     },
   ],
 
-  drilldown: {
-    drillUpButton: {
-      relativeTo: "spacingBox",
-      position: {
-        y: 0,
-        x: 0,
-      },
-    },
-    series: [
-      {
-        name: "Pulau Ketam, Jan, 2021",
-        id: "Pulau Ketam, Jan, 2021",
-        color: "#ffc425",
-        data: [
-          {
-            name: "Red Snapper",
-            y: 81.5,
-            color: "#fa3c4c",
-          },
-          {
-            name: "Golden Snapper",
-            y: 41.2,
-            color: "#0084ff",
-          },
-          {
-            name: "Pomfret",
-            y: 54,
-            color: "#ffc300",
-          },
-          {
-            name: "Seabass",
-            y: 85.1,
-            color: "#363b74",
-          },
-          {
-            name: "Hybrid Grouper",
-            y: 51.5,
-            color: "#d696bb",
-          },
-          {
-            name: "Giant Grouper",
-            y: 42,
-            color: "#4d1b7b",
-          },
-        ],
-      },
-      {
-        name: "Kong Kong, Jan, 2021",
-        id: "Kong Kong, Jan, 2021",
-        color: "#f37735",
-        data: [
-          {
-            name: "Red Snapper",
-            y: 81,
-            color: "#fa3c4c",
-          },
-          {
-            name: "Golden Snapper",
-            y: 41,
-            color: "#0084ff",
-          },
-          {
-            name: "Pomfret",
-            y: 54.5,
-            color: "#ffc300",
-          },
-          {
-            name: "Seabass",
-            y: 85.1,
-            color: "#363b74",
-          },
-          {
-            name: "Hybrid Grouper",
-            y: 51.2,
-            color: "#d696bb",
-          },
-          {
-            name: "Giant Grouper",
-            y: 42.3,
-            color: "#4d1b7b",
-          },
-        ],
-      },
-    ],
-  },
+  // drilldown: {
+  //   drillUpButton: {
+  //     relativeTo: "spacingBox",
+  //     position: {
+  //       y: 0,
+  //       x: 0,
+  //     },
+  //   },
+  //   series: [
+  //     {
+  //       name: "Pulau Ketam Farms",
+  //       id: "Pulau Ketam Farms",
+  //       color: "#84d9e5",
+  //       showEmpty: false,
+  //       data: [
+  //         ["BA1", 43.9],
+  //         ["BA2", 29.7],
+  //         ["BA3", 53.0],
+  //         ["BA4", 52.5],
+  //         ["BA5", 38.1],
+  //         ["BA6", 68.1],
+  //         ["BA7", 38.1],
+  //         ["BA8", 68.1],
+  //         ["BA9", 51.2],
+  //       ],
+  //     },
+  //     {
+  //       name: "Kong Kong Farms",
+  //       id: "Kong Kong Farms",
+  //       color: "#064a89",
+
+  //       data: [
+  //         ["BA1", 43.9],
+  //         ["BA2", 29.7],
+  //         ["BA3", 53.0],
+  //         ["BA4", 52.5],
+  //         ["BA5", 38.1],
+  //         ["BA6", 68.1],
+  //         ["BA7", 38.1],
+  //         ["BA8", 68.1],
+  //         ["BA9", 51.2],
+  //       ],
+  //     },
+  //   ],
+  // },
 
   responsive: {
     rules: [

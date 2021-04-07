@@ -7,16 +7,19 @@ Highcharts.chart("speciesGp_monthly", {
     spacingRight: 15,
     type: "column",
   },
-
   title: {
-    text: '<span style="font-weight: bold">Species GP(YTD)</span>',
-    align: "center",
+    text: "Species Gross Profit, 2017-2021",
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
+    },
   },
 
   subtitle: {
-    text: "Red Snapper, Pulau Ketam, 2017-2021",
+    text: "All Species",
     align: "center",
   },
+
   accessibility: {
     announceNewData: {
       enabled: true,
@@ -26,7 +29,7 @@ Highcharts.chart("speciesGp_monthly", {
   yAxis: {
     min: 0,
     title: {
-      text: '<span style="font-weight: bold">Gross Profit Revenue(RM)</span>',
+      text: '<span style="font-weight: bold">Sales Gross Profit(RM)</span>',
     },
     stackLabels: {
       enabled: true,
@@ -37,6 +40,10 @@ Highcharts.chart("speciesGp_monthly", {
         fontWeight: "bold",
       },
     },
+  },
+
+  credits: {
+    enabled: false,
   },
 
   xAxis: {
@@ -54,7 +61,7 @@ Highcharts.chart("speciesGp_monthly", {
     series: {
       pointWidth: 50,
       dataLabels: {
-        enabled: true,
+        enabled: false,
         format: "{point.y}m",
       },
     },
@@ -73,15 +80,15 @@ Highcharts.chart("speciesGp_monthly", {
         {
           name: "2017",
           y: 43,
-          drilldown: "Red Snapper, Jan, 2017",
+          // drilldown: "Red Snapper, Jan, 2017",
         },
         {
           name: "2018",
-          y: 29,
+          y: 29.2,
         },
         {
           name: "2019",
-          y: 32.6,
+          y: 32.4,
         },
         {
           name: "2020",
@@ -89,79 +96,208 @@ Highcharts.chart("speciesGp_monthly", {
         },
         {
           name: "2021",
-          y: 52.2,
+          y: 52.3,
         },
       ],
     },
+    // {
+    //   name: "Golden Snapper",
+    //   color: "#0084ff",
+    //   data: [
+    //     {
+    //       name: "2017",
+    //       y: 48,
+    //     },
+    //     {
+    //       name: "2018",
+    //       y: 35.1,
+    //     },
+    //     {
+    //       name: "2019",
+    //       y: 28.5,
+    //     },
+    //     {
+    //       name: "2020",
+    //       y: 30,
+    //     },
+    //     {
+    //       name: "2021",
+    //       y: 41,
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Pomfret",
+    //   color: "#ffc300",
+    //   data: [
+    //     {
+    //       name: "2017",
+    //       y: 43,
+    //     },
+    //     {
+    //       name: "2018",
+    //       y: 29.2,
+    //     },
+    //     {
+    //       name: "2019",
+    //       y: 32.4,
+    //     },
+    //     {
+    //       name: "2020",
+    //       y: 38.1,
+    //     },
+    //     {
+    //       name: "2021",
+    //       y: 52.3,
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Seabass",
+    //   color: "#363b74",
+    //   data: [
+    //     {
+    //       name: "2017",
+    //       y: 55,
+    //     },
+    //     {
+    //       name: "2018",
+    //       y: 32,
+    //     },
+    //     {
+    //       name: "2019",
+    //       y: 41,
+    //     },
+    //     {
+    //       name: "2020",
+    //       y: 38.1,
+    //     },
+    //     {
+    //       name: "2021",
+    //       y: 50.5,
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Hybrid Grouper",
+    //   color: "#d696bb",
+    //   data: [
+    //     {
+    //       name: "2017",
+    //       y: 48.2,
+    //     },
+    //     {
+    //       name: "2018",
+    //       y: 31.2,
+    //     },
+    //     {
+    //       name: "2019",
+    //       y: 30,
+    //     },
+    //     {
+    //       name: "2020",
+    //       y: 42,
+    //     },
+    //     {
+    //       name: "2021",
+    //       y: 52.3,
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Giant Grouper",
+    //   color: "#4d1b7b",
+    //   data: [
+    //     {
+    //       name: "2017",
+    //       y: 53,
+    //     },
+    //     {
+    //       name: "2018",
+    //       y: 32.6,
+    //     },
+    //     {
+    //       name: "2019",
+    //       y: 42.8,
+    //     },
+    //     {
+    //       name: "2020",
+    //       y: 58.1,
+    //     },
+    //     {
+    //       name: "2021",
+    //       y: 52.3,
+    //     },
+    //   ],
+    // },
   ],
-  drilldown: {
-    drillUpButton: {
-      relativeTo: "spacingBox",
-      position: {
-        y: 0,
-        x: 0,
-      },
-    },
-    series: [
-      {
-        name: "Red Snapper, Jan, 2017",
-        id: "Red Snapper, Jan, 2017",
-        color: "#fa3c4c",
-        data: [
-          {
-            name: "Jan",
-            y: 32,
-            // drilldown: "BA1, Pulau Ketam, Jan, 2017",
-          },
-          {
-            name: "Feb",
-            y: 42.2,
-          },
-          {
-            name: "Mar",
-            y: 52.3,
-          },
-          {
-            name: "Apr",
-            y: 81,
-          },
-          {
-            name: "Jun",
-            y: 68.1,
-          },
-          {
-            name: "July",
-            y: 29,
-          },
-          {
-            name: "Aug",
-            y: 38.1,
-          },
-          {
-            name: "Sept",
-            y: 29.2,
-          },
-          {
-            name: "Oct",
-            y: 54.1,
-          },
-          {
-            name: "Nov",
-            y: 32,
-          },
-          {
-            name: "Dec",
-            y: 43.3,
-          },
-          {
-            name: "YTD",
-            y: 53,
-            color: "#142d04",
-          },
-        ],
-      },
-    ],
-  },
+  // drilldown: {
+  //   drillUpButton: {
+  //     relativeTo: "spacingBox",
+  //     position: {
+  //       y: 0,
+  //       x: 0,
+  //     },
+  //   },
+  //   series: [
+  //     {
+  //       name: "Red Snapper, Jan, 2017",
+  //       id: "Red Snapper, Jan, 2017",
+  //       color: "#fa3c4c",
+  //       data: [
+  //         {
+  //           name: "Jan",
+  //           y: 32,
+  //         },
+  //         {
+  //           name: "Feb",
+  //           y: 42.3,
+  //         },
+  //         {
+  //           name: "Mar",
+  //           y: 52.2,
+  //         },
+  //         {
+  //           name: "Apr",
+  //           y: 81.2,
+  //         },
+  //         {
+  //           name: "Jun",
+  //           y: 68.4,
+  //         },
+  //         {
+  //           name: "July",
+  //           y: 29.7,
+  //         },
+  //         {
+  //           name: "Aug",
+  //           y: 38,
+  //         },
+  //         {
+  //           name: "Sept",
+  //           y: 29.7,
+  //         },
+  //         {
+  //           name: "Oct",
+  //           y: 54.1,
+  //         },
+  //         {
+  //           name: "Nov",
+  //           y: 32.1,
+  //         },
+  //         {
+  //           name: "Dec",
+  //           y: 43.3,
+  //         },
+  //         {
+  //           name: "YTD",
+  //           y: 73,
+  //           color: "#142d04",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   responsive: {
     rules: [
       {

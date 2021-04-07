@@ -1,27 +1,40 @@
-$(function () {
-  Highcharts.setOptions({
-    lang: {
-      thousandsSep: ",",
-    },
-  });
-});
+// $(function () {
+//   Highcharts.setOptions({
+//     lang: {
+//       thousandsSep: ",",
+//     },
+//   });
+// });
+
+var titles = ["Species Sales Mix, 2021"];
 
 Highcharts.chart("sales_mix_species", {
-  title: {
-    text: '<span style="font-weight: bold">Species Sales Mix</span>',
-    align: "center",
+  chart: {
+    type: "column",
+    events: {
+      drilldown: function (e) {
+        this.setTitle({
+          text: "Species Sales Mix, " + e.point.name + "," + " 2021",
+        });
+      },
+      drillup: function (e) {
+        this.setTitle({
+          text: titles[0],
+        });
+      },
+    },
   },
 
-  chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 15,
-    spacingRight: 15,
-    type: "column",
+  title: {
+    text: titles[0],
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
+    },
   },
 
   subtitle: {
-    text: "All Species, B1, Pulau Ketam, 2021 ",
+    text: "All Species",
     align: "center",
     verticalAlign: "top",
   },
@@ -32,9 +45,22 @@ Highcharts.chart("sales_mix_species", {
     },
   },
 
+  legend: {
+    enabled: false,
+  },
+
   yAxis: {
     title: {
       text: '<span style="font-weight: bold">Sales Mix Revenue(%)</span>',
+    },
+    stackLabels: {
+      enabled: true,
+      formatter: function () {
+        return this.total + "%";
+      },
+      style: {
+        fontWeight: "bold",
+      },
     },
   },
 
@@ -69,10 +95,10 @@ Highcharts.chart("sales_mix_species", {
   plotOptions: {
     series: {
       pointWidth: 50,
-      dataLabels: {
-        enabled: true,
-        format: "{point.y:.1f}%",
-      },
+      // dataLabels: {
+      //   enabled: true,
+      //   format: "{point.y:.1f}%",
+      // },
     },
     column: {
       stacking: "normal",
@@ -158,11 +184,11 @@ Highcharts.chart("sales_mix_species", {
           },
           {
             name: "Jun",
-            y: 0.9,
+            y: 1.4,
           },
           {
             name: "July",
-            y: 0.9,
+            y: 1.2,
           },
           {
             name: "Aug",
@@ -178,17 +204,17 @@ Highcharts.chart("sales_mix_species", {
           },
           {
             name: "Nov",
-            y: 0.9,
+            y: 1.1,
           },
           {
             name: "Dec",
-            y: 0.7,
+            y: 0.8,
           },
-          {
-            name: "YTD",
-            color: "#99cc33",
-            y: 1.1,
-          },
+          // {
+          //   name: "YTD",
+          //   color: "#99cc33",
+          //   y: 1.1,
+          // },
         ],
       },
     ],

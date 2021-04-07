@@ -43,7 +43,7 @@ Highcharts.chart("farm_gp_monthly", {
     },
     min: 0,
     title: {
-      text: '<span style="font-weight: bold">Sales Revenue(RM)</span>',
+      text: '<span style="font-weight: bold">Gross Profit(RM)</span>',
     },
   },
 
