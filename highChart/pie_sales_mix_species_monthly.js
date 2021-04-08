@@ -7,19 +7,21 @@
 // });
 
 var titles = ["Species Sales Mix, 2021"];
+var subtitle = ["All Species"];
 
 Highcharts.chart("sales_mix_species", {
   chart: {
     type: "column",
     events: {
       drilldown: function (e) {
-        this.setTitle({
-          text: "Species Sales Mix, " + e.point.name + "," + " 2021",
+        this.setSubtitle({
+          text: "Species: " + e.point.name,
         });
       },
+
       drillup: function (e) {
-        this.setTitle({
-          text: titles[0],
+        this.setSubtitle({
+          text: subtitle1[0],
         });
       },
     },
@@ -34,15 +36,7 @@ Highcharts.chart("sales_mix_species", {
   },
 
   subtitle: {
-    text: "All Species",
-    align: "center",
-    verticalAlign: "top",
-  },
-
-  accessibility: {
-    announceNewData: {
-      enabled: true,
-    },
+    text: subtitle[0],
   },
 
   legend: {
@@ -51,7 +45,7 @@ Highcharts.chart("sales_mix_species", {
 
   yAxis: {
     title: {
-      text: '<span style="font-weight: bold">Sales Mix Revenue(%)</span>',
+      text: '<span style="font-weight: bold">Sales Mix(%)</span>',
     },
     stackLabels: {
       enabled: true,
@@ -140,8 +134,13 @@ Highcharts.chart("sales_mix_species", {
         },
         {
           name: "Giant Grouper",
-          y: 21,
+          y: 16,
           color: "#4d1b7b",
+        },
+        {
+          name: "Other",
+          y: 5,
+          color: "#C0C0C0",
         },
       ],
     },

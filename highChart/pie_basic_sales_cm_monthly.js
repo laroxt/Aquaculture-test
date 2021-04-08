@@ -1,20 +1,38 @@
-// Create the chart
+var titles1 = ["Species Contribution Margin, 2021"];
+var subtitle1 = ["All Species"];
+
 Highcharts.chart("farm_sales_cm_year2", {
   chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 10,
-    spacingRight: 15,
     type: "column",
+    events: {
+      drilldown: function (e) {
+        this.setSubtitle({
+          text: "Species: " + e.point.name,
+        });
+      },
+      drillup: function (e) {
+        this.setSubtitle({
+          text: subtitle1[0],
+        });
+      },
+    },
   },
+
   title: {
-    text: '<span style="font-weight: bold">Species Contribution Margin(YTD)</span>',
-    align: "center",
+    text: titles1[0],
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
+    },
   },
+
   subtitle: {
-    text: "BA1, Pulau Ketam, 2021",
-    align: "center",
+    text: subtitle1[0],
   },
+  // subtitle: {
+  //   text: "BA1, Pulau Ketam, 2021",
+  //   align: "center",
+  // },
   accessibility: {
     announceNewData: {
       enabled: true,
@@ -23,7 +41,7 @@ Highcharts.chart("farm_sales_cm_year2", {
 
   yAxis: {
     title: {
-      text: '<span style="font-weight: bold">Contribution Margin Revenue(%)</span>',
+      text: '<span style="font-weight: bold">Contribution Margin(%)</span>',
     },
   },
 
@@ -86,12 +104,13 @@ Highcharts.chart("farm_sales_cm_year2", {
     {
       name: "B1, Pulau Ketam",
       color: "#84d9e5",
+      showInLegend: false,
       data: [
         {
           name: "Red Snapper",
           y: 60,
           color: "#fa3c4c",
-          drilldown: "Red Snapper, Pulau Ketam, Jan, 2021",
+          drilldown: "Red Snapper",
         },
         {
           name: "Golden Snapper",
@@ -132,10 +151,10 @@ Highcharts.chart("farm_sales_cm_year2", {
     },
     series: [
       {
-        name: "Red Snapper, Pulau Ketam, Jan, 2021",
-        id: "Red Snapper, Pulau Ketam, Jan, 2021",
+        name: "Red Snapper",
+        id: "Red Snapper",
         color: "#fa3c4c",
-
+        showInLegend: false,
         data: [
           {
             name: "Jan",
@@ -185,11 +204,11 @@ Highcharts.chart("farm_sales_cm_year2", {
             name: "Dec",
             y: 51,
           },
-          {
-            name: "YTD",
-            color: "#99cc33",
-            y: 52,
-          },
+          // {
+          //   name: "YTD",
+          //   color: "#99cc33",
+          //   y: 52,
+          // },
         ],
       },
     ],

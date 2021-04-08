@@ -1,4 +1,4 @@
-var titles1 = ["Farm GP, 2021"];
+var titles1 = ["Farm Gross Profit, 2021"];
 
 Highcharts.chart("farm_gp_yearly", {
   chart: {
@@ -6,7 +6,7 @@ Highcharts.chart("farm_gp_yearly", {
     events: {
       drilldown: function (e) {
         this.setTitle({
-          text: "Farm GP, " + e.point.name + "," + " 2021",
+          text: "Farm Gross Profit, " + e.point.name + "," + " 2021",
         });
       },
       drillup: function (e) {
@@ -113,7 +113,7 @@ Highcharts.chart("farm_gp_yearly", {
         {
           name: "Jan",
           y: 43.9,
-          drilldown: "Pulau Ketam Farms",
+          drilldown: "Pulau Ketam",
         },
         {
           name: "Feb",
@@ -169,7 +169,7 @@ Highcharts.chart("farm_gp_yearly", {
         {
           name: "Jan",
           y: 43.9,
-          drilldown: "Kong Kong Farms",
+          drilldown: "Kong Kong",
         },
         {
           name: "Feb",
@@ -351,8 +351,8 @@ Highcharts.chart("farm_gp_yearly", {
     },
     series: [
       {
-        name: "Pulau Ketam Farms",
-        id: "Pulau Ketam Farms",
+        name: "Pulau Ketam",
+        id: "Pulau Ketam",
         color: "#84d9e5",
         showEmpty: false,
         data: [
@@ -368,8 +368,8 @@ Highcharts.chart("farm_gp_yearly", {
         ],
       },
       {
-        name: "Kong Kong Farms",
-        id: "Kong Kong Farms",
+        name: "Kong Kong",
+        id: "Kong Kong",
         color: "#064a89",
 
         data: [

@@ -38,7 +38,7 @@ Highcharts.chart("speciesGp_yearly", {
         format: "{value}m",
       },
       title: {
-        text: '<span style="font-weight: bold">Sales Gross Profit(RM)</span>',
+        text: '<span style="font-weight: bold">Gross Profit(RM)</span>',
       },
       stackLabels: {
         enabled: true,
@@ -113,7 +113,7 @@ Highcharts.chart("speciesGp_yearly", {
         {
           name: "Jan",
           y: 43.9,
-          // drilldown: "Pulau Ketam Farms",
+          drilldown: "Pulau Ketam Farms",
         },
         {
           name: "Feb",
@@ -169,6 +169,7 @@ Highcharts.chart("speciesGp_yearly", {
         {
           name: "Jan",
           y: 33.2,
+          drilldown: "Pulau Ketam Farms",
         },
         {
           name: "Feb",
@@ -224,6 +225,7 @@ Highcharts.chart("speciesGp_yearly", {
         {
           name: "Jan",
           y: 40,
+          drilldown: "Pulau Ketam Farms",
         },
         {
           name: "Feb",
@@ -279,7 +281,7 @@ Highcharts.chart("speciesGp_yearly", {
         {
           name: "Jan",
           y: 37,
-          // drilldown: "Kong Kong Farms",
+          drilldown: "Pulau Ketam Farms",
         },
         {
           name: "Feb",
@@ -335,6 +337,7 @@ Highcharts.chart("speciesGp_yearly", {
         {
           name: "Jan",
           y: 43,
+          drilldown: "Pulau Ketam Farms",
         },
         {
           name: "Feb",
@@ -390,6 +393,7 @@ Highcharts.chart("speciesGp_yearly", {
         {
           name: "Jan",
           y: 45.1,
+          drilldown: "Pulau Ketam Farms",
         },
         {
           name: "Feb",
@@ -544,6 +548,57 @@ Highcharts.chart("speciesGp_yearly", {
   //     },
   //   ],
   // },
+  drilldown: {
+    drillUpButton: {
+      relativeTo: "spacingBox",
+      position: {
+        y: 0,
+        x: 0,
+      },
+    },
+    series: [
+      {
+        //Pulau Ketam, Jan
+        name: "Pulau Ketam Farms",
+        id: "Pulau Ketam Farms",
+        color: "#ffc425",
+        type: "column",
+        showInLegend: false,
+        data: [
+          {
+            name: "Red Snapper",
+            y: 43.9,
+            color: "#fa3c4c",
+          },
+          {
+            name: "Golden Snapper",
+            y: 33.2,
+            color: "#0084ff",
+          },
+          {
+            name: "Pomfret",
+            y: 40,
+            color: "#ffc300",
+          },
+          {
+            name: "Seabass",
+            y: 37,
+            color: "#363b74",
+          },
+          {
+            name: "Hybrid Grouper",
+            y: 43,
+            color: "#d696bb",
+          },
+          {
+            name: "Giant Grouper",
+            y: 45.1,
+            color: "#4d1b7b",
+          },
+        ],
+      },
+    ],
+  },
 
   responsive: {
     rules: [

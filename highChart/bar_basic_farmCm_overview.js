@@ -1,20 +1,32 @@
-// Create the chart
+var titles = ["Farm Contribution Margin, 2021"];
+
 Highcharts.chart("farmCm_overview", {
-  title: {
-    text: '<span style="font-weight: bold">Farm Contribution Margin</span>',
-    align: "center",
+  chart: {
+    type: "column",
+    events: {
+      drilldown: function (e) {
+        this.setTitle({
+          text: "Farm Contribution Margin, " + e.point.name + "," + " 2021",
+        });
+      },
+      drillup: function (e) {
+        this.setTitle({
+          text: titles1[0],
+        });
+      },
+    },
   },
 
-  chart: {
-    spacingTop: 0,
-    spacingBottom: 0,
-    spacingLeft: 15,
-    spacingRight: 15,
-    type: "column",
+  title: {
+    text: titles[0],
+    style: {
+      fontSize: "17px",
+      fontWeight: "bold",
+    },
   },
 
   subtitle: {
-    text: "All Farm, 2021 ",
+    text: "All Farm",
     align: "center",
     verticalAlign: "top",
   },
@@ -22,7 +34,7 @@ Highcharts.chart("farmCm_overview", {
   yAxis: {
     min: 0,
     title: {
-      text: '<span style="font-weight: bold">Contribution Margin Revenue(%)</span>',
+      text: '<span style="font-weight: bold">Contribution Margin(%)</span>',
     },
     // stackLabels: {
     //   enabled: true,
@@ -98,7 +110,7 @@ Highcharts.chart("farmCm_overview", {
         {
           name: "Jan",
           y: 60,
-          drilldown: "Pulau Ketam, Jan, 2021",
+          drilldown: "Pulau Ketam",
         },
         {
           name: "Feb",
@@ -153,7 +165,7 @@ Highcharts.chart("farmCm_overview", {
         {
           name: "Jan",
           y: 40,
-          drilldown: "Kong Kong, Jan, 2021",
+          drilldown: "Kong Kong",
         },
         {
           name: "Feb",
@@ -201,122 +213,122 @@ Highcharts.chart("farmCm_overview", {
         },
       ],
     },
-    {
-      name: "Pulau Ketam To Date(YTD)",
-      color: "#99cc33",
-      data: [
-        {
-          name: "Jan",
-          y: null,
-        },
-        {
-          name: "Feb",
-          y: null,
-        },
-        {
-          name: "Mar",
-          y: null,
-        },
-        {
-          name: "Apr",
-          y: null,
-        },
-        {
-          name: "May",
-          y: null,
-        },
-        {
-          name: "Jun",
-          y: null,
-        },
-        {
-          name: "July",
-          y: null,
-        },
-        {
-          name: "Aug",
-          y: null,
-        },
-        {
-          name: "Sept",
-          y: null,
-        },
-        {
-          name: "Oct",
-          y: null,
-        },
-        {
-          name: "Nov",
-          y: null,
-        },
-        {
-          name: "Dec",
-          y: null,
-        },
-        {
-          name: "YTD",
-          y: 42,
-        },
-      ],
-    },
-    {
-      name: "Kong Kong, Year To Date(YTD)",
-      color: "#0a8f0b",
-      data: [
-        {
-          name: "Jan",
-          y: null,
-        },
-        {
-          name: "Feb",
-          y: null,
-        },
-        {
-          name: "Mar",
-          y: null,
-        },
-        {
-          name: "Apr",
-          y: null,
-        },
-        {
-          name: "May",
-          y: null,
-        },
-        {
-          name: "Jun",
-          y: null,
-        },
-        {
-          name: "July",
-          y: null,
-        },
-        {
-          name: "Aug",
-          y: null,
-        },
-        {
-          name: "Sept",
-          y: null,
-        },
-        {
-          name: "Oct",
-          y: null,
-        },
-        {
-          name: "Nov",
-          y: null,
-        },
-        {
-          name: "Dec",
-          y: null,
-        },
-        {
-          name: "YTD",
-          y: 58,
-        },
-      ],
-    },
+    // {
+    //   name: "Pulau Ketam To Date(YTD)",
+    //   color: "#99cc33",
+    //   data: [
+    //     {
+    //       name: "Jan",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Feb",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Mar",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Apr",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "May",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Jun",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "July",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Aug",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Sept",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Oct",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Nov",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Dec",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "YTD",
+    //       y: 42,
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Kong Kong, Year To Date(YTD)",
+    //   color: "#0a8f0b",
+    //   data: [
+    //     {
+    //       name: "Jan",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Feb",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Mar",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Apr",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "May",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Jun",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "July",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Aug",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Sept",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Oct",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Nov",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "Dec",
+    //       y: null,
+    //     },
+    //     {
+    //       name: "YTD",
+    //       y: 58,
+    //     },
+    //   ],
+    // },
   ],
 
   drilldown: {
@@ -329,10 +341,10 @@ Highcharts.chart("farmCm_overview", {
     },
     series: [
       {
-        name: "Pulau Ketam, Jan, 2021",
-        id: "Pulau Ketam, Jan, 2021",
+        name: "Pulau Ketam",
+        id: "Pulau Ketam",
         color: "#84d9e5",
-
+        // showInLegend: false,
         data: [
           ["BA1", 52],
           ["BA2", 51],
@@ -346,8 +358,8 @@ Highcharts.chart("farmCm_overview", {
         ],
       },
       {
-        name: "Kong Kong, Jan, 2021",
-        id: "Kong Kong, Jan, 2021",
+        name: "Kong Kong",
+        id: "Kong Kong",
         color: "#064a89",
 
         data: [

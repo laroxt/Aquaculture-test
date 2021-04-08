@@ -16,7 +16,7 @@ Highcharts.chart("speciesGp_monthly", {
   },
 
   subtitle: {
-    text: "All Species",
+    text: "Species: Red Snapper",
     align: "center",
   },
 
@@ -29,7 +29,7 @@ Highcharts.chart("speciesGp_monthly", {
   yAxis: {
     min: 0,
     title: {
-      text: '<span style="font-weight: bold">Sales Gross Profit(RM)</span>',
+      text: '<span style="font-weight: bold">Gross Profit(RM)</span>',
     },
     stackLabels: {
       enabled: true,
@@ -76,6 +76,7 @@ Highcharts.chart("speciesGp_monthly", {
     {
       name: "Red Snapper",
       color: "#fa3c4c",
+      showInLegend: false,
       data: [
         {
           name: "2017",

@@ -16,7 +16,7 @@ Highcharts.chart("speciesSales_monthly", {
   },
 
   subtitle: {
-    text: "All Species",
+    text: "Species: Red Snapper",
     align: "center",
   },
 

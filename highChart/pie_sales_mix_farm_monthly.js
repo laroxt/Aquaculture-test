@@ -1,17 +1,19 @@
 var titles1 = ["Farm Sales Mix, 2021"];
+var subtitle1 = ["All Farm"];
 
 Highcharts.chart("sales_mix_farm", {
   chart: {
     type: "column",
     events: {
       drilldown: function (e) {
-        this.setTitle({
-          text: "Farm Sales Mix, " + e.point.name + "," + " 2021",
+        this.setSubtitle({
+          text: "Farm: " + e.point.name,
         });
       },
+
       drillup: function (e) {
-        this.setTitle({
-          text: titles1[0],
+        this.setSubtitle({
+          text: subtitle1[0],
         });
       },
     },
@@ -26,15 +28,13 @@ Highcharts.chart("sales_mix_farm", {
   },
 
   subtitle: {
-    text: "All Farm",
-    align: "center",
-    verticalAlign: "top",
+    text: subtitle1[0],
   },
 
   yAxis: {
     min: 0,
     title: {
-      text: '<span style="font-weight: bold">Sales Mix Revenue(%)</span>',
+      text: '<span style="font-weight: bold">Sales Mix(%)</span>',
     },
     stackLabels: {
       enabled: true,

@@ -26,7 +26,7 @@ Highcharts.chart("farm_sales_monthly", {
   },
 
   subtitle: {
-    text: "Farm BA1, Pulau Ketam",
+    text: "Farm: BA1, Pulau Ketam",
     align: "center",
     verticalAlign: "top",
   },
@@ -43,7 +43,7 @@ Highcharts.chart("farm_sales_monthly", {
     },
     min: 0,
     title: {
-      text: '<span style="font-weight: bold">Sales Revenue(RM)</span>',
+      text: '<span style="font-weight: bold">Gross Profit(RM)</span>',
     },
   },
 
@@ -71,8 +71,10 @@ Highcharts.chart("farm_sales_monthly", {
 
   series: [
     {
+      yAxis: 0,
       name: "Farm BA1",
       color: "#4d1b7b",
+      showInLegend: false,
       data: [
         {
           name: "2017",
@@ -98,74 +100,75 @@ Highcharts.chart("farm_sales_monthly", {
       ],
     },
   ],
-  drilldown: {
-    drillUpButton: {
-      relativeTo: "spacingBox",
-      position: {
-        y: 0,
-        x: 0,
-      },
-    },
-    series: [
-      {
-        name: "Farm BA, 2017",
-        id: "Farm BA, 2017",
-        color: "#4d1b7b",
-
-        data: [
-          {
-            name: "Jan",
-            y: 32.2,
-          },
-          {
-            name: "Feb",
-            y: 42.3,
-          },
-          {
-            name: "Mar",
-            y: 52.3,
-          },
-          {
-            name: "Apr",
-            y: 81,
-          },
-          {
-            name: "Jun",
-            y: 68.1,
-          },
-          {
-            name: "July",
-            y: 29.0,
-          },
-          {
-            name: "Aug",
-            y: 38.1,
-          },
-          {
-            name: "Sept",
-            y: 29.2,
-          },
-          {
-            name: "Oct",
-            y: 54.2,
-          },
-          {
-            name: "Nov",
-            y: 32.1,
-          },
-          {
-            name: "Dec",
-            y: 43.1,
-          },
-          {
-            name: "YTD",
-            y: 53,
-            color: "#142d04",
-          },
-        ],
-      },
-    ],
-  },
+  // drilldown: {
+  //   drillUpButton: {
+  //     relativeTo: "spacingBox",
+  //     position: {
+  //       y: 0,
+  //       x: 0,
+  //     },
+  //   },
+  //   series: [
+  //     {
+  //       name: "Farm BA, 2017",
+  //       id: "Farm BA, 2017",
+  //       color: "#4d1b7b",
+  //       showInLegend: false,
+  //       data: [
+  //         {
+  //           name: "Jan",
+  //           y: 32.2,
+  //         },
+  //         {
+  //           name: "Feb",
+  //           y: 42.3,
+  //         },
+  //         {
+  //           name: "Mar",
+  //           y: 52.3,
+  //         },
+  //         {
+  //           name: "Apr",
+  //           y: 81,
+  //         },
+  //         {
+  //           name: "Jun",
+  //           y: 68.1,
+  //         },
+  //         {
+  //           name: "July",
+  //           y: 29.0,
+  //         },
+  //         {
+  //           name: "Aug",
+  //           y: 38.1,
+  //         },
+  //         {
+  //           name: "Sept",
+  //           y: 29.2,
+  //         },
+  //         {
+  //           name: "Oct",
+  //           y: 54.2,
+  //         },
+  //         {
+  //           name: "Nov",
+  //           y: 32.1,
+  //         },
+  //         {
+  //           name: "Dec",
+  //           y: 43.1,
+  //         },
+  //         {
+  //           name: "YTD",
+  //           yAxis: 1,
+  //           y: 53,
+  //           color: "#142d04",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   responsive: {
     rules: [
       {
