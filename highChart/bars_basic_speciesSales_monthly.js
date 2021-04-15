@@ -8,18 +8,13 @@ Highcharts.chart("speciesSales_monthly", {
     type: "column",
   },
   title: {
-    text: "Species Sales, 2017-2021",
-    style: {
-      fontSize: "17px",
-      fontWeight: "bold",
-    },
-  },
-
-  subtitle: {
-    text: "Species: Red Snapper",
+    text: '<span style="font-weight: bold">Species Sales, 2017-2021</span>',
     align: "center",
   },
-
+  subtitle: {
+    text: "Red Snapper, Pulau Ketam",
+    align: "center",
+  },
   accessibility: {
     announceNewData: {
       enabled: true,
@@ -42,10 +37,6 @@ Highcharts.chart("speciesSales_monthly", {
     },
   },
 
-  credits: {
-    enabled: false,
-  },
-
   xAxis: {
     type: "category",
     crosshair: true,
@@ -61,7 +52,7 @@ Highcharts.chart("speciesSales_monthly", {
     series: {
       pointWidth: 50,
       dataLabels: {
-        enabled: false,
+        enabled: true,
         format: "{point.y}m",
       },
     },
@@ -75,16 +66,16 @@ Highcharts.chart("speciesSales_monthly", {
   series: [
     {
       name: "Red Snapper",
-      color: "#fa3c4c",
+      color: "#FA3C4C",
+      showInLegend: false,
       data: [
         {
           name: "2017",
           y: 43,
-          // drilldown: "Red Snapper, Jan, 2017",
         },
         {
           name: "2018",
-          y: 29.2,
+          y: 29.7,
         },
         {
           name: "2019",
@@ -96,210 +87,100 @@ Highcharts.chart("speciesSales_monthly", {
         },
         {
           name: "2021",
-          y: 52.3,
+          y: 52,
         },
       ],
     },
-    // {
-    //   name: "Golden Snapper",
-    //   color: "#0084ff",
-    //   data: [
-    //     {
-    //       name: "2017",
-    //       y: 48,
-    //     },
-    //     {
-    //       name: "2018",
-    //       y: 35.1,
-    //     },
-    //     {
-    //       name: "2019",
-    //       y: 28.5,
-    //     },
-    //     {
-    //       name: "2020",
-    //       y: 30,
-    //     },
-    //     {
-    //       name: "2021",
-    //       y: 41,
-    //     },
-    //   ],
-    // },
-    // {
-    //   name: "Pomfret",
-    //   color: "#ffc300",
-    //   data: [
-    //     {
-    //       name: "2017",
-    //       y: 43,
-    //     },
-    //     {
-    //       name: "2018",
-    //       y: 29.2,
-    //     },
-    //     {
-    //       name: "2019",
-    //       y: 32.4,
-    //     },
-    //     {
-    //       name: "2020",
-    //       y: 38.1,
-    //     },
-    //     {
-    //       name: "2021",
-    //       y: 52.3,
-    //     },
-    //   ],
-    // },
-    // {
-    //   name: "Seabass",
-    //   color: "#363b74",
-    //   data: [
-    //     {
-    //       name: "2017",
-    //       y: 55,
-    //     },
-    //     {
-    //       name: "2018",
-    //       y: 32,
-    //     },
-    //     {
-    //       name: "2019",
-    //       y: 41,
-    //     },
-    //     {
-    //       name: "2020",
-    //       y: 38.1,
-    //     },
-    //     {
-    //       name: "2021",
-    //       y: 50.5,
-    //     },
-    //   ],
-    // },
-    // {
-    //   name: "Hybrid Grouper",
-    //   color: "#d696bb",
-    //   data: [
-    //     {
-    //       name: "2017",
-    //       y: 48.2,
-    //       drilldown: "Red Snapper, Jan, 2017",
-    //     },
-    //     {
-    //       name: "2018",
-    //       y: 31.2,
-    //     },
-    //     {
-    //       name: "2019",
-    //       y: 30,
-    //     },
-    //     {
-    //       name: "2020",
-    //       y: 42,
-    //     },
-    //     {
-    //       name: "2021",
-    //       y: 52.3,
-    //     },
-    //   ],
-    // },
-    // {
-    //   name: "Giant Grouper",
-    //   color: "#4d1b7b",
-    //   data: [
-    //     {
-    //       name: "2017",
-    //       y: 53,
-    //       drilldown: "Red Snapper, Jan, 2017",
-    //     },
-    //     {
-    //       name: "2018",
-    //       y: 32.6,
-    //     },
-    //     {
-    //       name: "2019",
-    //       y: 42.8,
-    //     },
-    //     {
-    //       name: "2020",
-    //       y: 58.1,
-    //     },
-    //     {
-    //       name: "2021",
-    //       y: 52.3,
-    //     },
-    //   ],
-    // },
   ],
-  // drilldown: {
-  //   drillUpButton: {
-  //     relativeTo: "spacingBox",
-  //     position: {
-  //       y: 0,
-  //       x: 0,
-  //     },
-  //   },
-  //   series: [
-  //     {
-  //       name: "Red Snapper, Jan, 2017",
-  //       id: "Red Snapper, Jan, 2017",
-  //       color: "#fa3c4c",
-  //       data: [
-  //         {
-  //           name: "Jan",
-  //           y: 32,
-  //         },
-  //         {
-  //           name: "Feb",
-  //           y: 42.3,
-  //         },
-  //         {
-  //           name: "Mar",
-  //           y: 52.2,
-  //         },
-  //         {
-  //           name: "Apr",
-  //           y: 81.2,
-  //         },
-  //         {
-  //           name: "Jun",
-  //           y: 68.4,
-  //         },
-  //         {
-  //           name: "July",
-  //           y: 29.7,
-  //         },
-  //         {
-  //           name: "Aug",
-  //           y: 38,
-  //         },
-  //         {
-  //           name: "Sept",
-  //           y: 29.7,
-  //         },
-  //         {
-  //           name: "Oct",
-  //           y: 54.1,
-  //         },
-  //         {
-  //           name: "Nov",
-  //           y: 32.1,
-  //         },
-  //         {
-  //           name: "Dec",
-  //           y: 43.3,
-  //         },
-  //         {
-  //           name: "YTD",
-  //           y: 73,
-  //           color: "#142d04",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+  drilldown: {
+    drillUpButton: {
+      relativeTo: "spacingBox",
+      position: {
+        y: 0,
+        x: 0,
+      },
+    },
+    series: [
+      {
+        //Pulau Ketam, Jan
+        name: "B1, Pulau Ketam, 2017",
+        id: "B1, Pulau Ketam, 2017",
+        color: "#FA3C4C",
+        type: "column",
+        data: [
+          {
+            name: "Jan",
+            y: 32.1,
+            drilldown: "BA1, Pulau Ketam, Jan, 2017",
+          },
+          {
+            name: "Feb",
+            y: 42.4,
+          },
+          {
+            name: "Mar",
+            y: 52.3,
+          },
+          {
+            name: "Apr",
+            y: 81,
+          },
+          {
+            name: "Jun",
+            y: 68.1,
+          },
+          {
+            name: "July",
+            y: 29,
+          },
+          {
+            name: "Aug",
+            y: 38.1,
+          },
+          {
+            name: "Sept",
+            y: 29,
+          },
+          {
+            name: "Oct",
+            y: 54.2,
+          },
+          {
+            name: "Nov",
+            y: 32.4,
+          },
+          {
+            name: "Dec",
+            y: 43,
+          },
+          {
+            name: "YTD",
+            y: 53.3,
+            color: "#242d04",
+          },
+        ],
+      },
+      {
+        //Pulau Ketam, Jan
+        name: "BA1, Pulau Ketam, Jan, 2017",
+        id: "BA1, Pulau Ketam, Jan, 2017",
+        color: "#84d9e5",
+        type: "column",
+        data: [
+          ["BA1", 43.9],
+          ["BA2", 29.7],
+          ["BA3", 53.0],
+          ["BA4", 52.5],
+          ["BA5", 38.1],
+          ["BA6", 68.1],
+          ["BA7", 38.1],
+          ["BA8", 68.1],
+          ["BA9", 51.2],
+        ],
+      },
+    ],
+  },
+
   responsive: {
     rules: [
       {

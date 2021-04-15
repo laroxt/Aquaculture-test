@@ -445,7 +445,7 @@ Highcharts.chart("speciesGp_yearly", {
     {
       yAxis: 1,
       name: "Species Sales, Year To Date(YTD)",
-      color: "#78fd79",
+      color: "#99cc33",
       data: [
         {
           name: "Jan",

@@ -441,11 +441,67 @@ Highcharts.chart("speciesSales_yearly", {
         },
       ],
     },
+    {
+      yAxis: 0,
+      name: "Other",
+      color: "#c0c0c0",
+      data: [
+        {
+          name: "Jan",
+          y: 35.1,
+          drilldown: "Pulau Ketam Farms",
+        },
+        {
+          name: "Feb",
+          y: 19,
+        },
+        {
+          name: "Mar",
+          y: 26.3,
+        },
+        {
+          name: "Apr",
+          y: 28.1,
+        },
+        {
+          name: "May",
+          y: 40,
+        },
+        {
+          name: "Jun",
+          y: 15.1,
+        },
+        {
+          name: "July",
+          y: 22.1,
+        },
+        {
+          name: "Aug",
+          y: 31,
+        },
+        {
+          name: "Sept",
+          y: 22.1,
+        },
+        {
+          name: "Oct",
+          y: 39.2,
+        },
+        {
+          name: "Nov",
+          y: 26.1,
+        },
+        {
+          name: "Dec",
+          y: 34.2,
+        },
+      ],
+    },
 
     {
       yAxis: 1,
       name: "Species Sales, Year To Date(YTD)",
-      color: "#78fd79",
+      color: "#99cc33",
       data: [
         {
           name: "Jan",
@@ -497,7 +553,7 @@ Highcharts.chart("speciesSales_yearly", {
         },
         {
           name: "YTD",
-          y: 3232.3,
+          y: 3470.6,
         },
       ],
     },

@@ -119,7 +119,7 @@ Highcharts.chart("farm_sales_cm_year2", {
         },
         {
           name: "Pomfret",
-          y: 55,
+          y: 57,
           color: "#ffc300",
         },
         {
@@ -136,6 +136,11 @@ Highcharts.chart("farm_sales_cm_year2", {
           name: "Giant Grouper",
           y: 64,
           color: "#4d1b7b",
+        },
+        {
+          name: "Other",
+          y: 19,
+          color: "#c0c0c0",
         },
       ],
     },

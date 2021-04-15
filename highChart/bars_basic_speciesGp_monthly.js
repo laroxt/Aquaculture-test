@@ -16,7 +16,7 @@ Highcharts.chart("speciesGp_monthly", {
   },
 
   subtitle: {
-    text: "Species: Red Snapper",
+    text: "Red Snapper, Pulau Ketam",
     align: "center",
   },
 

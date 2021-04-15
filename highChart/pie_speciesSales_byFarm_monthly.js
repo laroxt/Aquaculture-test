@@ -8,11 +8,11 @@ Highcharts.chart("speciesSales_monthly", {
     type: "column",
   },
   title: {
-    text: '<span style="font-weight: bold">Species Sales By Farm(YTD)</span>',
+    text: '<span style="font-weight: bold">Species Sales By Farm, 2017-2021</span>',
     align: "center",
   },
   subtitle: {
-    text: "B1, Pulau Ketam, 2017-2021",
+    text: "Red Snapper, Pulau Ketam",
     align: "center",
   },
   accessibility: {
@@ -65,13 +65,13 @@ Highcharts.chart("speciesSales_monthly", {
 
   series: [
     {
-      name: "B1, Pulau Ketam",
+      name: "Red Snapper",
       color: "#FA3C4C",
+      showInLegend: false,
       data: [
         {
           name: "2017",
           y: 43,
-          drilldown: "B1, Pulau Ketam, 2017",
         },
         {
           name: "2018",
@@ -88,32 +88,6 @@ Highcharts.chart("speciesSales_monthly", {
         {
           name: "2021",
           y: 52,
-        },
-      ],
-    },
-    {
-      name: "Red Snapper, Pulau Ketam, Year To Date(YTD)",
-      color: "#242d04",
-      data: [
-        {
-          name: "2017",
-          y: null,
-        },
-        {
-          name: "2018",
-          y: null,
-        },
-        {
-          name: "2019",
-          y: null,
-        },
-        {
-          name: "2020",
-          y: null,
-        },
-        {
-          name: "2021",
-          y: null,
         },
       ],
     },

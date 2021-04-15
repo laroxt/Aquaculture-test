@@ -8,11 +8,11 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
     type: "column",
   },
   title: {
-    text: '<span style="font-weight: bold">Gross Profit By Farm(YTD)</span>',
+    text: '<span style="font-weight: bold">Species Gross Profit By Farm, 2017-2021</span>',
     align: "center",
   },
   subtitle: {
-    text: "B1, Pulau Ketam, 2017-2021",
+    text: "Red Snapper, Pulau Ketam",
     align: "center",
   },
   accessibility: {
@@ -24,7 +24,7 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
   yAxis: {
     min: 0,
     title: {
-      text: '<span style="font-weight: bold">Gross Profit Revenue(RM)</span>',
+      text: '<span style="font-weight: bold">Gross Profit(RM)</span>',
     },
     stackLabels: {
       enabled: true,
@@ -65,13 +65,13 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
 
   series: [
     {
-      name: "B1, Pulau Ketam",
+      name: "Red Snapper",
       color: "#FA3C4C",
+      showInLegend: false,
       data: [
         {
           name: "2017",
           y: 43,
-          drilldown: "B1, Pulau Ketam, 2017",
         },
         {
           name: "2018",
@@ -152,6 +152,11 @@ Highcharts.chart("speciesSales_byFarm_monthly", {
           {
             name: "Dec",
             y: 43,
+          },
+          {
+            name: "YTD",
+            y: 53.3,
+            color: "#242d04",
           },
         ],
       },
