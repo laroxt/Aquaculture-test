@@ -35,7 +35,7 @@ Highcharts.chart("farm_sales_yearly", {
     {
       // Primary yAxis
       labels: {
-        format: "{value}m",
+        format: "{value}M",
       },
       title: {
         text: '<span style="font-weight: bold">Sales Revenue(RM)</span>',
@@ -43,7 +43,7 @@ Highcharts.chart("farm_sales_yearly", {
       stackLabels: {
         enabled: true,
         formatter: function () {
-          return this.total + "m";
+          return this.total + "M";
         },
         style: {
           fontWeight: "bold",
@@ -53,7 +53,7 @@ Highcharts.chart("farm_sales_yearly", {
     {
       // Secondary yAxis
       labels: {
-        format: "{value}m",
+        format: "{value}M",
       },
       title: {
         text: '<span style="font-weight: bold">YTD Sales Revenue(RM)</span>',
@@ -61,7 +61,7 @@ Highcharts.chart("farm_sales_yearly", {
       stackLabels: {
         enabled: true,
         formatter: function () {
-          return this.total + "m";
+          return this.total + "M";
         },
         style: {
           fontWeight: "bold",
@@ -89,7 +89,7 @@ Highcharts.chart("farm_sales_yearly", {
 
   tooltip: {
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}m<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M<br/></b>',
     shared: true,
   },
 

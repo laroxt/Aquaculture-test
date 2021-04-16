@@ -1,4 +1,5 @@
 var titles1 = ["Species Sales, 2021"];
+var subtitles1 = ["All Farm"];
 
 Highcharts.chart("speciesSales_overview", {
   chart: {
@@ -8,10 +9,17 @@ Highcharts.chart("speciesSales_overview", {
         this.setTitle({
           text: "Species Sales, " + e.point.name + "," + " 2021",
         });
+        this.setSubtitle({
+          text: subtitles1[0],
+        });
       },
+
       drillup: function (e) {
         this.setTitle({
           text: titles1[0],
+        });
+        this.setSubtitle({
+          text: "All Species",
         });
       },
     },
@@ -35,7 +43,7 @@ Highcharts.chart("speciesSales_overview", {
     {
       // Primary yAxis
       labels: {
-        format: "{value}m",
+        format: "{value}M",
       },
       title: {
         text: '<span style="font-weight: bold">Sales Revenue(RM)</span>',
@@ -43,7 +51,7 @@ Highcharts.chart("speciesSales_overview", {
       stackLabels: {
         enabled: true,
         formatter: function () {
-          return this.total + "m";
+          return this.total + "M";
         },
         style: {
           fontWeight: "bold",
@@ -53,7 +61,7 @@ Highcharts.chart("speciesSales_overview", {
     {
       // Secondary yAxis
       labels: {
-        format: "{value}m",
+        format: "{value}M",
       },
       title: {
         text: '<span style="font-weight: bold">YTD Sales Revenue(RM)</span>',
@@ -61,7 +69,7 @@ Highcharts.chart("speciesSales_overview", {
       stackLabels: {
         enabled: true,
         formatter: function () {
-          return this.total + "m";
+          return this.total + "M";
         },
         style: {
           fontWeight: "bold",
@@ -89,7 +97,7 @@ Highcharts.chart("speciesSales_overview", {
 
   tooltip: {
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}m<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M<br/></b>',
     shared: true,
   },
 

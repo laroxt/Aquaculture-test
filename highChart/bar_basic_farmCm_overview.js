@@ -36,15 +36,15 @@ Highcharts.chart("farmCm_overview", {
     title: {
       text: '<span style="font-weight: bold">Contribution Margin(%)</span>',
     },
-    // stackLabels: {
-    //   enabled: true,
-    //   formatter: function () {
-    //     return this.total + "%";
-    //   },
-    //   style: {
-    //     fontWeight: "bold",
-    //   },
-    // },
+    stackLabels: {
+      enabled: true,
+      formatter: function () {
+        return this.total + "%";
+      },
+      style: {
+        fontWeight: "bold",
+      },
+    },
   },
 
   credits: {
@@ -91,8 +91,8 @@ Highcharts.chart("farmCm_overview", {
     series: {
       pointWidth: 50,
       dataLabels: {
-        enabled: true,
-        format: "{point.y}%",
+        enabled: false,
+        format: "{point.y:.1f}%",
       },
     },
     column: {
@@ -109,24 +109,24 @@ Highcharts.chart("farmCm_overview", {
       data: [
         {
           name: "Jan",
-          y: 60,
+          y: 51,
           drilldown: "Pulau Ketam",
         },
         {
           name: "Feb",
-          y: 55,
+          y: 65,
         },
         {
           name: "Mar",
-          y: 55,
+          y: 65,
         },
         {
           name: "Apr",
-          y: 60,
+          y: 70,
         },
         {
           name: "May",
-          y: 70,
+          y: 60,
         },
         {
           name: "Jun",
@@ -134,7 +134,7 @@ Highcharts.chart("farmCm_overview", {
         },
         {
           name: "July",
-          y: 40,
+          y: 60,
         },
         {
           name: "Aug",
@@ -146,15 +146,15 @@ Highcharts.chart("farmCm_overview", {
         },
         {
           name: "Oct",
-          y: 55,
+          y: 65,
         },
         {
           name: "Nov",
-          y: 45,
+          y: 55,
         },
         {
           name: "Dec",
-          y: 55,
+          y: 45,
         },
       ],
     },
@@ -164,7 +164,7 @@ Highcharts.chart("farmCm_overview", {
       data: [
         {
           name: "Jan",
-          y: 40,
+          y: 57,
           drilldown: "Kong Kong",
         },
         {
@@ -346,15 +346,15 @@ Highcharts.chart("farmCm_overview", {
         color: "#84d9e5",
         // showInLegend: false,
         data: [
-          ["BA1", 52],
-          ["BA2", 51],
-          ["BA3", 63],
-          ["BA4", 43.2],
-          ["BA5", 52.7],
-          ["BA6", 60],
-          ["BA7", 51],
-          ["BA8", 53],
-          ["BA9", 68],
+          ["BA1", 7],
+          ["BA2", 5],
+          ["BA3", 8],
+          ["BA4", 2],
+          ["BA5", 5],
+          ["BA6", 7],
+          ["BA7", 5],
+          ["BA8", 6],
+          ["BA9", 6],
         ],
       },
       {
@@ -363,15 +363,15 @@ Highcharts.chart("farmCm_overview", {
         color: "#064a89",
 
         data: [
-          ["BA1", 52],
-          ["BA2", 51],
-          ["BA3", 63],
-          ["BA4", 43.2],
-          ["BA5", 52.7],
-          ["BA6", 60],
-          ["BA7", 61],
-          ["BA8", 53],
-          ["BA9", 68],
+          ["BA1", 6],
+          ["BA2", 7],
+          ["BA3", 8],
+          ["BA4", 6],
+          ["BA5", 4],
+          ["BA6", 7],
+          ["BA7", 8],
+          ["BA8", 5],
+          ["BA9", 6],
         ],
       },
     ],

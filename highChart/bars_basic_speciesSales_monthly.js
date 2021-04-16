@@ -29,7 +29,7 @@ Highcharts.chart("speciesSales_monthly", {
     stackLabels: {
       enabled: true,
       formatter: function () {
-        return this.total + "m";
+        return this.total + "M";
       },
       style: {
         fontWeight: "bold",
@@ -44,7 +44,7 @@ Highcharts.chart("speciesSales_monthly", {
 
   tooltip: {
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}m<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M<br/></b>',
     shared: true,
   },
 
@@ -53,7 +53,7 @@ Highcharts.chart("speciesSales_monthly", {
       pointWidth: 50,
       dataLabels: {
         enabled: true,
-        format: "{point.y}m",
+        format: "{point.y}M",
       },
     },
     column: {

@@ -7,7 +7,7 @@ Highcharts.chart("farm_sales_cm_year2", {
     events: {
       drilldown: function (e) {
         this.setSubtitle({
-          text: "Species: " + e.point.name,
+          text: e.point.name,
         });
       },
       drillup: function (e) {
@@ -43,6 +43,15 @@ Highcharts.chart("farm_sales_cm_year2", {
     title: {
       text: '<span style="font-weight: bold">Contribution Margin(%)</span>',
     },
+    stackLabels: {
+      enabled: true,
+      formatter: function () {
+        return this.total + "%";
+      },
+      style: {
+        fontWeight: "bold",
+      },
+    },
   },
 
   xAxis: {
@@ -77,7 +86,7 @@ Highcharts.chart("farm_sales_cm_year2", {
     series: {
       pointWidth: 50,
       dataLabels: {
-        enabled: true,
+        enabled: false,
         format: "{point.y:.1f}%",
       },
     },
@@ -108,7 +117,7 @@ Highcharts.chart("farm_sales_cm_year2", {
       data: [
         {
           name: "Red Snapper",
-          y: 60,
+          y: 64,
           color: "#fa3c4c",
           drilldown: "Red Snapper",
         },
@@ -163,51 +172,51 @@ Highcharts.chart("farm_sales_cm_year2", {
         data: [
           {
             name: "Jan",
-            y: 43.9,
+            y: 4,
           },
           {
             name: "Feb",
-            y: 29.7,
+            y: 7,
           },
           {
             name: "Mar",
-            y: 32,
+            y: 5,
           },
           {
             name: "Apr",
-            y: 61,
+            y: 6,
           },
           {
             name: "May",
-            y: 42,
+            y: 4,
           },
           {
             name: "Jun",
-            y: 42,
+            y: 4,
           },
           {
             name: "July",
-            y: 51,
+            y: 5,
           },
           {
             name: "Aug",
-            y: 61,
+            y: 6,
           },
           {
             name: "Sept",
-            y: 31,
+            y: 5,
           },
           {
             name: "Oct",
-            y: 52,
+            y: 6,
           },
           {
             name: "Nov",
-            y: 61,
+            y: 7,
           },
           {
             name: "Dec",
-            y: 51,
+            y: 5,
           },
           // {
           //   name: "YTD",

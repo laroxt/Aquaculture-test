@@ -7,7 +7,7 @@ Highcharts.chart("sales_mix_farm", {
     events: {
       drilldown: function (e) {
         this.setSubtitle({
-          text: "Farm: " + e.point.name,
+          text: e.point.name,
         });
       },
 

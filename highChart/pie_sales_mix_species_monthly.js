@@ -15,7 +15,7 @@ Highcharts.chart("sales_mix_species", {
     events: {
       drilldown: function (e) {
         this.setSubtitle({
-          text: "Species: " + e.point.name,
+          text: e.point.name,
         });
       },
 

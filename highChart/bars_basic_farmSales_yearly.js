@@ -26,7 +26,7 @@ Highcharts.chart("farm_sales_monthly", {
   },
 
   subtitle: {
-    text: "Farm: BA1, Pulau Ketam",
+    text: "BA1, Pulau Ketam",
     align: "center",
     verticalAlign: "top",
   },
@@ -35,7 +35,7 @@ Highcharts.chart("farm_sales_monthly", {
     stackLabels: {
       enabled: true,
       formatter: function () {
-        return this.total + "m";
+        return this.total + "M";
       },
       style: {
         fontWeight: "bold",
@@ -54,7 +54,7 @@ Highcharts.chart("farm_sales_monthly", {
 
   tooltip: {
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}m<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M<br/></b>',
     shared: true,
   },
 
