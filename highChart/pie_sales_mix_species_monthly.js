@@ -7,7 +7,7 @@
 // });
 
 var titles = ["Species Sales Mix, 2021"];
-var subtitle = ["All Species"];
+var subtitle = ["All Species, Pulau Ketam"];
 
 Highcharts.chart("sales_mix_species", {
   chart: {

@@ -1,5 +1,5 @@
 var titles1 = ["Species Contribution Margin, 2021"];
-var subtitle1 = ["All Species"];
+var subtitle1 = ["All Species, Pulau Ketam"];
 
 Highcharts.chart("farm_sales_cm_year2", {
   chart: {
@@ -7,7 +7,7 @@ Highcharts.chart("farm_sales_cm_year2", {
     events: {
       drilldown: function (e) {
         this.setSubtitle({
-          text: e.point.name,
+          text: e.point.name + ", " + "Pulau Ketam",
         });
       },
       drillup: function (e) {

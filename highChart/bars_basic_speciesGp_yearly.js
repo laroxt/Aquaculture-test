@@ -26,7 +26,7 @@ Highcharts.chart("speciesGp_yearly", {
   },
 
   subtitle: {
-    text: "All Species ",
+    text: "All Species, Pulau Ketam",
     align: "center",
     verticalAlign: "top",
   },
@@ -88,8 +88,9 @@ Highcharts.chart("speciesGp_yearly", {
   },
 
   tooltip: {
+    useHTML: true,
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M <span class="tooltipGreen">5%</span></div></b><br>',
     shared: true,
   },
 

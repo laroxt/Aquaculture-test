@@ -1,5 +1,5 @@
 var titles1 = ["Farm Sales Mix, 2021"];
-var subtitle1 = ["All Farm"];
+var subtitle1 = ["All Farm, Pulau Ketam"];
 
 Highcharts.chart("sales_mix_farm", {
   chart: {

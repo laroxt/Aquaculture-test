@@ -501,7 +501,14 @@
 						<div class="card">
 							<div class="card-header bg-white header-elements-inline">
 								<h5 class="card-title font-weight-bold">Species Sales By Farm</h5>
-
+								<div class="header-elements">
+									<div class="list-icons">
+										<button type="button" class="btn bg-primary btn-icon rounded-round"
+											data-toggle="modal" data-target="#species-farm-sales-1"><i
+												class="icon-equalizer" data-popup="tooltip"
+												data-original-title="Graph Filter Settings"></i></button>
+									</div>
+								</div>
 							</div>
 
 							<div class="card-body">
@@ -529,6 +536,14 @@
 						<div class="card">
 							<div class="card-header bg-white header-elements-inline">
 								<h5 class="card-title font-weight-bold">5-Years Species Sales By Farm</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+										<button type="button" class="btn bg-primary btn-icon rounded-round"
+											data-toggle="modal" data-target="#species-farm-sales-2"><i
+												class="icon-equalizer" data-popup="tooltip"
+												data-original-title="Graph Filter Settings"></i></button>
+									</div>
+								</div>
 							</div>
 
 							<div class="card-body">
@@ -586,7 +601,112 @@
 			<!-- /footer -->
 		</div>
 		<!-- /content area -->
+		<!-- Full width modal/ Filter -->
+		<div id="species-farm-sales-1" class="modal fade" tabindex="-1">
+			<div class="modal-dialog  modal-lg">
+				<div class="modal-content  ">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-8 offset-md-2">
+								<div class="card">
+									<div class="card-header bg-white header-elements-inline">
+										<h4 class="card-title font-weight-bold">Species Sales By Farm Filter</h4>
+									</div>
+									<div class="card-body">
+										<form action="#">
+											<div class="form-group">
+												<label>Location:</label>
+												<select data-placeholder="Select Location" class="form-control select"
+													data-fouc>
+													<option></option>
+													<option value="">-- select one --</option>
+													<option value="Pulau Ketam">Pulau Ketam</option>
+													<option value="Kong Kong">Kong Kong</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label>Year:</label>
+												<select data-placeholder="Select Year" class="form-control select"
+													data-fouc>
+													<option></option>
+													<option value="">-- select one --</option>
+													<option value="2021">2021</option>
+													<option value="2020">2020</option>
+													<option value="2019">2019</option>
+													<option value="2018">2018</option>
+													<option value="2017">2017</option>
+												</select>
+											</div>
+											<p class="text-muted">Note: This filtering setting will affect the overall
+												graph result.</p>
+											<div class="text-right">
+												<button type="submit" class="btn btn-light" class="remove"
+													data-dismiss="modal">Cancel</button>
+												<button type="submit" class="btn btn-success">Submit</button>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /full width modal -->
 
+		<!-- Full width modal/ Filter -->
+		<div id="species-farm-sales-2" class="modal fade" tabindex="-1">
+			<div class="modal-dialog  modal-lg">
+				<div class="modal-content  ">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-8 offset-md-2">
+								<div class="card">
+									<div class="card-header bg-white header-elements-inline">
+										<h4 class="card-title font-weight-bold">5-Year Species Sales By Farm Filter</h4>
+									</div>
+									<div class="card-body">
+										<form action="#">
+											<div class="form-group">
+												<label>Location:</label>
+												<select data-placeholder="Select Location" class="form-control select"
+													data-fouc>
+													<option></option>
+													<option value="">-- select one --</option>
+													<option value="Pulau Ketam">Pulau Ketam</option>
+													<option value="Kong Kong">Kong Kong</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label>Species:</label>
+												<select data-placeholder="Select Species" class="form-control select"
+													data-fouc>
+													<option></option>
+													<option value="">-- select one --</option>
+													<option value="Red Snapper">Red Snapper</option>
+													<option value="Golden Snapper">Golden Snapper</option>
+													<option value="Pomfret">Pomfret</option>
+													<option value="Seabass">Seabass</option>
+													<option value="Hybrid Grouper">Hybrid Grouper</option>
+													<option value="Gian Grouper">Gian Grouper</option>
+												</select>
+											</div>
+											<p class="text-muted">Note: This filtering setting will affect the overall
+												graph result.</p>
+											<div class="text-right">
+												<button type="submit" class="btn btn-light" class="remove"
+													data-dismiss="modal">Cancel</button>
+												<button type="submit" class="btn btn-success">Submit</button>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /full width modal -->
 	</div>
 	<!-- /page content -->
 

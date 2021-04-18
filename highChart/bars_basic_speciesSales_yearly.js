@@ -26,7 +26,7 @@ Highcharts.chart("speciesSales_yearly", {
   },
 
   subtitle: {
-    text: "All Species ",
+    text: "All Species, Pulau Ketam ",
     align: "center",
     verticalAlign: "top",
   },

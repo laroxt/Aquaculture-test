@@ -1,5 +1,5 @@
 var titles1 = ["Species Gross Profit, 2021"];
-var subtitles1 = ["All Farm"];
+var subtitles1 = ["By Farm, Pulau Ketam"];
 
 Highcharts.chart("speciesSales_byFarm_overview", {
   chart: {
@@ -19,7 +19,7 @@ Highcharts.chart("speciesSales_byFarm_overview", {
           text: titles1[0],
         });
         this.setSubtitle({
-          text: "All Species",
+          text: "All Species, Pulau Ketam",
         });
       },
     },
@@ -34,7 +34,7 @@ Highcharts.chart("speciesSales_byFarm_overview", {
   },
 
   subtitle: {
-    text: "All Species ",
+    text: "All Species, Pulau Ketam",
     align: "center",
     verticalAlign: "top",
   },
@@ -96,8 +96,9 @@ Highcharts.chart("speciesSales_byFarm_overview", {
   },
 
   tooltip: {
+    useHTML: true,
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M <span class="tooltipGreen">5%</span></div></b><br>',
     shared: true,
   },
 
@@ -120,52 +121,52 @@ Highcharts.chart("speciesSales_byFarm_overview", {
       data: [
         {
           name: "Jan",
-          y: 43.9,
+          y: 3.9,
           drilldown: "Red Snapper",
         },
         {
           name: "Feb",
-          y: 29.7,
+          y: 9.7,
         },
         {
           name: "Mar",
-          y: 32.4,
+          y: 2.4,
         },
         {
           name: "Apr",
-          y: 38.1,
+          y: 8.1,
         },
         {
           name: "May",
-          y: 52.3,
+          y: 2.3,
         },
         {
           name: "Jun",
-          y: 52.3,
+          y: 2.3,
         },
         {
           name: "July",
-          y: 52.3,
+          y: 2.3,
         },
         {
           name: "Aug",
-          y: 52.3,
+          y: 2.3,
         },
         {
           name: "Sept",
-          y: 52.3,
+          y: 2.3,
         },
         {
           name: "Oct",
-          y: 52.3,
+          y: 2.3,
         },
         {
           name: "Nov",
-          y: 52.3,
+          y: 2.3,
         },
         {
           name: "Dec",
-          y: 52.3,
+          y: 2.3,
         },
       ],
     },
@@ -176,52 +177,52 @@ Highcharts.chart("speciesSales_byFarm_overview", {
       data: [
         {
           name: "Jan",
-          y: 38.7,
+          y: 8.7,
           drilldown: "Golden Snapper",
         },
         {
           name: "Feb",
-          y: 32.4,
+          y: 2.4,
         },
         {
           name: "Mar",
-          y: 38.1,
+          y: 8.1,
         },
         {
           name: "Apr",
-          y: 42.1,
+          y: 2.1,
         },
         {
           name: "May",
-          y: 52.3,
+          y: 2.3,
         },
         {
           name: "Jun",
-          y: 26.3,
+          y: 6.3,
         },
         {
           name: "July",
-          y: 39.3,
+          y: 9.3,
         },
         {
           name: "Aug",
-          y: 55.1,
+          y: 5.1,
         },
         {
           name: "Sept",
-          y: 59.8,
+          y: 9.8,
         },
         {
           name: "Oct",
-          y: 45.9,
+          y: 5.9,
         },
         {
           name: "Nov",
-          y: 62,
+          y: 2,
         },
         {
           name: "Dec",
-          y: 60,
+          y: 3,
         },
       ],
     },
@@ -232,52 +233,52 @@ Highcharts.chart("speciesSales_byFarm_overview", {
       data: [
         {
           name: "Jan",
-          y: 40,
+          y: 4,
           drilldown: "Pomfret",
         },
         {
           name: "Feb",
-          y: 23.1,
+          y: 3.1,
         },
         {
           name: "Mar",
-          y: 26.4,
+          y: 6.4,
         },
         {
           name: "Apr",
-          y: 42.1,
+          y: 2.1,
         },
         {
           name: "May",
-          y: 55,
+          y: 5,
         },
         {
           name: "Jun",
-          y: 25.1,
+          y: 5.1,
         },
         {
           name: "July",
-          y: 48.3,
+          y: 4.3,
         },
         {
           name: "Aug",
-          y: 42.1,
+          y: 4.1,
         },
         {
           name: "Sept",
-          y: 60,
+          y: 6,
         },
         {
           name: "Oct",
-          y: 45.2,
+          y: 5.2,
         },
         {
           name: "Nov",
-          y: 61.1,
+          y: 6.1,
         },
         {
           name: "Dec",
-          y: 52,
+          y: 2,
         },
       ],
     },
@@ -288,52 +289,52 @@ Highcharts.chart("speciesSales_byFarm_overview", {
       data: [
         {
           name: "Jan",
-          y: 37,
+          y: 3,
           drilldown: "Seabass",
         },
         {
           name: "Feb",
-          y: 44.3,
+          y: 4.3,
         },
         {
           name: "Mar",
-          y: 32.4,
+          y: 2.4,
         },
         {
           name: "Apr",
-          y: 38.5,
+          y: 8.5,
         },
         {
           name: "May",
-          y: 56,
+          y: 6,
         },
         {
           name: "Jun",
-          y: 25.5,
+          y: 5.5,
         },
         {
           name: "July",
-          y: 42,
+          y: 4,
         },
         {
           name: "Aug",
-          y: 56.1,
+          y: 5.1,
         },
         {
           name: "Sept",
-          y: 60.8,
+          y: 6.8,
         },
         {
           name: "Oct",
-          y: 52.2,
+          y: 2.2,
         },
         {
           name: "Nov",
-          y: 62.1,
+          y: 6.1,
         },
         {
           name: "Dec",
-          y: 54,
+          y: 4,
         },
       ],
     },
@@ -344,52 +345,52 @@ Highcharts.chart("speciesSales_byFarm_overview", {
       data: [
         {
           name: "Jan",
-          y: 44.8,
+          y: 4.8,
           drilldown: "Hybrid Grouper",
         },
         {
           name: "Feb",
-          y: 21.7,
+          y: 2.7,
         },
         {
           name: "Mar",
-          y: 42.4,
+          y: 4.4,
         },
         {
           name: "Apr",
-          y: 35,
+          y: 5,
         },
         {
           name: "May",
-          y: 46.3,
+          y: 6.3,
         },
         {
           name: "Jun",
-          y: 23.3,
+          y: 2.3,
         },
         {
           name: "July",
-          y: 42.3,
+          y: 4.3,
         },
         {
           name: "Aug",
-          y: 50,
+          y: 5,
         },
         {
           name: "Sept",
-          y: 67.8,
+          y: 6.8,
         },
         {
           name: "Oct",
-          y: 42,
+          y: 2,
         },
         {
           name: "Nov",
-          y: 55,
+          y: 5,
         },
         {
           name: "Dec",
-          y: 64.2,
+          y: 4.2,
         },
       ],
     },
@@ -400,52 +401,52 @@ Highcharts.chart("speciesSales_byFarm_overview", {
       data: [
         {
           name: "Jan",
-          y: 45.1,
+          y: 4.1,
           drilldown: "Giant Grouper",
         },
         {
           name: "Feb",
-          y: 40.8,
+          y: 4.8,
         },
         {
           name: "Mar",
-          y: 36.3,
+          y: 6.3,
         },
         {
           name: "Apr",
-          y: 38.1,
+          y: 3.1,
         },
         {
           name: "May",
-          y: 50,
+          y: 5,
         },
         {
           name: "Jun",
-          y: 25.1,
+          y: 5.1,
         },
         {
           name: "July",
-          y: 42.1,
+          y: 4.1,
         },
         {
           name: "Aug",
-          y: 51,
+          y: 5,
         },
         {
           name: "Sept",
-          y: 42.1,
+          y: 4.1,
         },
         {
           name: "Oct",
-          y: 49.2,
+          y: 4.2,
         },
         {
           name: "Nov",
-          y: 66.1,
+          y: 6.1,
         },
         {
           name: "Dec",
-          y: 54.2,
+          y: 5.2,
         },
       ],
     },
@@ -456,59 +457,59 @@ Highcharts.chart("speciesSales_byFarm_overview", {
       data: [
         {
           name: "Jan",
-          y: 30.7,
+          y: 3.7,
           drilldown: "Other",
         },
         {
           name: "Feb",
-          y: 19,
+          y: 9,
         },
         {
           name: "Mar",
-          y: 26.3,
+          y: 2.3,
         },
         {
           name: "Apr",
-          y: 28.1,
+          y: 2.1,
         },
         {
           name: "May",
-          y: 40,
+          y: 4,
         },
         {
           name: "Jun",
-          y: 15.1,
+          y: 5.1,
         },
         {
           name: "July",
-          y: 22.1,
+          y: 2.1,
         },
         {
           name: "Aug",
-          y: 31,
+          y: 3,
         },
         {
           name: "Sept",
-          y: 22.1,
+          y: 2.1,
         },
         {
           name: "Oct",
-          y: 39.2,
+          y: 3.2,
         },
         {
           name: "Nov",
-          y: 26.1,
+          y: 2.1,
         },
         {
           name: "Dec",
-          y: 34.2,
+          y: 3.2,
         },
       ],
     },
 
     {
       yAxis: 1,
-      name: "Species, Year To Date(YTD)",
+      name: "Species Sales, Year To Date(YTD)",
       color: "#99cc33",
       data: [
         {
@@ -561,7 +562,7 @@ Highcharts.chart("speciesSales_byFarm_overview", {
         },
         {
           name: "YTD",
-          y: 7083.5,
+          y: 351.8,
         },
       ],
     },
@@ -584,47 +585,47 @@ Highcharts.chart("speciesSales_byFarm_overview", {
         showInLegend: false,
         data: [
           {
-            name: "B1",
+            name: "Red Snapper, B1",
             y: 5.9,
             color: "#fa3c4c",
           },
           {
-            name: "B2",
+            name: "Red Snapper, B2",
             y: 5.5,
             color: "#fa3c4c",
           },
           {
-            name: "B3",
+            name: "Red Snapper, B3",
             y: 5.5,
             color: "#fa3c4c",
           },
           {
-            name: "B4",
+            name: "Red Snapper, B4",
             y: 4,
             color: "#fa3c4c",
           },
           {
-            name: "B5",
+            name: "Red Snapper, B5",
             y: 6.2,
             color: "#fa3c4c",
           },
           {
-            name: "B6",
+            name: "Red Snapper, B6",
             y: 5,
             color: "#fa3c4c",
           },
           {
-            name: "B7",
+            name: "Red Snapper, B7",
             y: 6.5,
             color: "#fa3c4c",
           },
           {
-            name: "B8",
+            name: "Red Snapper, B8",
             y: 7,
             color: "#fa3c4c",
           },
           {
-            name: "B9",
+            name: "Red Snapper, B9",
             y: 7.1,
             color: "#fa3c4c",
           },
@@ -638,47 +639,47 @@ Highcharts.chart("speciesSales_byFarm_overview", {
         showInLegend: false,
         data: [
           {
-            name: "B1",
+            name: "Golden Snapper, BA1",
             y: 4,
             color: "#0084ff",
           },
           {
-            name: "B2",
+            name: "Golden Snapper, BA2",
             y: 4.5,
             color: "#0084ff",
           },
           {
-            name: "B3",
+            name: "Golden Snapper, BA3",
             y: 4.7,
             color: "#0084ff",
           },
           {
-            name: "B4",
+            name: "Golden Snapper, BA4",
             y: 5,
             color: "#0084ff",
           },
           {
-            name: "B5",
+            name: "Golden Snapper, BA5",
             y: 4.2,
             color: "#0084ff",
           },
           {
-            name: "B6",
+            name: "Golden Snapper, BA6",
             y: 5.6,
             color: "#0084ff",
           },
           {
-            name: "B7",
+            name: "Golden Snapper, BA7",
             y: 4.7,
             color: "#0084ff",
           },
           {
-            name: "B8",
+            name: "Golden Snapper, BA8",
             y: 4,
             color: "#0084ff",
           },
           {
-            name: "B9",
+            name: "Golden Snapper, BA9",
             y: 5.1,
             color: "#0084ff",
           },
@@ -692,47 +693,47 @@ Highcharts.chart("speciesSales_byFarm_overview", {
         showInLegend: false,
         data: [
           {
-            name: "B1",
+            name: "Pomfret, BA1",
             y: 4.9,
             color: "#ffc300",
           },
           {
-            name: "B2",
+            name: "Pomfret, BA2",
             y: 3.5,
             color: "#ffc300",
           },
           {
-            name: "B3",
+            name: "Pomfret, BA3",
             y: 4.5,
             color: "#ffc300",
           },
           {
-            name: "B4",
+            name: "Pomfret, BA4",
             y: 3,
             color: "#ffc300",
           },
           {
-            name: "B5",
+            name: "Pomfret, BA5",
             y: 4.2,
             color: "#ffc300",
           },
           {
-            name: "B6",
+            name: "Pomfret, BA6",
             y: 4,
             color: "#ffc300",
           },
           {
-            name: "B7",
+            name: "Pomfret, BA7",
             y: 4.5,
             color: "#ffc300",
           },
           {
-            name: "B8",
+            name: "Pomfret, BA8",
             y: 5,
             color: "#ffc300",
           },
           {
-            name: "B9",
+            name: "Pomfret, BA9",
             y: 5.1,
             color: "#ffc300",
           },
@@ -746,47 +747,47 @@ Highcharts.chart("speciesSales_byFarm_overview", {
         showInLegend: false,
         data: [
           {
-            name: "B1",
+            name: "Seabass, BA1",
             y: 4.9,
             color: "#363b74",
           },
           {
-            name: "B2",
+            name: "Seabass, BA2",
             y: 5.5,
             color: "#363b74",
           },
           {
-            name: "B3",
+            name: "Seabass, BA3",
             y: 5.6,
             color: "#363b74",
           },
           {
-            name: "B4",
+            name: "Seabass, BA4",
             y: 4.3,
             color: "#363b74",
           },
           {
-            name: "B5",
+            name: "Seabass, BA5",
             y: 5.2,
             color: "#363b74",
           },
           {
-            name: "B6",
+            name: "Seabass, BA6",
             y: 5.2,
             color: "#363b74",
           },
           {
-            name: "B7",
+            name: "Seabass, BA7",
             y: 4.5,
             color: "#363b74",
           },
           {
-            name: "B8",
+            name: "Seabass, BA8",
             y: 5,
             color: "#363b74",
           },
           {
-            name: "B9",
+            name: "Seabass, BA9",
             y: 4.1,
             color: "#363b74",
           },
@@ -800,47 +801,47 @@ Highcharts.chart("speciesSales_byFarm_overview", {
         showInLegend: false,
         data: [
           {
-            name: "B1",
+            name: "Hybrid Grouper, BA1",
             y: 4.9,
             color: "#d696bb",
           },
           {
-            name: "B2",
+            name: "Hybrid Grouper, BA2",
             y: 4.5,
             color: "#d696bb",
           },
           {
-            name: "B3",
+            name: "Hybrid Grouper, BA3",
             y: 4.5,
             color: "#d696bb",
           },
           {
-            name: "B4",
+            name: "Hybrid Grouper, BA4",
             y: 5,
             color: "#d696bb",
           },
           {
-            name: "B5",
+            name: "Hybrid Grouper, BA5",
             y: 4.2,
             color: "#d696bb",
           },
           {
-            name: "B6",
+            name: "Hybrid Grouper, BA6",
             y: 5,
             color: "#d696bb",
           },
           {
-            name: "B7",
+            name: "Hybrid Grouper, BA7",
             y: 5.5,
             color: "#d696bb",
           },
           {
-            name: "B8",
+            name: "Hybrid Grouper, BA8",
             y: 6.1,
             color: "#d696bb",
           },
           {
-            name: "B9",
+            name: "Hybrid Grouper, BA9",
             y: 5.1,
             color: "#d696bb",
           },
@@ -854,47 +855,47 @@ Highcharts.chart("speciesSales_byFarm_overview", {
         showInLegend: false,
         data: [
           {
-            name: "B1",
+            name: "Giant Grouper, BA1",
             y: 4.9,
             color: "#4d1b76",
           },
           {
-            name: "B2",
+            name: "Giant Grouper, BA2",
             y: 4.5,
             color: "#4d1b76",
           },
           {
-            name: "B3",
+            name: "Giant Grouper, BA3",
             y: 3.3,
             color: "#4d1b76",
           },
           {
-            name: "B4",
+            name: "Giant Grouper, BA4",
             y: 4.3,
             color: "#4d1b76",
           },
           {
-            name: "B5",
+            name: "Giant Grouper, BA5",
             y: 5.2,
             color: "#4d1b76",
           },
           {
-            name: "B6",
+            name: "Giant Grouper, BA6",
             y: 5,
             color: "#4d1b76",
           },
           {
-            name: "B7",
+            name: "Giant Grouper, BA7",
             y: 5.5,
             color: "#4d1b76",
           },
           {
-            name: "B8",
+            name: "Giant Grouper, BA8",
             y: 4,
             color: "#4d1b76",
           },
           {
-            name: "B9",
+            name: "Giant Grouper, BA9",
             y: 4.1,
             color: "#4d1b76",
           },
@@ -908,47 +909,47 @@ Highcharts.chart("speciesSales_byFarm_overview", {
         showInLegend: false,
         data: [
           {
-            name: "B1",
+            name: "Other, BA1",
             y: 3.9,
             color: "#c0c0c0",
           },
           {
-            name: "B2",
+            name: "Other, BA2",
             y: 2.5,
             color: "#c0c0c0",
           },
           {
-            name: "B3",
+            name: "Other, BA3",
             y: 2.5,
             color: "#c0c0c0",
           },
           {
-            name: "B4",
+            name: "Other, BA4",
             y: 3,
             color: "#c0c0c0",
           },
           {
-            name: "B5",
+            name: "Other, BA5",
             y: 2.2,
             color: "#c0c0c0",
           },
           {
-            name: "B6",
+            name: "Other, BA6",
             y: 4,
             color: "#c0c0c0",
           },
           {
-            name: "B7",
+            name: "Other, BA7",
             y: 3.5,
             color: "#c0c0c0",
           },
           {
-            name: "B8",
+            name: "Other, BA8",
             y: 4,
             color: "#c0c0c0",
           },
           {
-            name: "B9",
+            name: "Other, BA9",
             y: 5.1,
             color: "#c0c0c0",
           },

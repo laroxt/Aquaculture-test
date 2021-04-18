@@ -88,8 +88,9 @@ Highcharts.chart("farm_gp_yearly", {
   },
 
   tooltip: {
+    useHTML: true,
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M <span class="tooltipGreen">5%</span></div></b><br>',
     shared: true,
   },
 
@@ -137,7 +138,7 @@ Highcharts.chart("farm_gp_yearly", {
         },
         {
           name: "July",
-          y: 52.3,
+          y: 32.3,
         },
         {
           name: "Aug",
@@ -185,7 +186,7 @@ Highcharts.chart("farm_gp_yearly", {
         },
         {
           name: "May",
-          y: 52.3,
+          y: 22.3,
         },
         {
           name: "Jun",
@@ -276,7 +277,7 @@ Highcharts.chart("farm_gp_yearly", {
         },
         {
           name: "YTD",
-          y: 510.2,
+          y: 490.2,
         },
       ],
     },
@@ -335,7 +336,7 @@ Highcharts.chart("farm_gp_yearly", {
         },
         {
           name: "YTD",
-          y: 509.9,
+          y: 479.9,
         },
       ],
     },

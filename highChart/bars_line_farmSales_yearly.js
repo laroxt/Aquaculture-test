@@ -137,7 +137,7 @@ Highcharts.chart("farm_sales_yearly", {
         },
         {
           name: "July",
-          y: 52.3,
+          y: 32.3,
         },
         {
           name: "Aug",
@@ -185,7 +185,7 @@ Highcharts.chart("farm_sales_yearly", {
         },
         {
           name: "May",
-          y: 52.3,
+          y: 22.3,
         },
         {
           name: "Jun",
@@ -276,7 +276,7 @@ Highcharts.chart("farm_sales_yearly", {
         },
         {
           name: "YTD",
-          y: 510.2,
+          y: 490.2,
         },
       ],
     },
@@ -335,7 +335,7 @@ Highcharts.chart("farm_sales_yearly", {
         },
         {
           name: "YTD",
-          y: 509.9,
+          y: 479.9,
         },
       ],
     },

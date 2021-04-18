@@ -52,8 +52,9 @@ Highcharts.chart("speciesGp_monthly", {
   },
 
   tooltip: {
+    useHTML: true,
     pointFormat:
-      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M<br/></b>',
+      '<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M <span class="tooltipGreen">5%</span></div></b><br>',
     shared: true,
   },
 
