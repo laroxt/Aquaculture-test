@@ -35,7 +35,7 @@
 	<script src="assets/js/app.js"></script>
 	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
 	<script src="./global_assets/js/demo_pages/form_wizard.js"></script>
-	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="./global_assets/js/demo_pages/datatables_basic_c3.js"></script>
 	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
@@ -46,6 +46,7 @@
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
+	<script src="./global_assets/js/main/table_ticker.js"></script>
 	<!-- /theme JS files -->
 
 
@@ -461,121 +462,125 @@
 			<!-- Main content -->
 			<div class="content-wrapper">
 				<!-- Content area -->
-				<div class="content2">
+				<div class="content3">
 					<!-- /fieldset legend -->
-					<div class="row">
+					<div class=" row">
 						<div class="col-md-12">
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold " style>Create User Account</h5>
+									<h5 class="card-title font-weight-bold">User Role List</h5>
 									<div class="header-elements">
-
+										<div class="list-icons">
+											<button type="button" class="btn bg-light btn-icon rounded-round mt-1"
+												data-toggle="modal" data-target="#addRole" data-popup="tooltip"
+												title="Add"><i class="icon-plus3"></i></button>
+										</div>
 									</div>
 								</div>
-
-								<div class="card-body">
-									<form action="#">
-
-										<div class="row">
-											<div class="col-md-12">
-												<!-- <legend class="font-weight-semibold">
-															General Details</legend> -->
-												<div class="row">
-													<div class="col-md-12">
-														<div class="form-group">
-															<label>Name:</label>
-															<input type="text" class="form-control"
-																placeholder="Eg. James Wong">
-														</div>
-													</div>
-
-												</div>
-												<div class="row">
-													<div class="col-md-12">
-														<div class="form-group">
-															<label>Mobile Number:</label>
-															<input type="number" class="form-control"
-																placeholder="Eg 016 828 3382">
-														</div>
-													</div>
-
-													<div class="col-md-12">
-														<div class="form-group">
-															<label>Email:</label>
-															<input type="email" class="form-control"
-																placeholder="Eg. Eden@gmail.com">
-														</div>
-													</div>
-
-													<div class="col-md-12">
-														<div class="form-group">
-															<label>Role:</label>
-															<select data-placeholder="Select your state"
-																class="form-control form-control-select2" data-fouc>
-																<option value="#" selected>Board Director</option>
-																<option value="#" selected>Managing Director</option>
-																<option value="#">Super Admin</option>
-																<option value="#">Accounting</option>
-																<option value="#">Operational Manager</option>
-																<option value="#">Operational Admin</option>
-																<option value="#">Purchasing Manager</option>
-																<option value="#">Farm Recorder</option>
-															</select>
-														</div>
-													</div>
-
-												</div>
-												<!-- <legend class="font-weight-semibold">
-														Employee Details</legend>
-													<div class="form-group">
-														<label>Location:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option>HQ, Kuala Lumpur</option>
-															<option>HQ, Selangor</option>
-															<option>HQ, Johor</option>
-															<option>Pulau Ketam, Selangor</option>
-															<option>Kong Kong, Johor</option>
-														</select>
-													</div>
-													<div class="form-group">
-														<label>Department:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option value="Farm-1">Operational Department</option>
-															<option value="Farm-2">Account Department</option>
-															<option value="Farm-3">Management Department</option>
-														</select>
-													</div>
-													<div class="form-group">
-														<label>Position:</label>
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<optgroup label="Pulau Ketam">
-																<option value="#" selected>Board Director</option>
-																<option value="#">Admin</option>
-																<option value="#">Accounting</option>
-																<option value="#">Operational Manager</option>
-																<option value="#">Operational Admin</option>
-																<option value="#">Purchasing Manager</option>
-																<option value="#">Bagan Warehouse</option>
-																<option value="#">Recorder</option>
-															</optgroup>
-														</select>
-													</div> -->
-
-												</fieldset>
-											</div>
-
-										</div>
-
-										<div class="text-right">
-											<button type="button" class="btn btn-success"
-												id="sweet_warning">Submit</button>
-										</div>
-									</form>
+								<div class="table-adjustment-smart mb-4">
+									<table class="table2 datatable-basic" width="100%">
+										<thead>
+											<tr>
+												<th class="table-row-color">Role</th>
+												<th class="table-row-color">Permission</th>
+												<th class="table-row-color">Create By</th>
+												<th class="table-row-color">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Board Director</td>
+												<td><button class="btn btn-primary" data-target="#permission"
+														data-toggle="modal">Permission</button></td>
+												<td>KSAQ Super Admin</td>
+												<td>
+													<span> <button type="button" class="btn btn-light btn-icon"
+															data-popup="tooltip" title="Remove"><i
+																class="icon-trash-alt"></i></button> </span>
+												</td>
+											</tr>
+											<tr>
+												<td>Managing Director</td>
+												<td><button class="btn btn-primary" data-target="#permission"
+														data-toggle="modal">Permission</button></td>
+												<td>KSAQ Super Admin</td>
+												<td>
+													<span> <button type="button" class="btn btn-light btn-icon"
+															data-popup="tooltip" title="Remove"><i
+																class="icon-trash-alt"></i></button> </span>
+												</td>
+											</tr>
+											<tr>
+												<td>Operational Manager</td>
+												<td><button class="btn btn-primary" data-target="#permission"
+														data-toggle="modal">Permission</button></td>
+												<td>KSAQ Super Admin</td>
+												<td>
+													<span> <button type="button" class="btn btn-light btn-icon"
+															data-popup="tooltip" title="Remove"><i
+																class="icon-trash-alt"></i></button> </span>
+												</td>
+											</tr>
+											<tr>
+												<td>Operational Admin</td>
+												<td><button class="btn btn-primary" data-target="#permission"
+														data-toggle="modal">Permission</button></td>
+												<td>KSAQ Super Admin</td>
+												<td>
+													<span> <button type="button" class="btn btn-light btn-icon"
+															data-popup="tooltip" title="Remove"><i
+																class="icon-trash-alt"></i></button> </span>
+												</td>
+											</tr>
+											<tr>
+												<td>Farm Recorder</td>
+												<td><button class="btn btn-primary" data-target="#permission"
+														data-toggle="modal">Permission</button></td>
+												<td>KSAQ Super Admin</td>
+												<td>
+													<span> <button type="button" class="btn btn-light btn-icon"
+															data-popup="tooltip" title="Remove"><i
+																class="icon-trash-alt"></i></button> </span>
+												</td>
+											</tr>
+											<tr>
+												<td>Accounting</td>
+												<td><button class="btn btn-primary" data-target="#permission"
+														data-toggle="modal">Permission</button></td>
+												<td>KSAQ Super Admin</td>
+												<td>
+													<span> <button type="button" class="btn btn-light btn-icon"
+															data-popup="tooltip" title="Remove"><i
+																class="icon-trash-alt"></i></button> </span>
+												</td>
+											</tr>
+											<tr>
+												<td>Super Admin</td>
+												<td><button class="btn btn-primary" data-target="#permission"
+														data-toggle="modal">Permission</button></td>
+												<td>KSAQ Super Admin</td>
+												<td>
+													<span> <button type="button" class="btn btn-light btn-icon"
+															data-popup="tooltip" title="Remove"><i
+																class="icon-trash-alt"></i></button> </span>
+												</td>
+											</tr>
+											<tr>
+												<td>Purchasing Manager</td>
+												<td><button class="btn btn-primary" data-target="#permission"
+														data-toggle="modal">Permission</button></td>
+												<td>KSAQ Super Admin</td>
+												<td>
+													<span> <button type="button" class="btn btn-light btn-icon"
+															data-popup="tooltip" title="Remove"><i
+																class="icon-trash-alt"></i></button> </span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
+
 							</div>
 						</div>
 					</div>
@@ -615,10 +620,234 @@
 
 		</div>
 		<!-- /main content -->
+		<!-- Full width modal/ Sub-Contractor-->
+		<div id="permission" class="modal fade" tabindex="-1">
+			<div class="modal-dialog  modal-full">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
 
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-8 offset-md-2">
+								<div class="card">
+									<div class="card-header bg-white header-elements-inline">
+										<h4 class="card-title font-weight-bold">Permission</h4>
+									</div>
+									<div class="card-body">
+										<div class="table-adjustment-smart mb-4">
+											<table class="table2" width="100%" id="tblData">
+												<thead>
+													<tr>
+														<th class="table-row-color">Page</th>
+														<th class="table-row-color">View</th>
+														<th class="table-row-color">Add</th>
+														<th class="table-row-color">Edit</th>
+														<th class="table-row-color">Delete</th>
+														<th class="table-row-color">Export</th>
+														<th class="table-row-color">Notification</th>
+														<th class="table-row-color">Email</th>
+														<th class="table-row-color">Upload</th>
+													</tr>
+												</thead>
+												<thead>
+													<tr>
+														<td>Select All <br><input type="checkbox" id="chkParent"
+																class="table-checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Board Director</td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+													</tr>
+													<tr>
+														<td>Managing Director</td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+													</tr>
+													<tr>
+														<td>Operational Manager</td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+													</tr>
+													<tr>
+														<td>Operational Admin</td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+													</tr>
+													<tr>
+														<td>Farm Recorder</td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+													</tr>
+													<tr>
+														<td>Accounting</td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+													</tr>
+													<tr>
+														<td>Super Admin</td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+													</tr>
+													<tr>
+														<td>Purchasing Manager</td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+														<td><input type="checkbox" /></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="text-right">
+											<button type="submit" class="btn btn-light" class="remove"
+												data-dismiss="modal">Cancel</button>
+											<button type="submit" class="btn btn-success">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /full width modal -->
+
+		<!-- Full width modal/ Sub-Contractor-->
+		<div id="addRole" class="modal fade" tabindex="-1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-8 offset-md-2">
+								<div class="card">
+									<div class="card-header bg-white header-elements-inline">
+										<h4 class="card-title font-weight-bold">Add Role</h4>
+									</div>
+									<div class="card-body">
+
+										<div class="form-group">
+											<label>Role:</label>
+											<select name="role" data-placeholder="Select user role"
+												class="form-control select-search" data-fouc id="RoleOptions"
+												onchange="check();">
+												<option></option>
+												<option value="">-- select one --</option>
+												<option value="board-director" disabled>Board Director</option>
+												<option value="managing-director" disabled>Managing Director</option>
+												<option value="operational-manager" disabled>Operatioanl Manager
+												</option>
+												<option value="operational-admin" disabled>Operational Admin</option>
+												<option value="farm-recorder" disabled>Farm Recorder</option>
+												<option value="accounting" disabled>Accounting</option>
+												<option value="super-admin" disabled>Super Admin</option>
+												<option value="purchasing-manager" disabled>Purchasing Manager</option>
+												<option value="Others">Others</option>
+											</select>
+										</div>
+
+										<div id=RoleForms>
+											<div class="form-group">
+												<label>Other Role:</label>
+												<input type="text" class="form-control"
+													placeholder="Example. Managing Director">
+											</div>
+										</div>
+
+										<script>
+											function check() {
+												var dropdown = document.getElementById("RoleOptions");
+												var current_value = dropdown.options[dropdown.selectedIndex].value;
+
+												if (current_value == "Others") {
+													document.getElementById("RoleForms").style.display = "block";
+												}
+												else {
+													document.getElementById("RoleForms").style.display = "none";
+												}
+											}
+										</script>
+
+										<div class="text-right">
+											<button type="submit" class="btn btn-light" class="remove"
+												data-dismiss="modal">Cancel</button>
+											<button type="submit" class="btn btn-success">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /full width modal -->
 	</div>
 	<!-- /page content -->
-
+	<script src="./global_assets/js/main/formDOM.js"></script>
 </body>
 
 </html>
