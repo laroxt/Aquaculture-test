@@ -26,9 +26,9 @@ var DatatableBasic = (function () {
       autoWidth: false,
       columnDefs: [
         {
-          orderable: false,
-          width: 100,
-          targets: [3],
+          orderable: true,
+          // width: 100,
+          targets: [1],
         },
       ],
       dom: '<"datatable-header"fl><"datatable-scroll"t><"datatable-footer"ip>',

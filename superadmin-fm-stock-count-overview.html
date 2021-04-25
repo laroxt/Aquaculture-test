@@ -319,14 +319,14 @@
 							<a href="#" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
 								<span>Account Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Accounting Management">
-								<li class="nav-item"><a href="./superadmin-accm-fries-management.html"
-										class="nav-link">Fries
-										Management</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-accm-feed-management.html"
-										class="nav-link">Feed
-										Management</a>
-								</li>
+								<li class="nav-item"><a href="./superadmin-accm-fries-purchase-fries.html"
+										class="nav-link">Purchase Fries</a></li>
+								<li class="nav-item"><a href="./superadmin-accm-fries-purchase-fries-validation.html"
+										class="nav-link">Fries Validation</a></li>
+								<li class="nav-item"><a href="./superadmin-accm-feed-purchase-pellet.html"
+										class="nav-link">Purchase Pellet</a></li>
+								<li class="nav-item"><a href="./superadmin-accm-feed-purchase-tfish.html"
+										class="nav-link">Purchase Trash Fish</a></li>
 							</ul>
 						</li>
 						<!-- /Account -->
@@ -344,13 +344,14 @@
 						<!-- /Operation -->
 
 						<!-- Farm Creation -->
-						<li class="nav-item nav-item-submenu ">
-							<a href="#" class="nav-link "><i class="icon-map"></i>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-map"></i>
 								<span>Farm Creation</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Farm Creation">
 								<li class="nav-item"><a href="superadmin-fc-farm-management.html"
-										class="nav-link">Create New Farm</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Farm Validation</a></li>
+										class="nav-link ">Create New Farm</a></li>
+								<li class="nav-item"><a href="superadmin-fc-farm-management-validation.html"
+										class="nav-link">Farm Creation Validation</a></li>
 							</ul>
 						</li>
 						<!-- /Farm Creation -->
@@ -389,15 +390,9 @@
 						<!-- /Floorplan Management -->
 
 						<!-- Species Management -->
-						<li class="nav-item nav-item-submenu ">
-							<a href=" #" class="nav-link "><i class="fas fa-fish"></i>
+						<li class="nav-item">
+							<a href="superadmin-sm-species-management.html" class="nav-link"><i class="fas fa-fish"></i>
 								<span>Species Management</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Species Management">
-								<li class="nav-item"><a href="superadmin-sm-species-management.html"
-										class="nav-link">New
-										Species Entry</a></li>
-								<li class="nav-item"><a href="#" class="nav-link">Species Validation</a></li>
-							</ul>
 						</li>
 						<!-- /Species Management -->
 
@@ -420,7 +415,8 @@
 							<a href="#" class="nav-link "><i class="icon-user"></i>
 								<span>User Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Species Dashboard">
-								<li class="nav-item"><a href="superadmin-um-user-create.html" class="nav-link">Manage User Role</a>
+								<li class="nav-item"><a href="superadmin-um-user-create.html" class="nav-link">Manage
+										User Role</a>
 								</li>
 								<li class="nav-item"><a href="superadmin-um-user-management.html"
 										class="nav-link">Manage User Account</a>
@@ -475,31 +471,37 @@
 								<div class="card-body" style="padding-bottom: 0;">
 									<form action="#">
 										<div class="row">
-											<div class="col-md-4">
+											<div class="col-md-3">
+												<fieldset>
+													<div class="form-group">
+														<div class="form-group">
+															<label>Location:</label>
+															<select data-placeholder="Select your state"
+																class="form-control select" data-fouc>
+																<option>Kong Kong</option>
+																<option>Pulau Ketam</option>
+															</select>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+											<div class="col-md-3">
 												<fieldset>
 													<div class="form-group">
 														<label>Farm:</label>
 														<select data-placeholder="Select your state"
 															class="form-control form-control-select2" data-fouc>
-															<optgroup label="Pulau Ketam">
-																<option value="Farm-1">BA</option>
-																<option value="Farm-2">BB</option>
-																<option value="Farm-3">BD</option>
-																<option value="Farm-3">BE</option>
-																<option value="Farm-3">BF</option>
-																<option value="Farm-3">BJ</option>
-															</optgroup>
-															<optgroup label="Johor">
-																<option value="Farm-1">JA</option>
-																<option value="Farm-2">JB</option>
-																<option value="Farm-3">JC</option>
-															</optgroup>
-															</optgroup>
+															<option value="Farm-1">BA</option>
+															<option value="Farm-2">BB</option>
+															<option value="Farm-3">BD</option>
+															<option value="Farm-3">BE</option>
+															<option value="Farm-3">BF</option>
+															<option value="Farm-3">BJ</option>
 														</select>
 													</div>
 												</fieldset>
 											</div>
-											<div class="col-md-4">
+											<div class="col-md-3">
 												<fieldset>
 													<div class="form-group">
 														<label>Date:</label>
@@ -515,25 +517,12 @@
 												</fieldset>
 											</div>
 
-											<div class="col-md-2">
-												<fieldset>
-													<div class="form-group">
-														<div class="form-group">
-															<label>Filter By:</label>
-															<select data-placeholder="Select your state"
-																class="form-control select" data-fouc>
-																<option>Species</option>
-																<option>Net Status</option>
-															</select>
-														</div>
-													</div>
-												</fieldset>
-											</div>
-											<div class="col-md-2">
+											<div class="col-md-3">
 												<div class="form-group">
 													<div class="input-group">
 														<button type="button" class="btn btn-primary" id="sweet_warning"
-															style="margin-top: 27px; width: 100%;">Retrieve</button>
+															style="margin-top: 27px; width: 100%;">Retrieve
+															Floorplan</button>
 													</div>
 												</div>
 											</div>

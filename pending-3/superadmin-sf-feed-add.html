@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" type="image/png" href="../main/brand_img/hummingsoft favicon.png" />
-	<title>Acc-Fries Management-Pellet-Add</title>
+	<title>SM-Feed Entry-Add</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -17,7 +17,6 @@
 	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/floorplan_indicator.css" rel="stylesheet" type="text/css">
 	<link href="./global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
 	<link href="./global_assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
@@ -31,30 +30,23 @@
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
-	<script src="./global_assets/js/plugins/forms/selects/select3.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<script src="./global_assets/js/demo_pages/form_multiselect.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="./global_assets/js/demo_pages/form_layouts.js"></script>
-	<script src="./global_assets/js/demo_pages/form_wizard3.js"></script>
-	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="./global_assets/js/demo_pages/form_wizard.js"></script>
+	<script src="./global_assets/js/demo_pages/datatables_basic_c4.js"></script>
 	<script src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_pnotify.js"></script>
 	<script src="./global_assets/js/plugins/notifications/pnotify.min.js"></script>
-	<script src="./dragscroll_js/dragscroll.js"></script>
+
 
 	<!-- Theme JS files -->
 	<script src="./global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
 	<script src="./global_assets/js/demo_pages/extra_sweetalert.js"></script>
-
-	<script src="./global_assets/js/plugins/pickers/pickadate/picker.js"></script>
-	<script src="./global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
-	<script src="./global_assets/js/demo_pages/picker_date.js"></script>
 	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
-
 	<!-- /theme JS files -->
-
 
 </head>
 
@@ -307,27 +299,24 @@
 						</li>
 						<!-- /Sepcies Dashboard -->
 
-
-
 						<li class="nav-item-header">
 							<div class="text-uppercase font-size-xs line-height-xs">Super Admin Menu</div> <i
 								class="icon-circle-small" title="Main"></i>
 						</li>
 
 						<!-- Account -->
-						<li class="nav-item nav-item-submenu nav-item-open">
-							<a href="#" class="nav-link active"><i class="fas fa-file-invoice-dollar"></i>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
 								<span>Account Management</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Accounting Management"
-								style="display: block;">
-								<li class="nav-item"><a href="./superadmin-accm-fries-management.html"
-										class="nav-link">Fries
-										Management</a>
-								</li>
-								<li class="nav-item"><a href="./superadmin-accm-feed-management.html"
-										class="nav-link active">Feed
-										Management</a>
-								</li>
+							<ul class="nav2 nav-group-sub" data-submenu-title="Accounting Management">
+								<li class="nav-item"><a href="./superadmin-accm-fries-purchase-fries.html"
+									class="nav-link">Purchase Fries</a></li>
+							<li class="nav-item"><a href="./superadmin-accm-fries-purchase-fries-validation.html"
+									class="nav-link">Fries Validation</a></li>
+							<li class="nav-item"><a href="./superadmin-accm-feed-purchase-pellet.html"
+									class="nav-link">Purchase Pellet</a></li>
+							<li class="nav-item"><a href="./superadmin-accm-feed-purchase-tfish.html"
+									class="nav-link">Purchase Trash Fish</a></li>
 							</ul>
 						</li>
 						<!-- /Account -->
@@ -390,26 +379,26 @@
 						<!-- /Floorplan Management -->
 
 						<!-- Species Management -->
-						<li class="nav-item nav-item-submenu">
+						<li class="nav-item nav-item-submenu ">
 							<a href=" #" class="nav-link "><i class="fas fa-fish"></i>
 								<span>Species Management</span></a>
 							<ul class="nav2 nav-group-sub" data-submenu-title="Species Management">
 								<li class="nav-item"><a href="superadmin-sm-species-management.html"
-										class="nav-link ">New
+										class="nav-link">New
 										Species Entry</a></li>
-								<li class="nav-item"><a href="#" class="nav-link ">Species Validation</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Species Validation</a></li>
 							</ul>
 						</li>
 						<!-- /Species Management -->
 
 						<!-- Smart Feeding-->
-						<li class="nav-item nav-item-submenu ">
-							<a href=" #" class="nav-link "><i class="icon-heart5"></i>
+						<li class="nav-item nav-item-submenu nav-item-open">
+							<a href=" #" class="nav-link active"><i class="icon-heart5"></i>
 								<span>Smart Feeding</span></a>
-							<ul class="nav2 nav-group-sub" data-submenu-title="Smart Feeding">
+							<ul class="nav2 nav-group-sub" data-submenu-title="Smart Feeding" style="display: block;">
 								<li class="nav-item"><a href="superadmin-sf-rd-feed.html" class="nav-link">Feeding
 										Entry</a></li>
-								<li class="nav-item"><a href="superadmin-sf-feed.html" class="nav-link ">New Feed
+								<li class="nav-item "><a href="superadmin-sf-feed.html" class="nav-link active">New Feed
 										Entry</a></li>
 								<li class="nav-item"><a href="#" class="nav-link">Feed Entry Validation</a></li>
 							</ul>
@@ -449,15 +438,12 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<h class="breadcrumb-item active">Account Management</h>
-							<a href="./superadmin-accm-feed-management.html" class="breadcrumb-item active">Feed
-								Management</a>
-							<a href="./superadmin-accm-feed-pellet-management-add.html" class="breadcrumb-item ">Add
-								Feed(Pellet) Purchase</a>
+							<h class="breadcrumb-item active">New Feed Entry</h>
+							<a href="./superadmin-sf-feed.html" class="breadcrumb-item active">Smart Feeding</a>
+							<a href="./superadmin-sf-feed-add.html" class=" breadcrumb-item ">Add Smart Feeding</a>
 						</div>
 
-						<a href="./recorder-feed-form-overview.html"
-							class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+
 					</div>
 
 
@@ -467,96 +453,104 @@
 
 
 			<!-- Main content -->
-			<div class="content-wrapper">
+			<div class=" content-wrapper">
 				<!-- Content area -->
 				<div class="content2">
-					<!-- /fieldset legend -->
 					<div class="row">
-						<div class="col-md-12">
+						<!-- /fieldset legend -->
+					</div>
+					<div class="row">
+						<div class="col-md-11">
 							<!-- 2 columns form -->
 							<div class="card">
 								<div class="card-header bg-white header-elements-inline">
-									<h5 class="card-title font-weight-bold " style>Add
-										Feed(Pellet) Purchase</h5>
+									<h5 class="card-title font-weight-bold">Add New Feed</h5>
 									<div class="header-elements">
 
 									</div>
 								</div>
-
 								<div class="card-body">
 									<form action="#">
 										<div class="row">
 											<div class="col-md-12">
-												<div class="form-group">
-													<label>Dest. Warehouse:</label>
+												<fieldset>
 													<div class="form-group">
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
+														<label>Farm<span class="input-required">*</span>:</label>
+														<select class="form-control multiselect-filtering"
+															multiple="multiple" data-fouc>
 															<optgroup label="Pulau Ketam">
-																<option>Farm BA</option>
-																<option>Farm BA</option>
-																<option>Farm BA</option>
-																<option>Farm BA</option>
-																<option>Farm BA</option>
-																<option>Farm BA</option>
+																<option selected>BA1</option>
+																<option>BA2</option>
+																<option>BA3</option>
+																<option>BA4</option>
+																<option>BA5</option>
+																<option>BA6</option>
 															</optgroup>
-															<optgroup label="Johor">
-																<option>Farm BA</option>
-																<option>Farm BA</option>
-																<option>Farm BA</option>
-															</optgroup>
+															<optgroup label="Kong Kong">
+																<option>BA7</option>
+																<option>BA8</option>
+																<option>BA9</option>
+																<option>BA10</option>
 															</optgroup>
 														</select>
 													</div>
-												</div>
-												<div class="form-group">
-													<label>PO Num:</label>
-													<input type="text" class="form-control" placeholder="Eg. FA-2312">
-												</div>
-												<div class="form-group">
-													<label>Pellet Type:</label>
-													<div class="form-group">
-														<select data-placeholder="Select your state"
-															class="form-control form-control-select2" data-fouc>
-															<option>UP6</option>
-															<option>UP6</option>
-															<option>UP6</option>
-															<option>UP6</option>
-															<option>UP6</option>
-															<option>UP6</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label>Unit Price(RM):</label>
-													<input type="number" class="form-control" placeholder="Eg. 0.45">
-												</div>
-												<div class="form-group">
-													<label>Quantity:</label>
-													<input type="number" class="form-control" placeholder="Eg. 100">
-												</div>
-												<div class="form-group">
-													<label>Total Cost</label>
-													<input type="number" class="form-control" placeholder="Eg. 45.00"
-														disabled>
-												</div>
-												<div class="form-group">
-													<label>Remark:</label>
-													<textarea type="text" class="form-control"
-														placeholder="Eg. Extra fish" rows="4" cols="50"></textarea>
-												</div>
+												</fieldset>
 											</div>
 										</div>
 
+										<div class="row">
+											<div class="col-md-12">
+												<fieldset>
+													<div class="form-group">
+														<label>Species<span class="input-required">*</span>:</label>
+														<select data-placeholder="Select your state"
+															class="form-control select" data-fouc>
+															<option value="Farm-1">Red Snapper</option>
+															<option value="Farm-2">Golden Snapper
+															</option>
+															<option value="Farm-2">Pomfret</option>
+															<option value="Farm-2">Seabass</option>
+															<option value="Farm-2">Hybrid Grouper
+															</option>
+															<option value="Farm-2">Giant Grouper
+															</option>
+														</select>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-12">
+												<fieldset>
+													<div class="form-group">
+														<label>Type of Food<span
+																class="input-required">*</span>:</label>
+														<select multiple="multiple" class="form-control select"
+															data-fouc>
+															<optgroup label="Mountain Time Zone">
+																<option selected>Food1</option>
+																<option selected>Food2</option>
+																<option selected>Food3</option>
+																<option>Food4</option>
+																<option>Food5</option>
+																<option>Food6</option>
+																<option>Food7</option>
+																<option>Food8</option>
+														</select>
+													</div>
+												</fieldset>
+											</div>
+										</div>
 										<div class="text-right">
-											<button type="button" class="btn btn-success">Confirm</button>
+											<button type="button" class="btn btn-success"
+												onClick="location.href='superadmin-mv-fc-farm-management-create-20x20.html'">Confirm</button>
 										</div>
 									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- /2 columns form -->
 				</div>
 			</div>
 			<!-- /content area -->
